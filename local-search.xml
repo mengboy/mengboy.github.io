@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>sse(serve send events) 服务端推送技术</title>
+    <link href="/2020/09/12/sse/"/>
+    <url>/2020/09/12/sse/</url>
+    
+    <content type="html"><![CDATA[<h3 id="什么是sse"><a href="#什么是sse" class="headerlink" title="什么是sse"></a>什么是sse</h3><p>sse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，<br>通常http请求都是请求–&gt;应答的模式，一次request–&gt;response结束后，连接就断开了，<br>前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。<br>而sse指连接建立成功后，后端可以不断向前端推送消息。<br><img src="/images/sse/httpvssse.png"><br>sse 连接的header Content-Type: text/event-stream，后端响应可以在EventStream选项卡中看到<br><img src="/images/sse/httpsseheader.png"><br><img src="/images/sse/sseeventstream.png"><br>其他具体的api介绍，比如web端是通过什么接口处理后端推送，以及后端推送的数据格式可以参考<a href="https://developer.mozilla.org/zh-CN/docs/Server-sent_events/Using_server-sent_events#%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A0%BC%E5%BC%8F">MDN文档</a></p><h3 id="http2-0-前后的sse"><a href="#http2-0-前后的sse" class="headerlink" title="http2.0 前后的sse"></a>http2.0 前后的sse</h3><p>http2一个最大的特性是引入流的多路复用机制，sse在http2.0前后的一个差异也主要是因为多路用。</p><h4 id="http1-x的sse"><a href="#http1-x的sse" class="headerlink" title="http1.x的sse"></a>http1.x的sse</h4><p>http1.x没有多路复用，在已建立sse的情况下，如果前端想要发消息给后端就需要建立新的连接。<br>这对于需要前端频繁向后端请求资源的场景是一个巨大的消耗。<br><img src="/images/sse/http1ssedemo.png"><br>图中示例c1、c2是来自两个sse连接的推送，chrome 调试里可以看到协议是http1.1以及connection id 分别是9003、9307，<br>这就表示http1 后端推送和前端请求没法在同一个连接里进行。<br>http1下还有一个限制是同一域名sse连接数和浏览器最大http并发连接数一样，一般是6个，可以使用demo打开3个tab建立6个连接后再打开一个具体观察，<br>而http2.0这个数默认是100。MDN文档里也有对这个的说明。</p><h4 id="http2的sse"><a href="#http2的sse" class="headerlink" title="http2的sse"></a>http2的sse</h4><p><img src="/images/sse/http2sse.png"><br>由于http2的多路复用，可以明显的看到这里两个sse的连接的connection ID都是15522，说明连个sse用的是同一个http连接。<br>也就是说前端向后端请求和后端向前端推送可以在同一个连接里完成，有接触过websocket的同学会发现http2的sse基本上可以取代websocket。<br>websocket在同链路上的全双工通信，http2的sse也可以实现。</p><h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>聊天室的消息推送，直播过程中的消息推送活动推送，某些场景下的状态更改等。任何需要高频http轮询或者websocket的场景都可以使用sse替代。<br>使用sse替代的一些优势，如果是替代http轮询很明显不需要前端再发请求了，会节省下处理前端请求的资源；如果是替代websocket，http1的sse还不能完全替代websocket，但是http2的完全可以，<br>http2的多路复用完美的解决了建立新连接带来的巨大性能消耗，基本上两者都是同一连接上的全双工通信。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://github.com/mengboy/sse-demo">http1 sse demo</a></li><li><a href="https://github.com/kaitmore/sse-envoy">http2 sse demo</a></li><li><a href="https://developer.mozilla.org/zh-CN/docs/Server-sent_events/Using_server-sent_events#%E4%BA%8B%E4%BB%B6%E6%B5%81%E6%A0%BC%E5%BC%8F">sse MDN</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>http</category>
+      
+      <category>go</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>sse</tag>
+      
+      <tag>http1.x</tag>
+      
+      <tag>http2.0</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2020/09/11/hello-world/"/>
     <url>/2020/09/11/hello-world/</url>

@@ -176,6 +176,59 @@
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
+        <a href="/2020/09/12/sse/">sse(serve send events) 服务端推送技术</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/12/sse/">
+          
+          
+            
+          
+          什么是ssesse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&gt;应答的模式，一次request–&gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。sse 连接的
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-12 22:58" pubdate>
+              2020-09-12
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/http/">http</a>
+            
+              <a href="/categories/http/go/">go</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/sse/">sse</a>
+            
+              <a href="/tags/http1-x/">http1.x</a>
+            
+              <a href="/tags/http2-0/">http2.0</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         <a href="/2020/09/11/hello-world/">Hello World</a>
       </h1>
 
@@ -302,7 +355,7 @@ Quick
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "An elegant Material-Design theme for Hexo&nbsp;",
+        "Just Notes&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
