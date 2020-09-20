@@ -1,0 +1,805 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  <title>websocket引入epoll机制 - mengboy</title>
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css" />
+    
+  
+
+  
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_pf9vaxs7x7b.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>Mengboy</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner intro-2" id="background" parallax=true
+         style="background: url('/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container page-header text-center fade-in-up">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-09-15 20:02" pubdate>
+        2020年9月15日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      31
+       分钟
+    </span>
+  
+
+  
+  
+    
+      <!-- 不蒜子统计文章PV -->
+      <span id="busuanzi_container_page_pv" style="display: none">
+        <i class="iconfont icon-eye" aria-hidden="true"></i>
+        <span id="busuanzi_value_page_pv"></span> 次
+      </span>
+    
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">websocket引入epoll机制</h1>
+            
+              <p class="note note-info">
+                
+                  本文最后更新于：2020年9月20日 中午
+                
+              </p>
+            
+            <div class="markdown-body" id="post-body">
+              <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。<br>使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。<br><img src="/images/websocket-epoll/websocket-epoll.png" srcset="/img/loading.gif"></p>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>具体<a target="_blank" rel="noopener" href="https://github.com/mengboy/1m-go-websockets">github demo源码</a> ，参考<a target="_blank" rel="noopener" href="https://github.com/eranyanay/1m-go-websockets">1m-go-websockets</a> ，原仓库只有linux下的实现，因为平时主要使用mac开发所以参考Linux的实现增加了mac下的实现。<br>demo中用到了两种websocket框架，分别是<a href="github.com/gorilla/websocket">gorilla/websocket</a> 和 <a href="github.com/gobwas/ws">gobwas/ws</a>。实际应用中发现了一个问题，因为平时主要使用gorilla/websocket，并且它的start数也远超gobwas/ws，所以在引入epoll时首选还是gorilla/websocket，然后开发调试过程中客户端一开始并发发msg给服务端，服务端就会有消息漏掉没处理的情况。<br>举个例子，客户端多个消息并发通知到服务端，客户端发第三次消息了，服务端才可能处理第二次消息。很明显并不是每次消息都触发了epoll的回调事件，这里epoll使用的水平触发，根据水平触发的定义：当被监控的文件描述符上有可读写事件发生时，就会一直触发epoll回调，这里没有触发说明文件描述上没有可读事件，基本上可以猜测epoll还没来的及通知时，fd对应的内容已经被读取完毕了。<br>理想中的触发流程：<br><img src="/images/websocket-epoll/expectflow.png" srcset="/img/loading.gif"><br>实际触发流程:<br><img src="/images/websocket-epoll/realflow.png" srcset="/img/loading.gif"><br>看到这里可能会有同学想问，既然msg2没有处理，那我们主动处理，不等epoll触发可不可以呢？我们看下gorilla/websocket读取消息的源码  </p>
+<pre><code class="hljs stata">	<span class="hljs-keyword">for</span> &#123;
+		connections, <span class="hljs-keyword">err</span> := epoller.Wait()
+		<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> != nil &#123;
+			<span class="hljs-keyword">log</span>.Printf(<span class="hljs-string">&quot;Failed to epoll wait %v&quot;</span>, <span class="hljs-keyword">err</span>)
+			<span class="hljs-keyword">continue</span>
+		&#125;
+		time.<span class="hljs-keyword">Sleep</span>(5)
+		<span class="hljs-keyword">for</span> _, conn := <span class="hljs-keyword">range</span> connections &#123;
+			<span class="hljs-keyword">if</span> conn == nil &#123;
+				<span class="hljs-keyword">break</span>
+			&#125;
+			_, msg, <span class="hljs-keyword">err</span> := conn.ReadMessage()
+			<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> != nil &#123;
+				<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> := epoller.Remove(conn); <span class="hljs-keyword">err</span> != nil &#123;
+					<span class="hljs-keyword">log</span>.Printf(<span class="hljs-string">&quot;Failed to remove %v&quot;</span>, <span class="hljs-keyword">err</span>)
+				&#125;
+				conn.<span class="hljs-keyword">Close</span>()
+			&#125; <span class="hljs-keyword">else</span> &#123;
+				<span class="hljs-keyword">log</span>.Printf(<span class="hljs-string">&quot;msg: %s&quot;</span>, <span class="hljs-built_in">string</span>(msg))
+			&#125;
+		&#125;
+	&#125;
+&#125;</code></pre>
+<p>从epoll wait拿到可读连接，到底下的读是一一对应的，我们如果想把conn 缓冲区处理完怎么办，只能接着循环 <em>conn.ReadMessage()</em> 但是这个函数并不会返回缓冲区是否处理完毕，当缓冲区和fd都没有东西读时它就被阻塞了，就是下面代码TODO部分无法实现，如果能够实现，epoll 就可以使用边沿触发的模式，理论上相比水平触发更高效。</p>
+<pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Start</span><span class="hljs-params">()</span></span> &#123;
+	<span class="hljs-keyword">for</span> &#123;
+		connections, err := epoller.Wait()
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;
+			log.Printf(<span class="hljs-string">&quot;Failed to epoll wait %v&quot;</span>, err)
+			<span class="hljs-keyword">continue</span>
+		&#125;
+		time.Sleep(<span class="hljs-number">5</span>)
+        wg := &amp;sync.WatiGroup&#123;&#125;
+		<span class="hljs-keyword">for</span> _, conn := <span class="hljs-keyword">range</span> connections &#123;
+			<span class="hljs-keyword">if</span> conn == <span class="hljs-literal">nil</span> &#123;
+				<span class="hljs-keyword">break</span>
+			&#125;
+            wg.Add(<span class="hljs-number">1</span>)
+			<span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> &#123;
+                <span class="hljs-keyword">defer</span> wg.done
+				<span class="hljs-keyword">for</span> &#123;
+					_, msg, err := conn.ReadMessage()
+					<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;
+						<span class="hljs-keyword">if</span> err := epoller.Remove(conn); err != <span class="hljs-literal">nil</span> &#123;
+							log.Printf(<span class="hljs-string">&quot;Failed to remove %v&quot;</span>, err)
+						&#125;
+						conn.Close()
+					&#125; <span class="hljs-keyword">else</span> &#123;
+						log.Printf(<span class="hljs-string">&quot;msg: %s&quot;</span>, <span class="hljs-keyword">string</span>(msg))
+					&#125;
+					<span class="hljs-comment">// TODO 没有内容可读时退出，等待下一次epoll触发</span>
+				&#125;
+			&#125;()
+		&#125;
+        wg.Wait()
+	&#125;
+&#125;</code></pre>
+<h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><p>为什么gorilla/websocket在这种场景下使用会有这种问题，而gobwas/ws没有？下面我们通过分析两者的读实现找下原因。</p>
+<h3 id="gorilla-websocket-读实现"><a href="#gorilla-websocket-读实现" class="headerlink" title="gorilla/websocket 读实现"></a>gorilla/websocket 读实现</h3><p>从 <em>conn.ReadMessage()</em> 点进去,可以看到这函数调了c.NextReader</p>
+<pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(c *Conn)</span> <span class="hljs-title">ReadMessage</span><span class="hljs-params">()</span> <span class="hljs-params">(messageType <span class="hljs-keyword">int</span>, p []<span class="hljs-keyword">byte</span>, err error)</span></span> &#123;
+	<span class="hljs-keyword">var</span> r io.Reader
+	messageType, r, err = c.NextReader()
+	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;
+		<span class="hljs-keyword">return</span> messageType, <span class="hljs-literal">nil</span>, err
+	&#125;
+	p, err = ioutil.ReadAll(r)
+	<span class="hljs-keyword">return</span> messageType, p, err
+&#125;</code></pre>
+<p>再点进c.NextReader可以看到实际返回要读的对象是messageReader  </p>
+<pre><code class="hljs swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(<span class="hljs-built_in">c</span> *Conn)</span></span> <span class="hljs-type">NextReader</span>() (messageType int, r io.<span class="hljs-type">Reader</span>, err error) &#123;
+	<span class="hljs-keyword">for</span> <span class="hljs-built_in">c</span>.readErr == <span class="hljs-literal">nil</span> &#123;
+		frameType, err := <span class="hljs-built_in">c</span>.advanceFrame()
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;
+			<span class="hljs-built_in">c</span>.readErr = hideTempErr(err)
+			<span class="hljs-keyword">break</span>
+		&#125;
+
+		<span class="hljs-keyword">if</span> frameType == <span class="hljs-type">TextMessage</span> || frameType == <span class="hljs-type">BinaryMessage</span> &#123;
+			<span class="hljs-built_in">c</span>.messageReader = &amp;messageReader&#123;<span class="hljs-built_in">c</span>&#125;
+			<span class="hljs-built_in">c</span>.reader = <span class="hljs-built_in">c</span>.messageReader
+			<span class="hljs-keyword">if</span> <span class="hljs-built_in">c</span>.readDecompress &#123;
+				<span class="hljs-built_in">c</span>.reader = <span class="hljs-built_in">c</span>.newDecompressionReader(<span class="hljs-built_in">c</span>.reader)
+			&#125;
+            <span class="hljs-comment">// 返回messageReader</span>
+			<span class="hljs-keyword">return</span> frameType, <span class="hljs-built_in">c</span>.reader, <span class="hljs-literal">nil</span>
+		&#125;
+	&#125;
+&#125;</code></pre>
+<p>接着看messageReader的实现, 通过看messageReader实现的Read方法发现，实际读取的内容来自c.br   </p>
+<pre><code class="hljs swift"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(r *messageReader)</span></span> <span class="hljs-type">Read</span>(b []byte) (int, error) &#123;
+	<span class="hljs-keyword">for</span> <span class="hljs-built_in">c</span>.readErr == <span class="hljs-literal">nil</span> &#123;
+		<span class="hljs-keyword">if</span> <span class="hljs-built_in">c</span>.readRemaining &gt; <span class="hljs-number">0</span> &#123;
+			<span class="hljs-keyword">if</span> int64(len(b)) &gt; <span class="hljs-built_in">c</span>.readRemaining &#123;
+				b = b[:<span class="hljs-built_in">c</span>.readRemaining]
+			&#125;
+            <span class="hljs-comment">// 实际从c.br读取的内容</span>
+			n, err := <span class="hljs-built_in">c</span>.br.<span class="hljs-type">Read</span>(b)
+			<span class="hljs-built_in">c</span>.readErr = hideTempErr(err)
+			<span class="hljs-keyword">if</span> <span class="hljs-built_in">c</span>.isServer &#123;
+				<span class="hljs-built_in">c</span>.readMaskPos = maskBytes(<span class="hljs-built_in">c</span>.readMaskKey, <span class="hljs-built_in">c</span>.readMaskPos, b[:n])
+			&#125;
+			rem := <span class="hljs-built_in">c</span>.readRemaining
+			rem -= int64(n)
+			<span class="hljs-built_in">c</span>.setReadRemaining(rem)
+			<span class="hljs-keyword">if</span> <span class="hljs-built_in">c</span>.readRemaining &gt; <span class="hljs-number">0</span> &amp;&amp; <span class="hljs-built_in">c</span>.readErr == io.<span class="hljs-type">EOF</span> &#123;
+				<span class="hljs-built_in">c</span>.readErr = errUnexpectedEOF
+			&#125;
+			<span class="hljs-keyword">return</span> n, <span class="hljs-built_in">c</span>.readErr
+		&#125;
+&#125;</code></pre>
+<p>c.br是go自身提供的缓冲读io的对象，看到这里已经很明朗了，就是这里在读的时候，把fd里要读的内容读到了本地缓冲区，导致上图msg2的时候epoll没有再次触发。</p>
+<pre><code class="hljs gauss"><span class="hljs-built_in">type</span> Conn <span class="hljs-keyword">struct</span> &#123;
+	conn        net.Conn
+	<span class="hljs-comment">// Read fields</span>
+	reader  io.ReadCloser <span class="hljs-comment">// the current reader returned to the application</span>
+	readErr <span class="hljs-built_in">error</span>
+	br      *bufio.Reader
+&#125;</code></pre>
+<p>上面还有一个用到比较多的函数 c.advanceFrame()，这个函数是用来处理每次要读多少字节的，因为websocket消息是一帧一帧的，读的时候也不能读多或者读少。</p>
+<h3 id="gobwas-ws读实现"><a href="#gobwas-ws读实现" class="headerlink" title="gobwas/ws读实现"></a>gobwas/ws读实现</h3><p>gobwas/ws 是用的utils包里的ReadClientData方法读取client发的消息的，最终是调的readData方法  </p>
+<pre><code class="hljs reasonml">func <span class="hljs-constructor">ReadClientData(<span class="hljs-params">rw</span> <span class="hljs-params">io</span>.ReadWriter)</span> (<span class="hljs-literal">[]</span>byte, ws.OpCode, error) &#123;
+	return <span class="hljs-constructor">ReadData(<span class="hljs-params">rw</span>, <span class="hljs-params">ws</span>.StateServerSide)</span>
+&#125;
+
+func <span class="hljs-constructor">ReadData(<span class="hljs-params">rw</span> <span class="hljs-params">io</span>.ReadWriter, <span class="hljs-params">s</span> <span class="hljs-params">ws</span>.State)</span> (<span class="hljs-literal">[]</span>byte, ws.OpCode, error) &#123;
+	return read<span class="hljs-constructor">Data(<span class="hljs-params">rw</span>, <span class="hljs-params">s</span>, <span class="hljs-params">ws</span>.OpText|<span class="hljs-params">ws</span>.OpBinary)</span>
+&#125;</code></pre>
+
+<p>readData具体实现,这里根据net.Conn连接创建了一个Reader</p>
+<pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">readData</span><span class="hljs-params">(rw io.ReadWriter, s ws.State, want ws.OpCode)</span> <span class="hljs-params">([]<span class="hljs-keyword">byte</span>, ws.OpCode, error)</span></span> &#123;
+	controlHandler := ControlFrameHandler(rw, s)
+    <span class="hljs-comment">// rw 就是 net.Conn</span>
+	rd := Reader&#123;
+		Source:          rw,
+		State:           s,
+		CheckUTF8:       <span class="hljs-literal">true</span>,
+		SkipHeaderCheck: <span class="hljs-literal">false</span>,
+		OnIntermediate:  controlHandler,
+	&#125;
+	<span class="hljs-keyword">for</span> &#123;
+		hdr, err := rd.NextFrame()
+		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;
+			<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, <span class="hljs-number">0</span>, err
+		&#125;
+		<span class="hljs-keyword">if</span> hdr.OpCode.IsControl() &#123;
+			<span class="hljs-keyword">if</span> err := controlHandler(hdr, &amp;rd); err != <span class="hljs-literal">nil</span> &#123;
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, <span class="hljs-number">0</span>, err
+			&#125;
+			<span class="hljs-keyword">continue</span>
+		&#125;
+		<span class="hljs-keyword">if</span> hdr.OpCode&amp;want == <span class="hljs-number">0</span> &#123;
+			<span class="hljs-keyword">if</span> err := rd.Discard(); err != <span class="hljs-literal">nil</span> &#123;
+				<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, <span class="hljs-number">0</span>, err
+			&#125;
+			<span class="hljs-keyword">continue</span>
+		&#125;
+
+		bts, err := ioutil.ReadAll(&amp;rd)
+
+		<span class="hljs-keyword">return</span> bts, hdr.OpCode, err
+	&#125;
+&#125;</code></pre>
+
+<p>Reader 结构， 可以看到这个是gobwas/ws自己实现的一个无buf Reader</p>
+<pre><code class="hljs elm"><span class="hljs-keyword">type</span> <span class="hljs-type">Reader</span> struct &#123;
+	<span class="hljs-type">Source</span> io.<span class="hljs-type">Reader</span>
+	<span class="hljs-type">State</span>  ws.<span class="hljs-type">State</span>
+
+	// <span class="hljs-type">SkipHeaderCheck</span> disables checking header bits to be <span class="hljs-type">RFC6455</span> compliant.
+	<span class="hljs-type">SkipHeaderCheck</span> bool
+
+	// <span class="hljs-type">CheckUTF8</span> enables <span class="hljs-type">UTF</span>-8 checks for text frames payload. <span class="hljs-type">If</span> incoming
+	// bytes are not valid <span class="hljs-type">UTF</span>-8 sequence, <span class="hljs-type">ErrInvalidUTF8</span> returned.
+	<span class="hljs-type">CheckUTF8</span> bool
+
+	// <span class="hljs-type">TODO(gobwas)</span>: add max frame size limit here.
+
+	<span class="hljs-type">OnContinuation</span> <span class="hljs-type">FrameHandlerFunc</span>
+	<span class="hljs-type">OnIntermediate</span> <span class="hljs-type">FrameHandlerFunc</span>
+
+	opCode ws.<span class="hljs-type">OpCode</span>        // <span class="hljs-type">Used</span> to store message op code on fragmentation.
+	frame  io.<span class="hljs-type">Reader</span>        // <span class="hljs-type">Used</span> to as frame reader.
+	raw    io.<span class="hljs-type">LimitedReader</span> // <span class="hljs-type">Used</span> to discard frames without cipher.
+	utf8   <span class="hljs-type">UTF8Reader</span>       // <span class="hljs-type">Used</span> to check <span class="hljs-type">UTF8</span> sequences if <span class="hljs-type">CheckUTF8</span> is true.
+&#125;</code></pre>
+
+<p>具体怎么读，读多少字节是在rd.NextFrame()方法中实现的，这里可以看到gobwas/ws每次都是直接读net.Conn也就是fd，并且每次当前帧的内容，所以刚好对应上图理想中的触发流程。  </p>
+<pre><code class="hljs stata">func (r *Reader) NextFrame() (hdr ws.Header, <span class="hljs-keyword">err</span> <span class="hljs-keyword">error</span>) &#123;
+    <span class="hljs-comment">// 解析当前帧报文</span>
+	hdr, <span class="hljs-keyword">err</span> = ws.ReadHeader(r.Source)
+	<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> == io.EOF &amp;&amp; r.fragmented() &#123;
+		<span class="hljs-keyword">err</span> = io.ErrUnexpectedEOF
+	&#125;
+	<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> == nil &amp;&amp; !r.SkipHeaderCheck &#123;
+		<span class="hljs-keyword">err</span> = ws.CheckHeader(hdr, r.State)
+	&#125;
+	<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> != nil &#123;
+		<span class="hljs-keyword">return</span> hdr, <span class="hljs-keyword">err</span>
+	&#125;
+
+	<span class="hljs-comment">// 设置读取长度， 这里r.Source 就是net.Conn</span>
+	r.raw = io.LimitedReader&#123;r.Source, hdr.Length&#125;
+
+	frame := io.Reader(&amp;r.raw)
+	<span class="hljs-keyword">if</span> hdr.Masked &#123;
+		frame = NewCipherReader(frame, hdr.Mask)
+	&#125;
+	<span class="hljs-keyword">if</span> r.fragmented() &#123;
+		<span class="hljs-keyword">if</span> hdr.OpCode.IsControl() &#123;
+			<span class="hljs-keyword">if</span> cb := r.OnIntermediate; cb != nil &#123;
+				<span class="hljs-keyword">err</span> = cb(hdr, frame)
+			&#125;
+			<span class="hljs-keyword">if</span> <span class="hljs-keyword">err</span> == nil &#123;
+				<span class="hljs-comment">// Ensure that src is empty.</span>
+                <span class="hljs-comment">// 直接从net.Conn读取hdr.Length长度的内容</span>
+				_, <span class="hljs-keyword">err</span> = io.<span class="hljs-keyword">Copy</span>(ioutil.<span class="hljs-keyword">Discard</span>, &amp;r.raw)
+			&#125;
+			<span class="hljs-keyword">return</span>
+		&#125;
+	&#125; <span class="hljs-keyword">else</span> &#123;
+		r.opCode = hdr.OpCode
+	&#125;
+	<span class="hljs-keyword">if</span> r.CheckUTF8 &amp;&amp; (hdr.OpCode == ws.OpText || (r.fragmented() &amp;&amp; r.opCode == ws.OpText)) &#123;
+		r.utf8.Source = frame
+		frame = &amp;r.utf8
+	&#125;
+
+	<span class="hljs-comment">// Save reader with ciphering and other streaming checks.</span>
+	r.frame = frame
+
+	<span class="hljs-keyword">if</span> hdr.OpCode == ws.OpContinuation &#123;
+		<span class="hljs-keyword">if</span> cb := r.OnContinuation; cb != nil &#123;
+			<span class="hljs-keyword">err</span> = cb(hdr, frame)
+		&#125;
+	&#125;
+
+	<span class="hljs-keyword">if</span> hdr.Fin &#123;
+		r.State = r.State.<span class="hljs-keyword">Clear</span>(ws.StateFragmented)
+	&#125; <span class="hljs-keyword">else</span> &#123;
+		r.State = r.State.<span class="hljs-keyword">Set</span>(ws.StateFragmented)
+	&#125;
+
+	<span class="hljs-keyword">return</span>
+&#125;</code></pre>
+
+<h3 id="两种方式的读比较"><a href="#两种方式的读比较" class="headerlink" title="两种方式的读比较"></a>两种方式的读比较</h3><p>gorilla/websocket加了buf读的方式理论上比gobwas/ws性能更高，如果能提供个buf和fd已读完读返回就好了，这样就可以直接使用epoll边沿触发模式。如果实在想用gorilla/websocket，这里也有一个解决方案，就是客户端加一个ping的控制帧消息，gorilla/websocket在接收到ping/pong之类的控制帧消息时，不会把这些消息暴漏给用户处理，而是在内部自己处理，处理完之后会接着处理剩下的消息，直到处理的消息不是ping/pong为止，这样就可以使用ping控制型帧强制触发epoll事件，保证业务消息能够及时处理。</p>
+<h2 id="参考以及源码"><a href="#参考以及源码" class="headerlink" title="参考以及源码"></a>参考以及源码</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/mengboy/1m-go-websockets">1m-go-websockets</a></li>
+<li><a target="_blank" rel="noopener" href="https://colobu.com/2019/02/23/1m-go-tcp-connection/">百万 Go TCP 连接的思考: epoll方式减少资源占用</a></li>
+</ul>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a>
+                    
+                      <a class="hover-with-bg" href="/categories/go/">go</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/websocket/">websocket</a>
+                    
+                      <a class="hover-with-bg" href="/tags/epoll/">epoll</a>
+                    
+                      <a class="hover-with-bg" href="/tags/gorilla-websocket/">gorilla/websocket</a>
+                    
+                      <a class="hover-with-bg" href="/tags/gobwas-ws/">gobwas/ws</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/09/12/sse/">
+                        <span class="hidden-mobile">sse(serve send events) 服务端推送技术</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <article class="comments" id="comments">
+                
+                
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      function loadDisqus() {
+        addCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        addScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'vector',
+            apikey: 'jakdsjcdj123'
+          });
+        });
+      }
+      waitElementVisible('disqus_thread', loadDisqus);
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a target="_blank" href="https://disqus.com/?ref_noscript" rel="nofollow noopener noopener">comments powered by Disqus.</a>
+    </noscript>
+  </div>
+
+
+              </article>
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div id="tocbot"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+  </main>
+
+  
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
+
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener">
+        <span>Fluid</span></a>
+    </div>
+    
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+    
+
+    
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script  src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" ></script>
+<script  src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/main.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js" ></script>
+  <script  src="/js/clipboard-use.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+  <script  src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js" ></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
+
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '#post-body',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js" ></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "websocket引入epoll机制&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js" ></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
