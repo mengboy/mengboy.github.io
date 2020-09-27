@@ -176,6 +176,61 @@
     
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
+        <a href="/2020/09/27/gogetFD/">go 获取 net.conn fd 反射和非反射</a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2020/09/27/gogetFD/">
+          
+          
+            
+          
+          非反射获取根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。
+func getFD(conn net.Conn) int &#123;
+	tln := conn.(*net.TCPConn)
+	f, err := tln.File()
+	if e
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-09-27 22:27" pubdate>
+              2020-09-27
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-category"></i>
+            
+              <a href="/categories/go/">go</a>
+            
+              <a href="/categories/net/">net</a>
+            
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/go1-14-2/">go1.14.2</a>
+            
+              <a href="/tags/fd/">fd</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
         <a href="/2020/09/15/websocket-epoll/">websocket引入epoll机制</a>
       </h1>
 

@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>go 获取 net.conn fd 反射和非反射</title>
+    <link href="/2020/09/27/gogetFD/"/>
+    <url>/2020/09/27/gogetFD/</url>
+    
+    <content type="html"><![CDATA[<h2 id="非反射获取"><a href="#非反射获取" class="headerlink" title="非反射获取"></a>非反射获取</h2><p>根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。</p><pre><code class="hljs css"><span class="hljs-selector-tag">func</span> <span class="hljs-selector-tag">getFD</span>(<span class="hljs-selector-tag">conn</span> <span class="hljs-selector-tag">net</span><span class="hljs-selector-class">.Conn</span>) <span class="hljs-selector-tag">int</span> &#123;<span class="hljs-attribute">tln </span>:= conn.(*net.TCPConn)f, err := tln.<span class="hljs-built_in">File</span>()if err != nil&#123;return  -<span class="hljs-number">1</span>&#125;<span class="hljs-selector-tag">return</span> <span class="hljs-selector-tag">int</span>(<span class="hljs-selector-tag">f</span><span class="hljs-selector-class">.Fd</span>())&#125;</code></pre><h2 id="根据反射获取"><a href="#根据反射获取" class="headerlink" title="根据反射获取"></a>根据反射获取</h2><pre><code class="hljs css"><span class="hljs-selector-tag">func</span> <span class="hljs-selector-tag">getFDReflect</span>(<span class="hljs-selector-tag">conn</span> <span class="hljs-selector-tag">net</span><span class="hljs-selector-class">.Conn</span>) <span class="hljs-selector-tag">int</span> &#123;<span class="hljs-attribute">tcpConn </span>:= reflect.<span class="hljs-built_in">Indirect</span>(reflect.ValueOf(conn)).<span class="hljs-built_in">FieldByName</span>(<span class="hljs-string">&quot;conn&quot;</span>)fdVal := tcpConn.<span class="hljs-built_in">FieldByName</span>(<span class="hljs-string">&quot;fd&quot;</span>)pfdVal := reflect.<span class="hljs-built_in">Indirect</span>(fdVal).<span class="hljs-built_in">FieldByName</span>(<span class="hljs-string">&quot;pfd&quot;</span>)return <span class="hljs-built_in">int</span>(pfdVal.FieldByName(<span class="hljs-string">&quot;Sysfd&quot;</span>).<span class="hljs-built_in">Int</span>())&#125;</code></pre><h2 id="两种方式性能比较"><a href="#两种方式性能比较" class="headerlink" title="两种方式性能比较"></a>两种方式性能比较</h2><ul><li><p>非反射</p><pre><code class="hljs angelscript">func BenchmarkTest(b *testing.B)  &#123;b.ResetTimer()<span class="hljs-keyword">for</span> i:=<span class="hljs-number">0</span>; i &lt; b.N; i++&#123;getFD(conn)&#125;&#125;<span class="hljs-comment">// 结果</span>goos: darwingoarch: amd64pkg: github.com/mengboy/<span class="hljs-number">1</span>m-go-websockets/<span class="hljs-number">4</span>_optimize_gobwasBenchmarkTestBenchmarkTest<span class="hljs-number">-8</span>   <span class="hljs-number">14268442</span>        <span class="hljs-number">78.5</span> ns/opPASS</code></pre></li><li><p>反射</p><pre><code class="hljs angelscript">func BenchmarkReflect(b *testing.B)  &#123;b.ResetTimer()<span class="hljs-keyword">for</span> i:=<span class="hljs-number">0</span>; i &lt; b.N; i++&#123;getFDReflect(conn)&#125;&#125;<span class="hljs-comment">// 结果</span>goos: darwingoarch: amd64pkg: github.com/mengboy/<span class="hljs-number">1</span>m-go-websockets/<span class="hljs-number">4</span>_optimize_gobwasBenchmarkReflectBenchmarkReflect<span class="hljs-number">-8</span>    <span class="hljs-number">2645677</span>       <span class="hljs-number">457</span> ns/opPASS</code></pre></li></ul><p>可以看到反射比起非反射还是性能还是差了几个数量级, 上一篇文章中的fd获取方法可以考虑使用分反射方式。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>go</category>
+      
+      <category>net</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>go1.14.2</tag>
+      
+      <tag>fd</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>websocket引入epoll机制</title>
     <link href="/2020/09/15/websocket-epoll/"/>
     <url>/2020/09/15/websocket-epoll/</url>
