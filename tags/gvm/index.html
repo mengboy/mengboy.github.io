@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
-  <title>mengboy</title>
+  <title>标签 - gvm - mengboy</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css" />
 
@@ -43,7 +43,7 @@
 
 
 <body>
-  <header style="height: 100vh;">
+  <header style="height: 80vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -150,10 +150,6 @@
           </div>
 
           
-            <div class="scroll-down-bar">
-              <i class="iconfont icon-arrowdown"></i>
-            </div>
-          
         </div>
       </div>
     </div>
@@ -163,238 +159,27 @@
     
       <div class="container nopadding-md">
         <div class="py-5" id="board"
-          style=margin-top:0>
+          >
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-
-  <div class="row mx-auto index-card">
+<div class="list-group">
+  <p class="h4">共计 1 篇文章</p>
+  <hr>
+  
     
+      
+      <p class="h5">2020</p>
     
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/09/29/gvm/">造轮子——go 版本控制(gvm)</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/29/gvm/">
-          
-          
-            
-          
-          功能列表
-支持linux、darwin
-获取远程go版本列表 gvm remote
-安装指定版本go gvm install [version]
-列出本地已下载go gvm list
-切换go版本 gvm use [version]
-清理本地指定版本go gvm clear [version]
-
-获取远程go版本列表实现直接拉取go下载页面html源码，然后通过正则获取版本号
-res, err :
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-29 20:36" pubdate>
-              2020-09-29
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/go/">go</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/go/">go</a>
-            
-              <a href="/tags/gvm/">gvm</a>
-            
-              <a href="/tags/go-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">go 版本控制</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/09/27/gogetFD/">go 获取 net.conn fd 反射和非反射</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/27/gogetFD/">
-          
-          
-            
-          
-          非反射获取根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。
-func getFD(conn net.Conn) int &#123;
-	tln := conn.(*net.TCPConn)
-	f, err := tln.File()
-	if e
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-27 22:27" pubdate>
-              2020-09-27
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/go/">go</a>
-            
-              <a href="/categories/net/">net</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/go1-14-2/">go1.14.2</a>
-            
-              <a href="/tags/fd/">fd</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/09/15/websocket-epoll/">websocket引入epoll机制</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/15/websocket-epoll/">
-          
-          
-            
-          
-          原理正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutin
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-15 20:02" pubdate>
-              2020-09-15
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a>
-            
-              <a href="/categories/go/">go</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/websocket/">websocket</a>
-            
-              <a href="/tags/epoll/">epoll</a>
-            
-              <a href="/tags/gorilla-websocket/">gorilla/websocket</a>
-            
-              <a href="/tags/gobwas-ws/">gobwas/ws</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        <a href="/2020/09/12/sse/">sse(serve send events) 服务端推送技术</a>
-      </h1>
-
-      <p class="index-excerpt">
-        <a href="/2020/09/12/sse/">
-          
-          
-            
-          
-          什么是ssesse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&gt;应答的模式，一次request–&gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。sse 连接的
-        </a>
-      </p>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2020-09-12 22:58" pubdate>
-              2020-09-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-category"></i>
-            
-              <a href="/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/">网络协议</a>
-            
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/http1-x/">http1.x</a>
-            
-              <a href="/tags/http2-0/">http2.0</a>
-            
-              <a href="/tags/sse/">sse</a>
-            
-              <a href="/tags/go/">go</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-
+    <a href="/2020/09/29/gvm/" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">造轮子——go 版本控制(gvm)</span>
+      <time style="float: right;">09-29</time>
+    </a>
+  
+</div>
 
 
 
@@ -517,7 +302,7 @@ func getFD(conn net.Conn) int &#123;
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "Just Notes&nbsp;",
+        "标签 - gvm&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,
