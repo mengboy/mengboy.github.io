@@ -22,24 +22,24 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null,"activeClass":"disqus"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta name="description" content="安装直接使用brew install gdb 安装， 没有安装brew的需要先安装brew。 问题安装之后，使用过程中遇到这么一个错误: 1Unable to find Mach task port for process-id 33653: (os&#x2F;kern) failure (0x5). (please check gdb is codesigned - see taskgated(">
+  <meta name="description" content="好未来一面 自我介绍  最近做到项目 没细聊  redis 常用结构  redis 宕机恢复 aop rdb  连接池 获取句柄时并发控制  mysql 引擎 区别  索引结构 b树 b+树 二叉树  算法 求数组交集 复杂度   算法 链表 快慢指针  http code 码  常用orm框架  tcp udp  日志存储 elk  接口稳定性监控  sync map  GMP  垃圾回收  你">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macos gdb解决Unable to find Mach task port for process-id">
-<meta property="og:url" content="http://example.com/2020/10/26/macos-gdb-install/index.html">
+<meta property="og:title" content="2021年滴滴、腾讯视频、字节等面试记录">
+<meta property="og:url" content="http://example.com/2022/10/08/interview-2021/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="安装直接使用brew install gdb 安装， 没有安装brew的需要先安装brew。 问题安装之后，使用过程中遇到这么一个错误: 1Unable to find Mach task port for process-id 33653: (os&#x2F;kern) failure (0x5). (please check gdb is codesigned - see taskgated(">
+<meta property="og:description" content="好未来一面 自我介绍  最近做到项目 没细聊  redis 常用结构  redis 宕机恢复 aop rdb  连接池 获取句柄时并发控制  mysql 引擎 区别  索引结构 b树 b+树 二叉树  算法 求数组交集 复杂度   算法 链表 快慢指针  http code 码  常用orm框架  tcp udp  日志存储 elk  接口稳定性监控  sync map  GMP  垃圾回收  你">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/macosgdb/createcert.png">
-<meta property="article:published_time" content="2020-10-26T07:35:34.000Z">
-<meta property="article:modified_time" content="2020-10-26T08:27:07.010Z">
+<meta property="article:published_time" content="2022-10-08T12:44:52.000Z">
+<meta property="article:modified_time" content="2022-10-08T13:02:54.668Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="gdb">
-<meta property="article:tag" content="mac">
+<meta property="article:tag" content="滴滴">
+<meta property="article:tag" content="百度">
+<meta property="article:tag" content="腾讯视频">
+<meta property="article:tag" content="好未来">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/macosgdb/createcert.png">
 
 
-<link rel="canonical" href="http://example.com/2020/10/26/macos-gdb-install/">
+<link rel="canonical" href="http://example.com/2022/10/08/interview-2021/">
 
 
 <script class="page-configurations">
@@ -52,7 +52,7 @@
   };
 </script>
 
-  <title>macos gdb解决Unable to find Mach task port for process-id | Mengboy's Blog</title>
+  <title>2021年滴滴、腾讯视频、字节等面试记录 | Mengboy's Blog</title>
   
 
 
@@ -179,7 +179,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A5%BD%E6%9C%AA%E6%9D%A5"><span class="nav-number">1.</span> <span class="nav-text">好未来</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%9D%A2"><span class="nav-number">1.1.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E9%9D%A2"><span class="nav-number">1.2.</span> <span class="nav-text">二面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BE%E5%BA%A6"><span class="nav-number">2.</span> <span class="nav-text">百度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%9D%A2-1"><span class="nav-number">2.1.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E9%9D%A2-1"><span class="nav-number">2.2.</span> <span class="nav-text">二面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E9%9D%A2"><span class="nav-number">2.3.</span> <span class="nav-text">三面</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%B4%E6%BB%B4"><span class="nav-number">3.</span> <span class="nav-text">滴滴</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82"><span class="nav-number">4.</span> <span class="nav-text">字节</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -258,7 +258,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/10/26/macos-gdb-install/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/08/interview-2021/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/site/favicon.png">
@@ -271,7 +271,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          macos gdb解决Unable to find Mach task port for process-id
+          2021年滴滴、腾讯视频、字节等面试记录
         </h1>
 
         <div class="post-meta-container">
@@ -283,7 +283,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2020-10-26 15:35:34 / 修改时间：16:27:07" itemprop="dateCreated datePublished" datetime="2020-10-26T15:35:34+08:00">2020-10-26</time>
+      <time title="创建时间：2022-10-08 20:44:52 / 修改时间：21:02:54" itemprop="dateCreated datePublished" datetime="2022-10-08T20:44:52+08:00">2022-10-08</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -291,7 +291,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/gdb/" itemprop="url" rel="index"><span itemprop="name">gdb</span></a>
+          <a href="/categories/%E9%9D%A2%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">面试</span></a>
         </span>
     </span>
 
@@ -311,8 +311,8 @@
       </span>
       <span class="post-meta-item-text">Disqus：</span>
     
-    <a title="disqus" href="/2020/10/26/macos-gdb-install/#disqus_thread" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2020/10/26/macos-gdb-install/" itemprop="commentCount"></span>
+    <a title="disqus" href="/2022/10/08/interview-2021/#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2022/10/08/interview-2021/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -326,28 +326,157 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>直接使用<code>brew install gdb</code> 安装， 没有安装brew的需要先安装<a target="_blank" rel="noopener" href="https://brew.sh/">brew</a>。</p>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>安装之后，使用过程中遇到这么一个错误:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to find Mach task port for process-id 33653: (os&#x2F;kern) failure (0x5). (please check gdb is codesigned - see taskgated(8))</span><br></pre></td></tr></table></figure>
+        <h2 id="好未来"><a href="#好未来" class="headerlink" title="好未来"></a>好未来</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><ol>
+<li><p>自我介绍</p>
+</li>
+<li><p>最近做到项目 没细聊</p>
+</li>
+<li><p>redis 常用结构</p>
+</li>
+<li><p>redis 宕机恢复 aop rdb</p>
+</li>
+<li><p>连接池 获取句柄时并发控制</p>
+</li>
+<li><p>mysql 引擎 区别</p>
+</li>
+<li><p>索引结构 b树 b+树 二叉树</p>
+</li>
+<li><p>算法 求数组交集 复杂度 </p>
+</li>
+<li><p>算法 链表 快慢指针</p>
+</li>
+<li><p>http code 码</p>
+</li>
+<li><p>常用orm框架</p>
+</li>
+<li><p>tcp udp</p>
+</li>
+<li><p>日志存储 elk</p>
+</li>
+<li><p>接口稳定性监控</p>
+</li>
+<li><p>sync map</p>
+</li>
+<li><p>GMP</p>
+</li>
+<li><p>垃圾回收</p>
+</li>
+<li><p>你有什么想问的 问了下对面部门</p>
+</li>
+<li><p>期望薪资</p>
+</li>
+</ol>
 <a id="more"></a>
 
-<p>这是因为Darwin kernel的权限控制问题，gdb调试需要有启动一个新的进程，并且要有这个进程的权限。解决方式如下：</p>
+<h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><ol>
+<li>自我介绍</li>
+<li>项目介绍</li>
+<li>redis 相关<ul>
+<li>分布式锁</li>
+<li>分布式可用性如何保证</li>
+</ul>
+</li>
+<li>mysql<ul>
+<li>引擎</li>
+<li>b+树</li>
+<li>索引左前缀原则 原理</li>
+</ul>
+</li>
+<li>grpc 相比http优越性 grpc-gateway</li>
+<li>gin  路由 中间件</li>
+<li>链表交叉点</li>
+<li>文本单词数量统计 最多的前几个</li>
+<li>channel</li>
+<li>GMP</li>
+</ol>
+<h2 id="百度"><a href="#百度" class="headerlink" title="百度"></a>百度</h2><h3 id="一面-1"><a href="#一面-1" class="headerlink" title="一面"></a>一面</h3><ol>
+<li><p>自我介绍</p>
+</li>
+<li><p>项目介绍</p>
 <ul>
-<li><p>创建根证书<br>打开钥匙串访问-证书助力-创建证书，创建一个代码签名的自签名根证书例如：gdb-cert。<br><img src="/images/macosgdb/createcert.png"><br>执行 <code>security find-certificate -c gdb-cert</code> 查看创建的证书，创建成功的话输出如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">keychain: &quot;&#x2F;Users&#x2F;vector&#x2F;Library&#x2F;Keychains&#x2F;login.keychain-db&quot;</span><br><span class="line">version: 512</span><br><span class="line">class: 0x80001000</span><br><span class="line">attributes:</span><br><span class="line">    &quot;alis&quot;&lt;blob&gt;&#x3D;&quot;xxxx&quot;</span><br><span class="line">    &quot;cenc&quot;&lt;uint32&gt;&#x3D;0x00000003</span><br><span class="line">    &quot;ctyp&quot;&lt;uint32&gt;&#x3D;0x00000001</span><br><span class="line">[...]</span><br></pre></td></tr></table></figure>
-<p>确保证书没有过期 <code>security find-certificate -p -c gdb-cert | openssl x509 -checkend 0</code></p>
-</li>
-<li><p>添加证书信任<br>创建gdb-entitlement.xml,添加以下内容 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC &quot;-&#x2F;&#x2F;Apple&#x2F;&#x2F;DTD PLIST 1.0&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;www.apple.com&#x2F;DTDs&#x2F;PropertyList-1.0.dtd&quot;&gt;</span><br><span class="line">&lt;plist version&#x3D;&quot;1.0&quot;&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.allow-jit&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.allow-unsigned-executable-memory&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.allow-dyld-environment-variables&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.disable-library-validation&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.disable-executable-page-protection&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.debugger&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.get-task-allow&lt;&#x2F;key&gt;</span><br><span class="line">    &lt;true&#x2F;&gt;</span><br><span class="line">&lt;&#x2F;dict&gt;</span><br><span class="line">&lt;&#x2F;plist&gt;</span><br><span class="line">&lt;&#x2F;pre&gt;</span><br></pre></td></tr></table></figure>
-<p>执行<code>codesign --entitlements gdb-entitlement.xml -fs gdb-cert $(which gdb)</code>。<br>执行<code>codesign -vv $(which gdb)</code>查看是否添加成功，输出如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> $: codesign -vv $(which gdb)</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;gdb: valid on disk</span><br><span class="line">&#x2F;usr&#x2F;local&#x2F;bin&#x2F;gdb: satisfies its Designated Requirement</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>刷新系统证书和codesign数据<br>执行<code>sudo killall taskgated</code>，重新运行gdb调试，没有再报错。</p>
-</li>
+<li>大秒 channel 使用</li>
+<li>秒杀 异步缓存</li>
+<li>长链接 epoll</li>
 </ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://sourceware.org/gdb/wiki/PermissionsDarwin">gdb wiki PermissionsDarwin</a></li>
+</li>
+<li><p>三数求和</p>
+<h3 id="二面-1"><a href="#二面-1" class="headerlink" title="二面"></a>二面</h3></li>
+<li><p>自我介绍</p>
+</li>
+<li><p>项目介绍 中间穿插一些go基础知识</p>
+<ul>
+<li>token 加签</li>
+<li>channel 使用场景</li>
+<li>GMP 和线程相比为什么更轻量</li>
+<li>map 如何有序</li>
+<li>切片  </li>
 </ul>
+</li>
+<li><p>redis</p>
+<ul>
+<li>sortset 跳表为啥不用b+树</li>
+</ul>
+</li>
+<li><p>mysql</p>
+<ul>
+<li>b树b+树</li>
+<li>原子性如何保证的</li>
+<li>事务隔离级别 原子性如何保证 隔离性如何保证</li>
+<li>索引 触发条件</li>
+<li>explain 获取索引触发情况</li>
+<li>慢查询优化</li>
+</ul>
+</li>
+<li><p>设计题 获取朋友圈</p>
+</li>
+<li><p>查询旋转数组</p>
+</li>
+<li><p>有什么想问的</p>
+</li>
+<li><p>你对我们这个部门有什么理解</p>
+</li>
+</ol>
+<h3 id="三面"><a href="#三面" class="headerlink" title="三面"></a>三面</h3><ul>
+<li>聊项目</li>
+<li>项目中遇到的问题怎么解决</li>
+<li>和产品遇到分歧怎么办</li>
+<li>个人发展</li>
+</ul>
+<h2 id="滴滴"><a href="#滴滴" class="headerlink" title="滴滴"></a>滴滴</h2><ol>
+<li>go<ul>
+<li>go 调度 goroutine是被阻塞到重新运行过程</li>
+<li>go map</li>
+<li>内存模型</li>
+<li>channel</li>
+<li>垃圾回收</li>
+<li>内存逃逸 返回指针会不会发生内存逃逸</li>
+<li>interface 底层结构</li>
+<li>goroutine 泄露 如何排查 常见到goroutine泄露 如何避免</li>
+</ul>
+</li>
+<li>mysql<ul>
+<li>隔离级别 如何实现的</li>
+<li>mvcc 原理</li>
+<li>索引 b+树 b+树如何分裂</li>
+<li>聚集索引 非聚集索引</li>
+<li>索引创建原则</li>
+<li>联合索引触发原则</li>
+<li>分库分表原则</li>
+</ul>
+</li>
+<li>redis<ul>
+<li>哨兵 主从</li>
+<li>持久化</li>
+<li>支持数据类型</li>
+<li>字符串 sds 实现原理 如何扩容</li>
+<li>zsed底层数据结构 为什么</li>
+<li>通过aop rdb 恢复过程， 会不会阻塞主线程</li>
+</ul>
+</li>
+<li>聊项目</li>
+<li>你有什么想问了</li>
+</ol>
+<h2 id="字节"><a href="#字节" class="headerlink" title="字节"></a>字节</h2><p>1.自我介绍<br>2.项目<br>3. redis<br>    - 常用数据结构<br>    - 字符串实现 为什么<br>    - zset 底层实现 跳表 压缩列表 分别什么情况下采取什么结构 实际应用<br>    - 分布式锁 获取锁、删除锁的lua脚本 为什么不用 setnx setex<br>    - hashmap 扩容 写时复制 长期没被访问的key如何处理<br>4. mysql<br>    - 执行一次查询经历了哪些部分<br>    - 优化器的做了什么<br>    - 如何选择较优索引<br>    - 单条sql查询时间过长 不涉及事务 如何排查<br>    - 分页查询第一页和最后一页性能有没有差异<br>    - b树 b+树 二叉树<br>5. go<br>    - map 为何输出是乱序的<br>6. 缓存穿透<br>7. 缓存击穿<br>8. http 502 504 499<br>9. 接口响应时间过长 如何排查<br>10. 下一个较大排列<br>11. 概率题</p>
 
     </div>
 
@@ -357,22 +486,21 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/gdb/" rel="tag"># gdb</a>
-              <a href="/tags/mac/" rel="tag"># mac</a>
+              <a href="/tags/%E6%BB%B4%E6%BB%B4/" rel="tag"># 滴滴</a>
+              <a href="/tags/%E7%99%BE%E5%BA%A6/" rel="tag"># 百度</a>
+              <a href="/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/" rel="tag"># 腾讯视频</a>
+              <a href="/tags/%E5%A5%BD%E6%9C%AA%E6%9D%A5/" rel="tag"># 好未来</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/09/29/gvm/" rel="prev" title="造轮子——go 版本控制(gvm)">
-                  <i class="fa fa-chevron-left"></i> 造轮子——go 版本控制(gvm)
+                <a href="/2020/11/18/mac-use/" rel="prev" title="MacOS 使用笔记">
+                  <i class="fa fa-chevron-left"></i> MacOS 使用笔记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/10/27/go-start-up/" rel="next" title="Go启动main函数都干了什么(一)">
-                  Go启动main函数都干了什么(一) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -506,9 +634,9 @@
 </script>
 <script>
   var disqus_config = function() {
-    this.page.url = "http://example.com/2020/10/26/macos-gdb-install/";
-    this.page.identifier = "2020/10/26/macos-gdb-install/";
-    this.page.title = "macos gdb解决Unable to find Mach task port for process-id";
+    this.page.url = "http://example.com/2022/10/08/interview-2021/";
+    this.page.identifier = "2022/10/08/interview-2021/";
+    this.page.title = "2021年滴滴、腾讯视频、字节等面试记录";
     };
   NexT.utils.loadComments('#disqus_thread', () => {
     if (window.DISQUS) {
