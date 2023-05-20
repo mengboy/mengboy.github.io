@@ -21,15 +21,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.13.1","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"disqus","storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请哥子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的">
+    <meta name="description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过nginx流代理转发流量到trojan服务">
 <meta property="og:url" content="http://example.com/2023/05/20/nginx-stream-to-trojan/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请哥子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的">
+<meta property="og:description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-20T12:14:28.000Z">
-<meta property="article:modified_time" content="2023-05-20T13:10:50.296Z">
+<meta property="article:modified_time" content="2023-05-20T13:17:21.241Z">
 <meta property="article:author" content="mengboy">
 <meta property="article:tag" content="trojan">
 <meta property="article:tag" content="科学上网">
@@ -225,7 +225,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2023-05-20 20:14:28 / 修改时间：21:10:50" itemprop="dateCreated datePublished" datetime="2023-05-20T20:14:28+08:00">2023-05-20</time>
+      <time title="创建时间：2023-05-20 20:14:28 / 修改时间：21:17:21" itemprop="dateCreated datePublished" datetime="2023-05-20T20:14:28+08:00">2023-05-20</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -254,7 +254,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>上一篇<a target="_blank" rel="noopener" href="https://www.mfun.ink/2023/03/04/trojan-install/">文章</a>记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请哥子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。</p>
+        <p>上一篇<a target="_blank" rel="noopener" href="https://www.mfun.ink/2023/03/04/trojan-install/">文章</a>记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。</p>
 <span id="more"></span>  
 
 <p>首先，443端口要给nginx用，我们需要修改trojan-go服务的端口，修改配置文件<code>/etc/trojan/conf/server.json</code>的local_port字段随便改成一个未被使用的端口，比如这里改成8089。这里的配置文件路径以及下文中的都是上篇文章<a target="_blank" rel="noopener" href="https://www.mfun.ink/2023/03/04/trojan-install/">trojan-go 安装配置</a>中介绍的一键脚本默认安装的路径，如果不是使用的这个脚本可以根据自己安装部署时的配置文件路径进行更改。  </p>
@@ -269,7 +269,7 @@
 <p>如果是使用上一篇文章中的一键安装脚本部署安装的nginx会因为缺少了stream、stream_ssl_preread_module两个module启动失败，这时候我们需要重新编译安装nginx，加上这两个module。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">wget -nc --no-check-certificate http://nginx.org/download/nginx-1.18.0.tar.gz -P /usr/local/src</span><br><span class="line">wget -nc --no-check-certificate https://www.openssl.org/source/openssl-1.1.1g.tar.gz -P /usr/local/src</span><br><span class="line">cd /usr/local/src</span><br><span class="line">tar -zxvf nginx-1.18.0.tar.gz</span><br><span class="line">tar -zxvf openssl-1.1.1g.tar.gz</span><br><span class="line">cd nginx-1.18.0  </span><br><span class="line">./configure --prefix=/etc/nginx \</span><br><span class="line">        --with-http_ssl_module \</span><br><span class="line">        --with-http_gzip_static_module \</span><br><span class="line">        --with-http_stub_status_module \</span><br><span class="line">        --with-pcre \</span><br><span class="line">        --with-http_realip_module \</span><br><span class="line">        --with-http_flv_module \</span><br><span class="line">        --with-http_mp4_module \</span><br><span class="line">        --with-http_secure_link_module \</span><br><span class="line">        --with-http_v2_module \</span><br><span class="line">        --with-cc-opt=&#x27;-O3&#x27; \</span><br><span class="line">        --with-ld-opt=&quot;-ljemalloc&quot; \</span><br><span class="line">        --with-openssl=../openssl-1.1.1g \</span><br><span class="line">        --with-stream \</span><br><span class="line">        --with-stream_ssl_preread_module</span><br><span class="line">make &amp;&amp; make install        </span><br></pre></td></tr></table></figure>
 <p>安装完成后重启nginx就可以了。</p>
-<p>通过这种方式我们可以配置更多的https子域名对应不同的页面，而且统一都走443端口，也可以开启更多的trojan服务进程配置不同的域名，最为重要的是因为统一走的443端口，不会影响trojan在https上的伪装。</p>
+<p>通过这种方式我们可以配置多个https子域名对应不同的https服务，而且都统一走443端口，也可以开启更多的trojan服务进程对应不同的域名，最为重要的是因为统一走的443端口，不会影响trojan的https伪装。</p>
 
     </div>
 
