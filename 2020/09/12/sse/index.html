@@ -19,15 +19,15 @@
     <meta name="description" content="什么是ssesse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&gt;应答的模式，一次request–&gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sse(serve send events) 服务端推送技术">
-<meta property="og:url" content="http://example.com/2020/09/12/sse/index.html">
+<meta property="og:url" content="https://www.mfun.ink/2020/09/12/sse/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
 <meta property="og:description" content="什么是ssesse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&gt;应答的模式，一次request–&gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/images/sse/httpvssse.png">
-<meta property="og:image" content="http://example.com/images/sse/httpsseheader.png">
-<meta property="og:image" content="http://example.com/images/sse/sseeventstream.png">
-<meta property="og:image" content="http://example.com/images/sse/http1ssedemo.png">
-<meta property="og:image" content="http://example.com/images/sse/http2sse.png">
+<meta property="og:image" content="https://www.mfun.ink/images/sse/httpvssse.png">
+<meta property="og:image" content="https://www.mfun.ink/images/sse/httpsseheader.png">
+<meta property="og:image" content="https://www.mfun.ink/images/sse/sseeventstream.png">
+<meta property="og:image" content="https://www.mfun.ink/images/sse/http1ssedemo.png">
+<meta property="og:image" content="https://www.mfun.ink/images/sse/http2sse.png">
 <meta property="article:published_time" content="2020-09-12T14:58:30.000Z">
 <meta property="article:modified_time" content="2020-10-26T07:37:33.777Z">
 <meta property="article:author" content="mengboy">
@@ -36,7 +36,7 @@
 <meta property="article:tag" content="http2.0">
 <meta property="article:tag" content="sse">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/images/sse/httpvssse.png">
+<meta name="twitter:image" content="https://www.mfun.ink/images/sse/httpvssse.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -80,7 +80,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":"UA-67858929-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-67858929-1","gtag":"G-PPJ7YW67PL","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -90,6 +90,45 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-67858929-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -163,6 +202,18 @@
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
               </a>
             </li>
           
@@ -337,7 +388,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>sse(serve send events) 服务端推送技术</div>
-      <div>http://example.com/2020/09/12/sse/</div>
+      <div>https://www.mfun.ink/2020/09/12/sse/</div>
     </div>
     <div class="license-meta">
       

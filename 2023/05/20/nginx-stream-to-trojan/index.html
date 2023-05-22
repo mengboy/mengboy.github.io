@@ -19,7 +19,7 @@
     <meta name="description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="通过nginx流代理转发流量到trojan服务">
-<meta property="og:url" content="http://example.com/2023/05/20/nginx-stream-to-trojan/index.html">
+<meta property="og:url" content="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
 <meta property="og:description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的">
 <meta property="og:locale" content="zh_CN">
@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":"UA-67858929-1","gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":"UA-67858929-1","gtag":"G-PPJ7YW67PL","tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,6 +84,45 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+    <!-- Google Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', 'UA-67858929-1', 'auto');
+          ga('send', 'pageview');
+        });
+      }
+    </script>
+  
+
+  
+    <!-- Google gtag.js -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript('https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL', function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -157,6 +196,18 @@
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
               </a>
             </li>
           
@@ -267,10 +318,10 @@
             
               <div class="markdown-body">
                 
-                <p>上一篇<a target="_blank" rel="noopener" href="https://www.mfun.ink/2023/03/04/trojan-install/">文章</a>记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。</p>
+                <p>上一篇<a href="https://www.mfun.ink/2023/03/04/trojan-install/">文章</a>记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。</p>
 <span id="more"></span>  
 
-<p>首先，443端口要给nginx用，我们需要修改trojan-go服务的端口，修改配置文件<code>/etc/trojan/conf/server.json</code>的local_port字段随便改成一个未被使用的端口，比如这里改成8089。这里的配置文件路径以及下文中的都是上篇文章<a target="_blank" rel="noopener" href="https://www.mfun.ink/2023/03/04/trojan-install/">trojan-go 安装配置</a>中介绍的一键脚本默认安装的路径，如果不是使用的这个脚本可以根据自己安装部署时的配置文件路径进行更改。  </p>
+<p>首先，443端口要给nginx用，我们需要修改trojan-go服务的端口，修改配置文件<code>/etc/trojan/conf/server.json</code>的local_port字段随便改成一个未被使用的端口，比如这里改成8089。这里的配置文件路径以及下文中的都是上篇文章<a href="https://www.mfun.ink/2023/03/04/trojan-install/">trojan-go 安装配置</a>中介绍的一键脚本默认安装的路径，如果不是使用的这个脚本可以根据自己安装部署时的配置文件路径进行更改。  </p>
 <p>接下来修改nginx配置文件<code>/etc/nginx/conf/nginx.conf</code>，在配置文件下方添加stream流转发配置：  </p>
 <figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-section">stream</span> &#123;<br><br>    <span class="hljs-attribute">map</span> <span class="hljs-variable">$ssl_preread_server_name</span> <span class="hljs-variable">$name</span> &#123;<br>        json.xxx.<span class="hljs-attribute">com</span> json;<br>        <span class="hljs-attribute">default</span> trojan;<br>    &#125;<br><br>    <span class="hljs-section">upstream</span> json &#123;<br>        <span class="hljs-attribute">server</span> json.xxx.com:<span class="hljs-number">8088</span>;<br>    &#125;<br><br>    <span class="hljs-section">upstream</span> trojan &#123;<br>        <span class="hljs-attribute">server</span> xxx.com:<span class="hljs-number">8089</span>;<br>    &#125;<br><br>    <span class="hljs-section">server</span> &#123;<br>        <span class="hljs-attribute">listen</span> <span class="hljs-number">443</span>;<br>        <span class="hljs-attribute">proxy_connect_timeout</span> <span class="hljs-number">5s</span>;<br>        <span class="hljs-attribute">proxy_timeout</span> <span class="hljs-number">20s</span>;<br>        <span class="hljs-attribute">proxy_pass</span> <span class="hljs-variable">$name</span>;<br>	    <span class="hljs-attribute">ssl_preread</span> <span class="hljs-literal">on</span>;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 <p>这样就把来自 <a target="_blank" rel="noopener" href="https://json.xxx.com/">https://json.xxx.com</a> 的流量转发到了 json.xxx.com:8088 上，把其他域名的443端口的流量转发给了trojan服务。这个配置就是指trojan在8089端口启动了服务，那我们的 json.xxx.com 在8088端口上也要开启服务，这是标准的http web页面直接在nginx http下添加配置即可。</p>
@@ -333,7 +384,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>通过nginx流代理转发流量到trojan服务</div>
-      <div>http://example.com/2023/05/20/nginx-stream-to-trojan/</div>
+      <div>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</div>
     </div>
     <div class="license-meta">
       
