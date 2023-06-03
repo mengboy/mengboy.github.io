@@ -24,7 +24,7 @@
 <meta property="og:description" content="分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-06-03T13:10:31.000Z">
-<meta property="article:modified_time" content="2023-06-03T14:36:25.197Z">
+<meta property="article:modified_time" content="2023-06-03T14:41:35.908Z">
 <meta property="article:author" content="mengboy">
 <meta property="article:tag" content="redis分布式锁">
 <meta name="twitter:card" content="summary_large_image">
@@ -333,7 +333,7 @@
 <ul>
 <li><p>加锁脚本</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> redis.call(<span class="hljs-string">&#x27;setnx&#x27;</span>, KEYS[<span class="hljs-number">1</span>], ARGV[<span class="hljs-number">1</span>]) == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> redis.call(<span class="hljs-string">&#x27;expire&#x27;</span>, KEYS[<span class="hljs-number">1</span>], ARGV[<span class="hljs-number">2</span>]) <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-<p>这个脚本会尝试给指定的key加锁。如果加锁成功，返回1；如果key已经存在，加锁失败，返回0。<code>PX</code>指的是毫秒级别的key过期时间，换成<code>EX</code>则是秒级时间，可以根据需要使用。这里为什么要加过期时间，可不可以只使用  <code>SETNX</code>？为了防止释放锁脚本执行失败，加上过期时间可以当锁释放失败的时候，等锁自动过期不影响下次获取锁，防止死锁。过期时间长短根据锁期间的业务逻辑执行时间来确定，比这个时间稍长。<br>上面lua加锁脚本用起来还是比较繁琐的，实际上redis 2.6.12版本支持set命令设置nx、ex参数，我们可以直接用set命令完成加锁<code>set [key] [val] px [expire_val] nx</code>，更加简洁。</p>
+<p>这个脚本会尝试给指定的key加锁。如果加锁成功，返回1；如果key已经存在，加锁失败，返回0。<code>PX</code>指的是毫秒级别的key过期时间，换成<code>EX</code>则是秒级时间，可以根据需要使用。这里为什么要加过期时间，可不可以只使用  <code>SETNX</code>？为了防止释放锁脚本执行失败，加上过期时间可以当锁释放失败的时候，等锁自动过期不影响下次获取锁，防止死锁。过期时间长短根据锁期间的业务逻辑执行时间来确定，比这个时间稍长。<br>上面lua加锁脚本用起来还是比较繁琐的，实际上redis 2.6.12版本支持set命令设置nx、ex参数，我们可以直接用set命令完成加锁<code>set [key] [val] px [expire_val] nx</code>，更加简洁方便。</p>
 </li>
 <li><p>释放锁脚本</p>
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> redis.call(<span class="hljs-string">&quot;get&quot;</span>, KEYS[<span class="hljs-number">1</span>]) == ARGV[<span class="hljs-number">1</span>] <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> redis.call(<span class="hljs-string">&quot;del&quot;</span>, KEYS[<span class="hljs-number">1</span>]) <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
