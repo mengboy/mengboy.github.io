@@ -16,24 +16,41 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。">
+    <meta name="description" content="分享一下几个使用vps挂机赚钱的方案，楼主把基于docker就可以实现的都实操了下，其他一些用不了docker的简单列下仅供参考。只实操支持docker的主要是因为简单方便，注册下账号，机器上一个docker指令令跑起就可以了。这种挂机只能稍微回点血，想要盈利的可以绕开了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="redis分布式锁">
-<meta property="og:url" content="https://www.mfun.ink/2023/06/03/redis-lua-lock/index.html">
+<meta property="og:title" content="闲置vps挂机赚钱回血">
+<meta property="og:url" content="https://www.mfun.ink/2023/07/02/vps-make-money/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。">
+<meta property="og:description" content="分享一下几个使用vps挂机赚钱的方案，楼主把基于docker就可以实现的都实操了下，其他一些用不了docker的简单列下仅供参考。只实操支持docker的主要是因为简单方便，注册下账号，机器上一个docker指令令跑起就可以了。这种挂机只能稍微回点血，想要盈利的可以绕开了。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-06-03T13:10:31.000Z">
-<meta property="article:modified_time" content="2023-06-03T14:41:35.908Z">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/traffmonetizer.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/proxyrack-device.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/proxyrack-earn.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/oneptp-ad-link.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/otohits-app.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/otohits-add-site.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/otohits-add-site.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/otohits-set-point.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/otohits-shop.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/feelingsurf-earn.png">
+<meta property="og:image" content="https://www.mfun.ink/images/vpsmakemoney/feelingsurf-site.png">
+<meta property="article:published_time" content="2023-07-02T08:17:11.000Z">
+<meta property="article:modified_time" content="2023-07-02T09:57:08.434Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="redis分布式锁">
+<meta property="article:tag" content="vps网赚">
+<meta property="article:tag" content="oneptp">
+<meta property="article:tag" content="otohits">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="traffmonetizer">
+<meta property="article:tag" content="proxyrack">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.mfun.ink/images/vpsmakemoney/traffmonetizer.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>redis分布式锁 - Mengboy&#39;s Blog</title>
+  <title>闲置vps挂机赚钱回血 - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -250,7 +267,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="redis分布式锁"></span>
+            <span id="subtitle" data-typed-text="闲置vps挂机赚钱回血"></span>
           
         </div>
 
@@ -261,8 +278,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-03 21:10" pubdate>
-          2023年6月3日 晚上
+        <time datetime="2023-07-02 16:17" pubdate>
+          2023年7月2日 下午
         </time>
       </span>
     
@@ -273,7 +290,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.1k 字
+          1.7k 字
         
       </span>
     
@@ -284,7 +301,7 @@
         
         
         
-          26 分钟
+          15 分钟
         
       </span>
     
@@ -322,27 +339,62 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">redis分布式锁</h1>
+            <h1 style="display: none">闲置vps挂机赚钱回血</h1>
             
             
               <div class="markdown-body">
                 
-                <p>分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。</p>
-<span id="more"></span>
-<p>以下是使用 Lua 脚本实现的 Redis 分布式锁示例，使用lua脚本是为了保证多个指令执行的原子性。</p>
-<ul>
-<li><p>加锁脚本</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> redis.call(<span class="hljs-string">&#x27;setnx&#x27;</span>, KEYS[<span class="hljs-number">1</span>], ARGV[<span class="hljs-number">1</span>]) == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> redis.call(<span class="hljs-string">&#x27;expire&#x27;</span>, KEYS[<span class="hljs-number">1</span>], ARGV[<span class="hljs-number">2</span>]) <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-<p>这个脚本会尝试给指定的key加锁。如果加锁成功，返回1；如果key已经存在，加锁失败，返回0。<code>PX</code>指的是毫秒级别的key过期时间，换成<code>EX</code>则是秒级时间，可以根据需要使用。这里为什么要加过期时间，可不可以只使用  <code>SETNX</code>？为了防止释放锁脚本执行失败，加上过期时间可以当锁释放失败的时候，等锁自动过期不影响下次获取锁，防止死锁。过期时间长短根据锁期间的业务逻辑执行时间来确定，比这个时间稍长。<br>上面lua加锁脚本用起来还是比较繁琐的，实际上redis 2.6.12版本支持set命令设置nx、ex参数，我们可以直接用set命令完成加锁<code>set [key] [val] px [expire_val] nx</code>，更加简洁方便。</p>
+                <p>分享一下几个使用vps挂机赚钱的方案，楼主把基于docker就可以实现的都实操了下，其他一些用不了docker的简单列下仅供参考。只实操支持docker的主要是因为简单方便，注册下账号，机器上一个docker指令令跑起就可以了。这种挂机只能稍微回点血，想要盈利的可以绕开了。</p>
+<span id="more"></span>  
+
+<h3 id="流量挂机"><a href="#流量挂机" class="headerlink" title="流量挂机"></a>流量挂机</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://traffmonetizer.com/?aff=1325625">traffmonetizer</a><br>这是一款欧洲爱沙尼亚的流量挂机项目，10刀提现（Paypal、BTC、Payoneer），<a target="_blank" rel="noopener" href="https://traffmonetizer.com/?aff=1325625">注册</a>送5刀，支持Windows、Mac OS、安卓、docker，国内ip基本无收益。以下是安装指令，把<strong>your_token_here</strong>替换成下面截图中Your application token下的那串字符串。其他操作系统在截图中Download apps里下载相应app就行。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker pull traffmonetizer/cli:latest<br>docker run -i --name tm traffmonetizer/cli start accept --token your_token_here<br></code></pre></td></tr></table></figure>
+<p><img src="/images/vpsmakemoney/traffmonetizer.png" srcset="/img/loading.gif" lazyload></p>
 </li>
-<li><p>释放锁脚本</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> redis.call(<span class="hljs-string">&quot;get&quot;</span>, KEYS[<span class="hljs-number">1</span>]) == ARGV[<span class="hljs-number">1</span>] <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> redis.call(<span class="hljs-string">&quot;del&quot;</span>, KEYS[<span class="hljs-number">1</span>]) <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-<p>这个脚本会尝试释放指定的key对应的锁。如果key不存在或者key对应的锁值与传入的锁值不匹配，释放锁失败，返回0；否则，释放锁成功，返回1。这里值不匹配说明锁已经被重新获取了。</p>
+<li><p><a target="_blank" rel="noopener" href="https://peer.proxyrack.com/ref/irfvgj1yx9at88rcsdnxrgls4rzuiogrmmhffijx">proxyrack</a></p>
 </li>
 </ul>
-<p>使用这两个脚本时，需要使用 Redis 的 EVAL 命令（或类似命令，如 evalsha）在 Redis 服务器上执行。另外，尽管使用 Lua 脚本可以提高分布式锁的可靠性，但在某些情况下（例如 Redis 主从切换）仍可能导致锁出现问题。在分布式系统中，除非必须，否则尽量避免使用分布式锁。</p>
+<p>另外一款流量挂机的项目，支持windows和docker，实际上支持docker就可以在Windows、Linux、Mac OS下跑了。<a target="_blank" rel="noopener" href="https://peer.proxyrack.com/ref/irfvgj1yx9at88rcsdnxrgls4rzuiogrmmhffijx">注册</a>后在机器上执行以下指令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker pull proxyrack/pop<br>docker run -d --name proxyrack --restart always proxyrack/pop<br>docker exec -it proxyrack cat uuid.cfg<br></code></pre></td></tr></table></figure>
+<p>执行成功后，最后一条指令会输出一个uuid，在proxyrack网站里选Devices，把uuid填到Device ID一栏，Friendly name可以随便填，然后点击Add Device按钮，这里可能会有个延迟，docker跑起来后一两分钟后proxyrack才能识别到，识别到后才能添加成功。<br><img src="/images/vpsmakemoney/proxyrack-device.png" srcset="/img/loading.gif" lazyload><br>下面跑了一天的数据，这里报表展示延迟有点严重，不像traffmonetizer那么实时，所以一开始没有数据也不用担心，只要上面Add Device成功就说明正常启动了。<br><img src="/images/vpsmakemoney/proxyrack-earn.png" srcset="/img/loading.gif" lazyload>  </p>
 <ul>
-<li>go 代码使用示例<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> (<br>	<span class="hljs-string">&quot;context&quot;</span><br>	<span class="hljs-string">&quot;fmt&quot;</span><br>	<span class="hljs-string">&quot;github.com/go-redis/redis/v8&quot;</span><br>	<span class="hljs-string">&quot;log&quot;</span><br>	<span class="hljs-string">&quot;time&quot;</span><br>)<br><br><span class="hljs-keyword">const</span> LockScript = <span class="hljs-string">`if redis.call(&#x27;setnx&#x27;, KEYS[1], ARGV[1]) == 1 then return redis.call(&#x27;expire&#x27;, KEYS[1], ARGV[2]) else return 0 end`</span><br><span class="hljs-keyword">const</span> unlockScript = <span class="hljs-string">`if redis.call(&quot;get&quot;, KEYS[1]) == ARGV[1] then return redis.call(&quot;del&quot;, KEYS[1]) else return 0 end`</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>	<span class="hljs-comment">// 初始化 Redis 客户端</span><br>	redisClient := redis.NewClient(&amp;redis.Options&#123;<br>		Addr: <span class="hljs-string">&quot;localhost:6379&quot;</span>,<br>	&#125;)<br>	<span class="hljs-comment">// 锁的 Key 和 Value</span><br>	lockKey := <span class="hljs-string">&quot;my_lock&quot;</span><br>	lockValue := <span class="hljs-string">&quot;unique_value&quot;</span><br>	lockExpire := <span class="hljs-number">5000</span> <span class="hljs-comment">// 锁的过期时间，单位：毫秒</span><br>	<span class="hljs-keyword">var</span> ctx = context.Background()<br>	<span class="hljs-keyword">defer</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> &#123;<br>		<span class="hljs-comment">// 尝试释放锁</span><br>		<span class="hljs-keyword">if</span> releaseLock(ctx, redisClient, lockKey, lockValue) &#123;<br>			fmt.Println(<span class="hljs-string">&quot;释放锁成功&quot;</span>)<br>			<span class="hljs-keyword">return</span><br>		&#125;<br>		fmt.Println(<span class="hljs-string">&quot;释放锁失败，可能已经过期或者被其他客户端获取&quot;</span>)<br>	&#125;()<br>	<span class="hljs-comment">// 尝试加锁</span><br>	<span class="hljs-keyword">if</span> acquireLock(ctx, redisClient, lockKey, lockValue, time.Duration(lockExpire)) &#123;<br>		fmt.Println(<span class="hljs-string">&quot;加锁成功，开始执行业务逻辑&quot;</span>)<br>		<span class="hljs-comment">// 模拟业务逻辑耗时</span><br>		time.Sleep(<span class="hljs-number">3</span> * time.Second)<br>		fmt.Println(<span class="hljs-string">&quot;业务逻辑处理完成，释放锁&quot;</span>)<br>		<span class="hljs-keyword">return</span><br>	&#125;<br>	fmt.Println(<span class="hljs-string">&quot;获取锁失败&quot;</span>)<br><br>&#125;<br><br><span class="hljs-comment">// acquireLockByScript 使用lua 脚本获取锁</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">acquireLockByScript</span><span class="hljs-params">(ctx context.Context, redisCli *redis.Client, lockKey, lockValue <span class="hljs-type">string</span>, lockExpire <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	res, err := redisCli.Eval(ctx, LockScript, []<span class="hljs-type">string</span>&#123;lockKey&#125;, lockValue, lockExpire).Int64()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		fmt.Println(<span class="hljs-string">&quot;ac err&quot;</span>, err)<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>	&#125;<br>	<span class="hljs-keyword">return</span> res == <span class="hljs-number">1</span><br>&#125;<br><br><span class="hljs-comment">// acquireLock 使用set ex nx 获取锁</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">acquireLock</span><span class="hljs-params">(ctx context.Context, redisCli *redis.Client, lockKey, lockValue <span class="hljs-type">string</span>, lockExpire time.Duration)</span></span> <span class="hljs-type">bool</span> &#123;<br>	ac, err := redisCli.SetNX(ctx, lockKey, lockValue, lockExpire*time.Millisecond).Result()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		fmt.Println(<span class="hljs-string">&quot;ac err&quot;</span>, err)<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>	&#125;<br>	<span class="hljs-keyword">return</span> ac<br>&#125;<br><br><span class="hljs-comment">// releaseLock 尝试释放分布式锁</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">releaseLock</span><span class="hljs-params">(ctx context.Context, redisCli *redis.Client, lockKey, lockValue <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	result, err := redisCli.Eval(ctx, unlockScript, []<span class="hljs-type">string</span>&#123;lockKey&#125;, lockValue).Int64()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		log.Fatalf(<span class="hljs-string">&quot;释放锁失败：%v&quot;</span>, err)<br>	&#125;<br>	<span class="hljs-keyword">return</span> result == <span class="hljs-number">1</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>其他流量挂机项目<br>下面这些基本都不支持机房ip需要家用带宽，仅供参考。<ul>
+<li><a target="_blank" rel="noopener" href="https://www.spider.com/income/learn-more">spider</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.honeygain.com/">honeygain</a></li>
+<li><a target="_blank" rel="noopener" href="https://earnapp.com/">earnapp</a></li>
+<li><a target="_blank" rel="noopener" href="https://packetstream.io/">packetstream</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="ptp-广告联盟点击"><a href="#ptp-广告联盟点击" class="headerlink" title="ptp 广告联盟点击"></a>ptp 广告联盟点击</h3><h4 id="广告联盟"><a href="#广告联盟" class="headerlink" title="广告联盟"></a>广告联盟</h4><ul>
+<li>注册广告联盟<a target="_blank" rel="noopener" href="http://cpm.oneptp.com/reg.php?u=509056">oneptp</a></li>
+<li>获取广告链接，这里可以获取多个链接<br><img src="/images/vpsmakemoney/oneptp-ad-link.png" srcset="/img/loading.gif" lazyload>  </li>
+<li>上面链接点击就有收益，一个IP最多点一次，多点不算，满0.01元即可提现到支付宝，微信、PayPal。那么该如何获取点击呢。下面介绍几个流量交换工具，通过这些工具去点，这里也只重点介绍支持docker部署的。</li>
+</ul>
+<h4 id="流量交换工具"><a href="#流量交换工具" class="headerlink" title="流量交换工具"></a>流量交换工具</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://www.otohits.net/?ref=321275">otohits</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.otohits.net/?ref=321275">注册账号</a></li>
+<li>进入Applications界面，点击docker，下面会出现docker指令，执行跑起来<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run -e APPLICATION_KEY=xxxxxxxx otohits/app:latest<br></code></pre></td></tr></table></figure>
+<img src="/images/vpsmakemoney/otohits-app.png" srcset="/img/loading.gif" lazyload></li>
+<li>docker 跑起来后可以在setting界面添加要看的广告类型，可以都勾选上<br><img src="/images/vpsmakemoney/otohits-add-site.png" srcset="/img/loading.gif" lazyload> </li>
+<li>在My site页面添加上面的广告链接，普通用户最多添加3个，想添加更多就要买了<br><img src="/images/vpsmakemoney/otohits-add-site.png" srcset="/img/loading.gif" lazyload></li>
+<li>添加完广告链接后，给每个链接分配点数，这些点数是一开始docker跑起来后otohits分配给你的广告播放完后获得的，otohits在发布你的广告链接时会消耗点数，这就是所谓的流量交换<br><img src="/images/vpsmakemoney/otohits-set-point.png" srcset="/img/loading.gif" lazyload></li>
+<li>一般配好三个链接后，点数是用不完的，剩下的点数可以换钱<br><img src="/images/vpsmakemoney/otohits-shop.png" srcset="/img/loading.gif" lazyload></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.feelingsurf.fr/r/76330">feelingsurf</a><ul>
+<li><a target="_blank" rel="noopener" href="https://www.feelingsurf.fr/r/76330">注册</a>账号</li>
+<li>在earn credit界面拿到access token<br><img src="/images/vpsmakemoney/feelingsurf-earn.png" srcset="/img/loading.gif" lazyload></li>
+<li>在服务上启动docker，XXXX换成你的access_token，运行成功后在earn credit界面可以看到运行情况<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">docker run -d -e access_token=XXXXXXXXXXXXXXXXXXXXXXXXXX --cap-add SYS_ADMIN feelingsurf/viewer:stable<br></code></pre></td></tr></table></figure></li>
+<li>在Website界面添加广告链接<br><img src="/images/vpsmakemoney/feelingsurf-site.png" srcset="/img/loading.gif" lazyload><br>feelingsurf不需要配置点数，会自动交换，获取的点数otohits没有多，目前看也仅够配置一个广告链接的。</li>
+</ul>
+</li>
+<li>其他<ul>
+<li><a target="_blank" rel="noopener" href="https://9hits.com/">9hits</a></li>
+<li><a target="_blank" rel="noopener" href="https://bighits4u.com/">bighits4u</a></li>
+</ul>
+</li>
 </ul>
 
                 
@@ -362,7 +414,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/redis/" class="category-chain-item">redis</a>
+  <a href="/categories/%E6%8C%82%E6%9C%BA%E7%BD%91%E8%B5%9A/" class="category-chain-item">挂机网赚</a>
   
   
 
@@ -377,7 +429,17 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">#redis分布式锁</a>
+        <a href="/tags/vps%E7%BD%91%E8%B5%9A/">#vps网赚</a>
+      
+        <a href="/tags/oneptp/">#oneptp</a>
+      
+        <a href="/tags/otohits/">#otohits</a>
+      
+        <a href="/tags/docker/">#docker</a>
+      
+        <a href="/tags/traffmonetizer/">#traffmonetizer</a>
+      
+        <a href="/tags/proxyrack/">#proxyrack</a>
       
     </div>
   
@@ -389,8 +451,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>redis分布式锁</div>
-      <div>https://www.mfun.ink/2023/06/03/redis-lua-lock/</div>
+      <div>闲置vps挂机赚钱回血</div>
+      <div>https://www.mfun.ink/2023/07/02/vps-make-money/</div>
     </div>
     <div class="license-meta">
       
@@ -402,7 +464,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月3日</div>
+          <div>2023年7月2日</div>
         </div>
       
       
@@ -434,18 +496,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/02/vps-make-money/" title="闲置vps挂机赚钱回血">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">闲置vps挂机赚钱回血</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/21/hexo-upgrade/" title="hexo版本升级">
-                        <span class="hidden-mobile">hexo版本升级</span>
+                      <a href="/2023/06/03/redis-lua-lock/" title="redis分布式锁">
+                        <span class="hidden-mobile">redis分布式锁</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -468,7 +524,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: 'ecf4fcb4cf7dfb4eb117882dd4652311'
+            id: '3204fb14c671dd838fdb50f57346f4ce'
           }
         )
         var gitalk = new Gitalk(options);
