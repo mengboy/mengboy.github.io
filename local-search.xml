@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>局域网下通过路由器虚拟服务访问子网</title>
+    <link href="/2023/07/30/lan-access-subnet/"/>
+    <url>/2023/07/30/lan-access-subnet/</url>
+    
+    <content type="html"><![CDATA[<p>最近在折腾nas，遇到一种情况需要访问子网，当前nas通过网线连的光猫，路由器连的光猫，pc笔记本电脑连的路由器。网络拓补图如下，现在想要nas中跑的docker服务访问到pc中的服务。<br><img src="/images/lan-access-subnet/net.png"> </p><span id="more"></span> <ul><li>nas和pc放到一个局域网<br>首先最简单的方法，把nas网线插到路由器上，让nas和pc处于同一个局域网下，然后直接通过ip访问pc中的服务，简单快速。但由于不可抗因素nas无法直接连到路由器上，所以这种方法pass掉。</li><li>光猫配置路由<br>接下来继续找可以访问子网的方法，看到网上说可以在光猫里配置路由，唉不错，赶紧登录光猫结果普通用户没有权限配置，需要管理员才能配置。又在网上找联通光猫如何管理员登录，挨个试了个遍连管理员登录界面都没找到，遂放弃继续想其他办法。</li><li>路由器配置虚拟服务器<br>既然光猫不可行那路由器可不可以呢，路由器下的子网没法直接访问但是路由器本身和nas是在一个局域网的。登录路由器发现一个虚拟服务器的配置，可以把外部ip+端口访问映射到内部服务ip+端口上。配上试试，完美运行。<br><img src="/images/lan-access-subnet/router-virtual.png"></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>network</category>
+      
+      <category>网络</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>网络</tag>
+      
+      <tag>局域网</tag>
+      
+      <tag>路由器虚拟服务器</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>xorm使用map kv更新日期时间类型字段的时区问题</title>
     <link href="/2023/07/29/xorm-update-time/"/>
     <url>/2023/07/29/xorm-update-time/</url>
