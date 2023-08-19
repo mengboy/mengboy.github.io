@@ -16,15 +16,15 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="非反射获取根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。 12345678func getFD(conn net.Conn) int &amp;#123;	tln :&#x3D; conn.(*net.TCPConn)	f, err :&#x3D; tln.File()">
+    <meta name="description" content="非反射获取根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="go 获取 net.conn fd 反射和非反射">
 <meta property="og:url" content="https://www.mfun.ink/2020/09/27/gogetFD/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="非反射获取根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。 12345678func getFD(conn net.Conn) int &amp;#123;	tln :&#x3D; conn.(*net.TCPConn)	f, err :&#x3D; tln.File()">
+<meta property="og:description" content="非反射获取根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-09-27T14:27:25.000Z">
-<meta property="article:modified_time" content="2020-10-02T06:10:01.078Z">
+<meta property="article:modified_time" content="2023-08-19T06:05:06.811Z">
 <meta property="article:author" content="mengboy">
 <meta property="article:tag" content="go1.14.2">
 <meta property="article:tag" content="fd">
@@ -304,9 +304,10 @@
               <div class="markdown-body">
                 
                 <h2 id="非反射获取"><a href="#非反射获取" class="headerlink" title="非反射获取"></a>非反射获取</h2><p>根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。</p>
+<span id="more"></span>
+
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">getFD</span><span class="hljs-params">(conn net.Conn)</span></span> <span class="hljs-type">int</span> &#123;<br>	tln := conn.(*net.TCPConn)<br>	f, err := tln.File()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span>&#123;<br>		<span class="hljs-keyword">return</span>  <span class="hljs-number">-1</span><br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-type">int</span>(f.Fd())<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<span id="more"></span>
 
 <h2 id="根据反射获取"><a href="#根据反射获取" class="headerlink" title="根据反射获取"></a>根据反射获取</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">getFDReflect</span><span class="hljs-params">(conn net.Conn)</span></span> <span class="hljs-type">int</span> &#123;<br>	tcpConn := reflect.Indirect(reflect.ValueOf(conn)).FieldByName(<span class="hljs-string">&quot;conn&quot;</span>)<br>	fdVal := tcpConn.FieldByName(<span class="hljs-string">&quot;fd&quot;</span>)<br>	pfdVal := reflect.Indirect(fdVal).FieldByName(<span class="hljs-string">&quot;pfd&quot;</span>)<br><br>	<span class="hljs-keyword">return</span> <span class="hljs-type">int</span>(pfdVal.FieldByName(<span class="hljs-string">&quot;Sysfd&quot;</span>).Int())<br>&#125;<br></code></pre></td></tr></table></figure>
 

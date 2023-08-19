@@ -259,7 +259,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/08/19/goroutine-leak/" target="_self">
         <div>
-          最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用select和time.After()实现超时控制，doSomething()一定会返回结果。 1234567891011121314sign := make(chan struct&#123;&#125;)go func() &#123;       doSomething()       sign &lt;- struct&
+          最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用select和time.After()实现超时控制，doSomething()一定会返回结果。
         </div>
       </a>
 
