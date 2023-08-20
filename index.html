@@ -62,7 +62,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -76,16 +76,14 @@
   
 
   
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async>
       if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-PPJ7YW67PL');
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', '[object Object]', 'auto');
+          ga('send', 'pageview');
         });
       }
     </script>
@@ -99,10 +97,13 @@
 
   
 
+  
+
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -188,6 +189,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -249,12 +262,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/08/20/curl-proxy-no-use/" target="_self">
           curl proxy设置无效问题排查
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/08/20/curl-proxy-no-use/" target="_self">
@@ -312,12 +325,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/08/19/goroutine-leak/" target="_self">
           无缓冲channel导致的goroutine泄露
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/08/19/goroutine-leak/" target="_self">
@@ -375,12 +388,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/07/30/lan-access-subnet/" target="_self">
           局域网下通过路由器虚拟服务访问子网
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/07/30/lan-access-subnet/" target="_self">
@@ -442,12 +455,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/07/29/xorm-update-time/" target="_self">
           xorm使用map kv更新日期时间类型字段的时区问题
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/07/29/xorm-update-time/" target="_self">
@@ -509,12 +522,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/06/03/redis-lua-lock/" target="_self">
           redis分布式锁
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/06/03/redis-lua-lock/" target="_self">
@@ -570,12 +583,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/05/21/hexo-upgrade/" target="_self">
           hexo版本升级
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/05/21/hexo-upgrade/" target="_self">
@@ -633,12 +646,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/05/20/nginx-stream-to-trojan/" target="_self">
           通过nginx流代理转发流量到trojan服务
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/05/20/nginx-stream-to-trojan/" target="_self">
@@ -700,12 +713,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2023/03/04/trojan-install/" target="_self">
           trojan-go 安装配置
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2023/03/04/trojan-install/" target="_self">
@@ -765,12 +778,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2022/10/16/vue3-study-init/" target="_self">
           Vue3学习笔记一.项目初始化
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/10/16/vue3-study-init/" target="_self">
@@ -830,12 +843,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2022/10/15/redis-current-limiter/" target="_self">
           基于redis实现一个简单的分布式限流器
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/10/15/redis-current-limiter/" target="_self">

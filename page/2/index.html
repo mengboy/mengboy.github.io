@@ -62,7 +62,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -76,16 +76,14 @@
   
 
   
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async>
       if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-PPJ7YW67PL');
+        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
+          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
+          ga.l = +new Date;
+          ga('create', '[object Object]', 'auto');
+          ga('send', 'pageview');
         });
       }
     </script>
@@ -99,10 +97,13 @@
 
   
 
+  
+
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -188,6 +189,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -249,12 +262,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2022/10/15/goroutine-limit/" target="_self">
           goroutine 并发数量限制
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/10/15/goroutine-limit/" target="_self">
@@ -314,12 +327,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2022/10/08/interview-2021/" target="_self">
           2021年滴滴、腾讯视频、字节等面试记录
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2022/10/08/interview-2021/" target="_self">
@@ -381,12 +394,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/11/18/mac-use/" target="_self">
           MacOS 使用笔记
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/11/18/mac-use/" target="_self">
@@ -450,12 +463,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/10/27/go-start-up/" target="_self">
           Go启动main函数都干了什么(一)
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/10/27/go-start-up/" target="_self">
@@ -517,12 +530,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/10/26/macos-gdb-install/" target="_self">
           macos gdb解决Unable to find Mach task port for process-id
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/10/26/macos-gdb-install/" target="_self">
@@ -580,12 +593,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/09/29/gvm/" target="_self">
           造轮子——go 版本控制(gvm)
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/09/29/gvm/" target="_self">
@@ -645,12 +658,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/09/27/gogetFD/" target="_self">
           go 获取 net.conn fd 反射和非反射
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/09/27/gogetFD/" target="_self">
@@ -710,12 +723,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/09/15/websocket-epoll/" target="_self">
           websocket引入epoll机制
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/09/15/websocket-epoll/" target="_self">
@@ -779,12 +792,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
+      <h1 class="index-header">
         
         <a href="/2020/09/12/sse/" target="_self">
           sse(serve send events) 服务端推送技术
         </a>
-      </h2>
+      </h1>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/2020/09/12/sse/" target="_self">

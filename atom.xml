@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mengboy&#39;s Blog</title>
+  <icon>https://www.mfun.ink/icon.png</icon>
+  
+  <link href="https://www.mfun.ink/atom.xml" rel="self"/>
+  
+  <link href="https://www.mfun.ink/"/>
+  <updated>2023-08-20T03:22:42.815Z</updated>
+  <id>https://www.mfun.ink/</id>
+  
+  <author>
+    <name>mengboy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>curl proxy设置无效问题排查</title>
+    <link href="https://www.mfun.ink/2023/08/20/curl-proxy-no-use/"/>
+    <id>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</id>
+    <published>2023-08-20T02:34:19.000Z</published>
+    <updated>2023-08-20T03:22:42.815Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="curl" scheme="https://www.mfun.ink/categories/curl/"/>
+    
+    
+    <category term="curl" scheme="https://www.mfun.ink/tags/curl/"/>
+    
+    <category term="curl proxy" scheme="https://www.mfun.ink/tags/curl-proxy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无缓冲channel导致的goroutine泄露</title>
+    <link href="https://www.mfun.ink/2023/08/19/goroutine-leak/"/>
+    <id>https://www.mfun.ink/2023/08/19/goroutine-leak/</id>
+    <published>2023-08-19T05:17:15.000Z</published>
+    <updated>2023-08-19T06:03:46.225Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用&lt;br&gt;select和time.After()实现超时控制，doSomething()一定会返回结果。  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="goroutine 泄露" scheme="https://www.mfun.ink/tags/goroutine-%E6%B3%84%E9%9C%B2/"/>
+    
+    <category term="go 超时控制" scheme="https://www.mfun.ink/tags/go-%E8%B6%85%E6%97%B6%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>局域网下通过路由器虚拟服务访问子网</title>
+    <link href="https://www.mfun.ink/2023/07/30/lan-access-subnet/"/>
+    <id>https://www.mfun.ink/2023/07/30/lan-access-subnet/</id>
+    <published>2023-07-30T09:16:29.000Z</published>
+    <updated>2023-07-30T09:48:05.430Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在折腾nas，遇到一种情况需要访问子网，当前nas通过网线连的光猫，路由器连的光猫，pc笔记本电脑连的路由器。网络拓补图如下，现在想要nas中跑的docker服务访问到pc中的服务。&lt;br&gt;&lt;img src=&quot;/images/lan-access-subnet/net.png&quot;&gt; &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="network" scheme="https://www.mfun.ink/categories/network/"/>
+    
+    <category term="网络" scheme="https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+    <category term="网络" scheme="https://www.mfun.ink/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="局域网" scheme="https://www.mfun.ink/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
+    
+    <category term="路由器虚拟服务器" scheme="https://www.mfun.ink/tags/%E8%B7%AF%E7%94%B1%E5%99%A8%E8%99%9A%E6%8B%9F%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>xorm使用map kv更新日期时间类型字段的时区问题</title>
+    <link href="https://www.mfun.ink/2023/07/29/xorm-update-time/"/>
+    <id>https://www.mfun.ink/2023/07/29/xorm-update-time/</id>
+    <published>2023-07-29T13:44:10.000Z</published>
+    <updated>2023-07-30T01:06:58.489Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs Go&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// demo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;type&lt;/span&gt; TimeTest &lt;span class=&quot;hljs-keyword&quot;&gt;struct&lt;/span&gt; &amp;#123;&lt;br&gt;	ID         &lt;span class=&quot;hljs-type&quot;&gt;int64&lt;/span&gt;     &lt;span class=&quot;hljs-string&quot;&gt;`xorm:&amp;quot;not null pk autoincr INT(11) &amp;#x27;id&amp;#x27;&amp;quot;`&lt;/span&gt;&lt;br&gt;	UpdateTime time.Time &lt;span class=&quot;hljs-string&quot;&gt;`xorm:&amp;quot;update_time&amp;quot;`&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;UpdateTime&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(o *xorm.Session)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;br&gt;	o.Table(&lt;span class=&quot;hljs-built_in&quot;&gt;new&lt;/span&gt;(TimeTest)).Where(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;id = ?&amp;quot;&lt;/span&gt;, &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;).Update(&amp;amp;TimeTest&amp;#123;&lt;br&gt;		UpdateTime: time.Now(),&lt;br&gt;	&amp;#125;)&lt;br&gt;	o.Table(&lt;span class=&quot;hljs-built_in&quot;&gt;new&lt;/span&gt;(TimeTest)).Where(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;id = ?&amp;quot;&lt;/span&gt;, &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;).Update(&lt;span class=&quot;hljs-keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;hljs-type&quot;&gt;string&lt;/span&gt;]&lt;span class=&quot;hljs-keyword&quot;&gt;interface&lt;/span&gt;&amp;#123;&amp;#125;&amp;#123;&lt;br&gt;		&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;update_time&amp;quot;&lt;/span&gt;: time.Now(),&lt;br&gt;	&amp;#125;)&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    <category term="xorm" scheme="https://www.mfun.ink/categories/xorm/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="xorm" scheme="https://www.mfun.ink/tags/xorm/"/>
+    
+    <category term="时区" scheme="https://www.mfun.ink/tags/%E6%97%B6%E5%8C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>redis分布式锁</title>
+    <link href="https://www.mfun.ink/2023/06/03/redis-lua-lock/"/>
+    <id>https://www.mfun.ink/2023/06/03/redis-lua-lock/</id>
+    <published>2023-06-03T13:10:31.000Z</published>
+    <updated>2023-06-03T14:41:35.908Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="redis" scheme="https://www.mfun.ink/categories/redis/"/>
+    
+    
+    <category term="redis分布式锁" scheme="https://www.mfun.ink/tags/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo版本升级</title>
+    <link href="https://www.mfun.ink/2023/05/21/hexo-upgrade/"/>
+    <id>https://www.mfun.ink/2023/05/21/hexo-upgrade/</id>
+    <published>2023-05-21T14:11:01.000Z</published>
+    <updated>2023-05-21T14:56:45.997Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;hexo版本升级还是很简单的，先切到hexo目录，使用&lt;code&gt;npm i hexo-cli -g&lt;/code&gt;升级全局hexo，接下来再使用&lt;code&gt;npm-check&lt;/code&gt;、&lt;code&gt;npm-upgrade&lt;/code&gt;,&lt;code&gt;npm-update&lt;/code&gt;升级相关依赖。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hexo" scheme="https://www.mfun.ink/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://www.mfun.ink/tags/hexo/"/>
+    
+    <category term="版本升级" scheme="https://www.mfun.ink/tags/%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过nginx流代理转发流量到trojan服务</title>
+    <link href="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/"/>
+    <id>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</id>
+    <published>2023-05-20T12:14:28.000Z</published>
+    <updated>2023-05-20T13:17:21.241Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;上一篇&lt;a href=&quot;https://www.mfun.ink/2023/03/04/trojan-install/&quot;&gt;文章&lt;/a&gt;记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="科学上网" scheme="https://www.mfun.ink/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="trojan" scheme="https://www.mfun.ink/tags/trojan/"/>
+    
+    <category term="科学上网" scheme="https://www.mfun.ink/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="trojan-go" scheme="https://www.mfun.ink/tags/trojan-go/"/>
+    
+    <category term="nginx" scheme="https://www.mfun.ink/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>trojan-go 安装配置</title>
+    <link href="https://www.mfun.ink/2023/03/04/trojan-install/"/>
+    <id>https://www.mfun.ink/2023/03/04/trojan-install/</id>
+    <published>2023-03-04T13:39:28.000Z</published>
+    <updated>2023-08-19T04:09:59.435Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文记录一下”科学上网”工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。 &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="【科学上网】" scheme="https://www.mfun.ink/categories/%E3%80%90%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E3%80%91/"/>
+    
+    
+    <category term="trojan" scheme="https://www.mfun.ink/tags/trojan/"/>
+    
+    <category term="科学上网" scheme="https://www.mfun.ink/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="trojan-go" scheme="https://www.mfun.ink/tags/trojan-go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue3学习笔记一.项目初始化</title>
+    <link href="https://www.mfun.ink/2022/10/16/vue3-study-init/"/>
+    <id>https://www.mfun.ink/2022/10/16/vue3-study-init/</id>
+    <published>2022-10-16T13:44:41.000Z</published>
+    <updated>2022-10-16T13:44:41.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;vue的安装就直接参考&lt;a href=&quot;https://cn.vuejs.org/guide/quick-start.html&quot;&gt;官方文档&lt;/a&gt;，描述的已经很详细了。&lt;/p&gt;
+&lt;h2 id=&quot;项目创建&quot;&gt;&lt;a href=&quot;#项目创建&quot; class=&quot;headerlink&quot; title=&quot;项目创建&quot;&gt;&lt;/a&gt;项目创建&lt;/h2&gt;&lt;p&gt;直接使用vue create + 项目名创建项目，默认有三种配置可选，vue2、vue3各有一个默认创建选项，也可以选第三种自定义项目创建要引入的features。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/categories/vue/"/>
+    
+    <category term="vue3" scheme="https://www.mfun.ink/categories/vue3/"/>
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/tags/vue/"/>
+    
+    <category term="vue3基础" scheme="https://www.mfun.ink/tags/vue3%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于redis实现一个简单的分布式限流器</title>
+    <link href="https://www.mfun.ink/2022/10/15/redis-current-limiter/"/>
+    <id>https://www.mfun.ink/2022/10/15/redis-current-limiter/</id>
+    <published>2022-10-15T14:30:35.000Z</published>
+    <updated>2022-10-15T14:30:35.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    <category term="分布式限流" scheme="https://www.mfun.ink/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E9%99%90%E6%B5%81/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="分布式限流" scheme="https://www.mfun.ink/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%99%90%E6%B5%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>goroutine 并发数量限制</title>
+    <link href="https://www.mfun.ink/2022/10/15/goroutine-limit/"/>
+    <id>https://www.mfun.ink/2022/10/15/goroutine-limit/</id>
+    <published>2022-10-15T10:08:41.000Z</published>
+    <updated>2022-10-15T10:08:41.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近经常用go写一些脚本，为了执行效率，一般会开启多个goroutine并发执行,脚本中通常会调用一些线上服务或者数据库读写数据，为了不影响线上服务运行,为了不影响线上服务运行就要对执行的goroutine数量进行限制，避免并发太大打垮线上服务。下面就简单写一个goroutine并发控制器。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="goroutine" scheme="https://www.mfun.ink/tags/goroutine/"/>
+    
+    <category term="并发控制" scheme="https://www.mfun.ink/tags/%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年滴滴、腾讯视频、字节等面试记录</title>
+    <link href="https://www.mfun.ink/2022/10/08/interview-2021/"/>
+    <id>https://www.mfun.ink/2022/10/08/interview-2021/</id>
+    <published>2022-10-08T12:44:52.000Z</published>
+    <updated>2023-08-19T06:05:06.803Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;好未来&quot;&gt;&lt;a href=&quot;#好未来&quot; class=&quot;headerlink&quot; title=&quot;好未来&quot;&gt;&lt;/a&gt;好未来&lt;/h2&gt;&lt;h3 id=&quot;一面&quot;&gt;&lt;a href=&quot;#一面&quot; class=&quot;headerlink&quot; title=&quot;一面&quot;&gt;&lt;/a&gt;一面&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;自我介绍&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;最近做到项目 没细聊&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;redis 常用结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;redis 宕机恢复 aop rdb&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;连接池 获取句柄时并发控制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;mysql 引擎 区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;索引结构 b树 b+树 二叉树&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;算法 求数组交集 复杂度 &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;算法 链表 快慢指针&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;http code 码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;常用orm框架&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;tcp udp&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;日志存储 elk&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;接口稳定性监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;sync map&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GMP&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;垃圾回收&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;你有什么想问的 问了下对面部门&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;期望薪资&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="面试" scheme="https://www.mfun.ink/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="滴滴" scheme="https://www.mfun.ink/tags/%E6%BB%B4%E6%BB%B4/"/>
+    
+    <category term="百度" scheme="https://www.mfun.ink/tags/%E7%99%BE%E5%BA%A6/"/>
+    
+    <category term="腾讯视频" scheme="https://www.mfun.ink/tags/%E8%85%BE%E8%AE%AF%E8%A7%86%E9%A2%91/"/>
+    
+    <category term="好未来" scheme="https://www.mfun.ink/tags/%E5%A5%BD%E6%9C%AA%E6%9D%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MacOS 使用笔记</title>
+    <link href="https://www.mfun.ink/2020/11/18/mac-use/"/>
+    <id>https://www.mfun.ink/2020/11/18/mac-use/</id>
+    <published>2020-11-18T11:00:56.000Z</published>
+    <updated>2022-10-16T13:44:41.000Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;终端命令行&quot;&gt;&lt;a href=&quot;#终端命令行&quot; class=&quot;headerlink&quot; title=&quot;终端命令行&quot;&gt;&lt;/a&gt;终端命令行&lt;/h3&gt;&lt;h4 id=&quot;brew包管理工具&quot;&gt;&lt;a href=&quot;#brew包管理工具&quot; class=&quot;headerlink&quot; title=&quot;brew包管理工具&quot;&gt;&lt;/a&gt;brew包管理工具&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://brew.sh/&quot;&gt;brew&lt;/a&gt; mac下的神器，类似linux的包管理工具，可以通过brew安装各种软件。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="操作系统" scheme="https://www.mfun.ink/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="MacOS" scheme="https://www.mfun.ink/categories/MacOS/"/>
+    
+    
+    <category term="MacOS" scheme="https://www.mfun.ink/tags/MacOS/"/>
+    
+    <category term="iTerm2" scheme="https://www.mfun.ink/tags/iTerm2/"/>
+    
+    <category term="zsh" scheme="https://www.mfun.ink/tags/zsh/"/>
+    
+    <category term="brew" scheme="https://www.mfun.ink/tags/brew/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go启动main函数都干了什么(一)</title>
+    <link href="https://www.mfun.ink/2020/10/27/go-start-up/"/>
+    <id>https://www.mfun.ink/2020/10/27/go-start-up/</id>
+    <published>2020-10-27T07:27:33.000Z</published>
+    <updated>2023-08-20T02:45:54.654Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;生成二进制可执行文件&quot;&gt;&lt;a href=&quot;#生成二进制可执行文件&quot; class=&quot;headerlink&quot; title=&quot;生成二进制可执行文件&quot;&gt;&lt;/a&gt;生成二进制可执行文件&lt;/h3&gt;&lt;p&gt;首先，写一个go main函数，这里就简单输出以下hello world。&lt;/p&gt;
+&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs go&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;package&lt;/span&gt; main&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;  &amp;#123;&lt;br&gt;	fmt.Println(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;hello word&amp;quot;&lt;/span&gt;)&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;执行&lt;code&gt;go build -gcflags &amp;quot;-N -l&amp;quot; -ldflags=-compressdwarf=false -o main main.go&lt;/code&gt;生成可执行二进制文件。&lt;/p&gt;
+&lt;h3 id=&quot;开启gdb调试&quot;&gt;&lt;a href=&quot;#开启gdb调试&quot; class=&quot;headerlink&quot; title=&quot;开启gdb调试&quot;&gt;&lt;/a&gt;开启gdb调试&lt;/h3&gt;&lt;p&gt;执行&lt;code&gt;gdb main&lt;/code&gt;开始gdb调试。通过i files查看程序入口地址，再这个地址打上断点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="go启动" scheme="https://www.mfun.ink/tags/go%E5%90%AF%E5%8A%A8/"/>
+    
+    <category term="go main" scheme="https://www.mfun.ink/tags/go-main/"/>
+    
+    <category term="gdb调试go" scheme="https://www.mfun.ink/tags/gdb%E8%B0%83%E8%AF%95go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>macos gdb解决Unable to find Mach task port for process-id</title>
+    <link href="https://www.mfun.ink/2020/10/26/macos-gdb-install/"/>
+    <id>https://www.mfun.ink/2020/10/26/macos-gdb-install/</id>
+    <published>2020-10-26T07:35:34.000Z</published>
+    <updated>2020-10-26T08:27:07.010Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;直接使用&lt;code&gt;brew install gdb&lt;/code&gt; 安装， 没有安装brew的需要先安装&lt;a href=&quot;https://brew.sh/&quot;&gt;brew&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;安装之后，使用过程中遇到这么一个错误:&lt;/p&gt;
+&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs smali&quot;&gt;Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (please&lt;span class=&quot;hljs-built_in&quot;&gt; check &lt;/span&gt;gdb is codesigned - see taskgated(8))&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="gdb" scheme="https://www.mfun.ink/categories/gdb/"/>
+    
+    
+    <category term="gdb" scheme="https://www.mfun.ink/tags/gdb/"/>
+    
+    <category term="mac" scheme="https://www.mfun.ink/tags/mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>造轮子——go 版本控制(gvm)</title>
+    <link href="https://www.mfun.ink/2020/09/29/gvm/"/>
+    <id>https://www.mfun.ink/2020/09/29/gvm/</id>
+    <published>2020-09-29T12:36:24.000Z</published>
+    <updated>2023-07-02T08:44:55.228Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;功能列表&quot;&gt;&lt;a href=&quot;#功能列表&quot; class=&quot;headerlink&quot; title=&quot;功能列表&quot;&gt;&lt;/a&gt;功能列表&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;支持linux、darwin&lt;/li&gt;
+&lt;li&gt;获取远程go版本列表 &lt;code&gt;gvm remote&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;/images/gvm/remote.png&quot;&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="gvm" scheme="https://www.mfun.ink/tags/gvm/"/>
+    
+    <category term="go 版本控制" scheme="https://www.mfun.ink/tags/go-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go 获取 net.conn fd 反射和非反射</title>
+    <link href="https://www.mfun.ink/2020/09/27/gogetFD/"/>
+    <id>https://www.mfun.ink/2020/09/27/gogetFD/</id>
+    <published>2020-09-27T14:27:25.000Z</published>
+    <updated>2023-08-19T06:05:06.811Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;非反射获取&quot;&gt;&lt;a href=&quot;#非反射获取&quot; class=&quot;headerlink&quot; title=&quot;非反射获取&quot;&gt;&lt;/a&gt;非反射获取&lt;/h2&gt;&lt;p&gt;根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    <category term="net" scheme="https://www.mfun.ink/categories/net/"/>
+    
+    
+    <category term="go1.14.2" scheme="https://www.mfun.ink/tags/go1-14-2/"/>
+    
+    <category term="fd" scheme="https://www.mfun.ink/tags/fd/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>websocket引入epoll机制</title>
+    <link href="https://www.mfun.ink/2020/09/15/websocket-epoll/"/>
+    <id>https://www.mfun.ink/2020/09/15/websocket-epoll/</id>
+    <published>2020-09-15T12:02:08.000Z</published>
+    <updated>2023-07-29T13:50:16.519Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。&lt;br&gt;使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    <category term="网络协议" scheme="https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+    
+    <category term="websocket" scheme="https://www.mfun.ink/tags/websocket/"/>
+    
+    <category term="epoll" scheme="https://www.mfun.ink/tags/epoll/"/>
+    
+    <category term="gorilla/websocket" scheme="https://www.mfun.ink/tags/gorilla-websocket/"/>
+    
+    <category term="gobwas/ws" scheme="https://www.mfun.ink/tags/gobwas-ws/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sse(serve send events) 服务端推送技术</title>
+    <link href="https://www.mfun.ink/2020/09/12/sse/"/>
+    <id>https://www.mfun.ink/2020/09/12/sse/</id>
+    <published>2020-09-12T14:58:30.000Z</published>
+    <updated>2020-10-26T07:37:33.777Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;什么是sse&quot;&gt;&lt;a href=&quot;#什么是sse&quot; class=&quot;headerlink&quot; title=&quot;什么是sse&quot;&gt;&lt;/a&gt;什么是sse&lt;/h3&gt;&lt;p&gt;sse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&amp;gt;应答的模式，一次request–&amp;gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网络协议" scheme="https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="http1.x" scheme="https://www.mfun.ink/tags/http1-x/"/>
+    
+    <category term="http2.0" scheme="https://www.mfun.ink/tags/http2-0/"/>
+    
+    <category term="sse" scheme="https://www.mfun.ink/tags/sse/"/>
+    
+  </entry>
+  
+</feed>
