@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.5","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -87,14 +87,16 @@
   
 
   
-    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
     <script async>
       if (!Fluid.ctx.dnt) {
-        Fluid.utils.createScript('https://www.google-analytics.com/analytics.js', function() {
-          window.ga = window.ga || function() { (ga.q = ga.q || []).push(arguments) };
-          ga.l = +new Date;
-          ga('create', '[object Object]', 'auto');
-          ga('send', 'pageview');
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
         });
       }
     </script>
@@ -108,12 +110,10 @@
 
   
 
-  
-
 
 
   
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+<meta name="generator" content="Hexo 7.0.0-rc2"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
 </head>
 
 
@@ -312,8 +312,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">trojan-go 安装配置</h1>
+            <h1 id="seo-header">trojan-go 安装配置</h1>
             
             
               <div class="markdown-body">
@@ -324,10 +323,10 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/kenzok8/Trojan/master/trojan-go_install.sh)&quot;<br></code></pre></td></tr></table></figure>
 <p>输出如下，这里楼主选的nginx，不为啥就是对nginx更熟悉些</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell">===================================================<br>Trojan-go二合一脚本<br>===================================================<br>如果已经安装了下列脚本之一，想要安装其他的，不需要单独执行卸载，直接选择想要安装脚本对应的数字即可……<br>因为安装的同时会执行卸载，除非想卸载干净回到初始状态,可以执行3……<br>===================================================<br>1. 安装trojan-go + nginx +tls<br>===================================================<br>2. 安装trojan-go + caddy +tls<br>===================================================<br>3. 卸载全部，系统回到初始状态<br>===================================================<br>4. 安装BBR加速<br>===================================================<br>0. 啥也不做，退出<br>请输入数字：1<br></code></pre></td></tr></table></figure>
-<p>确定后就是相关依赖安装流程了，下载完成后输入你的域名（<a href="mailto:&#x6d;&#121;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#x63;&#x6f;&#109;">&#x6d;&#121;&#64;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#46;&#x63;&#x6f;&#109;</a> 替换为你域名）</p>
+<p>确定后就是相关依赖安装流程了，下载完成后输入你的域名（<a href="mailto:&#109;&#121;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;">&#109;&#121;&#64;&#101;&#x78;&#97;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;</a> 替换为你域名）</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell">[信息]  trojan-go下载 完成<br>Archive:  /etc/trojan/bin/trojan-go-linux-amd64.zip<br>  inflating: /etc/trojan/bin/trojan-go<br>  inflating: /etc/trojan/bin/geoip.dat<br>  inflating: /etc/trojan/bin/geosite.dat<br>  inflating: /etc/trojan/bin/example/client.json<br>  inflating: /etc/trojan/bin/example/server.json<br>  inflating: /etc/trojan/bin/example/trojan-go.service<br>[信息]  trojan-go解压 完成<br>[信息] 80 端口未被占用<br>[信息] 443 端口未被占用<br>请输入您的域名(如果用Cloudflare解析域名，请点击小云彩使其变灰):my@example.com<br></code></pre></td></tr></table></figure>
 
-<p>输入确定后，签发过程可能会遇到下面的问题，按照提示acme需要更新下邮件地址，可以执行<em>curl <a target="_blank" rel="noopener" href="https://get.acme.sh/">https://get.acme.sh</a> | sh -s email&#x3D;<a href="mailto:&#x78;&#x78;&#120;&#x40;&#x78;&#120;&#x2e;&#x63;&#x6f;&#109;">&#x78;&#x78;&#120;&#x40;&#x78;&#120;&#x2e;&#x63;&#x6f;&#109;</a></em></p>
+<p>输入确定后，签发过程可能会遇到下面的问题，按照提示acme需要更新下邮件地址，可以执行<em>curl <a target="_blank" rel="noopener" href="https://get.acme.sh/">https://get.acme.sh</a> | sh -s email&#x3D;<a href="mailto:&#120;&#x78;&#x78;&#64;&#x78;&#120;&#46;&#x63;&#x6f;&#x6d;">&#120;&#x78;&#x78;&#64;&#x78;&#120;&#46;&#x63;&#x6f;&#x6d;</a></em></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">[Sat Mar  4 10:14:35 PM CST 2023] No EAB credentials found for ZeroSSL, let&#x27;s get one<br>[Sat Mar  4 10:14:35 PM CST 2023] acme.sh is using ZeroSSL as default CA now.<br>[Sat Mar  4 10:14:35 PM CST 2023] Please update your account with an email address first.<br>[Sat Mar  4 10:14:35 PM CST 2023] acme.sh --register-account -m my@example.com<br>[Sat Mar  4 10:14:35 PM CST 2023] See: https://github.com/acmesh-official/acme.sh/wiki/ZeroSSL.com-CA<br>[Sat Mar  4 10:14:35 PM CST 2023] Please add &#x27;--debug&#x27; or &#x27;--log&#x27; to check more details.<br>[Sat Mar  4 10:14:35 PM CST 2023] See: https://github.com/acmesh-official/acme.sh/wiki/How-to-debug-acme.sh<br>[错误] TLS 证书生成失败<br></code></pre></td></tr></table></figure>
 <p>接下来再次执行最开始的shell命令就可以了，证书配置成功后提示配置伪装网站，这个是保证正常访问你的域名是能够正常返回页面，假如没有配置伪装网站，gfw识别到你的域名有异常流量，然后进行探测你没有任何返回，那么很明显你这个域名绝壁有问题，啪唧 给你封了。如果不想用下面列出的也可用自己的，比如自己blog站点啥的，这就可以一个域名多用了，明面上是正儿八经的博客网站，背地干着流量转发的活。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell">[信息]证书配置成功<br>[注意]伪装网站未下载或下载失败,请选择下面的任意一个进行下载:<br>      [信息]1. https://templated.co/intensify<br>      [信息]2. https://templated.co/binary<br>      [信息]3. https://templated.co/retrospect<br>      [信息]4. https://templated.co/spatial<br>      [信息]5. https://templated.co/monochromed<br>      [信息]6. https://templated.co/transit<br>      [信息]7. https://templated.co/interphase<br>      [信息]8. https://templated.co/ion<br>      [信息]9. https://templated.co/solarize<br>      [信息]10. https://templated.co/phaseshift<br>      [信息]11. https://templated.co/horizons<br>      [信息]12. https://templated.co/grassygrass<br>      [信息]13. https://templated.co/breadth<br>      [信息]14. https://templated.co/undeviating<br>      [信息]15. https://templated.co/breadth<br>[注意]请输入你要下载的网站的数字:15<br></code></pre></td></tr></table></figure>
@@ -381,11 +380,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/trojan/">#trojan</a>
+        <a href="/tags/trojan/" class="print-no-link">#trojan</a>
       
-        <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">#科学上网</a>
+        <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="print-no-link">#科学上网</a>
       
-        <a href="/tags/trojan-go/">#trojan-go</a>
+        <a href="/tags/trojan-go/" class="print-no-link">#trojan-go</a>
       
     </div>
   
@@ -421,7 +420,7 @@
             
               
               
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
                   </span>
