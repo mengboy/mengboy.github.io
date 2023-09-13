@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>内网NAS docker部署Joplin笔记服务</title>
+    <link href="/2023/09/12/joplin-docker-deploy/"/>
+    <url>/2023/09/12/joplin-docker-deploy/</url>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/laurent22/joplin">Joplin</a>是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：</p><span id="more"></span><h3 id="下载镜像并安装"><a href="#下载镜像并安装" class="headerlink" title="下载镜像并安装"></a>下载镜像并安装</h3><p>这里使用的极空间nas，其他支持docker的nas也是类似的部署步骤，进入nas的docker服务，在仓库里搜索joplin，选择第一个官方的下载就是。<br><img src="/images/joplin-docker-deploy/joplin-image.png"><br>下载完成后可以在本地镜像里找到，点击安装，安装时需要修改的一些配置</p><ul><li><p>添加端口映射<br>本地端口可以根据需要修改<br><img src="/images/joplin-docker-deploy/port-map.png">  </p></li><li><p>添加环境变量<br>首先是<strong>APP_BASE_URL</strong>这个是最外层用来访问服务的地址，一般是公网域名或者ip+端口，如果只在内网访问内网ip+端口就够了。<br>接着是存储相关的配置，Joplin支持SQLite和PostgreSQL作为存储，单人使用的话SQLite就已经满足需要了，如果想使用PostgreSQL需要在环境变量里添加如下配置,红框里的改为你自己的配置。<br><img src="/images/joplin-docker-deploy/pgsql.png"><br>再接着是邮箱服务配置，邮箱不配的话也能使用，就是没有邮件发送功能<br><img src="/images/joplin-docker-deploy/mail.png"><br>Joplin完整的环境变量配置可以在官方<a href="https://github.com/laurent22/joplin/blob/dev/packages/server/src/env.ts">github仓库</a>里找到<br>以上配置完后启动容器即可。</p></li><li><p>添加访问配置<br>如果直接用部署机器的ip+端口访问可以不用配置nginx代理，如果使用的域名则需要配置下nginx代理或者类似nginx的应用配置代理，nginx配置如下，这里关键是设置Host header，就是把访问host透传下去，上面的APP_BASE_URL配置的值就是这个。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>         listen       8888; //端口<br>         server_name  domain;<br>         location / &#123;<br>             proxy_set_header Host $host:$server_port;<br>             proxy_set_header X-Real-IP $remote_addr;<br>             proxy_pass http://ip:port;<br>           &#125;<br>      &#125;<br></code></pre></td></tr></table></figure><p>部署完成后通过浏览器访问，初始邮箱admin@localhost，初始密码admin<br><img src="/images/joplin-docker-deploy/login.png"><br>登录后先更新密码，这里如果上面不配置邮件服务相关的环境变量的话是没办法修改邮箱的，因为修改邮箱会发送一封确认邮件，点击确认后才能修改成功。<br><img src="/images/joplin-docker-deploy/update-pass.png"></p></li></ul><h3 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h3><p>客户端直接去官网下载客户端就好，下载完成后在配置里添加同步配置<br><img src="/images/joplin-docker-deploy/client-sync.png"><br>以上就是整个安装配置过程</p><h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><p>如果是部署到内网，没有公网ip话，想要在公网访问可以搞个内网穿透。我这直接使用的<a href="https://github.com/fatedier/frp">frp</a>加上一个云服务商的轻量云服务器，frp配置如下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">服务端</span><br>[common]<br>bind_port = 7000<br>token = token<br>log_file = ./frps.log<br>log_max_days = 3<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">客户端配置</span><br>[common]<br>server_addr = 公网ip<br>server_port = 7000<br>token = token<br><br>[joplin]<br>type = tcp<br>local_port = 22300<br>local_ip = joplin局域网ip<br>remote_port = 8083<br></code></pre></td></tr></table></figure><p>对应的nginx配置如下，这里nginx和frps部署在了同一个服务器上，所以直接代理到127.0.0.1，端口就是上面frpc配的remote_port，当然不用域名的话不加nginx代理也可以，直接通过公网域名+remote_port访问。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>          listen       8888; //端口<br>          server_name  domain;<br>          location / &#123;<br>              proxy_set_header Host $host:$server_port;<br>              proxy_set_header X-Real-IP $remote_addr;<br>              proxy_pass http://127.0.0.1:8083;<br>            &#125;<br>       &#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Joplin</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Joplin</tag>
+      
+      <tag>部署</tag>
+      
+      <tag>frp</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>curl proxy设置无效问题排查</title>
     <link href="/2023/08/20/curl-proxy-no-use/"/>
     <url>/2023/08/20/curl-proxy-no-use/</url>

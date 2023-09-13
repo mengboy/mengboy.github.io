@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-08-20T03:22:42.815Z</updated>
+  <updated>2023-09-13T14:13:48.729Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>内网NAS docker部署Joplin笔记服务</title>
+    <link href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/"/>
+    <id>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</id>
+    <published>2023-09-12T14:45:49.000Z</published>
+    <updated>2023-09-13T14:13:48.729Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/laurent22/joplin&quot;&gt;Joplin&lt;/a&gt;是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Joplin" scheme="https://www.mfun.ink/categories/Joplin/"/>
+    
+    
+    <category term="Joplin" scheme="https://www.mfun.ink/tags/Joplin/"/>
+    
+    <category term="部署" scheme="https://www.mfun.ink/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="frp" scheme="https://www.mfun.ink/tags/frp/"/>
+    
+  </entry>
   
   <entry>
     <title>curl proxy设置无效问题排查</title>

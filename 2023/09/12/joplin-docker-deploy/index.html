@@ -16,25 +16,34 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。">
+    <meta name="description" content="Joplin是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="curl proxy设置无效问题排查">
-<meta property="og:url" content="https://www.mfun.ink/2023/08/20/curl-proxy-no-use/index.html">
+<meta property="og:title" content="内网NAS docker部署Joplin笔记服务">
+<meta property="og:url" content="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。">
+<meta property="og:description" content="Joplin是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-08-20T02:34:19.000Z">
-<meta property="article:modified_time" content="2023-08-20T03:22:42.815Z">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/joplin-image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/port-map.png">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/pgsql.png">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/mail.png">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/login.png">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/update-pass.png">
+<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/client-sync.png">
+<meta property="article:published_time" content="2023-09-12T14:45:49.000Z">
+<meta property="article:modified_time" content="2023-09-13T14:13:48.729Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="curl">
-<meta property="article:tag" content="curl proxy">
+<meta property="article:tag" content="Joplin">
+<meta property="article:tag" content="部署">
+<meta property="article:tag" content="frp">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.mfun.ink/images/joplin-docker-deploy/joplin-image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>curl proxy设置无效问题排查 - Mengboy&#39;s Blog</title>
+  <title>内网NAS docker部署Joplin笔记服务 - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -240,7 +249,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="curl proxy设置无效问题排查"></span>
+            <span id="subtitle" data-typed-text="内网NAS docker部署Joplin笔记服务"></span>
           
         </div>
 
@@ -251,8 +260,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-20 10:34" pubdate>
-          2023年8月20日 上午
+        <time datetime="2023-09-12 22:45" pubdate>
+          2023年9月12日 晚上
         </time>
       </span>
     
@@ -263,7 +272,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.6k 字
         
       </span>
     
@@ -274,7 +283,7 @@
         
         
         
-          13 分钟
+          14 分钟
         
       </span>
     
@@ -311,18 +320,32 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">curl proxy设置无效问题排查</h1>
+            <h1 id="seo-header">内网NAS docker部署Joplin笔记服务</h1>
             
             
               <div class="markdown-body">
                 
-                <p>最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。</p>
+                <p><a target="_blank" rel="noopener" href="https://github.com/laurent22/joplin">Joplin</a>是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：</p>
 <span id="more"></span>
-<p>下面是终端执行过程中的输出，无论是否设置proxy curl都使用了另一个代理配置。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">$ </span><span class="language-bash">curl cip.cc</span><br>curl: (7) Failed to connect to 127.0.0.1 port 51837 after 8 ms: Connection refused<br><span class="hljs-meta prompt_">$ </span><span class="language-bash">HTTP_PROXY=http://127.0.0.1:58591; <span class="hljs-built_in">export</span> HTTPS_PROXY=http://127.0.0.1:58591; <span class="hljs-built_in">export</span> ALL_PROXY=socks5://127.0.0.1:51838</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">curl cip.cc</span><br>curl: (7) Failed to connect to 127.0.0.1 port 51837 after 8 ms: Connection refused<br><span class="hljs-meta prompt_">$ </span><span class="language-bash"><span class="hljs-built_in">unset</span> HTTP_PROXY; <span class="hljs-built_in">unset</span> HTTPS_PROXY; <span class="hljs-built_in">unset</span> ALL_PROXY</span><br><span class="hljs-meta prompt_">$ </span><span class="language-bash">curl cip.cc</span><br>curl: (7) Failed to connect to 127.0.0.1 port 51837 after 8 ms: Connection refused<br></code></pre></td></tr></table></figure>
-<p>一开始怀疑iterm2终端是不是有什么配置，于是换了Mac OS系统终端，发现还是一样的问题，排除终端问题。接着又怀疑是不是curl版本问题，使用brew安装了新版本的curl，问题依旧。再然后直接命令行里执行<code>env</code>命令，一股脑把全部环境变量都打了出来，并没有任何关于proxy的环境变量设置，有意思了，到底哪里出了问题呢？<br>作为一个程序员从源码里找答案是基本技能，于是从git clone了curl的源码，开始从代码里找curl设置proxy相关逻辑，终于发现curl除了会从环境变量里读proxy设置外还读了一个.curlrc的配置文件</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-comment">/* return 0 on everything-is-fine, and non-zero otherwise */</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">parseconfig</span><span class="hljs-params">(<span class="hljs-type">const</span> <span class="hljs-type">char</span> *filename, <span class="hljs-keyword">struct</span> GlobalConfig *global)</span><br>&#123;<br>  FILE *file = <span class="hljs-literal">NULL</span>;<br>  <span class="hljs-type">bool</span> usedarg = FALSE;<br>  <span class="hljs-type">int</span> rc = <span class="hljs-number">0</span>;<br>  <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">OperationConfig</span> *<span class="hljs-title">operation</span> =</span> global-&gt;last;<br>  <span class="hljs-type">char</span> *pathalloc = <span class="hljs-literal">NULL</span>;<br><br>  <span class="hljs-keyword">if</span>(!filename) &#123;<br>    <span class="hljs-comment">/* NULL means load .curlrc from homedir! */</span><br>    <span class="hljs-type">char</span> *curlrc = findfile(<span class="hljs-string">&quot;.curlrc&quot;</span>, CURLRC_DOTSCORE);<br>    <span class="hljs-keyword">if</span>(curlrc) &#123;<br>      file = fopen(curlrc, FOPEN_READTEXT);<br>      <span class="hljs-keyword">if</span>(!file) &#123;<br>        <span class="hljs-built_in">free</span>(curlrc);<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;<br>      &#125;<br>      filename = pathalloc = curlrc;<br>    &#125;<br></code></pre></td></tr></table></figure>
-<p>虽然还没找到解析配置文件设置proxy相关的逻辑，但是可以先去home目录下看一下了，一看还真有个.curlrc的文件，5个月前创建的，打开一看只有一行配置<code>socks5=127.0.0.1:51837</code>。看到这里终于有了点印象，之前为了设置socks5 proxy就加了这么个配置，删掉重新执行<code>curl</code>终于正常了。</p>
+<h3 id="下载镜像并安装"><a href="#下载镜像并安装" class="headerlink" title="下载镜像并安装"></a>下载镜像并安装</h3><p>这里使用的极空间nas，其他支持docker的nas也是类似的部署步骤，进入nas的docker服务，在仓库里搜索joplin，选择第一个官方的下载就是。<br><img src="/images/joplin-docker-deploy/joplin-image.png" srcset="/img/loading.gif" lazyload><br>下载完成后可以在本地镜像里找到，点击安装，安装时需要修改的一些配置</p>
+<ul>
+<li><p>添加端口映射<br>本地端口可以根据需要修改<br><img src="/images/joplin-docker-deploy/port-map.png" srcset="/img/loading.gif" lazyload>  </p>
+</li>
+<li><p>添加环境变量<br>首先是<strong>APP_BASE_URL</strong>这个是最外层用来访问服务的地址，一般是公网域名或者ip+端口，如果只在内网访问内网ip+端口就够了。<br>接着是存储相关的配置，Joplin支持SQLite和PostgreSQL作为存储，单人使用的话SQLite就已经满足需要了，如果想使用PostgreSQL需要在环境变量里添加如下配置,红框里的改为你自己的配置。<br><img src="/images/joplin-docker-deploy/pgsql.png" srcset="/img/loading.gif" lazyload><br>再接着是邮箱服务配置，邮箱不配的话也能使用，就是没有邮件发送功能<br><img src="/images/joplin-docker-deploy/mail.png" srcset="/img/loading.gif" lazyload><br>Joplin完整的环境变量配置可以在官方<a target="_blank" rel="noopener" href="https://github.com/laurent22/joplin/blob/dev/packages/server/src/env.ts">github仓库</a>里找到<br>以上配置完后启动容器即可。</p>
+</li>
+<li><p>添加访问配置<br>如果直接用部署机器的ip+端口访问可以不用配置nginx代理，如果使用的域名则需要配置下nginx代理或者类似nginx的应用配置代理，nginx配置如下，这里关键是设置Host header，就是把访问host透传下去，上面的APP_BASE_URL配置的值就是这个。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>         listen       8888; //端口<br>         server_name  domain;<br>         location / &#123;<br>             proxy_set_header Host $host:$server_port;<br>             proxy_set_header X-Real-IP $remote_addr;<br>             proxy_pass http://ip:port;<br>           &#125;<br>      &#125;<br></code></pre></td></tr></table></figure>
+<p>部署完成后通过浏览器访问，初始邮箱admin@localhost，初始密码admin<br><img src="/images/joplin-docker-deploy/login.png" srcset="/img/loading.gif" lazyload><br>登录后先更新密码，这里如果上面不配置邮件服务相关的环境变量的话是没办法修改邮箱的，因为修改邮箱会发送一封确认邮件，点击确认后才能修改成功。<br><img src="/images/joplin-docker-deploy/update-pass.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+<h3 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h3><p>客户端直接去官网下载客户端就好，下载完成后在配置里添加同步配置<br><img src="/images/joplin-docker-deploy/client-sync.png" srcset="/img/loading.gif" lazyload><br>以上就是整个安装配置过程</p>
+<h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><p>如果是部署到内网，没有公网ip话，想要在公网访问可以搞个内网穿透。我这直接使用的<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">frp</a>加上一个云服务商的轻量云服务器，frp配置如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">服务端</span><br>[common]<br>bind_port = 7000<br>token = token<br>log_file = ./frps.log<br>log_max_days = 3<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">客户端配置</span><br>[common]<br>server_addr = 公网ip<br>server_port = 7000<br>token = token<br><br>[joplin]<br>type = tcp<br>local_port = 22300<br>local_ip = joplin局域网ip<br>remote_port = 8083<br></code></pre></td></tr></table></figure>
+<p>对应的nginx配置如下，这里nginx和frps部署在了同一个服务器上，所以直接代理到127.0.0.1，端口就是上面frpc配的remote_port，当然不用域名的话不加nginx代理也可以，直接通过公网域名+remote_port访问。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>          listen       8888; //端口<br>          server_name  domain;<br>          location / &#123;<br>              proxy_set_header Host $host:$server_port;<br>              proxy_set_header X-Real-IP $remote_addr;<br>              proxy_pass http://127.0.0.1:8083;<br>            &#125;<br>       &#125;<br></code></pre></td></tr></table></figure>
+
+
+
 
                 
               </div>
@@ -341,7 +364,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/curl/" class="category-chain-item">curl</a>
+  <a href="/categories/Joplin/" class="category-chain-item">Joplin</a>
   
   
 
@@ -356,9 +379,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/curl/" class="print-no-link">#curl</a>
+        <a href="/tags/Joplin/" class="print-no-link">#Joplin</a>
       
-        <a href="/tags/curl-proxy/" class="print-no-link">#curl proxy</a>
+        <a href="/tags/%E9%83%A8%E7%BD%B2/" class="print-no-link">#部署</a>
+      
+        <a href="/tags/frp/" class="print-no-link">#frp</a>
       
     </div>
   
@@ -370,8 +395,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>curl proxy设置无效问题排查</div>
-      <div>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</div>
+      <div>内网NAS docker部署Joplin笔记服务</div>
+      <div>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</div>
     </div>
     <div class="license-meta">
       
@@ -383,7 +408,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月20日</div>
+          <div>2023年9月12日</div>
         </div>
       
       
@@ -415,18 +440,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/12/joplin-docker-deploy/" title="内网NAS docker部署Joplin笔记服务">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">内网NAS docker部署Joplin笔记服务</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/19/goroutine-leak/" title="无缓冲channel导致的goroutine泄露">
-                        <span class="hidden-mobile">无缓冲channel导致的goroutine泄露</span>
+                      <a href="/2023/08/20/curl-proxy-no-use/" title="curl proxy设置无效问题排查">
+                        <span class="hidden-mobile">curl proxy设置无效问题排查</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -449,7 +468,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: 'fb848bfb67e8bcad312640d1cb92626b'
+            id: '0d34f5968379148ea90409a878406e19'
           }
         )
         var gitalk = new Gitalk(options);
