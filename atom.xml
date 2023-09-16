@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-13T14:19:36.295Z</updated>
+  <updated>2023-09-16T09:00:47.343Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/"/>
     <id>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</id>
     <published>2023-09-12T14:45:49.000Z</published>
-    <updated>2023-09-13T14:19:36.295Z</updated>
+    <updated>2023-09-16T09:00:47.343Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/laurent22/joplin&quot;&gt;Joplin&lt;/a&gt;是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：&lt;/p&gt;</summary>
