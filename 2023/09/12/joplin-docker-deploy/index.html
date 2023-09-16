@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/update-pass.png">
 <meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/client-sync.png">
 <meta property="article:published_time" content="2023-09-12T14:45:49.000Z">
-<meta property="article:modified_time" content="2023-09-16T09:00:47.343Z">
+<meta property="article:modified_time" content="2023-09-16T09:22:48.486Z">
 <meta property="article:author" content="mengboy">
 <meta property="article:tag" content="Joplin">
 <meta property="article:tag" content="部署">
@@ -338,7 +338,7 @@
 <p>部署完成后通过浏览器访问，初始邮箱admin@localhost，初始密码admin<br><img src="/images/joplin-docker-deploy/login.png" srcset="/img/loading.gif" lazyload><br>登录后先更新密码，这里如果上面不配置邮件服务相关的环境变量的话是没办法修改邮箱的，因为修改邮箱会发送一封确认邮件，点击确认后才能修改成功。<br><img src="/images/joplin-docker-deploy/update-pass.png" srcset="/img/loading.gif" lazyload></p>
 </li>
 </ul>
-<h3 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h3><p>客户端直接去官网下载客户端就好，下载完成后在配置里添加同步配置<br><img src="/images/joplin-docker-deploy/client-sync.png" srcset="/img/loading.gif" lazyload><br>以上就是整个安装配置过程</p>
+<h3 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h3><p>客户端直接去<a target="_blank" rel="noopener" href="https://joplinapp.org/">官网</a>下载客户端就好，下载完成后在配置里添加同步配置<br><img src="/images/joplin-docker-deploy/client-sync.png" srcset="/img/loading.gif" lazyload><br>以上就是整个安装配置过程</p>
 <h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><p>如果是部署到内网，没有公网ip话，想要在公网访问可以搞个内网穿透。我这直接使用的<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">frp</a>加上一个云服务商的轻量云服务器，frp配置如下</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">服务端</span><br>[common]<br>bind_port = 7000<br>token = token<br>log_file = ./frps.log<br>log_max_days = 3<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">客户端配置</span><br>[common]<br>server_addr = 公网ip<br>server_port = 7000<br>token = token<br><br>[joplin]<br>type = tcp<br>local_port = 22300<br>local_ip = joplin局域网ip<br>remote_port = 8083<br></code></pre></td></tr></table></figure>
 <p>对应的nginx配置如下，这里nginx和frps部署在了同一个服务器上，所以直接代理到127.0.0.1，端口就是上面frpc配的remote_port，当然直接访问的话就不用nginx反代了，直接通过公网域名&#x2F;ip+remote_port访问。</p>
