@@ -16,34 +16,36 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Joplin是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：">
+    <meta name="description" content="最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加-csdn，效果如下：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内网NAS使用docker部署Joplin笔记服务">
-<meta property="og:url" content="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/index.html">
+<meta property="og:title" content="好用的浏览器插件——搜索结果屏蔽指定网页">
+<meta property="og:url" content="https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="Joplin是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：">
+<meta property="og:description" content="最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加-csdn，效果如下：">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/joplin-image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/port-map.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/pgsql.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/mail.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/login.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/update-pass.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-docker-deploy/client-sync.png">
-<meta property="article:published_time" content="2023-09-12T14:45:49.000Z">
-<meta property="article:modified_time" content="2023-09-16T09:22:48.486Z">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/ff0ad7742cc73d7b39af10bf0cad716a.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/b1dd6ce357ffbc3906098a001f8ae5aa.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/6766f99d89c7db24a77a9aae902b984e.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/a2baba0ae05cc0ee7dd21420c4537fdf.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/a2e1675783aeaa237c7eff02bde2b09e.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/b75d203130d28431d811d35960e222bd.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/839b78d4aaa8aa85f7926b3aec25b1c6.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/fd4e3dd095d98026d50b2fb48f5e9dd4.png">
+<meta property="og:image" content="https://www.mfun.ink/images/search-engine/a290aed25be2f2d38390fdc08960856c.png">
+<meta property="article:published_time" content="2023-09-19T13:35:21.000Z">
+<meta property="article:modified_time" content="2023-09-19T13:57:32.640Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="Joplin">
-<meta property="article:tag" content="部署">
-<meta property="article:tag" content="frp">
+<meta property="article:tag" content="Chrome">
+<meta property="article:tag" content="Edge">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.mfun.ink/images/joplin-docker-deploy/joplin-image.png">
+<meta name="twitter:image" content="https://www.mfun.ink/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>内网NAS使用docker部署Joplin笔记服务 - Mengboy&#39;s Blog</title>
+  <title>好用的浏览器插件——搜索结果屏蔽指定网页 - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -249,7 +251,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="内网NAS使用docker部署Joplin笔记服务"></span>
+            <span id="subtitle" data-typed-text="好用的浏览器插件——搜索结果屏蔽指定网页"></span>
           
         </div>
 
@@ -260,8 +262,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-12 22:45" pubdate>
-          2023年9月12日 晚上
+        <time datetime="2023-09-19 21:35" pubdate>
+          2023年9月19日 晚上
         </time>
       </span>
     
@@ -272,7 +274,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          657 字
         
       </span>
     
@@ -283,7 +285,7 @@
         
         
         
-          14 分钟
+          6 分钟
         
       </span>
     
@@ -320,32 +322,25 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">内网NAS使用docker部署Joplin笔记服务</h1>
+            <h1 id="seo-header">好用的浏览器插件——搜索结果屏蔽指定网页</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://github.com/laurent22/joplin">Joplin</a>是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：</p>
+                <p>最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。<br>实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加<code>-csdn</code>，效果如下：</p>
 <span id="more"></span>
-<h3 id="下载镜像并安装"><a href="#下载镜像并安装" class="headerlink" title="下载镜像并安装"></a>下载镜像并安装</h3><p>这里使用的极空间nas，其他支持docker的nas也是类似的部署步骤，进入nas的docker服务，在仓库里搜索joplin，选择第一个官方的下载就是。<br><img src="/images/joplin-docker-deploy/joplin-image.png" srcset="/img/loading.gif" lazyload><br>下载完成后可以在本地镜像里找到，点击安装，安装时需要修改的一些配置</p>
 <ul>
-<li><p>添加端口映射<br>本地端口可以根据需要修改<br><img src="/images/joplin-docker-deploy/port-map.png" srcset="/img/loading.gif" lazyload>  </p>
-</li>
-<li><p>添加环境变量<br>首先是<strong>APP_BASE_URL</strong>这个是最外层用来访问服务的地址，一般是公网域名或者ip+端口，如果只在内网访问内网ip+端口就够了。<br>接着是存储相关的配置，Joplin支持SQLite和PostgreSQL作为存储，单人使用的话SQLite就已经满足需要了，如果想使用PostgreSQL需要在环境变量里添加如下配置,红框里的改为你自己的配置。<br><img src="/images/joplin-docker-deploy/pgsql.png" srcset="/img/loading.gif" lazyload><br>再接着是邮箱服务配置，邮箱不配的话也能使用，就是没有邮件发送功能<br><img src="/images/joplin-docker-deploy/mail.png" srcset="/img/loading.gif" lazyload><br>Joplin完整的环境变量配置可以在官方<a target="_blank" rel="noopener" href="https://github.com/laurent22/joplin/blob/dev/packages/server/src/env.ts">github仓库</a>里找到<br>以上配置完后启动容器即可。</p>
-</li>
-<li><p>添加访问配置<br>如果直接用部署机器的ip+端口访问可以不用配置nginx代理，如果不是直接访问可以使用nginx反代或者类似nginx的应用配置反代，nginx配置如下，这里关键是设置Host header，就是把访问host透传下去，上面的APP_BASE_URL配置的值就是这个。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>         listen       8888; //端口<br>         server_name  domain;<br>         location / &#123;<br>             proxy_set_header Host $host:$server_port;<br>             proxy_set_header X-Real-IP $remote_addr;<br>             proxy_pass http://ip:port; //Jopin 地址<br>           &#125;<br>      &#125;<br></code></pre></td></tr></table></figure>
-<p>部署完成后通过浏览器访问，初始邮箱admin@localhost，初始密码admin<br><img src="/images/joplin-docker-deploy/login.png" srcset="/img/loading.gif" lazyload><br>登录后先更新密码，这里如果上面不配置邮件服务相关的环境变量的话是没办法修改邮箱的，因为修改邮箱会发送一封确认邮件，点击确认后才能修改成功。<br><img src="/images/joplin-docker-deploy/update-pass.png" srcset="/img/loading.gif" lazyload></p>
-</li>
+<li>不加<code>-csdn</code><br><img src="/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png" srcset="/img/loading.gif" lazyload></li>
+<li>添加<code>-csdn</code><br><img src="/images/search-engine/ff0ad7742cc73d7b39af10bf0cad716a.png" srcset="/img/loading.gif" lazyload></li>
 </ul>
-<h3 id="客户端安装"><a href="#客户端安装" class="headerlink" title="客户端安装"></a>客户端安装</h3><p>客户端直接去<a target="_blank" rel="noopener" href="https://joplinapp.org/">官网</a>下载客户端就好，下载完成后在配置里添加同步配置<br><img src="/images/joplin-docker-deploy/client-sync.png" srcset="/img/loading.gif" lazyload><br>以上就是整个安装配置过程</p>
-<h3 id="内网穿透"><a href="#内网穿透" class="headerlink" title="内网穿透"></a>内网穿透</h3><p>如果是部署到内网，没有公网ip话，想要在公网访问可以搞个内网穿透。我这直接使用的<a target="_blank" rel="noopener" href="https://github.com/fatedier/frp">frp</a>加上一个云服务商的轻量云服务器，frp配置如下</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">服务端</span><br>[common]<br>bind_port = 7000<br>token = token<br>log_file = ./frps.log<br>log_max_days = 3<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">客户端配置</span><br>[common]<br>server_addr = 公网ip<br>server_port = 7000<br>token = token<br><br>[joplin]<br>type = tcp<br>local_port = 22300<br>local_ip = joplin局域网ip<br>remote_port = 8083<br></code></pre></td></tr></table></figure>
-<p>对应的nginx配置如下，这里nginx和frps部署在了同一个服务器上，所以直接代理到127.0.0.1，端口就是上面frpc配的remote_port，当然直接访问的话就不用nginx反代了，直接通过公网域名&#x2F;ip+remote_port访问。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>          listen       8888; //端口<br>          server_name  domain;<br>          location / &#123;<br>              proxy_set_header Host $host:$server_port;<br>              proxy_set_header X-Real-IP $remote_addr;<br>              proxy_pass http://127.0.0.1:8083;<br>            &#125;<br>       &#125;<br></code></pre></td></tr></table></figure>
-
-
-
+<p>bing也可以通过加<code>-site:*.csdn.net</code>实现同样的效果</p>
+<ul>
+<li>不加<code>-site:*.csdn.net</code><br><img src="/images/search-engine/b1dd6ce357ffbc3906098a001f8ae5aa.png" srcset="/img/loading.gif" lazyload></li>
+<li>加<code>-site:*.csdn.net</code><br><img src="/images/search-engine/6766f99d89c7db24a77a9aae902b984e.png" srcset="/img/loading.gif" lazyload></li>
+</ul>
+<p>虽然添加参数可以解决问题，但总不能每次搜索都额外输入一些参数，使用起来反而更加麻烦，有没有什么好方法不用增加额外成本呢，一番搜索终于找到了个浏览器插件 <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?gclid=EAIaIQobChMIldeskoe0gQMVHM0WBR2V_Qa5EAAYASAAEgLoj_D_BwE">uBlacklist</a>适用于Chrome或者Edge浏览器。安装后可以在搜索结果里将某些站点添加黑名单。</p>
+<p><img src="/images/search-engine/a2baba0ae05cc0ee7dd21420c4537fdf.png" srcset="/img/loading.gif" lazyload></p>
+<p>也可以直接在插件选项里添加屏蔽配置<br><img src="/images/search-engine/a2e1675783aeaa237c7eff02bde2b09e.png" srcset="/img/loading.gif" lazyload><br>这个插件在使用chrome搜索引擎时可以完美工作，在使用bing时虽然也正常工作了，但是bing默认有个搜索推荐，如下：<br><img src="/images/search-engine/b75d203130d28431d811d35960e222bd.png" srcset="/img/loading.gif" lazyload><br>在这里还是展示了想要屏蔽的网站，有没有办法把这个也屏蔽呢，找了下，就找到了另一个插件<code>stylebot</code>了<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/stylebot/oiaejidbmkiecgbjeifoejpgmdaleoha?gclid=EAIaIQobChMIldeskoe0gQMVHM0WBR2V_Qa5EAAYASAAEgLoj_D_BwE">chrome地址</a>、 <a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/stylebot/mjolbpfednnbebfapicajpifliopnnai">edge地址</a>。这个插件允许添加css样式作用到页面。<br>在bing搜索结果页面查看页面元素可以看到开头的两条推荐的html标签class属性都有<code>b_ans</code>这个值<br><img src="/images/search-engine/839b78d4aaa8aa85f7926b3aec25b1c6.png" srcset="/img/loading.gif" lazyload><br>我们通过stylebot插件直接隐藏包含<code>b_ans</code>类属性值的标签<br><img src="/images/search-engine/fd4e3dd095d98026d50b2fb48f5e9dd4.png" srcset="/img/loading.gif" lazyload><br>最终效果，开头的两条推荐被完美隐藏：<br><img src="/images/search-engine/a290aed25be2f2d38390fdc08960856c.png" srcset="/img/loading.gif" lazyload><br>有些不完美的地方是没办法指定css作用的页面，如果其他页面也有这个属性可能会被误伤，遇到这种可以通过stylebot插件里的开关控制是否开启。</p>
 
                 
               </div>
@@ -364,7 +359,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Joplin/" class="category-chain-item">Joplin</a>
+  <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" class="category-chain-item">浏览器插件</a>
   
   
 
@@ -379,11 +374,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Joplin/" class="print-no-link">#Joplin</a>
+        <a href="/tags/Chrome/" class="print-no-link">#Chrome</a>
       
-        <a href="/tags/%E9%83%A8%E7%BD%B2/" class="print-no-link">#部署</a>
-      
-        <a href="/tags/frp/" class="print-no-link">#frp</a>
+        <a href="/tags/Edge/" class="print-no-link">#Edge</a>
       
     </div>
   
@@ -395,8 +388,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>内网NAS使用docker部署Joplin笔记服务</div>
-      <div>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</div>
+      <div>好用的浏览器插件——搜索结果屏蔽指定网页</div>
+      <div>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</div>
     </div>
     <div class="license-meta">
       
@@ -408,7 +401,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月12日</div>
+          <div>2023年9月19日</div>
         </div>
       
       
@@ -440,18 +433,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/19/chrome-edge-add-black-list/" title="好用的浏览器插件——搜索结果屏蔽指定网页">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">好用的浏览器插件——搜索结果屏蔽指定网页</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/20/curl-proxy-no-use/" title="curl proxy设置无效问题排查">
-                        <span class="hidden-mobile">curl proxy设置无效问题排查</span>
+                      <a href="/2023/09/12/joplin-docker-deploy/" title="内网NAS使用docker部署Joplin笔记服务">
+                        <span class="hidden-mobile">内网NAS使用docker部署Joplin笔记服务</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -474,7 +461,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: '0d34f5968379148ea90409a878406e19'
+            id: '9b44279f8930e75d48ec104d7974c783'
           }
         )
         var gitalk = new Gitalk(options);

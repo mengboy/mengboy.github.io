@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>好用的浏览器插件——搜索结果屏蔽指定网页</title>
+    <link href="/2023/09/19/chrome-edge-add-black-list/"/>
+    <url>/2023/09/19/chrome-edge-add-black-list/</url>
+    
+    <content type="html"><![CDATA[<p>最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。<br>实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加<code>-csdn</code>，效果如下：</p><span id="more"></span><ul><li>不加<code>-csdn</code><br><img src="/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png"></li><li>添加<code>-csdn</code><br><img src="/images/search-engine/ff0ad7742cc73d7b39af10bf0cad716a.png"></li></ul><p>bing也可以通过加<code>-site:*.csdn.net</code>实现同样的效果</p><ul><li>不加<code>-site:*.csdn.net</code><br><img src="/images/search-engine/b1dd6ce357ffbc3906098a001f8ae5aa.png"></li><li>加<code>-site:*.csdn.net</code><br><img src="/images/search-engine/6766f99d89c7db24a77a9aae902b984e.png"></li></ul><p>虽然添加参数可以解决问题，但总不能每次搜索都额外输入一些参数，使用起来反而更加麻烦，有没有什么好方法不用增加额外成本呢，一番搜索终于找到了个浏览器插件 <a href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?gclid=EAIaIQobChMIldeskoe0gQMVHM0WBR2V_Qa5EAAYASAAEgLoj_D_BwE">uBlacklist</a>适用于Chrome或者Edge浏览器。安装后可以在搜索结果里将某些站点添加黑名单。</p><p><img src="/images/search-engine/a2baba0ae05cc0ee7dd21420c4537fdf.png"></p><p>也可以直接在插件选项里添加屏蔽配置<br><img src="/images/search-engine/a2e1675783aeaa237c7eff02bde2b09e.png"><br>这个插件在使用chrome搜索引擎时可以完美工作，在使用bing时虽然也正常工作了，但是bing默认有个搜索推荐，如下：<br><img src="/images/search-engine/b75d203130d28431d811d35960e222bd.png"><br>在这里还是展示了想要屏蔽的网站，有没有办法把这个也屏蔽呢，找了下，就找到了另一个插件<code>stylebot</code>了<a href="https://chrome.google.com/webstore/detail/stylebot/oiaejidbmkiecgbjeifoejpgmdaleoha?gclid=EAIaIQobChMIldeskoe0gQMVHM0WBR2V_Qa5EAAYASAAEgLoj_D_BwE">chrome地址</a>、 <a href="https://microsoftedge.microsoft.com/addons/detail/stylebot/mjolbpfednnbebfapicajpifliopnnai">edge地址</a>。这个插件允许添加css样式作用到页面。<br>在bing搜索结果页面查看页面元素可以看到开头的两条推荐的html标签class属性都有<code>b_ans</code>这个值<br><img src="/images/search-engine/839b78d4aaa8aa85f7926b3aec25b1c6.png"><br>我们通过stylebot插件直接隐藏包含<code>b_ans</code>类属性值的标签<br><img src="/images/search-engine/fd4e3dd095d98026d50b2fb48f5e9dd4.png"><br>最终效果，开头的两条推荐被完美隐藏：<br><img src="/images/search-engine/a290aed25be2f2d38390fdc08960856c.png"><br>有些不完美的地方是没办法指定css作用的页面，如果其他页面也有这个属性可能会被误伤，遇到这种可以通过stylebot插件里的开关控制是否开启。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>浏览器插件</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Chrome</tag>
+      
+      <tag>Edge</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>内网NAS使用docker部署Joplin笔记服务</title>
     <link href="/2023/09/12/joplin-docker-deploy/"/>
     <url>/2023/09/12/joplin-docker-deploy/</url>

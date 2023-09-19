@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-16T09:22:48.486Z</updated>
+  <updated>2023-09-19T13:57:32.640Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>好用的浏览器插件——搜索结果屏蔽指定网页</title>
+    <link href="https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/"/>
+    <id>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</id>
+    <published>2023-09-19T13:35:21.000Z</published>
+    <updated>2023-09-19T13:57:32.640Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。&lt;br&gt;实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加&lt;code&gt;-csdn&lt;/code&gt;，效果如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="浏览器插件" scheme="https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="Chrome" scheme="https://www.mfun.ink/tags/Chrome/"/>
+    
+    <category term="Edge" scheme="https://www.mfun.ink/tags/Edge/"/>
+    
+  </entry>
   
   <entry>
     <title>内网NAS使用docker部署Joplin笔记服务</title>
@@ -506,31 +527,6 @@
     <category term="gorilla/websocket" scheme="https://www.mfun.ink/tags/gorilla-websocket/"/>
     
     <category term="gobwas/ws" scheme="https://www.mfun.ink/tags/gobwas-ws/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sse(serve send events) 服务端推送技术</title>
-    <link href="https://www.mfun.ink/2020/09/12/sse/"/>
-    <id>https://www.mfun.ink/2020/09/12/sse/</id>
-    <published>2020-09-12T14:58:30.000Z</published>
-    <updated>2020-10-26T07:37:33.777Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;什么是sse&quot;&gt;&lt;a href=&quot;#什么是sse&quot; class=&quot;headerlink&quot; title=&quot;什么是sse&quot;&gt;&lt;/a&gt;什么是sse&lt;/h3&gt;&lt;p&gt;sse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&amp;gt;应答的模式，一次request–&amp;gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="网络协议" scheme="https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
-    
-    <category term="http1.x" scheme="https://www.mfun.ink/tags/http1-x/"/>
-    
-    <category term="http2.0" scheme="https://www.mfun.ink/tags/http2-0/"/>
-    
-    <category term="sse" scheme="https://www.mfun.ink/tags/sse/"/>
     
   </entry>
   
