@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-19T13:57:32.640Z</updated>
+  <updated>2023-09-22T11:18:06.343Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/"/>
     <id>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</id>
     <published>2023-09-19T13:35:21.000Z</published>
-    <updated>2023-09-19T13:57:32.640Z</updated>
+    <updated>2023-09-22T11:18:06.343Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。&lt;br&gt;实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加&lt;code&gt;-csdn&lt;/code&gt;，效果如下：&lt;/p&gt;</summary>
