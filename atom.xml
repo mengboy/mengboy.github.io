@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-22T11:18:06.343Z</updated>
+  <updated>2023-09-26T16:19:44.143Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go处理zip压缩以及解压</title>
+    <link href="https://www.mfun.ink/2023/09/26/go-zip/"/>
+    <id>https://www.mfun.ink/2023/09/26/go-zip/</id>
+    <published>2023-09-26T14:47:26.000Z</published>
+    <updated>2023-09-26T16:19:44.143Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库&lt;code&gt;archive/zip&lt;/code&gt;。下面记录下具体使用方法，以及注意事项。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="zip" scheme="https://www.mfun.ink/tags/zip/"/>
+    
+    <category term="go zip" scheme="https://www.mfun.ink/tags/go-zip/"/>
+    
+  </entry>
   
   <entry>
     <title>好用的浏览器插件——搜索结果屏蔽指定网页</title>
@@ -500,33 +521,6 @@
     <category term="go1.14.2" scheme="https://www.mfun.ink/tags/go1-14-2/"/>
     
     <category term="fd" scheme="https://www.mfun.ink/tags/fd/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>websocket引入epoll机制</title>
-    <link href="https://www.mfun.ink/2020/09/15/websocket-epoll/"/>
-    <id>https://www.mfun.ink/2020/09/15/websocket-epoll/</id>
-    <published>2020-09-15T12:02:08.000Z</published>
-    <updated>2023-07-29T13:50:16.519Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。&lt;br&gt;使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
-    
-    <category term="网络协议" scheme="https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
-    
-    
-    <category term="websocket" scheme="https://www.mfun.ink/tags/websocket/"/>
-    
-    <category term="epoll" scheme="https://www.mfun.ink/tags/epoll/"/>
-    
-    <category term="gorilla/websocket" scheme="https://www.mfun.ink/tags/gorilla-websocket/"/>
-    
-    <category term="gobwas/ws" scheme="https://www.mfun.ink/tags/gobwas-ws/"/>
     
   </entry>
   

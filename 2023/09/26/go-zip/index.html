@@ -16,36 +16,25 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加-csdn，效果如下：">
+    <meta name="description" content="Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库archive&#x2F;zip。下面记录下具体使用方法，以及注意事项。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="好用的浏览器插件——搜索结果屏蔽指定网页">
-<meta property="og:url" content="https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/index.html">
+<meta property="og:title" content="Go处理zip压缩以及解压">
+<meta property="og:url" content="https://www.mfun.ink/2023/09/26/go-zip/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加-csdn，效果如下：">
+<meta property="og:description" content="Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库archive&#x2F;zip。下面记录下具体使用方法，以及注意事项。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/ff0ad7742cc73d7b39af10bf0cad716a.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/b1dd6ce357ffbc3906098a001f8ae5aa.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/6766f99d89c7db24a77a9aae902b984e.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/a2baba0ae05cc0ee7dd21420c4537fdf.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/a2e1675783aeaa237c7eff02bde2b09e.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/b75d203130d28431d811d35960e222bd.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/839b78d4aaa8aa85f7926b3aec25b1c6.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/fd4e3dd095d98026d50b2fb48f5e9dd4.png">
-<meta property="og:image" content="https://www.mfun.ink/images/search-engine/a290aed25be2f2d38390fdc08960856c.png">
-<meta property="article:published_time" content="2023-09-19T13:35:21.000Z">
-<meta property="article:modified_time" content="2023-09-22T11:18:06.343Z">
+<meta property="article:published_time" content="2023-09-26T14:47:26.000Z">
+<meta property="article:modified_time" content="2023-09-26T16:19:44.143Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="Chrome">
-<meta property="article:tag" content="Edge">
+<meta property="article:tag" content="zip">
+<meta property="article:tag" content="go zip">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.mfun.ink/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>好用的浏览器插件——搜索结果屏蔽指定网页 - Mengboy&#39;s Blog</title>
+  <title>Go处理zip压缩以及解压 - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -251,7 +240,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="好用的浏览器插件——搜索结果屏蔽指定网页"></span>
+            <span id="subtitle" data-typed-text="Go处理zip压缩以及解压"></span>
           
         </div>
 
@@ -262,8 +251,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-19 21:35" pubdate>
-          2023年9月19日 晚上
+        <time datetime="2023-09-26 22:47" pubdate>
+          2023年9月26日 晚上
         </time>
       </span>
     
@@ -274,7 +263,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          622 字
+          2.8k 字
         
       </span>
     
@@ -285,7 +274,7 @@
         
         
         
-          6 分钟
+          24 分钟
         
       </span>
     
@@ -322,25 +311,21 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">好用的浏览器插件——搜索结果屏蔽指定网页</h1>
+            <h1 id="seo-header">Go处理zip压缩以及解压</h1>
             
             
               <div class="markdown-body">
                 
-                <p>最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。<br>实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加<code>-csdn</code>，效果如下：</p>
+                <p>Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库<code>archive/zip</code>。下面记录下具体使用方法，以及注意事项。</p>
 <span id="more"></span>
-<ul>
-<li>不加<code>-csdn</code><br><img src="/images/search-engine/703f73e4ad445a0ac1f59535fb079657.png" srcset="/img/loading.gif" lazyload></li>
-<li>添加<code>-csdn</code><br><img src="/images/search-engine/ff0ad7742cc73d7b39af10bf0cad716a.png" srcset="/img/loading.gif" lazyload></li>
-</ul>
-<p>bing也可以通过加<code>-site:*.csdn.net</code>实现同样的效果</p>
-<ul>
-<li>不加<code>-site:*.csdn.net</code><br><img src="/images/search-engine/b1dd6ce357ffbc3906098a001f8ae5aa.png" srcset="/img/loading.gif" lazyload></li>
-<li>加<code>-site:*.csdn.net</code><br><img src="/images/search-engine/6766f99d89c7db24a77a9aae902b984e.png" srcset="/img/loading.gif" lazyload></li>
-</ul>
-<p>虽然添加参数可以解决问题，但总不能每次搜索都额外输入一些参数，使用起来反而更加麻烦，有没有什么好方法不用增加额外成本呢，一番搜索终于找到了个浏览器插件 <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe?gclid=EAIaIQobChMIldeskoe0gQMVHM0WBR2V_Qa5EAAYASAAEgLoj_D_BwE">uBlacklist</a>适用于Chrome或者Edge浏览器。安装后可以在搜索结果里将某些站点添加黑名单。</p>
-<p><img src="/images/search-engine/a2baba0ae05cc0ee7dd21420c4537fdf.png" srcset="/img/loading.gif" lazyload></p>
-<p>也可以直接在插件选项里添加屏蔽配置<br><img src="/images/search-engine/a2e1675783aeaa237c7eff02bde2b09e.png" srcset="/img/loading.gif" lazyload><br>这个插件在使用chrome搜索引擎时可以完美工作，在使用bing时虽然也正常工作了，但是bing默认有个搜索推荐，如下：<br><img src="/images/search-engine/b75d203130d28431d811d35960e222bd.png" srcset="/img/loading.gif" lazyload><br>在这里还是展示了想要屏蔽的网站，有没有办法把这个也屏蔽呢，找了下，就找到了另一个插件<code>stylebot</code>了<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/stylebot/oiaejidbmkiecgbjeifoejpgmdaleoha?gclid=EAIaIQobChMIldeskoe0gQMVHM0WBR2V_Qa5EAAYASAAEgLoj_D_BwE">chrome地址</a>、 <a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/stylebot/mjolbpfednnbebfapicajpifliopnnai">edge地址</a>。这个插件允许添加css样式作用到页面。<br>在bing搜索结果页面查看页面元素可以看到开头的两条推荐的html标签class属性都有<code>b_ans</code>这个值<br><img src="/images/search-engine/839b78d4aaa8aa85f7926b3aec25b1c6.png" srcset="/img/loading.gif" lazyload><br>我们通过stylebot插件直接隐藏包含<code>b_ans</code>类属性值的标签，上面输入框里可以选择生效的具体页面，针对域名或者域名下自级目录都可以。<br><img src="/images/search-engine/fd4e3dd095d98026d50b2fb48f5e9dd4.png" srcset="/img/loading.gif" lazyload><br>最终效果，开头的两条推荐被完美隐藏：<br><img src="/images/search-engine/a290aed25be2f2d38390fdc08960856c.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="Go-处理zip解压"><a href="#Go-处理zip解压" class="headerlink" title="Go 处理zip解压"></a>Go 处理zip解压</h3><p>一般zip文件是来自于磁盘或者网络，不管处理磁盘还是网络中的zip文件首先都是读取文件数据</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs Go"><span class="hljs-comment">// 读取磁盘文件</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">getFromDisk</span><span class="hljs-params">(filePath <span class="hljs-type">string</span>)</span></span> ([]<span class="hljs-type">byte</span>, <span class="hljs-type">error</span>)  &#123;<br>	<span class="hljs-keyword">return</span> os.ReadFile(filePath)<br>&#125;<br><br><span class="hljs-comment">// 读取网络文件</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">getZipFromNet</span><span class="hljs-params">(zipURL <span class="hljs-type">string</span>)</span></span> ([]<span class="hljs-type">byte</span>, <span class="hljs-type">error</span>) &#123;<br>	rsp, err := http.Get(zipURL)<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, err<br>	&#125;<br>	rspBody, err := io.ReadAll(rsp.Body)<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, err<br>	&#125;<br>	<span class="hljs-keyword">defer</span> rsp.Body.Close()<br>	<span class="hljs-keyword">return</span> rspBody, <span class="hljs-literal">nil</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>拿到数据后在使用标准库解压就好，需要注意的是要记得校验目录是否存在，如果不存在要先创建不然下面<code>Open</code>打开文件的时候会报错。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs Go"><span class="hljs-comment">// @zipData 压缩数据</span><br><span class="hljs-comment">// @destDir 要解压的文件夹 </span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">unzip</span><span class="hljs-params">(zipData []<span class="hljs-type">byte</span>, destDir <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">error</span> &#123;<br>	zipReader, err := zip.NewReader(bytes.NewReader(zipData), <span class="hljs-type">int64</span>(<span class="hljs-built_in">len</span>(zipData)))<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> err<br>	&#125;<br>	<span class="hljs-keyword">for</span> _, f := <span class="hljs-keyword">range</span> zipReader.File &#123;<br>		err := writeUnzipFile(f, destDir)<br>		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>			fmt.Println(err)<br>			<span class="hljs-keyword">return</span> err<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">writeUnzipFile</span><span class="hljs-params">(f *zip.File, destDir <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">error</span> &#123;<br>	fName := f.Name<br>	destPath := filepath.Join(destDir, fName)<br>	<span class="hljs-comment">// 判断文件夹是否存在，主要是处理zip包含多层文件目录的情况</span><br>	<span class="hljs-keyword">if</span> f.FileInfo().IsDir() &amp;&amp; !isFileExist(destPath) &#123;<br>		err := os.MkdirAll(destPath, os.ModePerm)<br>		<span class="hljs-keyword">return</span> err<br>	&#125;<br>	<span class="hljs-comment">// 创建要写入的文件</span><br>	fw, err := os.Open(destPath)<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> err<br>	&#125;<br>	<span class="hljs-keyword">defer</span> fw.Close()<br>	fr, err := f.Open()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> err<br>	&#125;<br>	<span class="hljs-keyword">defer</span> fr.Close()<br>	_, err = io.Copy(fw, fr)<br>	<span class="hljs-keyword">return</span> err<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="压缩文件"><a href="#压缩文件" class="headerlink" title="压缩文件"></a>压缩文件</h3><p>压缩文件就要用到zip writer了，这里用到<code>filepath.Walk</code>遍历目录下所有文件读取并写入到zip writer里，需要注意的是<code>filepath.Walk</code>方法会遍历目录自身，处理的时候要跳过。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs Go"><span class="hljs-comment">// @toZipFilePath 要压缩的文件所在目录 绝对路径</span><br><span class="hljs-comment">// @destDir 生成压缩文件的目录</span><br><span class="hljs-comment">// @fileName 生成的压缩文件名称 如xxx.zip</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">zipData</span><span class="hljs-params">(toZipFilePath <span class="hljs-type">string</span>, destDir <span class="hljs-type">string</span>, fileName <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">error</span> &#123;<br>	<span class="hljs-keyword">if</span> !isFileExist(destDir) &#123;<br>		err := os.MkdirAll(destDir, os.ModePerm)<br>		<span class="hljs-keyword">return</span> err<br>	&#125;<br>	<span class="hljs-comment">// 创建新的压缩文件</span><br>	archive, err := os.Create(destDir + <span class="hljs-string">&quot;/&quot;</span> + fileName)<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> err<br><br>	&#125;<br>	zipWriter := zip.NewWriter(archive)<br>	<span class="hljs-keyword">defer</span> zipWriter.Close()<br>	err = filepath.Walk(toZipFilePath, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(path <span class="hljs-type">string</span>, info fs.FileInfo, err <span class="hljs-type">error</span>)</span></span> <span class="hljs-type">error</span> &#123;<br>		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>			<span class="hljs-keyword">return</span> err<br>		&#125;<br>		fmt.Println(<span class="hljs-string">&quot;walk&quot;</span>, path)<br>		<span class="hljs-comment">// 跳过目录自身</span><br>		<span class="hljs-keyword">if</span> path == toZipFilePath &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>		&#125;<br>		<span class="hljs-comment">// 获取zip包中的相对路径 比如要压缩的目录是/tmp/tozip</span><br>		<span class="hljs-comment">// 要压缩的文件是/tmp/tozip/tozip.file</span><br>		<span class="hljs-comment">// 则得到的zipPath = tozip.file</span><br>		<span class="hljs-comment">// 保证压缩后文件目录结构和之前是一样的</span><br>		<span class="hljs-comment">// 如果需要使用新的目录，可以根据需要自定义</span><br>		zipPath := path[<span class="hljs-built_in">len</span>(toZipFilePath)+<span class="hljs-number">1</span>:]<br>		<span class="hljs-keyword">if</span> info.IsDir() &#123;<br>			zipPath += <span class="hljs-string">&quot;/&quot;</span><br>		&#125;<br>		w, err := zipWriter.Create(zipPath)<br>		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>			<span class="hljs-keyword">return</span> err<br>		&#125;<br>		<span class="hljs-keyword">if</span> info.IsDir() &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>		&#125;<br>		fr, err := os.Open(path)<br>		<span class="hljs-keyword">defer</span> fr.Close()<br>		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>			<span class="hljs-keyword">return</span> err<br>		&#125;<br>		_, err = io.Copy(w, fr)<br>		<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>			<span class="hljs-keyword">return</span> err<br>		&#125;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>	&#125;)<br>	<span class="hljs-comment">// 在这里读取新的zip文件可能会出问题</span><br>	<span class="hljs-comment">// 除非吧上面的defer zipWriter.Close()去掉，然后在这里先执行zipWriter.Close()在读取</span><br>	<span class="hljs-keyword">return</span> err<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>处理压缩的时候在zipWriter close之前读取文件读到的数据可能会有问题，因为缓冲区的数据不一定写入完成。在这里被坑过一次，想要读取压缩后的文件重新上传到文件服务结果缓冲区没有flush导致读取的数据有问题。</p>
 
                 
               </div>
@@ -359,7 +344,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/" class="category-chain-item">浏览器插件</a>
+  <a href="/categories/go/" class="category-chain-item">go</a>
   
   
 
@@ -374,9 +359,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Chrome/" class="print-no-link">#Chrome</a>
+        <a href="/tags/zip/" class="print-no-link">#zip</a>
       
-        <a href="/tags/Edge/" class="print-no-link">#Edge</a>
+        <a href="/tags/go-zip/" class="print-no-link">#go zip</a>
       
     </div>
   
@@ -388,8 +373,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>好用的浏览器插件——搜索结果屏蔽指定网页</div>
-      <div>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</div>
+      <div>Go处理zip压缩以及解压</div>
+      <div>https://www.mfun.ink/2023/09/26/go-zip/</div>
     </div>
     <div class="license-meta">
       
@@ -401,7 +386,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月19日</div>
+          <div>2023年9月26日</div>
         </div>
       
       
@@ -433,18 +418,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/09/26/go-zip/" title="Go处理zip压缩以及解压">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Go处理zip压缩以及解压</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/12/joplin-docker-deploy/" title="内网NAS使用docker部署Joplin笔记服务">
-                        <span class="hidden-mobile">内网NAS使用docker部署Joplin笔记服务</span>
+                      <a href="/2023/09/19/chrome-edge-add-black-list/" title="好用的浏览器插件——搜索结果屏蔽指定网页">
+                        <span class="hidden-mobile">好用的浏览器插件——搜索结果屏蔽指定网页</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -467,7 +446,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: '9b44279f8930e75d48ec104d7974c783'
+            id: '59974d8ce34d6f03b6b599fe912a8546'
           }
         )
         var gitalk = new Gitalk(options);
