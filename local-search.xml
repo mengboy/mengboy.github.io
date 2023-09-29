@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>docker部署joplin-server数据备份问题</title>
+    <link href="/2023/09/29/docker-joplin-server-data-backup/"/>
+    <url>/2023/09/29/docker-joplin-server-data-backup/</url>
+    
+    <content type="html"><![CDATA[<p>在之前的一篇<a href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/">文章</a>中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？</p><span id="more"></span><h3 id="SQLite-备份"><a href="#SQLite-备份" class="headerlink" title="SQLite 备份"></a>SQLite 备份</h3><p>默认使用SQLite的时候，服务会在<code>/home/joplin/packages/server</code>下创建<code>db-prod.sqlite</code>文件来存储笔记数据。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cd7e1f960db0:/home/joplin/packages/server# ls -al<br>...<br>-rw-r--r-- 1 joplin joplin    8165 Jul 13 10:26 README.md<br>drwxr-xr-x 1 joplin joplin      10 Jul 13 10:26 assets<br>-rw-r--r-- 1 joplin joplin 5054464 Sep 29 04:36 db-prod.sqlite<br>drwxr-xr-x 1 joplin joplin     390 Jul 13 10:38 dist<br>-rw-r--r-- 1 joplin joplin     624 Jul 13 10:26 gulpfile.js<br>...<br></code></pre></td></tr></table></figure><p>显然，这种在docker里创建的文件，docker镜像一旦销毁文件啥的就都没了，一般我们需要持久化的数据都会选择挂载卷的方式把主机目录挂载到docker镜像里，这样docker应用实际操作就是主机目录下文件，即使docker镜像销毁主机目录下的文件也不会受影响，那接下来尝试使用挂载路径存储笔记数据。<br>首先，首次部署的时候挂载个好目录<br><img src="/images/joplin-data-backup/path.png"><br>服务启动后进入容器内命令行，把初始化的<code>db-prod.sqlite</code>拷贝到挂载的目录里</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cd7e1f960db0:/home/joplin/packages/server# cp db-prod.sqlite /back/<br>root@cd7e1f960db0:/home/joplin/packages/server# ls /back<br>db-prod.sqlite<br></code></pre></td></tr></table></figure><p>最后，添加环境变量使用自定义数据库路径，重新启动<br><img src="/images/joplin-data-backup/db-path-env.png"><br>理想情况下，joplin-server会使用挂载的这个数据库作为存储，然而启动后报错，看错误信息是因为没有写权限，我又尝试修改文件权限，清理<code>knex_migrations_lock</code>表的数据，但是还是不行。最终放弃了挂载这种方式。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">[error] db: update `knex_migrations_lock` set `is_locked` = 1 where `is_locked` = 0 - SQLITE_READONLY: attempt to write a readonly database <br></code></pre></td></tr></table></figure><p>接着又考虑其他方法，启动后使用<code>/back/db-prod.sqlite</code>覆盖默认初始化的<code>/home/joplin/packages/server/db-prod.sqlite</code>，一试还真行，覆盖之后通过浏览器访问，登录账号确实是修改之后的，笔记数据也都在。那这种方法是可以的，接下来就好办了，我们定期备份<code>db-prod.sqlite</code>就行，可以写个脚本启个定时任务，定期把数据库文件备份到挂载的主机目录下。<br>当然客户端本地数据都有的情况下，server端docker容器由于某种原因销毁，重新部署后，也可以通过本地覆盖远程的方式强行覆盖远程数据。不过这样总归是有些麻烦的，毕竟重新部署server端后还得修改账号数据。</p><h3 id="PostgresSQL-备份"><a href="#PostgresSQL-备份" class="headerlink" title="PostgresSQL 备份"></a>PostgresSQL 备份</h3><p>使用PostgresSQL的话实际是备份PostgresSQL数据库，docker部署PostgresSQL的时候挂载好路径就行，这样docker镜像异常销毁，数据也不会受到影响。<br><img src="/images/joplin-data-backup/pgsql-data-path.png"><br>总结下来，还是PostgresSQL更方便些，数据和镜像分割开来，更加安全，果断切到PostgresSQL上来。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>joplin</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>joplin-docker</tag>
+      
+      <tag>joplin数据备份</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Go处理zip压缩以及解压</title>
     <link href="/2023/09/26/go-zip/"/>
     <url>/2023/09/26/go-zip/</url>

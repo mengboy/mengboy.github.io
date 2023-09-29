@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-27T11:42:20.055Z</updated>
+  <updated>2023-09-29T05:25:49.930Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker部署joplin-server数据备份问题</title>
+    <link href="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/"/>
+    <id>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</id>
+    <published>2023-09-29T04:26:57.000Z</published>
+    <updated>2023-09-29T05:25:49.930Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在之前的一篇&lt;a href=&quot;https://www.mfun.ink/2023/09/12/joplin-docker-deploy/&quot;&gt;文章&lt;/a&gt;中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="joplin" scheme="https://www.mfun.ink/categories/joplin/"/>
+    
+    
+    <category term="joplin-docker" scheme="https://www.mfun.ink/tags/joplin-docker/"/>
+    
+    <category term="joplin数据备份" scheme="https://www.mfun.ink/tags/joplin%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
   
   <entry>
     <title>Go处理zip压缩以及解压</title>
@@ -498,29 +519,6 @@
     <category term="gvm" scheme="https://www.mfun.ink/tags/gvm/"/>
     
     <category term="go 版本控制" scheme="https://www.mfun.ink/tags/go-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>go 获取 net.conn fd 反射和非反射</title>
-    <link href="https://www.mfun.ink/2020/09/27/gogetFD/"/>
-    <id>https://www.mfun.ink/2020/09/27/gogetFD/</id>
-    <published>2020-09-27T14:27:25.000Z</published>
-    <updated>2023-08-19T06:05:06.811Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;非反射获取&quot;&gt;&lt;a href=&quot;#非反射获取&quot; class=&quot;headerlink&quot; title=&quot;非反射获取&quot;&gt;&lt;/a&gt;非反射获取&lt;/h2&gt;&lt;p&gt;根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
-    
-    <category term="net" scheme="https://www.mfun.ink/categories/net/"/>
-    
-    
-    <category term="go1.14.2" scheme="https://www.mfun.ink/tags/go1-14-2/"/>
-    
-    <category term="fd" scheme="https://www.mfun.ink/tags/fd/"/>
     
   </entry>
   
