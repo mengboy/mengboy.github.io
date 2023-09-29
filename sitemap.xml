@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.mfun.ink/book/algorithms/sort/selection_sort.html</loc>
-    
-    <lastmod>2023-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mfun.ink/book/algorithms/search_index.json</loc>
-    
-    <lastmod>2023-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mfun.ink/book/algorithms/index.html</loc>
-    
-    <lastmod>2023-09-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</loc>
     
     <lastmod>2023-09-29</lastmod>

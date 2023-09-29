@@ -1,6 +1,3 @@
-https://www.mfun.ink/book/algorithms/sort/selection_sort.html
-https://www.mfun.ink/book/algorithms/search_index.json
-https://www.mfun.ink/book/algorithms/index.html
 https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/
 https://www.mfun.ink/2023/09/26/go-zip/
 https://www.mfun.ink/2023/03/04/trojan-install/
