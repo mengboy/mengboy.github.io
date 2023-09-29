@@ -27,7 +27,7 @@
 <meta property="og:image" content="https://www.mfun.ink/images/joplin-data-backup/db-path-env.png">
 <meta property="og:image" content="https://www.mfun.ink/images/joplin-data-backup/pgsql-data-path.png">
 <meta property="article:published_time" content="2023-09-29T04:26:57.000Z">
-<meta property="article:modified_time" content="2023-09-29T05:25:49.930Z">
+<meta property="article:modified_time" content="2023-09-29T07:03:37.784Z">
 <meta property="article:author" content="mengboy">
 <meta property="article:tag" content="joplin-docker">
 <meta property="article:tag" content="joplin数据备份">
@@ -116,7 +116,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0-rc2"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
 </head>
 
 
@@ -324,7 +324,7 @@
 <span id="more"></span>
 <h3 id="SQLite-备份"><a href="#SQLite-备份" class="headerlink" title="SQLite 备份"></a>SQLite 备份</h3><p>默认使用SQLite的时候，服务会在<code>/home/joplin/packages/server</code>下创建<code>db-prod.sqlite</code>文件来存储笔记数据。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cd7e1f960db0:/home/joplin/packages/server# ls -al<br>...<br>-rw-r--r-- 1 joplin joplin    8165 Jul 13 10:26 README.md<br>drwxr-xr-x 1 joplin joplin      10 Jul 13 10:26 assets<br>-rw-r--r-- 1 joplin joplin 5054464 Sep 29 04:36 db-prod.sqlite<br>drwxr-xr-x 1 joplin joplin     390 Jul 13 10:38 dist<br>-rw-r--r-- 1 joplin joplin     624 Jul 13 10:26 gulpfile.js<br>...<br></code></pre></td></tr></table></figure>
-<p>显然，这种在docker里创建的文件，docker镜像一旦销毁文件啥的就都没了，一般我们需要持久化的数据都会选择挂载卷的方式把主机目录挂载到docker镜像里，这样docker应用实际操作就是主机目录下文件，即使docker镜像销毁主机目录下的文件也不会受影响，那接下来尝试使用挂载路径存储笔记数据。<br>首先，首次部署的时候挂载个好目录<br><img src="/images/joplin-data-backup/path.png" srcset="/img/loading.gif" lazyload><br>服务启动后进入容器内命令行，把初始化的<code>db-prod.sqlite</code>拷贝到挂载的目录里</p>
+<p>显然，这种在docker里创建的文件，docker镜像一旦销毁文件啥的就都没了，一般我们需要持久化的数据都会选择挂载卷的方式把主机目录挂载到docker镜像里，这样docker应用实际操作就是主机目录下文件，即使docker镜像销毁主机目录下的文件也不会受影响，那接下来尝试使用挂载路径存储笔记数据。<br>首先，首次部署的时候挂载好目录<br><img src="/images/joplin-data-backup/path.png" srcset="/img/loading.gif" lazyload><br>服务启动后进入容器内命令行，把初始化的<code>db-prod.sqlite</code>拷贝到挂载的目录里</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cd7e1f960db0:/home/joplin/packages/server# cp db-prod.sqlite /back/<br>root@cd7e1f960db0:/home/joplin/packages/server# ls /back<br>db-prod.sqlite<br></code></pre></td></tr></table></figure>
 <p>最后，添加环境变量使用自定义数据库路径，重新启动<br><img src="/images/joplin-data-backup/db-path-env.png" srcset="/img/loading.gif" lazyload><br>理想情况下，joplin-server会使用挂载的这个数据库作为存储，然而启动后报错，看错误信息是因为没有写权限，我又尝试修改文件权限，清理<code>knex_migrations_lock</code>表的数据，但是还是不行。最终放弃了挂载这种方式。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">[error] db: update `knex_migrations_lock` set `is_locked` = 1 where `is_locked` = 0 - SQLITE_READONLY: attempt to write a readonly database <br></code></pre></td></tr></table></figure>

@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-29T05:25:49.930Z</updated>
+  <updated>2023-09-29T07:03:37.784Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/"/>
     <id>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</id>
     <published>2023-09-29T04:26:57.000Z</published>
-    <updated>2023-09-29T05:25:49.930Z</updated>
+    <updated>2023-09-29T07:03:37.784Z</updated>
     
     
     <summary type="html">&lt;p&gt;在之前的一篇&lt;a href=&quot;https://www.mfun.ink/2023/09/12/joplin-docker-deploy/&quot;&gt;文章&lt;/a&gt;中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？&lt;/p&gt;</summary>
