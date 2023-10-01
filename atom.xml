@@ -42,7 +42,7 @@
     <link href="https://www.mfun.ink/2023/09/26/go-zip/"/>
     <id>https://www.mfun.ink/2023/09/26/go-zip/</id>
     <published>2023-09-26T14:47:26.000Z</published>
-    <updated>2023-09-27T11:42:20.055Z</updated>
+    <updated>2023-10-01T03:04:47.119Z</updated>
     
     
     <summary type="html">&lt;p&gt;Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库&lt;code&gt;archive/zip&lt;/code&gt;。下面记录下具体使用方法，以及注意事项。&lt;/p&gt;</summary>
