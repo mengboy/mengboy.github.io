@@ -16,29 +16,35 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="在之前的一篇文章中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？">
+    <meta name="description" content="有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker部署joplin-server数据备份问题">
-<meta property="og:url" content="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/index.html">
+<meta property="og:title" content="docker部署calibre-web">
+<meta property="og:url" content="https://www.mfun.ink/2023/10/23/docker-calibre-web/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="在之前的一篇文章中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？">
+<meta property="og:description" content="有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-data-backup/path.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-data-backup/db-path-env.png">
-<meta property="og:image" content="https://www.mfun.ink/images/joplin-data-backup/pgsql-data-path.png">
-<meta property="article:published_time" content="2023-09-29T04:26:57.000Z">
-<meta property="article:modified_time" content="2023-10-23T15:20:29.925Z">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/1_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/3_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/2_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/5_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/6_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/7_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/8_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/9_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/calibre-web/image.jpg">
+<meta property="article:published_time" content="2023-10-23T15:18:33.000Z">
+<meta property="article:modified_time" content="2023-10-23T15:28:02.227Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="joplin-docker">
-<meta property="article:tag" content="joplin数据备份">
+<meta property="article:tag" content="calibre-web">
+<meta property="article:tag" content="个人数字图书馆">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.mfun.ink/images/joplin-data-backup/path.png">
+<meta name="twitter:image" content="https://www.mfun.ink/images/calibre-web/1_image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>docker部署joplin-server数据备份问题 - Mengboy&#39;s Blog</title>
+  <title>docker部署calibre-web - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -244,7 +250,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="docker部署joplin-server数据备份问题"></span>
+            <span id="subtitle" data-typed-text="docker部署calibre-web"></span>
           
         </div>
 
@@ -255,8 +261,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-09-29 12:26" pubdate>
-          2023年9月29日 中午
+        <time datetime="2023-10-23 23:18" pubdate>
+          2023年10月23日 晚上
         </time>
       </span>
     
@@ -267,7 +273,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1k 字
         
       </span>
     
@@ -278,7 +284,7 @@
         
         
         
-          13 分钟
+          9 分钟
         
       </span>
     
@@ -315,21 +321,59 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">docker部署joplin-server数据备份问题</h1>
+            <h1 id="seo-header">docker部署calibre-web</h1>
             
             
               <div class="markdown-body">
                 
-                <p>在之前的一篇<a href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/">文章</a>中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？</p>
+                <p>有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。</p>
 <span id="more"></span>
-<h3 id="SQLite-备份"><a href="#SQLite-备份" class="headerlink" title="SQLite 备份"></a>SQLite 备份</h3><p>默认使用SQLite的时候，服务会在<code>/home/joplin/packages/server</code>下创建<code>db-prod.sqlite</code>文件来存储笔记数据。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cd7e1f960db0:/home/joplin/packages/server# ls -al<br>...<br>-rw-r--r-- 1 joplin joplin    8165 Jul 13 10:26 README.md<br>drwxr-xr-x 1 joplin joplin      10 Jul 13 10:26 assets<br>-rw-r--r-- 1 joplin joplin 5054464 Sep 29 04:36 db-prod.sqlite<br>drwxr-xr-x 1 joplin joplin     390 Jul 13 10:38 dist<br>-rw-r--r-- 1 joplin joplin     624 Jul 13 10:26 gulpfile.js<br>...<br></code></pre></td></tr></table></figure>
-<p>显然，这种在docker里创建的文件，docker镜像一旦销毁文件啥的就都没了，一般我们需要持久化的数据都会选择挂载卷的方式把主机目录挂载到docker镜像里，这样docker应用实际操作就是主机目录下文件，即使docker镜像销毁主机目录下的文件也不会受影响，那接下来尝试使用挂载路径存储笔记数据。<br>首先，首次部署的时候挂载好目录<br><img src="/images/joplin-data-backup/path.png" srcset="/img/loading.gif" lazyload><br>服务启动后进入容器内命令行，把初始化的<code>db-prod.sqlite</code>拷贝到挂载的目录里</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">root@cd7e1f960db0:/home/joplin/packages/server# cp db-prod.sqlite /back/<br>root@cd7e1f960db0:/home/joplin/packages/server# ls /back<br>db-prod.sqlite<br></code></pre></td></tr></table></figure>
-<p>最后，添加环境变量使用自定义数据库路径，重新启动<br><img src="/images/joplin-data-backup/db-path-env.png" srcset="/img/loading.gif" lazyload><br>理想情况下，joplin-server会使用挂载的这个数据库作为存储，然而启动后报错，看错误信息是因为没有写权限，我又尝试修改文件权限，清理<code>knex_migrations_lock</code>表的数据，但是还是不行。最终放弃了挂载这种方式。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">[error] db: update `knex_migrations_lock` set `is_locked` = 1 where `is_locked` = 0 - SQLITE_READONLY: attempt to write a readonly database <br></code></pre></td></tr></table></figure>
-<p>接着又考虑其他方法，启动后使用<code>/back/db-prod.sqlite</code>覆盖默认初始化的<code>/home/joplin/packages/server/db-prod.sqlite</code>，一试还真行，覆盖之后通过浏览器访问，登录账号确实是修改之后的，笔记数据也都在。那这种方法是可以的，接下来就好办了，我们定期备份<code>db-prod.sqlite</code>就行，可以写个脚本启个定时任务，定期把数据库文件备份到挂载的主机目录下。<br>当然客户端本地数据都有的情况下，server端docker容器由于某种原因销毁，重新部署后，也可以通过本地覆盖远程的方式强行覆盖远程数据。不过这样总归是有些麻烦的，毕竟重新部署server端后还得修改账号数据。</p>
-<h3 id="PostgresSQL-备份"><a href="#PostgresSQL-备份" class="headerlink" title="PostgresSQL 备份"></a>PostgresSQL 备份</h3><p>使用PostgresSQL的话实际是备份PostgresSQL数据库，docker部署PostgresSQL的时候挂载好路径就行，这样docker镜像异常销毁，数据也不会受到影响。<br><img src="/images/joplin-data-backup/pgsql-data-path.png" srcset="/img/loading.gif" lazyload><br>总结下来，还是PostgresSQL更方便些，数据和镜像分割开来，更加安全，果断切到PostgresSQL上来。</p>
+
+<h3 id="下载部署"><a href="#下载部署" class="headerlink" title="下载部署"></a>下载部署</h3><p>这里在极空间docker下部署，其他品牌支持docker的NAS也是差不多的流程。</p>
+<ul>
+<li>拉取镜像linuxserver&#x2F;calibre-web</li>
+<li>双击拉取成功的镜像开始部署</li>
+<li>设置挂载路径</li>
+</ul>
+<p><img src="/images/calibre-web/1_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>设置端口映射</li>
+</ul>
+<p><img src="/images/calibre-web/3_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>设置环境变量</li>
+</ul>
+<p><img src="/images/calibre-web/2_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>TZ是时区设置；PUID、PGID是服务进程在docker下的启动用户，0的话表示是以root用户运行，一般不推荐，官方镜像文档给的例子是1000；HTTPS_PROXY也许docker系统级别的环境变量，设置这个目的是calibre-web元数据抓取有google，不挂代理的话有些元数据抓取没法用，代理自己想办法。</p>
+<h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>安装部署完成后，通过ip+端口访问，初始登录用户：admin，密码：admin123。</p>
+<ul>
+<li>登录之后设置书籍存储路径</li>
+</ul>
+<p><img src="/images/calibre-web/5_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>若提示以下错误表示初始db文件不存在，官方<a target="_blank" rel="noopener" href="https://github.com/janeczku/calibre-web">github</a>README有提到，可以通过这个<a target="_blank" rel="noopener" href="https://github.com/janeczku//images/calibre-web/raw/master/library/metadata.db">链接下载</a>，下载之后放到&#x2F;book目录下，如果有权限问题可以修改db文件权限<code>chmod 644 metadata.db</code></p>
+<p><img src="/images/calibre-web/6_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>修改用户配置</li>
+</ul>
+<p><img src="/images/calibre-web/7_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击右上角的用户，进入用户配置，可以修改用户名和密码；用来接收书籍的电子阅读器邮箱地址一般是类似Kindle这种可以直接通过邮箱接收书籍的应用使用。</p>
+<ul>
+<li>元数据获取</li>
+</ul>
+<p><img src="/images/calibre-web/8_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>点击上传的书籍，会弹出书籍详情，点击下面的编辑元数据会进入元数据详情，可以手动编辑元数据或者点击最下方的获取元数据自动获取</p>
+<p><img src="/images/calibre-web/9_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>国内如果没有代理的话google是用不了的，不过豆瓣基本上也够用了。</p>
+<h3 id="书籍资源查找"><a href="#书籍资源查找" class="headerlink" title="书籍资源查找"></a>书籍资源查找</h3><p>关于找书我一般是在zlibrary，其他一些图书网站如图，有些需要挂代理。</p>
+<p><img src="/images/calibre-web/image.jpg" srcset="/img/loading.gif" lazyload></p>
+<h3 id="客户端阅读器"><a href="#客户端阅读器" class="headerlink" title="客户端阅读器"></a>客户端阅读器</h3><p>calibre-web 支持opds协议，ip+端口&#x2F;opds就是opds路径，所有支持opds的客户端都可以。</p>
+<ul>
+<li>安卓下推荐<strong>静读天下</strong>，ios推荐<strong>kybook</strong>。</li>
+<li>另外有一款开源的<a target="_blank" rel="noopener" href="https://fbreader.org/">fbreader</a>跨平台ios、安卓、pc、mac都支持，且支持google drive同步，就是文件格式支持不好不支持pdf。</li>
+<li>kindle用户也可以通过邮件推送方式获取书籍。</li>
+</ul>
+<p>如果希望阅读过程中支持标注、注解可以选择以上应用。  </p>
+<p>calibre-web自带的web阅读基本功能也都有，如果想要支持批准、注解可以安装浏览器插件比如<a target="_blank" rel="noopener" href="http://ksria.com/simpread/">简阅</a>或者开源的<a target="_blank" rel="noopener" href="https://web.hypothes.is/">hypothes</a>。如果使用hypothes Joplin也有相关插件支持导出批注到笔记。</p>
 
                 
               </div>
@@ -348,7 +392,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/joplin/" class="category-chain-item">joplin</a>
+  <a href="/categories/calibre-web/" class="category-chain-item">calibre-web</a>
   
   
 
@@ -373,9 +417,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/joplin-docker/" class="print-no-link">#joplin-docker</a>
+        <a href="/tags/calibre-web/" class="print-no-link">#calibre-web</a>
       
-        <a href="/tags/joplin%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/" class="print-no-link">#joplin数据备份</a>
+        <a href="/tags/%E4%B8%AA%E4%BA%BA%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/" class="print-no-link">#个人数字图书馆</a>
       
     </div>
   
@@ -387,8 +431,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>docker部署joplin-server数据备份问题</div>
-      <div>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</div>
+      <div>docker部署calibre-web</div>
+      <div>https://www.mfun.ink/2023/10/23/docker-calibre-web/</div>
     </div>
     <div class="license-meta">
       
@@ -400,7 +444,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年9月29日</div>
+          <div>2023年10月23日</div>
         </div>
       
       
@@ -432,18 +476,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/10/23/docker-calibre-web/" title="docker部署calibre-web">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">docker部署calibre-web</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/09/26/go-zip/" title="Go处理zip压缩以及解压">
-                        <span class="hidden-mobile">Go处理zip压缩以及解压</span>
+                      <a href="/2023/09/29/docker-joplin-server-data-backup/" title="docker部署joplin-server数据备份问题">
+                        <span class="hidden-mobile">docker部署joplin-server数据备份问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -466,7 +504,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: '3189de91380f5f7c173807540f1f7bad'
+            id: 'e2c0555dc33b3900318d5f8803c20fe6'
           }
         )
         var gitalk = new Gitalk(options);

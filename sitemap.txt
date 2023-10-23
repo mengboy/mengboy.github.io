@@ -1,8 +1,9 @@
-https://www.mfun.ink/2023/09/26/go-zip/
+https://www.mfun.ink/2023/10/23/docker-calibre-web/
+https://www.mfun.ink/2023/09/12/joplin-docker-deploy/
 https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/
+https://www.mfun.ink/2023/09/26/go-zip/
 https://www.mfun.ink/2023/03/04/trojan-install/
 https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/
-https://www.mfun.ink/2023/09/12/joplin-docker-deploy/
 https://www.mfun.ink/tool/index.html
 https://www.mfun.ink/2023/08/20/curl-proxy-no-use/
 https://www.mfun.ink/2020/10/27/go-start-up/
@@ -81,6 +82,8 @@ https://www.mfun.ink/tags/xorm/
 https://www.mfun.ink/tags/%E6%97%B6%E5%8C%BA/
 https://www.mfun.ink/tags/joplin-docker/
 https://www.mfun.ink/tags/joplin%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/
+https://www.mfun.ink/tags/calibre-web/
+https://www.mfun.ink/tags/%E4%B8%AA%E4%BA%BA%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/
 https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/
 https://www.mfun.ink/categories/curl/
 https://www.mfun.ink/categories/go/
@@ -102,3 +105,5 @@ https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C/
 https://www.mfun.ink/categories/MacOS/
 https://www.mfun.ink/categories/vue3/
 https://www.mfun.ink/categories/joplin/
+https://www.mfun.ink/categories/calibre-web/
+https://www.mfun.ink/categories/NAS/

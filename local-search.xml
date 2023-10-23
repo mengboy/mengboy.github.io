@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>docker部署calibre-web</title>
+    <link href="/2023/10/23/docker-calibre-web/"/>
+    <url>/2023/10/23/docker-calibre-web/</url>
+    
+    <content type="html"><![CDATA[<p>有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。</p><span id="more"></span><h3 id="下载部署"><a href="#下载部署" class="headerlink" title="下载部署"></a>下载部署</h3><p>这里在极空间docker下部署，其他品牌支持docker的NAS也是差不多的流程。</p><ul><li>拉取镜像linuxserver&#x2F;calibre-web</li><li>双击拉取成功的镜像开始部署</li><li>设置挂载路径</li></ul><p><img src="/images/calibre-web/1_image.png"></p><ul><li>设置端口映射</li></ul><p><img src="/images/calibre-web/3_image.png"></p><ul><li>设置环境变量</li></ul><p><img src="/images/calibre-web/2_image.png"></p><p>TZ是时区设置；PUID、PGID是服务进程在docker下的启动用户，0的话表示是以root用户运行，一般不推荐，官方镜像文档给的例子是1000；HTTPS_PROXY也许docker系统级别的环境变量，设置这个目的是calibre-web元数据抓取有google，不挂代理的话有些元数据抓取没法用，代理自己想办法。</p><h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>安装部署完成后，通过ip+端口访问，初始登录用户：admin，密码：admin123。</p><ul><li>登录之后设置书籍存储路径</li></ul><p><img src="/images/calibre-web/5_image.png"></p><p>若提示以下错误表示初始db文件不存在，官方<a href="https://github.com/janeczku/calibre-web">github</a>README有提到，可以通过这个<a href="https://github.com/janeczku//images/calibre-web/raw/master/library/metadata.db">链接下载</a>，下载之后放到&#x2F;book目录下，如果有权限问题可以修改db文件权限<code>chmod 644 metadata.db</code></p><p><img src="/images/calibre-web/6_image.png"></p><ul><li>修改用户配置</li></ul><p><img src="/images/calibre-web/7_image.png"></p><p>点击右上角的用户，进入用户配置，可以修改用户名和密码；用来接收书籍的电子阅读器邮箱地址一般是类似Kindle这种可以直接通过邮箱接收书籍的应用使用。</p><ul><li>元数据获取</li></ul><p><img src="/images/calibre-web/8_image.png"></p><p>点击上传的书籍，会弹出书籍详情，点击下面的编辑元数据会进入元数据详情，可以手动编辑元数据或者点击最下方的获取元数据自动获取</p><p><img src="/images/calibre-web/9_image.png"></p><p>国内如果没有代理的话google是用不了的，不过豆瓣基本上也够用了。</p><h3 id="书籍资源查找"><a href="#书籍资源查找" class="headerlink" title="书籍资源查找"></a>书籍资源查找</h3><p>关于找书我一般是在zlibrary，其他一些图书网站如图，有些需要挂代理。</p><p><img src="/images/calibre-web/image.jpg"></p><h3 id="客户端阅读器"><a href="#客户端阅读器" class="headerlink" title="客户端阅读器"></a>客户端阅读器</h3><p>calibre-web 支持opds协议，ip+端口&#x2F;opds就是opds路径，所有支持opds的客户端都可以。</p><ul><li>安卓下推荐<strong>静读天下</strong>，ios推荐<strong>kybook</strong>。</li><li>另外有一款开源的<a href="https://fbreader.org/">fbreader</a>跨平台ios、安卓、pc、mac都支持，且支持google drive同步，就是文件格式支持不好不支持pdf。</li><li>kindle用户也可以通过邮件推送方式获取书籍。</li></ul><p>如果希望阅读过程中支持标注、注解可以选择以上应用。  </p><p>calibre-web自带的web阅读基本功能也都有，如果想要支持批准、注解可以安装浏览器插件比如<a href="http://ksria.com/simpread/">简阅</a>或者开源的<a href="https://web.hypothes.is/">hypothes</a>。如果使用hypothes Joplin也有相关插件支持导出批注到笔记。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>calibre-web</category>
+      
+      <category>NAS</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>calibre-web</tag>
+      
+      <tag>个人数字图书馆</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>docker部署joplin-server数据备份问题</title>
     <link href="/2023/09/29/docker-joplin-server-data-backup/"/>
     <url>/2023/09/29/docker-joplin-server-data-backup/</url>
@@ -14,6 +43,8 @@
     <categories>
       
       <category>joplin</category>
+      
+      <category>NAS</category>
       
     </categories>
     
@@ -95,6 +126,8 @@
     <categories>
       
       <category>Joplin</category>
+      
+      <category>NAS</category>
       
     </categories>
     

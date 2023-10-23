@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-09-29T07:03:37.784Z</updated>
+  <updated>2023-10-23T15:28:02.227Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker部署calibre-web</title>
+    <link href="https://www.mfun.ink/2023/10/23/docker-calibre-web/"/>
+    <id>https://www.mfun.ink/2023/10/23/docker-calibre-web/</id>
+    <published>2023-10-23T15:18:33.000Z</published>
+    <updated>2023-10-23T15:28:02.227Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="calibre-web" scheme="https://www.mfun.ink/categories/calibre-web/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    
+    <category term="calibre-web" scheme="https://www.mfun.ink/tags/calibre-web/"/>
+    
+    <category term="个人数字图书馆" scheme="https://www.mfun.ink/tags/%E4%B8%AA%E4%BA%BA%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>docker部署joplin-server数据备份问题</title>
     <link href="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/"/>
     <id>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</id>
     <published>2023-09-29T04:26:57.000Z</published>
-    <updated>2023-09-29T07:03:37.784Z</updated>
+    <updated>2023-10-23T15:20:29.925Z</updated>
     
     
     <summary type="html">&lt;p&gt;在之前的一篇&lt;a href=&quot;https://www.mfun.ink/2023/09/12/joplin-docker-deploy/&quot;&gt;文章&lt;/a&gt;中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？&lt;/p&gt;</summary>
@@ -29,6 +52,8 @@
     
     
     <category term="joplin" scheme="https://www.mfun.ink/categories/joplin/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
     
     
     <category term="joplin-docker" scheme="https://www.mfun.ink/tags/joplin-docker/"/>
@@ -84,7 +109,7 @@
     <link href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/"/>
     <id>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</id>
     <published>2023-09-12T14:45:49.000Z</published>
-    <updated>2023-09-16T09:22:48.486Z</updated>
+    <updated>2023-10-23T15:20:29.932Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/laurent22/joplin&quot;&gt;Joplin&lt;/a&gt;是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：&lt;/p&gt;</summary>
@@ -92,6 +117,8 @@
     
     
     <category term="Joplin" scheme="https://www.mfun.ink/categories/Joplin/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
     
     
     <category term="Joplin" scheme="https://www.mfun.ink/tags/Joplin/"/>
@@ -494,31 +521,6 @@
     <category term="gdb" scheme="https://www.mfun.ink/tags/gdb/"/>
     
     <category term="mac" scheme="https://www.mfun.ink/tags/mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>造轮子——go 版本控制(gvm)</title>
-    <link href="https://www.mfun.ink/2020/09/29/gvm/"/>
-    <id>https://www.mfun.ink/2020/09/29/gvm/</id>
-    <published>2020-09-29T12:36:24.000Z</published>
-    <updated>2023-07-02T08:44:55.228Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;功能列表&quot;&gt;&lt;a href=&quot;#功能列表&quot; class=&quot;headerlink&quot; title=&quot;功能列表&quot;&gt;&lt;/a&gt;功能列表&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;支持linux、darwin&lt;/li&gt;
-&lt;li&gt;获取远程go版本列表 &lt;code&gt;gvm remote&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;/images/gvm/remote.png&quot;&gt;</summary>
-    
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
-    
-    <category term="gvm" scheme="https://www.mfun.ink/tags/gvm/"/>
-    
-    <category term="go 版本控制" scheme="https://www.mfun.ink/tags/go-%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
     
   </entry>
   
