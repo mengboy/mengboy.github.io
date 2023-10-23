@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-10-23T15:28:02.227Z</updated>
+  <updated>2023-10-23T16:01:55.135Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2023/10/23/docker-calibre-web/"/>
     <id>https://www.mfun.ink/2023/10/23/docker-calibre-web/</id>
     <published>2023-10-23T15:18:33.000Z</published>
-    <updated>2023-10-23T15:28:02.227Z</updated>
+    <updated>2023-10-23T16:01:55.135Z</updated>
     
     
     <summary type="html">&lt;p&gt;有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。&lt;/p&gt;</summary>

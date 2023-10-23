@@ -33,7 +33,7 @@
 <meta property="og:image" content="https://www.mfun.ink/images/calibre-web/9_image.png">
 <meta property="og:image" content="https://www.mfun.ink/images/calibre-web/image.jpg">
 <meta property="article:published_time" content="2023-10-23T15:18:33.000Z">
-<meta property="article:modified_time" content="2023-10-23T15:28:02.227Z">
+<meta property="article:modified_time" content="2023-10-23T16:01:55.135Z">
 <meta property="article:author" content="mengboy">
 <meta property="article:tag" content="calibre-web">
 <meta property="article:tag" content="个人数字图书馆">
@@ -344,7 +344,7 @@
 <li>设置环境变量</li>
 </ul>
 <p><img src="/images/calibre-web/2_image.png" srcset="/img/loading.gif" lazyload></p>
-<p>TZ是时区设置；PUID、PGID是服务进程在docker下的启动用户，0的话表示是以root用户运行，一般不推荐，官方镜像文档给的例子是1000；HTTPS_PROXY也许docker系统级别的环境变量，设置这个目的是calibre-web元数据抓取有google，不挂代理的话有些元数据抓取没法用，代理自己想办法。</p>
+<p>TZ是时区设置；PUID、PGID是服务进程在docker下的启动用户，0的话表示是以root用户运行，一般不推荐，官方镜像文档给的例子是1000；HTTPS_PROXY是docker系统级别的环境变量，设置这个目的是calibre-web元数据抓取有google，不挂代理的话有些元数据抓取没法用，代理就需要自己想办法了嘿嘿。。。</p>
 <h3 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h3><p>安装部署完成后，通过ip+端口访问，初始登录用户：admin，密码：admin123。</p>
 <ul>
 <li>登录之后设置书籍存储路径</li>
