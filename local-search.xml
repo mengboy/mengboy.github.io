@@ -13,6 +13,8 @@
     
     <categories>
       
+      <category>NAS</category>
+      
       <category>jellyfin</category>
       
     </categories>
@@ -23,8 +25,6 @@
       <tag>jellyfin</tag>
       
       <tag>docker</tag>
-      
-      <tag>NAS</tag>
       
       <tag>极空间</tag>
       
