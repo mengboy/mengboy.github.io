@@ -4,6 +4,37 @@
   
   
   <entry>
+    <title>Jellyfin安装及使用体验优化</title>
+    <link href="/2023/10/29/jellyfin-install-use/"/>
+    <url>/2023/10/29/jellyfin-install-use/</url>
+    
+    <content type="html"><![CDATA[<p>Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。</p><span id="more"></span><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>NAS下当然还是docker安装，安装教程基本上随手一搜就是一大把，这里简单记录下配置项，主要是文件映射和端口映射</p><ul><li>文件映射</li></ul><p><img src="/images/jellyfin/image.png"></p><ul><li>端口映射</li></ul><p><img src="/images/jellyfin/1_image.png"></p><p>配置完成后直接启动容器，之后在浏览器里通过ip+端口访问，首次访问需要设置用户名和密码。</p><h2 id="使用优化"><a href="#使用优化" class="headerlink" title="使用优化"></a>使用优化</h2><h3 id="硬件解码"><a href="#硬件解码" class="headerlink" title="硬件解码"></a>硬件解码</h3><p>如果使用服务端解码的话一定要开启硬件解码，否则可以说是毫无使用体验，硬件加速选择根据机器配置进行选择，极空间是Intel CPU+集显，所以就选Intel加速。</p><p><img src="/images/jellyfin/2_image.png"></p><p>实际上在开启硬件加速后，就目前使用体验来看，播放起4K高清视频，还是卡顿明显。所以还是建议使用串流让客户端解码。</p><h3 id="客户端解码"><a href="#客户端解码" class="headerlink" title="客户端解码"></a>客户端解码</h3><p>这种方式的话默认就内网播放了，因为串流播放非常依赖带宽，相当于把完整的视频下载下来，一部高清视频大十几G，外网播放流量带宽属实扛不住，当然如果你说你公网带宽无压力那请随意。</p><ul><li>将用户播放设置里，允许转码播放都取消勾选</li></ul><p><img src="/images/jellyfin/3_image.png"></p><ul><li>客户端设置，客户端可以勾选使用fMP4-HLS播放器，不过实际上还是建议使用第三方播放器</li></ul><p><img src="/images/jellyfin/4_image.png"></p><h3 id="第三方播放器"><a href="#第三方播放器" class="headerlink" title="第三方播放器"></a>第三方播放器</h3><ul><li>桌面端</li></ul><p>MacOS和windows都可以选择<a href="https://github.com/jellyfin/jellyfin-mpv-shim">jellyfin-mpv-shim</a>播放器，适配了Jellyfin的MPV播放器，支持mpv的各种配置，对mpv不熟悉可以直接用默认配置，安装的话windows有现成安装包，mac下可以用brew+pip安装。安装完成后，启动jellyfin-mpv-shim按照提示登录jellyfin服务器即可。之后打开Jellyfin客户端播放一个视频，点击右上角那个框可以选择在其他播放器播放。</p><p><img src="/images/jellyfin/5_image.png"></p><p>Mac下还有一个好用的客户端<a href="https://firecore.com/infuse">Infuse</a>，infuse支持多种类型的播放源Jellyfin是其中之一，支持同步Jellyfin的元数据以及媒体库。播放进度也可以同步到Jellyfin服务器。最关键的是播放高清视频十分流畅，我尝试和MPV、VLC对比了下，这俩都有卡顿的情况下infuse居然十分流畅，当然也有可能是我mpv和vlc配置不对。</p><ul><li>移动端</li></ul><p>移动端安装官方客户端后，修改设置可以使用第三方播放器，设置-&gt;客户端设置-&gt;video player type 改为External player</p><p><img src="/images/jellyfin/8_image.png"></p><p>点击播放会让你选择已经安装的播放器播放，这里推荐MXPlayer，除了播放器自身强大外，也是我找到的唯一可以同步播放进度到Jellyfin服务的播放器</p><ul><li>其他一些客户端，参考这个<a href="https://github.com/awesome-jellyfin/clients">github仓库</a></li></ul><p><img src="/images/jellyfin/6_image.png"></p><h3 id="客户端界面设置"><a href="#客户端界面设置" class="headerlink" title="客户端界面设置"></a>客户端界面设置</h3><p>安装官方客户端后可以先在设置-》显示里修改客户端语言以及主题</p><p><img src="/images/jellyfin/7_image.png"></p><h3 id="一些网络错误解决"><a href="#一些网络错误解决" class="headerlink" title="一些网络错误解决"></a>一些网络错误解决</h3><ul><li>TMDB访问不通</li></ul><p>通过tmdb刮削元数据时，报如下错误</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">System.Net.Http.HttpRequestException: Connection timed out (api.themoviedb.org:443)<br></code></pre></td></tr></table></figure><ul><li>github访问不通</li></ul><p>某些插件可能会访问github下载资源，出现如下错误</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">System.Net.Http.HttpRequestException: Connection refused (raw.githubusercontent.com:443)<br></code></pre></td></tr></table></figure><p>上面两个问题一般是查询DNS没有找到相应ip地址，可以修改默认DNS服务器地址，一些默认的国内DNS比如114.114.114.114会封禁一些访问，这时候通过修改DNS一定程度上能解决问题。</p><p>也可以到到这个<a href="https://dnschecker.org/">DNS checker</a>网站查询可使用的ip，通过修改host文件直接绑定可使用ip解决问题</p><p><img src="/images/jellyfin/9_image.png"></p><p>如果这里找到的ip都访问不通的话，那可能就需要挂代理了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>jellyfin</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>jellyfin</tag>
+      
+      <tag>docker</tag>
+      
+      <tag>NAS</tag>
+      
+      <tag>极空间</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>docker部署calibre-web</title>
     <link href="/2023/10/23/docker-calibre-web/"/>
     <url>/2023/10/23/docker-calibre-web/</url>

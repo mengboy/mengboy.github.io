@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-10-23T16:01:55.135Z</updated>
+  <updated>2023-10-29T13:30:32.740Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jellyfin安装及使用体验优化</title>
+    <link href="https://www.mfun.ink/2023/10/29/jellyfin-install-use/"/>
+    <id>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</id>
+    <published>2023-10-29T13:02:00.000Z</published>
+    <updated>2023-10-29T13:30:32.740Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="jellyfin" scheme="https://www.mfun.ink/categories/jellyfin/"/>
+    
+    
+    <category term="jellyfin" scheme="https://www.mfun.ink/tags/jellyfin/"/>
+    
+    <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="极空间" scheme="https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>docker部署calibre-web</title>
@@ -498,29 +523,6 @@
     <category term="go main" scheme="https://www.mfun.ink/tags/go-main/"/>
     
     <category term="gdb调试go" scheme="https://www.mfun.ink/tags/gdb%E8%B0%83%E8%AF%95go/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>macos gdb解决Unable to find Mach task port for process-id</title>
-    <link href="https://www.mfun.ink/2020/10/26/macos-gdb-install/"/>
-    <id>https://www.mfun.ink/2020/10/26/macos-gdb-install/</id>
-    <published>2020-10-26T07:35:34.000Z</published>
-    <updated>2020-10-26T08:27:07.010Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;直接使用&lt;code&gt;brew install gdb&lt;/code&gt; 安装， 没有安装brew的需要先安装&lt;a href=&quot;https://brew.sh/&quot;&gt;brew&lt;/a&gt;。&lt;/p&gt;
-&lt;h3 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h3&gt;&lt;p&gt;安装之后，使用过程中遇到这么一个错误:&lt;/p&gt;
-&lt;figure class=&quot;highlight smali&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs smali&quot;&gt;Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (please&lt;span class=&quot;hljs-built_in&quot;&gt; check &lt;/span&gt;gdb is codesigned - see taskgated(8))&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="gdb" scheme="https://www.mfun.ink/categories/gdb/"/>
-    
-    
-    <category term="gdb" scheme="https://www.mfun.ink/tags/gdb/"/>
-    
-    <category term="mac" scheme="https://www.mfun.ink/tags/mac/"/>
     
   </entry>
   
