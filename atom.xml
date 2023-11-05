@@ -33,11 +33,11 @@
     <category term="jellyfin" scheme="https://www.mfun.ink/categories/jellyfin/"/>
     
     
+    <category term="极空间" scheme="https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/"/>
+    
     <category term="jellyfin" scheme="https://www.mfun.ink/tags/jellyfin/"/>
     
     <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
-    
-    <category term="极空间" scheme="https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/"/>
     
   </entry>
   
@@ -141,9 +141,9 @@
     
     
     
-    <category term="Joplin" scheme="https://www.mfun.ink/categories/Joplin/"/>
-    
     <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="Joplin" scheme="https://www.mfun.ink/categories/Joplin/"/>
     
     
     <category term="Joplin" scheme="https://www.mfun.ink/tags/Joplin/"/>
