@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>Go语言编程规范-命名篇</title>
+    <link href="/2023/11/26/go-name-standard/"/>
+    <url>/2023/11/26/go-name-standard/</url>
+    
+    <content type="html"><![CDATA[<p>命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。</p><span id="more"></span><h3 id="包命名"><a href="#包命名" class="headerlink" title="包命名"></a>包命名</h3><ul><li>命名简洁且能概括包功能，参考go标准包都是些简短且辨识度极高的命名。</li><li>保持包名和文件目录名称一致</li><li>全小写，不要包含特殊分隔符如下划线</li><li>不用复数。例如<code>net/url</code>，而不是<code>net/urls</code>。</li><li>项目名可以使用中横线分隔多个单词</li><li>除了广为人知的单词缩写，尽量不要使用缩写</li><li>不要用含义宽泛的单词命名，比如“common”，“util”，“lib”等，一般这些单词命名都会往里塞各种乱七八糟的东西，导致依赖关系复杂，不利于阅读。这些包命名作为包下的一个子包名是可以的比如<code>net/util</code>整个包的被引用范围仅限于父包内。</li><li>避免将<code>src</code>、<code>pkg</code>放到可导入包路径中</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">github.com/user/repo/src/httputil   // DON&#x27;T DO IT, AVOID SRC!!<br><br>github.com/user/repo/gosrc/httputil // DON&#x27;T DO IT, AVOID GOSRC!!<br></code></pre></td></tr></table></figure><ul><li>导入的包如果包名冲突，可以采用重命名的方式</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">import (<br>    gourl &quot;net/url&quot;<br><br>    &quot;myother.com/url&quot;<br>)<br></code></pre></td></tr></table></figure><h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3><ul><li>简短有意义</li><li>所有单词小写，多个单词使用下划线分隔</li></ul><h3 id="结构体命名"><a href="#结构体命名" class="headerlink" title="结构体命名"></a>结构体命名</h3><ul><li>采用驼峰命名，首字母根据访问控制决定是否大小写</li><li>避免使用意义宽泛的单词命名</li><li>避免使用包名作为前缀，因为引用过程中包名已经在代码关系中了，如果使用GoLand IDE的话ide也会自动提示</li></ul><h3 id="接口命名"><a href="#接口命名" class="headerlink" title="接口命名"></a>接口命名</h3><ul><li>基本规则和结构体命名保持一致</li><li>单函数接口一般函数名加上er后缀作为接口名，如Reader、 Writer、 Formatter、 CloseNotifier。</li><li>多个函数类似结构体命名</li></ul><h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><ul><li>采用驼峰命名，首字母根据访问控制决定是否大小写</li><li>专有名词全大写或全小写，比如UrlArr应该写成URLArr或者urlArr。</li><li>包内私有全局变量小写字母开头，或者使用”_“开头，保持统一即可</li><li>命名简洁，特别是局部变量作用域比较集中时可以使用单首字母，比如index可以直接使用i</li></ul><h3 id="常量命名"><a href="#常量命名" class="headerlink" title="常量命名"></a>常量命名</h3><ul><li>采用驼峰式</li><li>包内私有全局变量小写字母开头，或者使用”_“开头，保持统一即可</li><li>枚举类型的常量需要先声明相应类型比如</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">type Color string<br>const (<br>Blue color = &quot;blue&quot;<br>Red  color = &quot;red&quot;<br>)<br></code></pre></td></tr></table></figure><h3 id="函数命名"><a href="#函数命名" class="headerlink" title="函数命名"></a>函数命名</h3><ul><li>采用驼峰命名，首字母根据访问控制决定是否大小写</li><li>单测可以使用下划线比如<code>TestFunc_xxx</code></li></ul><h3 id="一些吐槽"><a href="#一些吐槽" class="headerlink" title="一些吐槽"></a>一些吐槽</h3><p>命名规范里多次强调简洁简短，这也符合Go语言的设计理念。但在实际业务代码中命名的简短就意味着牺牲一定的可读性，因为业务代码中各种复杂嵌套逻辑很难用一两个单词描述清楚，这就要你做出取舍是保持代码简洁还是保证代码更易读，个人认为在团队里易读让别人更容易看懂还是更重要些。</p><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://github.com/xxjwxc/uber_go_guide_cn">uber Go编程规范</a></li><li><a href="https://rakyll.org/style-packages/">Style guideline for Go packages</a></li><li><a href="https://go.dev/blog/package-names">Go官方博客包命名</a></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>go</category>
+      
+      <category>编程规范</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>go编程规范</tag>
+      
+      <tag>命名规范</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Jellyfin安装及使用体验优化</title>
     <link href="/2023/10/29/jellyfin-install-use/"/>
     <url>/2023/10/29/jellyfin-install-use/</url>

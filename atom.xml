@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2023-10-29T13:31:14.076Z</updated>
+  <updated>2023-11-26T11:05:10.578Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go语言编程规范-命名篇</title>
+    <link href="https://www.mfun.ink/2023/11/26/go-name-standard/"/>
+    <id>https://www.mfun.ink/2023/11/26/go-name-standard/</id>
+    <published>2023-11-26T10:56:42.000Z</published>
+    <updated>2023-11-26T11:05:10.578Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    <category term="编程规范" scheme="https://www.mfun.ink/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"/>
+    
+    
+    <category term="go编程规范" scheme="https://www.mfun.ink/tags/go%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"/>
+    
+    <category term="命名规范" scheme="https://www.mfun.ink/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Jellyfin安装及使用体验优化</title>
@@ -495,34 +518,6 @@
     <category term="zsh" scheme="https://www.mfun.ink/tags/zsh/"/>
     
     <category term="brew" scheme="https://www.mfun.ink/tags/brew/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go启动main函数都干了什么(一)</title>
-    <link href="https://www.mfun.ink/2020/10/27/go-start-up/"/>
-    <id>https://www.mfun.ink/2020/10/27/go-start-up/</id>
-    <published>2020-10-27T07:27:33.000Z</published>
-    <updated>2023-08-20T02:45:54.654Z</updated>
-    
-    
-    <summary type="html">&lt;h3 id=&quot;生成二进制可执行文件&quot;&gt;&lt;a href=&quot;#生成二进制可执行文件&quot; class=&quot;headerlink&quot; title=&quot;生成二进制可执行文件&quot;&gt;&lt;/a&gt;生成二进制可执行文件&lt;/h3&gt;&lt;p&gt;首先，写一个go main函数，这里就简单输出以下hello world。&lt;/p&gt;
-&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs go&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;package&lt;/span&gt; main&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;fmt&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;()&lt;/span&gt;&lt;/span&gt;  &amp;#123;&lt;br&gt;	fmt.Println(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;hello word&amp;quot;&lt;/span&gt;)&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;执行&lt;code&gt;go build -gcflags &amp;quot;-N -l&amp;quot; -ldflags=-compressdwarf=false -o main main.go&lt;/code&gt;生成可执行二进制文件。&lt;/p&gt;
-&lt;h3 id=&quot;开启gdb调试&quot;&gt;&lt;a href=&quot;#开启gdb调试&quot; class=&quot;headerlink&quot; title=&quot;开启gdb调试&quot;&gt;&lt;/a&gt;开启gdb调试&lt;/h3&gt;&lt;p&gt;执行&lt;code&gt;gdb main&lt;/code&gt;开始gdb调试。通过i files查看程序入口地址，再这个地址打上断点。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
-    
-    <category term="go启动" scheme="https://www.mfun.ink/tags/go%E5%90%AF%E5%8A%A8/"/>
-    
-    <category term="go main" scheme="https://www.mfun.ink/tags/go-main/"/>
-    
-    <category term="gdb调试go" scheme="https://www.mfun.ink/tags/gdb%E8%B0%83%E8%AF%95go/"/>
     
   </entry>
   

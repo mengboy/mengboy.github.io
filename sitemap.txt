@@ -1,3 +1,4 @@
+https://www.mfun.ink/2023/11/26/go-name-standard/
 https://www.mfun.ink/2023/10/29/jellyfin-install-use/
 https://www.mfun.ink/2023/10/23/docker-calibre-web/
 https://www.mfun.ink/2023/09/12/joplin-docker-deploy/
@@ -88,6 +89,8 @@ https://www.mfun.ink/tags/gorilla-websocket/
 https://www.mfun.ink/tags/gobwas-ws/
 https://www.mfun.ink/tags/xorm/
 https://www.mfun.ink/tags/%E6%97%B6%E5%8C%BA/
+https://www.mfun.ink/tags/go%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/
+https://www.mfun.ink/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/
 https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/
 https://www.mfun.ink/categories/calibre-web/
 https://www.mfun.ink/categories/curl/
@@ -111,3 +114,4 @@ https://www.mfun.ink/categories/xorm/
 https://www.mfun.ink/categories/%E7%BD%91%E7%BB%9C/
 https://www.mfun.ink/categories/MacOS/
 https://www.mfun.ink/categories/vue3/
+https://www.mfun.ink/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/

@@ -16,37 +16,25 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。">
+    <meta name="description" content="命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jellyfin安装及使用体验优化">
-<meta property="og:url" content="https://www.mfun.ink/2023/10/29/jellyfin-install-use/index.html">
+<meta property="og:title" content="Go语言编程规范-命名篇">
+<meta property="og:url" content="https://www.mfun.ink/2023/11/26/go-name-standard/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。">
+<meta property="og:description" content="命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/1_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/2_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/3_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/4_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/5_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/8_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/6_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/7_image.png">
-<meta property="og:image" content="https://www.mfun.ink/images/jellyfin/9_image.png">
-<meta property="article:published_time" content="2023-10-29T13:02:00.000Z">
-<meta property="article:modified_time" content="2023-10-29T13:31:14.076Z">
+<meta property="article:published_time" content="2023-11-26T10:56:42.000Z">
+<meta property="article:modified_time" content="2023-11-26T11:05:10.578Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="极空间">
-<meta property="article:tag" content="jellyfin">
-<meta property="article:tag" content="docker">
+<meta property="article:tag" content="go编程规范">
+<meta property="article:tag" content="命名规范">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.mfun.ink/images/jellyfin/image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>Jellyfin安装及使用体验优化 - Mengboy&#39;s Blog</title>
+  <title>Go语言编程规范-命名篇 - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -252,7 +240,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Jellyfin安装及使用体验优化"></span>
+            <span id="subtitle" data-typed-text="Go语言编程规范-命名篇"></span>
           
         </div>
 
@@ -263,8 +251,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-10-29 21:02" pubdate>
-          2023年10月29日 晚上
+        <time datetime="2023-11-26 18:56" pubdate>
+          2023年11月26日 晚上
         </time>
       </span>
     
@@ -275,7 +263,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          1.4k 字
         
       </span>
     
@@ -286,7 +274,7 @@
         
         
         
-          13 分钟
+          12 分钟
         
       </span>
     
@@ -323,70 +311,68 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Jellyfin安装及使用体验优化</h1>
+            <h1 id="seo-header">Go语言编程规范-命名篇</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。</p>
+                <p>命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。</p>
 <span id="more"></span>
 
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>NAS下当然还是docker安装，安装教程基本上随手一搜就是一大把，这里简单记录下配置项，主要是文件映射和端口映射</p>
-<ul>
-<li>文件映射</li>
+<h3 id="包命名"><a href="#包命名" class="headerlink" title="包命名"></a>包命名</h3><ul>
+<li>命名简洁且能概括包功能，参考go标准包都是些简短且辨识度极高的命名。</li>
+<li>保持包名和文件目录名称一致</li>
+<li>全小写，不要包含特殊分隔符如下划线</li>
+<li>不用复数。例如<code>net/url</code>，而不是<code>net/urls</code>。</li>
+<li>项目名可以使用中横线分隔多个单词</li>
+<li>除了广为人知的单词缩写，尽量不要使用缩写</li>
+<li>不要用含义宽泛的单词命名，比如“common”，“util”，“lib”等，一般这些单词命名都会往里塞各种乱七八糟的东西，导致依赖关系复杂，不利于阅读。这些包命名作为包下的一个子包名是可以的比如<code>net/util</code>整个包的被引用范围仅限于父包内。</li>
+<li>避免将<code>src</code>、<code>pkg</code>放到可导入包路径中</li>
 </ul>
-<p><img src="/images/jellyfin/image.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>端口映射</li>
-</ul>
-<p><img src="/images/jellyfin/1_image.png" srcset="/img/loading.gif" lazyload></p>
-<p>配置完成后直接启动容器，之后在浏览器里通过ip+端口访问，首次访问需要设置用户名和密码。</p>
-<h2 id="使用优化"><a href="#使用优化" class="headerlink" title="使用优化"></a>使用优化</h2><h3 id="硬件解码"><a href="#硬件解码" class="headerlink" title="硬件解码"></a>硬件解码</h3><p>如果使用服务端解码的话一定要开启硬件解码，否则可以说是毫无使用体验，硬件加速选择根据机器配置进行选择，极空间是Intel CPU+集显，所以就选Intel加速。</p>
-<p><img src="/images/jellyfin/2_image.png" srcset="/img/loading.gif" lazyload></p>
-<p>实际上在开启硬件加速后，就目前使用体验来看，播放起4K高清视频，还是卡顿明显。所以还是建议使用串流让客户端解码。</p>
-<h3 id="客户端解码"><a href="#客户端解码" class="headerlink" title="客户端解码"></a>客户端解码</h3><p>这种方式的话默认就内网播放了，因为串流播放非常依赖带宽，相当于把完整的视频下载下来，一部高清视频大十几G，外网播放流量带宽属实扛不住，当然如果你说你公网带宽无压力那请随意。</p>
-<ul>
-<li>将用户播放设置里，允许转码播放都取消勾选</li>
-</ul>
-<p><img src="/images/jellyfin/3_image.png" srcset="/img/loading.gif" lazyload></p>
-<ul>
-<li>客户端设置，客户端可以勾选使用fMP4-HLS播放器，不过实际上还是建议使用第三方播放器</li>
-</ul>
-<p><img src="/images/jellyfin/4_image.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="第三方播放器"><a href="#第三方播放器" class="headerlink" title="第三方播放器"></a>第三方播放器</h3><ul>
-<li>桌面端</li>
-</ul>
-<p>MacOS和windows都可以选择<a target="_blank" rel="noopener" href="https://github.com/jellyfin/jellyfin-mpv-shim">jellyfin-mpv-shim</a>播放器，适配了Jellyfin的MPV播放器，支持mpv的各种配置，对mpv不熟悉可以直接用默认配置，安装的话windows有现成安装包，mac下可以用brew+pip安装。安装完成后，启动jellyfin-mpv-shim按照提示登录jellyfin服务器即可。之后打开Jellyfin客户端播放一个视频，点击右上角那个框可以选择在其他播放器播放。</p>
-<p><img src="/images/jellyfin/5_image.png" srcset="/img/loading.gif" lazyload></p>
-<p>Mac下还有一个好用的客户端<a target="_blank" rel="noopener" href="https://firecore.com/infuse">Infuse</a>，infuse支持多种类型的播放源Jellyfin是其中之一，支持同步Jellyfin的元数据以及媒体库。播放进度也可以同步到Jellyfin服务器。最关键的是播放高清视频十分流畅，我尝试和MPV、VLC对比了下，这俩都有卡顿的情况下infuse居然十分流畅，当然也有可能是我mpv和vlc配置不对。</p>
-<ul>
-<li>移动端</li>
-</ul>
-<p>移动端安装官方客户端后，修改设置可以使用第三方播放器，设置-&gt;客户端设置-&gt;video player type 改为External player</p>
-<p><img src="/images/jellyfin/8_image.png" srcset="/img/loading.gif" lazyload></p>
-<p>点击播放会让你选择已经安装的播放器播放，这里推荐MXPlayer，除了播放器自身强大外，也是我找到的唯一可以同步播放进度到Jellyfin服务的播放器</p>
-<ul>
-<li>其他一些客户端，参考这个<a target="_blank" rel="noopener" href="https://github.com/awesome-jellyfin/clients">github仓库</a></li>
-</ul>
-<p><img src="/images/jellyfin/6_image.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="客户端界面设置"><a href="#客户端界面设置" class="headerlink" title="客户端界面设置"></a>客户端界面设置</h3><p>安装官方客户端后可以先在设置-》显示里修改客户端语言以及主题</p>
-<p><img src="/images/jellyfin/7_image.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="一些网络错误解决"><a href="#一些网络错误解决" class="headerlink" title="一些网络错误解决"></a>一些网络错误解决</h3><ul>
-<li>TMDB访问不通</li>
-</ul>
-<p>通过tmdb刮削元数据时，报如下错误</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">System.Net.Http.HttpRequestException: Connection timed out (api.themoviedb.org:443)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">github.com/user/repo/src/httputil   // DON&#x27;T DO IT, AVOID SRC!!<br><br>github.com/user/repo/gosrc/httputil // DON&#x27;T DO IT, AVOID GOSRC!!<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>github访问不通</li>
+<li>导入的包如果包名冲突，可以采用重命名的方式</li>
 </ul>
-<p>某些插件可能会访问github下载资源，出现如下错误</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">System.Net.Http.HttpRequestException: Connection refused (raw.githubusercontent.com:443)<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">import (<br>    gourl &quot;net/url&quot;<br><br>    &quot;myother.com/url&quot;<br>)<br></code></pre></td></tr></table></figure>
 
-<p>上面两个问题一般是查询DNS没有找到相应ip地址，可以修改默认DNS服务器地址，一些默认的国内DNS比如114.114.114.114会封禁一些访问，这时候通过修改DNS一定程度上能解决问题。</p>
-<p>也可以到到这个<a target="_blank" rel="noopener" href="https://dnschecker.org/">DNS checker</a>网站查询可使用的ip，通过修改host文件直接绑定可使用ip解决问题</p>
-<p><img src="/images/jellyfin/9_image.png" srcset="/img/loading.gif" lazyload></p>
-<p>如果这里找到的ip都访问不通的话，那可能就需要挂代理了。</p>
+<h3 id="文件命名"><a href="#文件命名" class="headerlink" title="文件命名"></a>文件命名</h3><ul>
+<li>简短有意义</li>
+<li>所有单词小写，多个单词使用下划线分隔</li>
+</ul>
+<h3 id="结构体命名"><a href="#结构体命名" class="headerlink" title="结构体命名"></a>结构体命名</h3><ul>
+<li>采用驼峰命名，首字母根据访问控制决定是否大小写</li>
+<li>避免使用意义宽泛的单词命名</li>
+<li>避免使用包名作为前缀，因为引用过程中包名已经在代码关系中了，如果使用GoLand IDE的话ide也会自动提示</li>
+</ul>
+<h3 id="接口命名"><a href="#接口命名" class="headerlink" title="接口命名"></a>接口命名</h3><ul>
+<li>基本规则和结构体命名保持一致</li>
+<li>单函数接口一般函数名加上er后缀作为接口名，如Reader、 Writer、 Formatter、 CloseNotifier。</li>
+<li>多个函数类似结构体命名</li>
+</ul>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><ul>
+<li>采用驼峰命名，首字母根据访问控制决定是否大小写</li>
+<li>专有名词全大写或全小写，比如UrlArr应该写成URLArr或者urlArr。</li>
+<li>包内私有全局变量小写字母开头，或者使用”_“开头，保持统一即可</li>
+<li>命名简洁，特别是局部变量作用域比较集中时可以使用单首字母，比如index可以直接使用i</li>
+</ul>
+<h3 id="常量命名"><a href="#常量命名" class="headerlink" title="常量命名"></a>常量命名</h3><ul>
+<li>采用驼峰式</li>
+<li>包内私有全局变量小写字母开头，或者使用”_“开头，保持统一即可</li>
+<li>枚举类型的常量需要先声明相应类型比如</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">type Color string<br>const (<br>	Blue color = &quot;blue&quot;<br>	Red  color = &quot;red&quot;	<br>)<br></code></pre></td></tr></table></figure>
+
+<h3 id="函数命名"><a href="#函数命名" class="headerlink" title="函数命名"></a>函数命名</h3><ul>
+<li>采用驼峰命名，首字母根据访问控制决定是否大小写</li>
+<li>单测可以使用下划线比如<code>TestFunc_xxx</code></li>
+</ul>
+<h3 id="一些吐槽"><a href="#一些吐槽" class="headerlink" title="一些吐槽"></a>一些吐槽</h3><p>命名规范里多次强调简洁简短，这也符合Go语言的设计理念。但在实际业务代码中命名的简短就意味着牺牲一定的可读性，因为业务代码中各种复杂嵌套逻辑很难用一两个单词描述清楚，这就要你做出取舍是保持代码简洁还是保证代码更易读，个人认为在团队里易读让别人更容易看懂还是更重要些。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/xxjwxc/uber_go_guide_cn">uber Go编程规范</a></li>
+<li><a target="_blank" rel="noopener" href="https://rakyll.org/style-packages/">Style guideline for Go packages</a></li>
+<li><a target="_blank" rel="noopener" href="https://go.dev/blog/package-names">Go官方博客包命名</a></li>
+</ul>
 
                 
               </div>
@@ -405,7 +391,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/NAS/" class="category-chain-item">NAS</a>
+  <a href="/categories/go/" class="category-chain-item">go</a>
   
   
 
@@ -415,7 +401,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/jellyfin/" class="category-chain-item">jellyfin</a>
+  <a href="/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/" class="category-chain-item">编程规范</a>
   
   
 
@@ -430,11 +416,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/" class="print-no-link">#极空间</a>
+        <a href="/tags/go%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/" class="print-no-link">#go编程规范</a>
       
-        <a href="/tags/jellyfin/" class="print-no-link">#jellyfin</a>
-      
-        <a href="/tags/docker/" class="print-no-link">#docker</a>
+        <a href="/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" class="print-no-link">#命名规范</a>
       
     </div>
   
@@ -446,8 +430,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Jellyfin安装及使用体验优化</div>
-      <div>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</div>
+      <div>Go语言编程规范-命名篇</div>
+      <div>https://www.mfun.ink/2023/11/26/go-name-standard/</div>
     </div>
     <div class="license-meta">
       
@@ -459,7 +443,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年10月29日</div>
+          <div>2023年11月26日</div>
         </div>
       
       
@@ -491,18 +475,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/26/go-name-standard/" title="Go语言编程规范-命名篇">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Go语言编程规范-命名篇</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/10/23/docker-calibre-web/" title="docker部署calibre-web">
-                        <span class="hidden-mobile">docker部署calibre-web</span>
+                      <a href="/2023/10/29/jellyfin-install-use/" title="Jellyfin安装及使用体验优化">
+                        <span class="hidden-mobile">Jellyfin安装及使用体验优化</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -525,7 +503,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: 'f73abfd8e3868d7c20d6cecf3f114c23'
+            id: '90f399a437785eb2caaebf163bf27e7d'
           }
         )
         var gitalk = new Gitalk(options);
