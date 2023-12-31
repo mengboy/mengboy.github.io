@@ -16,25 +16,39 @@
   <meta name="author" content="mengboy">
   <meta name="keywords" content="">
   
-    <meta name="description" content="问题提出提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：">
+    <meta name="description" content="wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。官网 和 github。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="go 指针赋值是原子性的吗">
-<meta property="og:url" content="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/index.html">
+<meta property="og:title" content="NAS部署wiki.js">
+<meta property="og:url" content="https://www.mfun.ink/2023/12/31/wiki-js-deploy/index.html">
 <meta property="og:site_name" content="Mengboy&#39;s Blog">
-<meta property="og:description" content="问题提出提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：">
+<meta property="og:description" content="wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。官网 和 github。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-06T13:16:31.000Z">
-<meta property="article:modified_time" content="2023-12-06T13:19:55.789Z">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/2_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/3_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/4_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/5_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/6_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/7_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/8_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/9_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/10_wiki.js_image.png">
+<meta property="og:image" content="https://www.mfun.ink/images/wiki.js/12_wiki.js_image.png">
+<meta property="article:published_time" content="2023-12-31T12:28:29.000Z">
+<meta property="article:modified_time" content="2023-12-31T12:36:38.405Z">
 <meta property="article:author" content="mengboy">
-<meta property="article:tag" content="go">
-<meta property="article:tag" content="指针赋值的原子性">
+<meta property="article:tag" content="极空间">
+<meta property="article:tag" content="docker">
+<meta property="article:tag" content="wiki.js">
+<meta property="article:tag" content="NAS">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.mfun.ink/images/wiki.js/wiki.js_image.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>go 指针赋值是原子性的吗 - Mengboy&#39;s Blog</title>
+  <title>NAS部署wiki.js - Mengboy&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -240,7 +254,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="go 指针赋值是原子性的吗"></span>
+            <span id="subtitle" data-typed-text="NAS部署wiki.js"></span>
           
         </div>
 
@@ -251,8 +265,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-06 21:16" pubdate>
-          2023年12月6日 晚上
+        <time datetime="2023-12-31 20:28" pubdate>
+          2023年12月31日 晚上
         </time>
       </span>
     
@@ -263,7 +277,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3k 字
+          1.1k 字
         
       </span>
     
@@ -274,7 +288,7 @@
         
         
         
-          26 分钟
+          10 分钟
         
       </span>
     
@@ -311,39 +325,60 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">go 指针赋值是原子性的吗</h1>
+            <h1 id="seo-header">NAS部署wiki.js</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="问题提出"><a href="#问题提出" class="headerlink" title="问题提出"></a>问题提出</h3><p>提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：</p>
+                <p>wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。<a target="_blank" rel="noopener" href="https://js.wiki/">官网</a> 和 <a target="_blank" rel="noopener" href="https://github.com/Requarks/wiki">github</a>。</p>
 <span id="more"></span>
 
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">type conf struct &#123;<br>	<br>&#125;<br><br>var c *conf<br><br>func loadConf()  &#123;<br>	c = &amp;conf&#123;&#125;<br>	go func() &#123;<br>		ticker := time.NewTicker(time.Second)<br>		for range ticker.C&#123;<br>			newC := &amp;conf&#123;&#125;<br>			c = newC<br>		&#125;<br>	&#125;()<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>这里的关键点在于<code>c = newC</code> 是否是原子性的，需不需要加锁。go 指针和int64一样都是8位在32位机器上一条指令最多只能操作4字节的数据所以一次赋值操作至少得两条指令，所以在32位机器上肯定存在并发问题。那么在64位机器上8位的数据是可以通过一条指令操作的那在64位机器上存在并发问题吗？</p>
-<h3 id="竞态检测"><a href="#竞态检测" class="headerlink" title="竞态检测"></a>竞态检测</h3><p>关于数据并发问题，go本身提供了竞态检测来帮助发现代码中的存在竞态情况，如下代码，通过 <code>go run -race main.go</code> 会显示代码中存在的竟态情况</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">func main() &#123;<br>	var data map[string]string<br>	temp := make(map[string]string)<br>	data = temp<br>	go func() &#123;<br>		v := data[&quot;d&quot;]<br>		fmt.Println(v)<br>	&#125;()<br>	go func() &#123;<br>		temp := make(map[string]string)<br>		temp[&quot;a&quot;] = &quot;a&quot;<br>		data = temp<br>	&#125;()<br>	time.Sleep(time.Second)<br>&#125;<br><br>// go run -race main.go 输出如下：<br>==================<br>WARNING: DATA RACE<br>Write at 0x00c000012028 by goroutine 7:<br>  main.main.func2()<br>      /Users/vector/go/src/demo/conf/main.go:19 +0x93<br><br>Previous read at 0x00c000012028 by goroutine 6:<br>  main.main.func1()<br>      /Users/vector/go/src/demo/conf/main.go:13 +0x34<br><br>Goroutine 7 (running) created at:<br>  main.main()<br>      /Users/vector/go/src/demo/conf/main.go:16 +0x16e<br><br>Goroutine 6 (running) created at:<br>  main.main()<br>      /Users/vector/go/src/demo/conf/main.go:12 +0x104<br>==================<br><br>Found 1 data race(s)<br>exit status 66<br></code></pre></td></tr></table></figure>
-
-<p>通过-race参数可以看到go给出了告警，并发赋值存在数据竞争。本着小心使得万年船的态度我们可以加个读写锁，至于这条赋值语句是不是原子的我们继续看。</p>
-<h3 id="汇编代码"><a href="#汇编代码" class="headerlink" title="汇编代码"></a>汇编代码</h3><p>想看到赋值是不是一条指令只能看编译之后的汇编代码了，通过<code>go tool compile -S -N main.go &gt; main.s</code>生成中间汇编代码(64位机器)：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">;;...<br>    0x008c 00140 (main.go:19)	PCDATA	ZR, $-1<br>    0x008c 00140 (main.go:19)	MOVD	main.&amp;data-8(SP), R2 ;;将栈指针（SP）减 8 后的地址处的数据（main.&amp;data）加载到寄存器 R2 中。<br>    0x0090 00144 (main.go:19)	MOVD	main.temp-24(SP), R3 ;;将栈指针（SP）减 24 后的地址处的数据（main.temp）加载到寄存器 R3 中。<br>    0x0094 00148 (main.go:19)	PCDATA	ZR, $-2<br>    0x0094 00148 (main.go:19)	MOVWU	runtime.writeBarrier(SB), R0<br>    0x00a0 00160 (main.go:19)	CBZW	R0, 168<br>    0x00a4 00164 (main.go:19)	JMP	176<br>    0x00a8 00168 (main.go:19)	MOVD	R3, (R2) ;;将寄存器 R3 中的数据存储到寄存器 R2 指向的地址。<br>    0x00ac 00172 (main.go:19)	JMP	184<br>    0x00b0 00176 (main.go:19)	CALL	runtime.gcWriteBarrier(SB)<br>    0x00b4 00180 (main.go:19)	JMP	184<br>;;...<br></code></pre></td></tr></table></figure>
-
-<p>一行赋值语句生成了这么多条汇编指令，真正发生值修改是这句<code>MOVD R3, (R2)</code>可以看出指针的赋值确实是原子的。</p>
-<h3 id="网上的一些讨论"><a href="#网上的一些讨论" class="headerlink" title="网上的一些讨论"></a>网上的一些讨论</h3><p>关于这个问题，也在网上搜了下，有说是原子的也有说不是原子的。结合go官方文档只有使用<code>atomic</code>包才保证原子性，并没有显示指出指针赋值是原子的，所以无法保证指针赋值是原子的，虽然上面汇编值修改是只有一条指令，但谁也无法保证随着后续的升级go语言本身会不会有什么修改。所以普遍建议是使用读写锁或者使用<code>atomic</code>，刚好go 1.19新出了<a target="_blank" rel="noopener" href="https://pkg.go.dev/sync/atomic#Pointer">atomic.Pointer</a> 专门用来处理指针的原子操作，用法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">type conf struct &#123;<br>	v1 string<br>	v2 int<br>&#125;<br><br>var atomicC = atomic.Pointer[conf]&#123;&#125;<br><br>func main() &#123;<br>	tempc := &amp;conf&#123;<br>		v1: &quot;&quot;,<br>		v2: 0,<br>	&#125;<br>	atomicC.Store(tempc)<br>	go func() &#123;<br>		ticker := time.NewTicker(time.Second)<br>		for range ticker.C &#123;<br>			newC := &amp;conf&#123;&#125;<br>			atomicC.Store(newC)<br>		&#125;<br>	&#125;()<br>	var c = &amp;conf&#123;&#125;<br>	c = atomicC.Load()<br>	fmt.Println(c.v2, c.v1)<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>go 官方没有显示保证指针赋值是原子的，变量建议使用<code>atomic</code>保证原子性</li>
-<li>不用架构的cpu比如x86、x64实现不一样，如过想保证全平台一致一定要显示做原子性处理，加锁或使用<code>atomic</code></li>
-<li>在性能损失可接受的情况下使用<code>atomic</code>或者加锁保证原子性</li>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>官方有详细的个平台<a target="_blank" rel="noopener" href="https://docs.requarks.io/en/install/docker">部署文档</a>，这里记录下基于极空间docker的部署，这里直接部署的最新版本v2.5.300.</p>
+<ul>
+<li>镜像拉取</li>
 </ul>
-<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/21447463/is-assigning-a-pointer-atomic-in-go">is-assigning-a-pointer-atomic-in-go</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/Terry-Mao/gopush-cluster/issues/44">golang中多goroutine操作map时直接赋值不用加锁</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/golang/go/issues/38667">Is assigning a pointer atomic in go</a></li>
-<li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/48046591/how-do-i-atomically-move-a-64bit-value-in-x86-asm">How do I atomically move a 64bit value in x86 ASM?</a></li>
+<p><img src="/images/wiki.js/wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>点击部署</li>
 </ul>
+<p>路径映射：</p>
+<p><img src="/images/wiki.js/2_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>端口映射：</p>
+<p><img src="/images/wiki.js/3_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>环境变量：</p>
+<p><img src="/images/wiki.js/4_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>部署存粹是个人使用，就直接用的sqlite，目前官方支持这几种数据库：mysql, postgres, mariadb, mssql,sqlite</p>
+<h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><ul>
+<li>设置密码</li>
+</ul>
+<p>启动后通过ip+端口访问，填写邮箱和登录密码，site URL可以先不用管，下面开关是否允许官方收集信息来优化产品。</p>
+<p><img src="/images/wiki.js/5_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>设置语言</li>
+</ul>
+<p>登录后选择进入管理台：</p>
+<p><img src="/images/wiki.js/6_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>进入后台后，在Local里下载本地语言并切换到本地语言</p>
+<p><img src="/images/wiki.js/7_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>权限管理</li>
+</ul>
+<p>访客默认有查看权限，可以在用户组里把访客权限干掉：</p>
+<p><img src="/images/wiki.js/8_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>存储</li>
+</ul>
+<p>这里相当于一个备份存储，可选择种类很多，我这里就启用了一个git存储，下面可以配置同步方向、同步周期等</p>
+<p><img src="/images/wiki.js/9_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>这里需要注意的是，填的git仓库和分支一定要先创建好，如过配置没问题还是同步失败，有可能是下面这个问题，登录到容器找到git仓库目录执行下<code>git config --global --add safe.directory /wiki/data/repo</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">cfe4c4613525:/wiki/data/repo# git remote -v<br>fatal: detected dubious ownership in repository at &#x27;/wiki/data/repo&#x27;<br>To add an exception for this directory, call:<br><br>git config --global --add safe.directory /wiki/data/repo<br>cfe4c4613525:/wiki/data/repo# git config --global --add safe.directory /wiki/data/repo<br></code></pre></td></tr></table></figure>
+
+<p>其他一些功能可以根据官方文档自行探索，对于个人使用目前的配置已经满足了。</p>
+<h4 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h4><p>首次进入需要创建首页，根据习惯选择编辑器即可，支持markdown，创建类似目录的层级关系话可以在下面路径里直接填写</p>
+<p><img src="/images/wiki.js/10_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>编辑支持嵌入draw.io画图，并且画完后支持在原来基础上编辑，这个功能真的是太棒了，很多支持插入的画图的工具都是画完后插入一张图片就不可编辑了，这里是直接渲染的数据，不是图片，所以可以继续编辑。</p>
+<p><img src="/images/wiki.js/12_wiki.js_image.png" srcset="/img/loading.gif" lazyload></p>
+<p>wiki 本身还有很多偏向团队方面的功能，适合小型团队作为知识管理的工具，本身颜值也高。槽点的话就目前体验来看，渲染速度不是很快每次编辑完发布需要等待；侧边栏不能收起，不过说是3.x版本会支持。</p>
 
                 
               </div>
@@ -362,7 +397,17 @@
     
       <span class="category-chain">
         
-  <a href="/categories/go/" class="category-chain-item">go</a>
+  <a href="/categories/NAS/" class="category-chain-item">NAS</a>
+  
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/wiki/" class="category-chain-item">wiki</a>
   
   
 
@@ -377,9 +422,13 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/go/" class="print-no-link">#go</a>
+        <a href="/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/" class="print-no-link">#极空间</a>
       
-        <a href="/tags/%E6%8C%87%E9%92%88%E8%B5%8B%E5%80%BC%E7%9A%84%E5%8E%9F%E5%AD%90%E6%80%A7/" class="print-no-link">#指针赋值的原子性</a>
+        <a href="/tags/docker/" class="print-no-link">#docker</a>
+      
+        <a href="/tags/wiki-js/" class="print-no-link">#wiki.js</a>
+      
+        <a href="/tags/NAS/" class="print-no-link">#NAS</a>
       
     </div>
   
@@ -391,8 +440,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>go 指针赋值是原子性的吗</div>
-      <div>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</div>
+      <div>NAS部署wiki.js</div>
+      <div>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</div>
     </div>
     <div class="license-meta">
       
@@ -404,7 +453,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月6日</div>
+          <div>2023年12月31日</div>
         </div>
       
       
@@ -436,18 +485,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/31/wiki-js-deploy/" title="NAS部署wiki.js">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">NAS部署wiki.js</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/11/26/go-name-standard/" title="Go语言编程规范-命名篇">
-                        <span class="hidden-mobile">Go语言编程规范-命名篇</span>
+                      <a href="/2023/12/06/is-assigning-pointer-atomic-go/" title="go 指针赋值是原子性的吗">
+                        <span class="hidden-mobile">go 指针赋值是原子性的吗</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -470,7 +513,7 @@
         var options = Object.assign(
           {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
           {
-            id: '16eecddb03410a91523506c44c55142e'
+            id: '23ca685e2ddd3fe1360d8e8373e2304d'
           }
         )
         var gitalk = new Gitalk(options);

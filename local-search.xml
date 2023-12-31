@@ -4,6 +4,39 @@
   
   
   <entry>
+    <title>NAS部署wiki.js</title>
+    <link href="/2023/12/31/wiki-js-deploy/"/>
+    <url>/2023/12/31/wiki-js-deploy/</url>
+    
+    <content type="html"><![CDATA[<p>wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。<a href="https://js.wiki/">官网</a> 和 <a href="https://github.com/Requarks/wiki">github</a>。</p><span id="more"></span><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>官方有详细的个平台<a href="https://docs.requarks.io/en/install/docker">部署文档</a>，这里记录下基于极空间docker的部署，这里直接部署的最新版本v2.5.300.</p><ul><li>镜像拉取</li></ul><p><img src="/images/wiki.js/wiki.js_image.png"></p><ul><li>点击部署</li></ul><p>路径映射：</p><p><img src="/images/wiki.js/2_wiki.js_image.png"></p><p>端口映射：</p><p><img src="/images/wiki.js/3_wiki.js_image.png"></p><p>环境变量：</p><p><img src="/images/wiki.js/4_wiki.js_image.png"></p><p>部署存粹是个人使用，就直接用的sqlite，目前官方支持这几种数据库：mysql, postgres, mariadb, mssql,sqlite</p><h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><ul><li>设置密码</li></ul><p>启动后通过ip+端口访问，填写邮箱和登录密码，site URL可以先不用管，下面开关是否允许官方收集信息来优化产品。</p><p><img src="/images/wiki.js/5_wiki.js_image.png"></p><ul><li>设置语言</li></ul><p>登录后选择进入管理台：</p><p><img src="/images/wiki.js/6_wiki.js_image.png"></p><p>进入后台后，在Local里下载本地语言并切换到本地语言</p><p><img src="/images/wiki.js/7_wiki.js_image.png"></p><ul><li>权限管理</li></ul><p>访客默认有查看权限，可以在用户组里把访客权限干掉：</p><p><img src="/images/wiki.js/8_wiki.js_image.png"></p><ul><li>存储</li></ul><p>这里相当于一个备份存储，可选择种类很多，我这里就启用了一个git存储，下面可以配置同步方向、同步周期等</p><p><img src="/images/wiki.js/9_wiki.js_image.png"></p><p>这里需要注意的是，填的git仓库和分支一定要先创建好，如过配置没问题还是同步失败，有可能是下面这个问题，登录到容器找到git仓库目录执行下<code>git config --global --add safe.directory /wiki/data/repo</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text-plain">cfe4c4613525:/wiki/data/repo# git remote -v<br>fatal: detected dubious ownership in repository at &#x27;/wiki/data/repo&#x27;<br>To add an exception for this directory, call:<br><br>git config --global --add safe.directory /wiki/data/repo<br>cfe4c4613525:/wiki/data/repo# git config --global --add safe.directory /wiki/data/repo<br></code></pre></td></tr></table></figure><p>其他一些功能可以根据官方文档自行探索，对于个人使用目前的配置已经满足了。</p><h4 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h4><p>首次进入需要创建首页，根据习惯选择编辑器即可，支持markdown，创建类似目录的层级关系话可以在下面路径里直接填写</p><p><img src="/images/wiki.js/10_wiki.js_image.png"></p><p>编辑支持嵌入draw.io画图，并且画完后支持在原来基础上编辑，这个功能真的是太棒了，很多支持插入的画图的工具都是画完后插入一张图片就不可编辑了，这里是直接渲染的数据，不是图片，所以可以继续编辑。</p><p><img src="/images/wiki.js/12_wiki.js_image.png"></p><p>wiki 本身还有很多偏向团队方面的功能，适合小型团队作为知识管理的工具，本身颜值也高。槽点的话就目前体验来看，渲染速度不是很快每次编辑完发布需要等待；侧边栏不能收起，不过说是3.x版本会支持。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>NAS</category>
+      
+      <category>wiki</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>极空间</tag>
+      
+      <tag>docker</tag>
+      
+      <tag>wiki.js</tag>
+      
+      <tag>NAS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>go 指针赋值是原子性的吗</title>
     <link href="/2023/12/06/is-assigning-pointer-atomic-go/"/>
     <url>/2023/12/06/is-assigning-pointer-atomic-go/</url>
