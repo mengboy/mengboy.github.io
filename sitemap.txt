@@ -1,4 +1,3 @@
-https://www.mfun.ink/2023/12/31/test-gitalk/
 https://www.mfun.ink/2023/12/31/wiki-js-deploy/
 https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/
 https://www.mfun.ink/2023/11/26/go-name-standard/
