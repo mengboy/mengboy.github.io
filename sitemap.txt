@@ -1,3 +1,4 @@
+https://www.mfun.ink/2024/01/06/note-software/
 https://www.mfun.ink/2023/12/31/wiki-js-deploy/
 https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/
 https://www.mfun.ink/2023/11/26/go-name-standard/
@@ -96,6 +97,9 @@ https://www.mfun.ink/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/
 https://www.mfun.ink/tags/%E6%8C%87%E9%92%88%E8%B5%8B%E5%80%BC%E7%9A%84%E5%8E%9F%E5%AD%90%E6%80%A7/
 https://www.mfun.ink/tags/wiki-js/
 https://www.mfun.ink/tags/NAS/
+https://www.mfun.ink/tags/%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8/
+https://www.mfun.ink/tags/%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0/
+https://www.mfun.ink/tags/Trilium/
 https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/
 https://www.mfun.ink/categories/calibre-web/
 https://www.mfun.ink/categories/curl/
@@ -121,3 +125,5 @@ https://www.mfun.ink/categories/MacOS/
 https://www.mfun.ink/categories/vue3/
 https://www.mfun.ink/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/
 https://www.mfun.ink/categories/wiki/
+https://www.mfun.ink/categories/%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8/
+https://www.mfun.ink/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/
