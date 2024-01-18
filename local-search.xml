@@ -4,11 +4,44 @@
   
   
   <entry>
+    <title>RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
+    <link href="/2024/01/18/rsshub-freshrss-feedme/"/>
+    <url>/2024/01/18/rsshub-freshrss-feedme/</url>
+    
+    <content type="html"><![CDATA[<p>生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务</p><h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><p>rss是一种内容聚合工具，有rss和atom两种协议，xml为基础协议。通常在一些blog网站比较常见。通过订阅这种方式可以只接收自己选择自己想要关注的信息。</p><h3 id="RSSHub"><a href="#RSSHub" class="headerlink" title="RSSHub"></a>RSSHub</h3><p><a href="https://docs.rsshub.app/zh/">RSSHub</a>是一款开源、简单易用的rss生成器，主要用于将不支持rss的网站变得可以使用rss这种方式订阅。目前已经支持数百个主流网站。</p><span id="more"></span><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ul><li>镜像下载</li></ul><p><img src="/images/rsshub/RSSHub_image.png"></p><ul><li>配置</li></ul><p><img src="/images/rsshub/1_RSSHub_image.png"></p><p><img src="/images/rsshub/4_RSSHub_image.png"></p><p>基本上不需要特别复杂的配置，设置好端口和访问密钥就行，更多配置参考<a href="https://docs.rsshub.app/zh/install/config">官方文档</a>。</p><ul><li>启动</li></ul><p><img src="/images/rsshub/2_RSSHub_image.png"></p><p>浏览器通过ip+端口方法出现这个页面就说明安装好了。</p><ul><li>浏览器插件</li></ul><p><img src="/images/rsshub/3_RSSHub_image.png"></p><p>支持主流浏览器<a href="https://github.com/DIYgod/RSSHub-Radar">github地址</a>选择相应的浏览器插件进行安装。</p><p><img src="/images/rsshub/5_RSSHub_image.png"></p><p>安装完后设置服务地址(上面访问页面时输入的ip+端口)和访问密钥</p><p><img src="/images/rsshub/6_RSSHub_image.png"></p><p>插件支持在多种rss订阅服务里添加订阅，这里用的是<a href="https://www.freshrss.org/">FreshRss</a>免费开源，支持docker部署。</p><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p><img src="/images/rsshub/7_RSSHub_image.png"></p><p>使用也十分方便，如过网站支持rss，插件自动就有提示，点击FreshRSS就会将当前网站的rss订阅添加到FreshRSS中。下面的RSSHub针对当前网站支持的api，用法就是可以将订阅地址直接写成 rsshub服务地址+路径 的形式，如过设置了密钥后面要加上密钥参数。</p><p><img src="/images/rsshub/8_RSSHub_image.png"></p><h4 id="使用中遇到的问题"><a href="#使用中遇到的问题" class="headerlink" title="使用中遇到的问题"></a>使用中遇到的问题</h4><p><img src="/images/rsshub/18_RSSHub_image.png"></p><p>按RssHub文档中的api访问有些时候会出现数据获取不到的情况，看报错像是被禁止访问了，可能是目标网站有反爬机制，我就直接使用的官方服务了，不过官方域名国内访问需要使用代理，在FreshRss里配置的时候需要配置上代理。</p><p><img src="/images/rsshub/19_RSSHub_image.png"></p><h3 id="FreshRSS"><a href="#FreshRSS" class="headerlink" title="FreshRSS"></a>FreshRSS</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><ul><li>同样先下载freshrss镜像</li></ul><p><img src="/images/rsshub/9_RSSHub_image.png"></p><ul><li>freshrss会有些配置数据和缓存数据，需要设置下目录映射</li></ul><p><img src="/images/rsshub/10_RSSHub_image.png"></p><ul><li>设置端口</li></ul><p><img src="/images/rsshub/11_RSSHub_image.png"></p><h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p><img src="/images/rsshub/12_RSSHub_image.png"></p><p>主要就是阅读和管理订阅，在rsshub浏览器里添加订阅后，联动这里就可以直接查看订阅，不过这个是网页端，移动端的话还需要一个rss阅读器，支持freshrss服务的就行，这里用的是<a href="https://github.com/seazon/FeedMe/releases">feedme</a> 只支持安卓端，ios端可以用reader。</p><h4 id="添加订阅"><a href="#添加订阅" class="headerlink" title="添加订阅"></a>添加订阅</h4><p>正常情况下订阅地址可以正常访问手动添加订阅时能正常添加，一些需要走代理的订阅需要添加#force_feed参数强制添加，然后再在下面代理配置里设置代理</p><ul><li>强制添加订阅</li></ul><p><img src="/images/rsshub/16_RSSHub_image.png"></p><ul><li>代理配置</li></ul><p><img src="/images/rsshub/17_RSSHub_image.png"></p><h3 id="FeedMe"><a href="#FeedMe" class="headerlink" title="FeedMe"></a>FeedMe</h3><h4 id="安装使用"><a href="#安装使用" class="headerlink" title="安装使用"></a>安装使用</h4><p>直接<a href="https://github.com/seazon/FeedMe/releases">github</a>下载相应apk安装打开选FreshRss，会让输入freshrss api地址和账号密码，api地址需要在freshrss 开启允许api访问，api是服务地址 ip+端口&#x2F;api&#x2F;greader.php，比如我这个是<a href="http://192.168.1.4:8889/api/greader.php">http://192.168.1.4:8889/api/greader.php</a></p><p><img src="/images/rsshub/13_RSSHub_image.png"></p><ul><li>账户里设置api密码</li></ul><p><img src="/images/rsshub/15_RSSHub_image.png"></p><ul><li>登录后效果</li></ul><p><img src="/images/rsshub/14_RSSHub_image.png"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>NAS</category>
+      
+      <category>rss</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>NAS</tag>
+      
+      <tag>RSSHub</tag>
+      
+      <tag>FreshRSS</tag>
+      
+      <tag>FeedMe</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>个人笔记类应用使用体验</title>
     <link href="/2024/01/06/note-software/"/>
     <url>/2024/01/06/note-software/</url>
     
-    <content type="html"><![CDATA[<p>年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用<a href="https://joplinapp.org/">Joplin</a>、<a href="https://b3log.org/siyuan/?lang=cn">思源</a>、<a href="https://github.com/zadam/trilium">Trilium</a>、<a href="https://github.com/blossom-editor/blossom">Blossom</a>都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。</p><span id="more"></span>  <h3 id="思源笔记"><a href="#思源笔记" class="headerlink" title="思源笔记"></a>思源笔记</h3><p><img src="/images/note-software/%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E7%B1%BB%E5%BA%94%E7%94%A8_feature0.png"></p><p>国人开发的一款非常棒的开源笔记，社区活跃，插件众多，颜值高而且国人开发使用起来没有语言障碍，一些插件比较贴合国内市场，也有挺多整活有趣的插件，其他功能特点可以看官网介绍。</p><p>为什么没有继续使用了？</p><ul><li>同步问题 部署之后使用的NAS自身的webdav同步，不知怎么的安装几个挂件后同步巨慢，局域网下也巨慢，看了思源是把所有数据分成了小块进行同步的所以文件数据较多、体积小，同步时不能用满带宽，就跟平时复制文件夹时如果小文件太多复制起来会变慢一样。看官方也推荐使用S3同步，不过NAS不支持S3就没继续折腾了。</li><li>账号问题 部署后要使用同步功能必须要注册登录他们论坛的账号，对强制要求注册账号这种事比较抵触</li><li>收费问题 同步功能非免费，后面需要付费才能使用</li></ul><p>  </p><h3 id="Joplin"><a href="#Joplin" class="headerlink" title="Joplin"></a>Joplin</h3><p><a href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/">Joplin部署</a>目前用Joplin更多的是来收集网页内容，它的chrome插件配合本地客户端实在是太好用，直接一键把网页内容同步到本地笔记中。Joplin本身功能加上一些插件补充功能上还是满足使用的，就是界面有些简陋。</p><h3 id="Trilium"><a href="#Trilium" class="headerlink" title="Trilium"></a>Trilium</h3><p><img src="/images/note-software/1_%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E7%B1%BB%E5%BA%94%E7%94%A8_image.png"></p><p>这个有<a href="https://github.com/Nriver/trilium-translation">汉化版</a>也有完整的使用<a href="https://trilium.netlify.app/home">wiki文档</a>，支持双链导出markdown等。可以通过js、html、css实现各种插件比如字数统计、笔记统计等等非常容易扩展。另外一个比较好用的点是对画布excalidraw的支持很好。其他各种功能wiki都很详细，基本上看一遍wiki啥都清楚了。桌面客户端可以和服务器同步，也支持直接在web端访问。</p><h3 id="blossom"><a href="#blossom" class="headerlink" title="blossom"></a>blossom</h3><p><img src="/images/note-software/2_%E4%B8%AA%E4%BA%BA%E7%AC%94%E8%AE%B0%E7%B1%BB%E5%BA%94%E7%94%A8_image.png"></p><p>目前接触到界面最漂亮的一款笔记，github readme 有详细介绍可以直接在线试用，不过云笔记对服务器端可用性要求比较高。</p><p>其他一些比较受流行的笔记Notion、Obsidian等没法私有部署就没一一体验，就目前使用来Trilium已经完美满足需求了，就不想在折腾其他笔记了，毕竟部署笔记应用的初衷是为了记笔记。之前也一直想找款all in one的笔记最终折腾下来还是各种工具组合下来更舒服些。目前的话网页收集Joplin，笔记整理Trilium，一些项目类wiki使用<a href="https://www.mfun.ink/2023/12/31/wiki-js-deploy/">wiki.js</a>对draw.io的支持太棒了。</p>]]></content>
+    <content type="html"><![CDATA[<p>年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用<a href="https://joplinapp.org/">Joplin</a>、<a href="https://b3log.org/siyuan/?lang=cn">思源</a>、<a href="https://github.com/zadam/trilium">Trilium</a>、<a href="https://github.com/blossom-editor/blossom">Blossom</a>都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。</p><span id="more"></span>  <h3 id="思源笔记"><a href="#思源笔记" class="headerlink" title="思源笔记"></a>思源笔记</h3><p><img src="/images/note-software/siyuan.png"></p><p>国人开发的一款非常棒的开源笔记，社区活跃，插件众多，颜值高而且国人开发使用起来没有语言障碍，一些插件比较贴合国内市场，也有挺多整活有趣的插件，其他功能特点可以看官网介绍。</p><p>为什么没有继续使用了？</p><ul><li>同步问题 部署之后使用的NAS自身的webdav同步，不知怎么的安装几个挂件后同步巨慢，局域网下也巨慢，看了思源是把所有数据分成了小块进行同步的所以文件数据较多、体积小，同步时不能用满带宽，就跟平时复制文件夹时如果小文件太多复制起来会变慢一样。看官方也推荐使用S3同步，不过NAS不支持S3就没继续折腾了。</li><li>账号问题 部署后要使用同步功能必须要注册登录他们论坛的账号，对强制要求注册账号这种事比较抵触</li><li>收费问题 同步功能非免费，后面需要付费才能使用</li></ul><p>  </p><h3 id="Joplin"><a href="#Joplin" class="headerlink" title="Joplin"></a>Joplin</h3><p><a href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/">Joplin部署</a>目前用Joplin更多的是来收集网页内容，它的chrome插件配合本地客户端实在是太好用，直接一键把网页内容同步到本地笔记中。Joplin本身功能加上一些插件补充功能上还是满足使用的，就是界面有些简陋。</p><h3 id="Trilium"><a href="#Trilium" class="headerlink" title="Trilium"></a>Trilium</h3><p><img src="/images/note-software/trilium.png"></p><p>这个有<a href="https://github.com/Nriver/trilium-translation">汉化版</a>也有完整的使用<a href="https://trilium.netlify.app/home">wiki文档</a>，支持双链导出markdown等。可以通过js、html、css实现各种插件比如字数统计、笔记统计等等非常容易扩展。另外一个比较好用的点是对画布excalidraw的支持很好。其他各种功能wiki都很详细，基本上看一遍wiki啥都清楚了。桌面客户端可以和服务器同步，也支持直接在web端访问。</p><h3 id="blossom"><a href="#blossom" class="headerlink" title="blossom"></a>blossom</h3><p><img src="/images/note-software/blossom.png"></p><p>目前接触到界面最漂亮的一款笔记，github readme 有详细介绍可以直接在线试用，不过云笔记对服务器端可用性要求比较高。</p><p>其他一些比较受流行的笔记Notion、Obsidian等没法私有部署就没一一体验，就目前使用来Trilium已经完美满足需求了，就不想在折腾其他笔记了，毕竟部署笔记应用的初衷是为了记笔记。之前也一直想找款all in one的笔记最终折腾下来还是各种工具组合下来更舒服些。目前的话网页收集Joplin，笔记整理Trilium，一些项目类wiki使用<a href="https://www.mfun.ink/2023/12/31/wiki-js-deploy/">wiki.js</a>对draw.io的支持太棒了。</p>]]></content>
     
     
     <categories>

@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-01-06T12:04:40.431Z</updated>
+  <updated>2024-01-18T15:43:04.360Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
+    <link href="https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/"/>
+    <id>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</id>
+    <published>2024-01-18T15:35:51.000Z</published>
+    <updated>2024-01-18T15:43:04.360Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务&lt;/p&gt;
+&lt;h3 id=&quot;RSS&quot;&gt;&lt;a href=&quot;#RSS&quot; class=&quot;headerlink&quot; title=&quot;RSS&quot;&gt;&lt;/a&gt;RSS&lt;/h3&gt;&lt;p&gt;rss是一种内容聚合工具，有rss和atom两种协议，xml为基础协议。通常在一些blog网站比较常见。通过订阅这种方式可以只接收自己选择自己想要关注的信息。&lt;/p&gt;
+&lt;h3 id=&quot;RSSHub&quot;&gt;&lt;a href=&quot;#RSSHub&quot; class=&quot;headerlink&quot; title=&quot;RSSHub&quot;&gt;&lt;/a&gt;RSSHub&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://docs.rsshub.app/zh/&quot;&gt;RSSHub&lt;/a&gt;是一款开源、简单易用的rss生成器，主要用于将不支持rss的网站变得可以使用rss这种方式订阅。目前已经支持数百个主流网站。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="rss" scheme="https://www.mfun.ink/categories/rss/"/>
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="RSSHub" scheme="https://www.mfun.ink/tags/RSSHub/"/>
+    
+    <category term="FreshRSS" scheme="https://www.mfun.ink/tags/FreshRSS/"/>
+    
+    <category term="FeedMe" scheme="https://www.mfun.ink/tags/FeedMe/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人笔记类应用使用体验</title>
     <link href="https://www.mfun.ink/2024/01/06/note-software/"/>
     <id>https://www.mfun.ink/2024/01/06/note-software/</id>
     <published>2024-01-06T11:57:04.000Z</published>
-    <updated>2024-01-06T12:04:40.431Z</updated>
+    <updated>2024-01-06T12:10:08.736Z</updated>
     
     
     <summary type="html">&lt;p&gt;年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用&lt;a href=&quot;https://joplinapp.org/&quot;&gt;Joplin&lt;/a&gt;、&lt;a href=&quot;https://b3log.org/siyuan/?lang=cn&quot;&gt;思源&lt;/a&gt;、&lt;a href=&quot;https://github.com/zadam/trilium&quot;&gt;Trilium&lt;/a&gt;、&lt;a href=&quot;https://github.com/blossom-editor/blossom&quot;&gt;Blossom&lt;/a&gt;都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。&lt;/p&gt;</summary>
@@ -454,29 +483,6 @@
     <category term="vue" scheme="https://www.mfun.ink/tags/vue/"/>
     
     <category term="vue3基础" scheme="https://www.mfun.ink/tags/vue3%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于redis实现一个简单的分布式限流器</title>
-    <link href="https://www.mfun.ink/2022/10/15/redis-current-limiter/"/>
-    <id>https://www.mfun.ink/2022/10/15/redis-current-limiter/</id>
-    <published>2022-10-15T14:30:35.000Z</published>
-    <updated>2022-10-15T14:30:35.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
-    
-    <category term="分布式限流" scheme="https://www.mfun.ink/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E9%99%90%E6%B5%81/"/>
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
-    
-    <category term="分布式限流" scheme="https://www.mfun.ink/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%99%90%E6%B5%81/"/>
     
   </entry>
   
