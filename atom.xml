@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-01-28T04:08:36.029Z</updated>
+  <updated>2024-01-28T09:48:05.625Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2024/01/28/windows-wsl-docker/"/>
     <id>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</id>
     <published>2024-01-28T04:04:04.000Z</published>
-    <updated>2024-01-28T04:08:36.029Z</updated>
+    <updated>2024-01-28T09:48:05.625Z</updated>
     
     
     <summary type="html">&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</summary>
@@ -46,7 +46,7 @@
     <link href="https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/"/>
     <id>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</id>
     <published>2024-01-18T15:35:51.000Z</published>
-    <updated>2024-01-18T15:43:04.360Z</updated>
+    <updated>2024-01-28T09:49:13.416Z</updated>
     
     
     <summary type="html">&lt;p&gt;生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务&lt;/p&gt;
@@ -75,7 +75,7 @@
     <link href="https://www.mfun.ink/2024/01/06/note-software/"/>
     <id>https://www.mfun.ink/2024/01/06/note-software/</id>
     <published>2024-01-06T11:57:04.000Z</published>
-    <updated>2024-01-06T12:10:08.736Z</updated>
+    <updated>2024-01-28T09:53:46.962Z</updated>
     
     
     <summary type="html">&lt;p&gt;年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用&lt;a href=&quot;https://joplinapp.org/&quot;&gt;Joplin&lt;/a&gt;、&lt;a href=&quot;https://b3log.org/siyuan/?lang=cn&quot;&gt;思源&lt;/a&gt;、&lt;a href=&quot;https://github.com/zadam/trilium&quot;&gt;Trilium&lt;/a&gt;、&lt;a href=&quot;https://github.com/blossom-editor/blossom&quot;&gt;Blossom&lt;/a&gt;都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。&lt;/p&gt;</summary>
