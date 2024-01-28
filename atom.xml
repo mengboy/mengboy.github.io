@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-01-18T15:43:04.360Z</updated>
+  <updated>2024-01-28T04:08:36.029Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>局域网下Windows docker 挂载 NAS 磁盘</title>
+    <link href="https://www.mfun.ink/2024/01/28/windows-wsl-docker/"/>
+    <id>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</id>
+    <published>2024-01-28T04:04:04.000Z</published>
+    <updated>2024-01-28T04:08:36.029Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="docker" scheme="https://www.mfun.ink/categories/docker/"/>
+    
+    
+    <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="wsl" scheme="https://www.mfun.ink/tags/wsl/"/>
+    
+  </entry>
   
   <entry>
     <title>RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
@@ -459,30 +484,6 @@
     <category term="科学上网" scheme="https://www.mfun.ink/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
     
     <category term="trojan-go" scheme="https://www.mfun.ink/tags/trojan-go/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue3学习笔记一.项目初始化</title>
-    <link href="https://www.mfun.ink/2022/10/16/vue3-study-init/"/>
-    <id>https://www.mfun.ink/2022/10/16/vue3-study-init/</id>
-    <published>2022-10-16T13:44:41.000Z</published>
-    <updated>2022-10-16T13:44:41.000Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h2&gt;&lt;p&gt;vue的安装就直接参考&lt;a href=&quot;https://cn.vuejs.org/guide/quick-start.html&quot;&gt;官方文档&lt;/a&gt;，描述的已经很详细了。&lt;/p&gt;
-&lt;h2 id=&quot;项目创建&quot;&gt;&lt;a href=&quot;#项目创建&quot; class=&quot;headerlink&quot; title=&quot;项目创建&quot;&gt;&lt;/a&gt;项目创建&lt;/h2&gt;&lt;p&gt;直接使用vue create + 项目名创建项目，默认有三种配置可选，vue2、vue3各有一个默认创建选项，也可以选第三种自定义项目创建要引入的features。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="vue" scheme="https://www.mfun.ink/categories/vue/"/>
-    
-    <category term="vue3" scheme="https://www.mfun.ink/categories/vue3/"/>
-    
-    
-    <category term="vue" scheme="https://www.mfun.ink/tags/vue/"/>
-    
-    <category term="vue3基础" scheme="https://www.mfun.ink/tags/vue3%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
