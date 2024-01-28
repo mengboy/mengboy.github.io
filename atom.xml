@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-01-28T09:48:05.625Z</updated>
+  <updated>2024-01-28T13:43:56.526Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go 语言实现jpg和png图片的批量压缩</title>
+    <link href="https://www.mfun.ink/2024/01/28/img-tool/"/>
+    <id>https://www.mfun.ink/2024/01/28/img-tool/</id>
+    <published>2024-01-28T13:42:10.000Z</published>
+    <updated>2024-01-28T13:43:56.526Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录笔记或者写博客的时候经常会直接复制mac截图插入图片，默认复制得到的是无损png图片，图片体积比较大，占空间带宽，就基于go实现了个命令行批量压缩工具。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Go" scheme="https://www.mfun.ink/categories/Go/"/>
+    
+    <category term="图片处理" scheme="https://www.mfun.ink/categories/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="Go" scheme="https://www.mfun.ink/tags/Go/"/>
+    
+    <category term="图片压缩" scheme="https://www.mfun.ink/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>局域网下Windows docker 挂载 NAS 磁盘</title>
@@ -461,29 +484,6 @@
     <category term="trojan-go" scheme="https://www.mfun.ink/tags/trojan-go/"/>
     
     <category term="nginx" scheme="https://www.mfun.ink/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>trojan-go 安装配置</title>
-    <link href="https://www.mfun.ink/2023/03/04/trojan-install/"/>
-    <id>https://www.mfun.ink/2023/03/04/trojan-install/</id>
-    <published>2023-03-04T13:39:28.000Z</published>
-    <updated>2023-09-26T16:40:27.424Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本文记录一下”科学上网”工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。 &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="科学上网" scheme="https://www.mfun.ink/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-    
-    <category term="trojan" scheme="https://www.mfun.ink/tags/trojan/"/>
-    
-    <category term="科学上网" scheme="https://www.mfun.ink/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-    <category term="trojan-go" scheme="https://www.mfun.ink/tags/trojan-go/"/>
     
   </entry>
   
