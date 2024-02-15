@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-02-15T16:25:32.659Z</updated>
+  <updated>2024-02-15T16:55:26.814Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2024/02/16/docker-app-mount-smb/"/>
     <id>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</id>
     <published>2024-02-15T16:18:54.000Z</published>
-    <updated>2024-02-15T16:25:32.659Z</updated>
+    <updated>2024-02-15T16:55:26.814Z</updated>
     
     
     <summary type="html">&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</summary>
