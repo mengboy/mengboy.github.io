@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-01-28T13:43:56.526Z</updated>
+  <updated>2024-02-15T16:25:32.659Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker应用挂载SMB网络目录遇到的问题</title>
+    <link href="https://www.mfun.ink/2024/02/16/docker-app-mount-smb/"/>
+    <id>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</id>
+    <published>2024-02-15T16:18:54.000Z</published>
+    <updated>2024-02-15T16:25:32.659Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="docker" scheme="https://www.mfun.ink/categories/docker/"/>
+    
+    
+    <category term="sqlite" scheme="https://www.mfun.ink/tags/sqlite/"/>
+    
+    <category term="mysql" scheme="https://www.mfun.ink/tags/mysql/"/>
+    
+    <category term="mariadb" scheme="https://www.mfun.ink/tags/mariadb/"/>
+    
+    <category term="smb" scheme="https://www.mfun.ink/tags/smb/"/>
+    
+  </entry>
   
   <entry>
     <title>Go 语言实现jpg和png图片的批量压缩</title>
@@ -459,31 +484,6 @@
     <category term="hexo" scheme="https://www.mfun.ink/tags/hexo/"/>
     
     <category term="版本升级" scheme="https://www.mfun.ink/tags/%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通过nginx流代理转发流量到trojan服务</title>
-    <link href="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/"/>
-    <id>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</id>
-    <published>2023-05-20T12:14:28.000Z</published>
-    <updated>2023-05-20T13:17:21.241Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;上一篇&lt;a href=&quot;https://www.mfun.ink/2023/03/04/trojan-install/&quot;&gt;文章&lt;/a&gt;记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="科学上网" scheme="https://www.mfun.ink/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-    
-    <category term="trojan" scheme="https://www.mfun.ink/tags/trojan/"/>
-    
-    <category term="科学上网" scheme="https://www.mfun.ink/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
-    
-    <category term="trojan-go" scheme="https://www.mfun.ink/tags/trojan-go/"/>
-    
-    <category term="nginx" scheme="https://www.mfun.ink/tags/nginx/"/>
     
   </entry>
   
