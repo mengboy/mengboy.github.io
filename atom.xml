@@ -177,7 +177,7 @@
     <link href="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/"/>
     <id>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</id>
     <published>2023-12-06T13:16:31.000Z</published>
-    <updated>2023-12-06T13:19:55.789Z</updated>
+    <updated>2024-03-17T13:15:51.194Z</updated>
     
     
     <summary type="html">&lt;h3 id=&quot;问题提出&quot;&gt;&lt;a href=&quot;#问题提出&quot; class=&quot;headerlink&quot; title=&quot;问题提出&quot;&gt;&lt;/a&gt;问题提出&lt;/h3&gt;&lt;p&gt;提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：&lt;/p&gt;</summary>
