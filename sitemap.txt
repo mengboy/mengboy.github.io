@@ -1,3 +1,4 @@
+https://www.mfun.ink/2024/06/16/vue-sfc/
 https://www.mfun.ink/2024/06/16/vue-application/
 https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/
 https://www.mfun.ink/2024/02/16/docker-app-mount-smb/
