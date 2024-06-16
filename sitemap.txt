@@ -1,3 +1,4 @@
+https://www.mfun.ink/2024/06/16/vue-application/
 https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/
 https://www.mfun.ink/2024/02/16/docker-app-mount-smb/
 https://www.mfun.ink/2024/01/28/img-tool/
@@ -114,6 +115,8 @@ https://www.mfun.ink/tags/sqlite/
 https://www.mfun.ink/tags/mysql/
 https://www.mfun.ink/tags/mariadb/
 https://www.mfun.ink/tags/smb/
+https://www.mfun.ink/tags/vue%E5%9F%BA%E7%A1%80/
+https://www.mfun.ink/tags/vue%E5%BA%94%E7%94%A8/
 https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/
 https://www.mfun.ink/categories/calibre-web/
 https://www.mfun.ink/categories/curl/
@@ -145,3 +148,4 @@ https://www.mfun.ink/categories/rss/
 https://www.mfun.ink/categories/docker/
 https://www.mfun.ink/categories/Go/
 https://www.mfun.ink/categories/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/
+https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/

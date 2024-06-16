@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-02-15T16:55:26.814Z</updated>
+  <updated>2024-06-16T12:46:02.424Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue名词介绍--应用</title>
+    <link href="https://www.mfun.ink/2024/06/16/vue-application/"/>
+    <id>https://www.mfun.ink/2024/06/16/vue-application/</id>
+    <published>2024-06-16T12:21:26.000Z</published>
+    <updated>2024-06-16T12:46:02.424Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;核心概念&quot;&gt;&lt;a href=&quot;#核心概念&quot; class=&quot;headerlink&quot; title=&quot;核心概念&quot;&gt;&lt;/a&gt;核心概念&lt;/h2&gt;&lt;p&gt;在 Vue.js 中，“应用”（Application）是指整个 Vue 项目的一个实例。它是 Vue 应用的基础结构和运行的起点，负责管理和协调所有的组件、状态、路由、和其他功能模块。&lt;br&gt;一个 Vue 应用通常是由一个 Vue 实例或多个 Vue 实例组成，通过实例化 Vue 对象创建应用。应用实例负责初始化应用的根组件，并提供应用范围内的配置和资源，例如插件、全局状态管理等。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/categories/vue/"/>
+    
+    <category term="名词解析" scheme="https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/"/>
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/tags/vue/"/>
+    
+    <category term="vue基础" scheme="https://www.mfun.ink/tags/vue%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="vue应用" scheme="https://www.mfun.ink/tags/vue%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>docker应用挂载SMB网络目录遇到的问题</title>
@@ -463,27 +488,6 @@
     
     
     <category term="redis分布式锁" scheme="https://www.mfun.ink/tags/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo版本升级</title>
-    <link href="https://www.mfun.ink/2023/05/21/hexo-upgrade/"/>
-    <id>https://www.mfun.ink/2023/05/21/hexo-upgrade/</id>
-    <published>2023-05-21T14:11:01.000Z</published>
-    <updated>2023-05-21T14:56:45.997Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;hexo版本升级还是很简单的，先切到hexo目录，使用&lt;code&gt;npm i hexo-cli -g&lt;/code&gt;升级全局hexo，接下来再使用&lt;code&gt;npm-check&lt;/code&gt;、&lt;code&gt;npm-upgrade&lt;/code&gt;,&lt;code&gt;npm-update&lt;/code&gt;升级相关依赖。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="hexo" scheme="https://www.mfun.ink/categories/hexo/"/>
-    
-    
-    <category term="hexo" scheme="https://www.mfun.ink/tags/hexo/"/>
-    
-    <category term="版本升级" scheme="https://www.mfun.ink/tags/%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7/"/>
     
   </entry>
   
