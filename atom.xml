@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-06-16T12:50:20.654Z</updated>
+  <updated>2024-07-20T01:52:28.994Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>seo 优化措施</title>
+    <link href="https://www.mfun.ink/2024/07/20/seo-base/"/>
+    <id>https://www.mfun.ink/2024/07/20/seo-base/</id>
+    <published>2024-07-20T01:47:33.000Z</published>
+    <updated>2024-07-20T01:52:28.994Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;seo-是什么&quot;&gt;&lt;a href=&quot;#seo-是什么&quot; class=&quot;headerlink&quot; title=&quot;seo 是什么&quot;&gt;&lt;/a&gt;seo 是什么&lt;/h2&gt;&lt;p&gt;SEO，即搜索引擎优化（Search Engine Optimization），是一种通过优化网站结构、内容和外部链接来提高网站在搜索引擎中的排名的技术和策略。SEO的目的是增加网站的可见性，从而吸引更多的自然流量（即非付费流量）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搜索引擎" scheme="https://www.mfun.ink/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="seo" scheme="https://www.mfun.ink/categories/seo/"/>
+    
+    
+    <category term="seo" scheme="https://www.mfun.ink/tags/seo/"/>
+    
+    <category term="seo优化" scheme="https://www.mfun.ink/tags/seo%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue名词介绍--单文件组件</title>
@@ -468,32 +491,6 @@
     <category term="局域网" scheme="https://www.mfun.ink/tags/%E5%B1%80%E5%9F%9F%E7%BD%91/"/>
     
     <category term="路由器虚拟服务器" scheme="https://www.mfun.ink/tags/%E8%B7%AF%E7%94%B1%E5%99%A8%E8%99%9A%E6%8B%9F%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>xorm使用map kv更新日期时间类型字段的时区问题</title>
-    <link href="https://www.mfun.ink/2023/07/29/xorm-update-time/"/>
-    <id>https://www.mfun.ink/2023/07/29/xorm-update-time/</id>
-    <published>2023-07-29T13:44:10.000Z</published>
-    <updated>2023-07-30T01:06:58.489Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？&lt;/p&gt;
-&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs Go&quot;&gt;&lt;span class=&quot;hljs-comment&quot;&gt;// demo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;type&lt;/span&gt; TimeTest &lt;span class=&quot;hljs-keyword&quot;&gt;struct&lt;/span&gt; &amp;#123;&lt;br&gt;	ID         &lt;span class=&quot;hljs-type&quot;&gt;int64&lt;/span&gt;     &lt;span class=&quot;hljs-string&quot;&gt;`xorm:&amp;quot;not null pk autoincr INT(11) &amp;#x27;id&amp;#x27;&amp;quot;`&lt;/span&gt;&lt;br&gt;	UpdateTime time.Time &lt;span class=&quot;hljs-string&quot;&gt;`xorm:&amp;quot;update_time&amp;quot;`&lt;/span&gt;&lt;br&gt;&amp;#125;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;hljs-function&quot;&gt;&lt;span class=&quot;hljs-keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;hljs-title&quot;&gt;UpdateTime&lt;/span&gt;&lt;span class=&quot;hljs-params&quot;&gt;(o *xorm.Session)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;br&gt;	o.Table(&lt;span class=&quot;hljs-built_in&quot;&gt;new&lt;/span&gt;(TimeTest)).Where(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;id = ?&amp;quot;&lt;/span&gt;, &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;).Update(&amp;amp;TimeTest&amp;#123;&lt;br&gt;		UpdateTime: time.Now(),&lt;br&gt;	&amp;#125;)&lt;br&gt;	o.Table(&lt;span class=&quot;hljs-built_in&quot;&gt;new&lt;/span&gt;(TimeTest)).Where(&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;id = ?&amp;quot;&lt;/span&gt;, &lt;span class=&quot;hljs-number&quot;&gt;1&lt;/span&gt;).Update(&lt;span class=&quot;hljs-keyword&quot;&gt;map&lt;/span&gt;[&lt;span class=&quot;hljs-type&quot;&gt;string&lt;/span&gt;]&lt;span class=&quot;hljs-keyword&quot;&gt;interface&lt;/span&gt;&amp;#123;&amp;#125;&amp;#123;&lt;br&gt;		&lt;span class=&quot;hljs-string&quot;&gt;&amp;quot;update_time&amp;quot;&lt;/span&gt;: time.Now(),&lt;br&gt;	&amp;#125;)&lt;br&gt;&amp;#125;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
-    
-    <category term="xorm" scheme="https://www.mfun.ink/categories/xorm/"/>
-    
-    
-    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
-    
-    <category term="xorm" scheme="https://www.mfun.ink/tags/xorm/"/>
-    
-    <category term="时区" scheme="https://www.mfun.ink/tags/%E6%97%B6%E5%8C%BA/"/>
     
   </entry>
   

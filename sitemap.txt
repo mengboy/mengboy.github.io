@@ -1,3 +1,4 @@
+https://www.mfun.ink/2024/07/20/seo-base/
 https://www.mfun.ink/2024/06/16/vue-sfc/
 https://www.mfun.ink/2024/06/16/vue-application/
 https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/
@@ -118,6 +119,9 @@ https://www.mfun.ink/tags/mariadb/
 https://www.mfun.ink/tags/smb/
 https://www.mfun.ink/tags/vue%E5%9F%BA%E7%A1%80/
 https://www.mfun.ink/tags/vue%E5%BA%94%E7%94%A8/
+https://www.mfun.ink/tags/seo/
+https://www.mfun.ink/tags/%E3%80%90seo%E4%BC%98%E5%8C%96%E3%80%91/
+https://www.mfun.ink/tags/seo%E4%BC%98%E5%8C%96/
 https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/
 https://www.mfun.ink/categories/calibre-web/
 https://www.mfun.ink/categories/curl/
@@ -150,3 +154,6 @@ https://www.mfun.ink/categories/docker/
 https://www.mfun.ink/categories/Go/
 https://www.mfun.ink/categories/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/
 https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/
+https://www.mfun.ink/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/
+https://www.mfun.ink/categories/%E3%80%90seo%E3%80%91/
+https://www.mfun.ink/categories/seo/
