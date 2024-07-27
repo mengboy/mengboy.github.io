@@ -306,7 +306,7 @@
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
       
-<aside class="sidebar d-none d-xl-block" style="margin-right:-1rem;z-index:-1"><ins class="adsbygoogle" style="display:flex;justify-content:center;min-width:160px;max-width:300px;width:100%;height:600px;position:sticky;top:2rem" data-ad-client="ca-pub-2789089615690497" data-ad-slot="1804972236"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></aside>
+<aside class="sidebar d-none d-xl-block" style="margin-right:-1rem;z-index:-1"><ins class="adsbygoogle" style="display:flex;justify-content:center;min-width:160px;max-width:300px;width:100%;height:600px;position:sticky;top:2rem" data-ad-client="ca-pub-2789089615690497" data-ad-slot="6136665648"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></aside>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -334,7 +334,7 @@
 执行<code>codesign --entitlements gdb-entitlement.xml -fs gdb-cert $(which gdb)</code>。</li>
 </ul>
 <p>执行<code>codesign -vv $(which gdb)</code>查看是否添加成功，输出如下</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs awk"> $: codesign -vv $(which gdb)<br><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/g</span>db: valid on disk<br><span class="hljs-regexp">/usr/</span>local<span class="hljs-regexp">/bin/g</span>db: satisfies its Designated Requirement<br></code></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crystal"> <span class="hljs-variable">$:</span> codesign -vv <span class="hljs-variable">$(</span>which gdb)<br><span class="hljs-regexp">/usr/local</span><span class="hljs-regexp">/bin/gdb</span>: valid on disk<br><span class="hljs-regexp">/usr/local</span><span class="hljs-regexp">/bin/gdb</span>: satisfies its Designated Requirement<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>刷新系统证书和codesign数据<br>执行<code>sudo killall taskgated</code>，重新运行gdb调试，没有再报错。</li>
@@ -427,7 +427,7 @@
     <div class="license-icon iconfont"></div>
   </div>
 
-<div style="width:100%;display:flex;justify-content:center;margin-bottom:1.5rem"><ins class="adsbygoogle" style="display:flex;justify-content:center;max-width:845px;width:100%;height:90px" data-ad-client="ca-pub-2789089615690497" data-ad-slot="1804972236"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>
+<div style="width:100%;display:flex;justify-content:center;margin-bottom:1.5rem"><ins class="adsbygoogle" style="display:flex;justify-content:center;max-width:845px;width:100%;height:90px" data-ad-client="ca-pub-2789089615690497" data-ad-slot="6136665648"></ins><script> (adsbygoogle = window.adsbygoogle || []).push({}); </script></div>
 
               
                 <div class="post-prevnext my-3">

@@ -176,9 +176,9 @@
     
     
     
-    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
-    
     <category term="docker" scheme="https://www.mfun.ink/categories/docker/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
     
     
     <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
@@ -266,9 +266,9 @@
     
     <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
     
-    <category term="wiki.js" scheme="https://www.mfun.ink/tags/wiki-js/"/>
-    
     <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="wiki.js" scheme="https://www.mfun.ink/tags/wiki-js/"/>
     
   </entry>
   
