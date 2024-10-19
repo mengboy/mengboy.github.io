@@ -1,0 +1,757 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon.png">
+  <link rel="icon" href="/images/site/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="mengboy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis分布式锁">
+<meta property="og:url" content="https://www.mfun.ink/2023/06/03/redis-lua-lock/index.html">
+<meta property="og:site_name" content="Mengboy&#39;s Blog">
+<meta property="og:description" content="分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-06-03T13:10:31.000Z">
+<meta property="article:modified_time" content="2024-10-19T02:25:36.343Z">
+<meta property="article:author" content="mengboy">
+<meta property="article:tag" content="redis分布式锁">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>redis分布式锁 - Mengboy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Mengboy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://nav.mfun.ink/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>导航</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml" target="_self">
+                <i class="iconfont icon-rss"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/site/fluid.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="redis分布式锁"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-06-03 21:10" pubdate>
+          2023年6月3日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          964 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">redis分布式锁</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。</p>
+<span id="more"></span>
+<p>以下是使用 Lua 脚本实现的 Redis 分布式锁示例，使用lua脚本是为了保证多个指令执行的原子性。</p>
+<ul>
+<li><p>加锁脚本</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> redis.call(<span class="hljs-string">&#x27;setnx&#x27;</span>, KEYS[<span class="hljs-number">1</span>], ARGV[<span class="hljs-number">1</span>]) == <span class="hljs-number">1</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> redis.call(<span class="hljs-string">&#x27;expire&#x27;</span>, KEYS[<span class="hljs-number">1</span>], ARGV[<span class="hljs-number">2</span>]) <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<p>这个脚本会尝试给指定的key加锁。如果加锁成功，返回1；如果key已经存在，加锁失败，返回0。<code>PX</code>指的是毫秒级别的key过期时间，换成<code>EX</code>则是秒级时间，可以根据需要使用。这里为什么要加过期时间，可不可以只使用  <code>SETNX</code>？为了防止释放锁脚本执行失败，加上过期时间可以当锁释放失败的时候，等锁自动过期不影响下次获取锁，防止死锁。过期时间长短根据锁期间的业务逻辑执行时间来确定，比这个时间稍长。<br>上面lua加锁脚本用起来还是比较繁琐的，实际上redis 2.6.12版本支持set命令设置nx、ex参数，我们可以直接用set命令完成加锁<code>set [key] [val] px [expire_val] nx</code>，更加简洁方便。</p>
+</li>
+<li><p>释放锁脚本</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs lua"><span class="hljs-keyword">if</span> redis.call(<span class="hljs-string">&quot;get&quot;</span>, KEYS[<span class="hljs-number">1</span>]) == ARGV[<span class="hljs-number">1</span>] <span class="hljs-keyword">then</span> <span class="hljs-keyword">return</span> redis.call(<span class="hljs-string">&quot;del&quot;</span>, KEYS[<span class="hljs-number">1</span>]) <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<p>这个脚本会尝试释放指定的key对应的锁。如果key不存在或者key对应的锁值与传入的锁值不匹配，释放锁失败，返回0；否则，释放锁成功，返回1。这里值不匹配说明锁已经被重新获取了。</p>
+</li>
+</ul>
+<p>使用这两个脚本时，需要使用 Redis 的 EVAL 命令（或类似命令，如 evalsha）在 Redis 服务器上执行。另外，尽管使用 Lua 脚本可以提高分布式锁的可靠性，但在某些情况下（例如 Redis 主从切换）仍可能导致锁出现问题。在分布式系统中，除非必须，否则尽量避免使用分布式锁。</p>
+<ul>
+<li>go 代码使用示例<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> (<br>	<span class="hljs-string">&quot;context&quot;</span><br>	<span class="hljs-string">&quot;fmt&quot;</span><br>	<span class="hljs-string">&quot;github.com/go-redis/redis/v8&quot;</span><br>	<span class="hljs-string">&quot;log&quot;</span><br>	<span class="hljs-string">&quot;time&quot;</span><br>)<br><br><span class="hljs-keyword">const</span> LockScript = <span class="hljs-string">`if redis.call(&#x27;setnx&#x27;, KEYS[1], ARGV[1]) == 1 then return redis.call(&#x27;expire&#x27;, KEYS[1], ARGV[2]) else return 0 end`</span><br><span class="hljs-keyword">const</span> unlockScript = <span class="hljs-string">`if redis.call(&quot;get&quot;, KEYS[1]) == ARGV[1] then return redis.call(&quot;del&quot;, KEYS[1]) else return 0 end`</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>	<span class="hljs-comment">// 初始化 Redis 客户端</span><br>	redisClient := redis.NewClient(&amp;redis.Options&#123;<br>		Addr: <span class="hljs-string">&quot;localhost:6379&quot;</span>,<br>	&#125;)<br>	<span class="hljs-comment">// 锁的 Key 和 Value</span><br>	lockKey := <span class="hljs-string">&quot;my_lock&quot;</span><br>	lockValue := <span class="hljs-string">&quot;unique_value&quot;</span><br>	lockExpire := <span class="hljs-number">5000</span> <span class="hljs-comment">// 锁的过期时间，单位：毫秒</span><br>	<span class="hljs-keyword">var</span> ctx = context.Background()<br>	<span class="hljs-keyword">defer</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> &#123;<br>		<span class="hljs-comment">// 尝试释放锁</span><br>		<span class="hljs-keyword">if</span> releaseLock(ctx, redisClient, lockKey, lockValue) &#123;<br>			fmt.Println(<span class="hljs-string">&quot;释放锁成功&quot;</span>)<br>			<span class="hljs-keyword">return</span><br>		&#125;<br>		fmt.Println(<span class="hljs-string">&quot;释放锁失败，可能已经过期或者被其他客户端获取&quot;</span>)<br>	&#125;()<br>	<span class="hljs-comment">// 尝试加锁</span><br>	<span class="hljs-keyword">if</span> acquireLock(ctx, redisClient, lockKey, lockValue, time.Duration(lockExpire)) &#123;<br>		fmt.Println(<span class="hljs-string">&quot;加锁成功，开始执行业务逻辑&quot;</span>)<br>		<span class="hljs-comment">// 模拟业务逻辑耗时</span><br>		time.Sleep(<span class="hljs-number">3</span> * time.Second)<br>		fmt.Println(<span class="hljs-string">&quot;业务逻辑处理完成，释放锁&quot;</span>)<br>		<span class="hljs-keyword">return</span><br>	&#125;<br>	fmt.Println(<span class="hljs-string">&quot;获取锁失败&quot;</span>)<br><br>&#125;<br><br><span class="hljs-comment">// acquireLockByScript 使用lua 脚本获取锁</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">acquireLockByScript</span><span class="hljs-params">(ctx context.Context, redisCli *redis.Client, lockKey, lockValue <span class="hljs-type">string</span>, lockExpire <span class="hljs-type">int</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	res, err := redisCli.Eval(ctx, LockScript, []<span class="hljs-type">string</span>&#123;lockKey&#125;, lockValue, lockExpire).Int64()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		fmt.Println(<span class="hljs-string">&quot;ac err&quot;</span>, err)<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>	&#125;<br>	<span class="hljs-keyword">return</span> res == <span class="hljs-number">1</span><br>&#125;<br><br><span class="hljs-comment">// acquireLock 使用set ex nx 获取锁</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">acquireLock</span><span class="hljs-params">(ctx context.Context, redisCli *redis.Client, lockKey, lockValue <span class="hljs-type">string</span>, lockExpire time.Duration)</span></span> <span class="hljs-type">bool</span> &#123;<br>	ac, err := redisCli.SetNX(ctx, lockKey, lockValue, lockExpire*time.Millisecond).Result()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		fmt.Println(<span class="hljs-string">&quot;ac err&quot;</span>, err)<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>	&#125;<br>	<span class="hljs-keyword">return</span> ac<br>&#125;<br><br><span class="hljs-comment">// releaseLock 尝试释放分布式锁</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">releaseLock</span><span class="hljs-params">(ctx context.Context, redisCli *redis.Client, lockKey, lockValue <span class="hljs-type">string</span>)</span></span> <span class="hljs-type">bool</span> &#123;<br>	result, err := redisCli.Eval(ctx, unlockScript, []<span class="hljs-type">string</span>&#123;lockKey&#125;, lockValue).Int64()<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		log.Fatalf(<span class="hljs-string">&quot;释放锁失败：%v&quot;</span>, err)<br>	&#125;<br>	<span class="hljs-keyword">return</span> result == <span class="hljs-number">1</span><br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/redis/" class="category-chain-item">redis</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/" class="print-no-link">#redis分布式锁</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>redis分布式锁</div>
+      <div>https://www.mfun.ink/2023/06/03/redis-lua-lock/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>mengboy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年6月3日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/07/29/xorm-update-time/" title="xorm使用map kv更新日期时间类型字段的时区问题">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">xorm使用map kv更新日期时间类型字段的时区问题</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/05/21/hexo-upgrade/" title="hexo版本升级">
+                        <span class="hidden-mobile">hexo版本升级</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
+          {
+            id: 'ecf4fcb4cf7dfb4eb117882dd4652311'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

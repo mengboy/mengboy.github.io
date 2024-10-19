@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mengboy&#39;s Blog</title>
+  <icon>https://www.mfun.ink/icon.png</icon>
+  
+  <link href="https://www.mfun.ink/atom.xml" rel="self"/>
+  
+  <link href="https://www.mfun.ink/"/>
+  <updated>2024-10-19T08:08:48.731Z</updated>
+  <id>https://www.mfun.ink/</id>
+  
+  <author>
+    <name>mengboy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>windows-teminal 美化</title>
+    <link href="https://www.mfun.ink/2024/10/19/windows-teminal/"/>
+    <id>https://www.mfun.ink/2024/10/19/windows-teminal/</id>
+    <published>2024-10-19T06:40:08.000Z</published>
+    <updated>2024-10-19T08:08:48.731Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近组了台台式机，日常主力机从Mac OS切到了Windows，Windows下的终端之前一直是被吐槽的对象，不过自从有了WSL后，Windows下的开发体验有了极大的提升，终端体验已经完全能赶得上Mac、Linux。贴两张调整后的终端截图：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows" scheme="https://www.mfun.ink/categories/Windows/"/>
+    
+    <category term="Terminal" scheme="https://www.mfun.ink/categories/Terminal/"/>
+    
+    
+    <category term="wsl" scheme="https://www.mfun.ink/tags/wsl/"/>
+    
+    <category term="ho my posh" scheme="https://www.mfun.ink/tags/ho-my-posh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>6年程序员，一些困扰</title>
+    <link href="https://www.mfun.ink/2024/07/27/career-development-issues/"/>
+    <id>https://www.mfun.ink/2024/07/27/career-development-issues/</id>
+    <published>2024-07-27T09:48:59.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="职业发展" scheme="https://www.mfun.ink/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    
+    
+    <category term="职业发展" scheme="https://www.mfun.ink/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
+    
+    <category term="困扰" scheme="https://www.mfun.ink/tags/%E5%9B%B0%E6%89%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>seo 优化措施</title>
+    <link href="https://www.mfun.ink/2024/07/20/seo-base/"/>
+    <id>https://www.mfun.ink/2024/07/20/seo-base/</id>
+    <published>2024-07-20T01:47:33.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;seo-是什么&quot;&gt;&lt;a href=&quot;#seo-是什么&quot; class=&quot;headerlink&quot; title=&quot;seo 是什么&quot;&gt;&lt;/a&gt;seo 是什么&lt;/h2&gt;&lt;p&gt;SEO，即搜索引擎优化（Search Engine Optimization），是一种通过优化网站结构、内容和外部链接来提高网站在搜索引擎中的排名的技术和策略。SEO的目的是增加网站的可见性，从而吸引更多的自然流量（即非付费流量）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="搜索引擎" scheme="https://www.mfun.ink/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/"/>
+    
+    <category term="seo" scheme="https://www.mfun.ink/categories/seo/"/>
+    
+    
+    <category term="seo" scheme="https://www.mfun.ink/tags/seo/"/>
+    
+    <category term="seo优化" scheme="https://www.mfun.ink/tags/seo%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue名词介绍--单文件组件</title>
+    <link href="https://www.mfun.ink/2024/06/16/vue-sfc/"/>
+    <id>https://www.mfun.ink/2024/06/16/vue-sfc/</id>
+    <published>2024-06-16T12:47:40.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;单文件组件&quot;&gt;&lt;a href=&quot;#单文件组件&quot; class=&quot;headerlink&quot; title=&quot;单文件组件&quot;&gt;&lt;/a&gt;单文件组件&lt;/h1&gt;&lt;p&gt;什么是单文件组件？&lt;br&gt;简称SFC，将模版（template）、逻辑（script）、样式（style）整合在一个文件中，通常以`.vue`的形式存在。 简化组件开发和管理，使得代码更加清晰、模块化、便于维护&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/categories/vue/"/>
+    
+    <category term="名词解析" scheme="https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/"/>
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/tags/vue/"/>
+    
+    <category term="vue基础" scheme="https://www.mfun.ink/tags/vue%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="vue应用" scheme="https://www.mfun.ink/tags/vue%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue名词介绍--应用</title>
+    <link href="https://www.mfun.ink/2024/06/16/vue-application/"/>
+    <id>https://www.mfun.ink/2024/06/16/vue-application/</id>
+    <published>2024-06-16T12:21:26.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;核心概念&quot;&gt;&lt;a href=&quot;#核心概念&quot; class=&quot;headerlink&quot; title=&quot;核心概念&quot;&gt;&lt;/a&gt;核心概念&lt;/h2&gt;&lt;p&gt;在 Vue.js 中，“应用”（Application）是指整个 Vue 项目的一个实例。它是 Vue 应用的基础结构和运行的起点，负责管理和协调所有的组件、状态、路由、和其他功能模块。&lt;br&gt;一个 Vue 应用通常是由一个 Vue 实例或多个 Vue 实例组成，通过实例化 Vue 对象创建应用。应用实例负责初始化应用的根组件，并提供应用范围内的配置和资源，例如插件、全局状态管理等。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/categories/vue/"/>
+    
+    <category term="名词解析" scheme="https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/"/>
+    
+    
+    <category term="vue" scheme="https://www.mfun.ink/tags/vue/"/>
+    
+    <category term="vue基础" scheme="https://www.mfun.ink/tags/vue%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="vue应用" scheme="https://www.mfun.ink/tags/vue%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker应用挂载SMB网络目录遇到的问题</title>
+    <link href="https://www.mfun.ink/2024/02/16/docker-app-mount-smb/"/>
+    <id>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</id>
+    <published>2024-02-15T16:18:54.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="docker" scheme="https://www.mfun.ink/categories/docker/"/>
+    
+    
+    <category term="sqlite" scheme="https://www.mfun.ink/tags/sqlite/"/>
+    
+    <category term="mysql" scheme="https://www.mfun.ink/tags/mysql/"/>
+    
+    <category term="mariadb" scheme="https://www.mfun.ink/tags/mariadb/"/>
+    
+    <category term="smb" scheme="https://www.mfun.ink/tags/smb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go 语言实现jpg和png图片的批量压缩</title>
+    <link href="https://www.mfun.ink/2024/01/28/img-tool/"/>
+    <id>https://www.mfun.ink/2024/01/28/img-tool/</id>
+    <published>2024-01-28T13:42:10.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;记录笔记或者写博客的时候经常会直接复制mac截图插入图片，默认复制得到的是无损png图片，图片体积比较大，占空间带宽，就基于go实现了个命令行批量压缩工具。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Go" scheme="https://www.mfun.ink/categories/Go/"/>
+    
+    <category term="图片处理" scheme="https://www.mfun.ink/categories/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="Go" scheme="https://www.mfun.ink/tags/Go/"/>
+    
+    <category term="图片压缩" scheme="https://www.mfun.ink/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>局域网下Windows docker 挂载 NAS 磁盘</title>
+    <link href="https://www.mfun.ink/2024/01/28/windows-wsl-docker/"/>
+    <id>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</id>
+    <published>2024-01-28T04:04:04.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="docker" scheme="https://www.mfun.ink/categories/docker/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    
+    <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="wsl" scheme="https://www.mfun.ink/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
+    <link href="https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/"/>
+    <id>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</id>
+    <published>2024-01-18T15:35:51.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务&lt;/p&gt;
+&lt;h3 id=&quot;RSS&quot;&gt;&lt;a href=&quot;#RSS&quot; class=&quot;headerlink&quot; title=&quot;RSS&quot;&gt;&lt;/a&gt;RSS&lt;/h3&gt;&lt;p&gt;rss是一种内容聚合工具，有rss和atom两种协议，xml为基础协议。通常在一些blog网站比较常见。通过订阅这种方式可以只接收自己选择自己想要关注的信息。&lt;/p&gt;
+&lt;h3 id=&quot;RSSHub&quot;&gt;&lt;a href=&quot;#RSSHub&quot; class=&quot;headerlink&quot; title=&quot;RSSHub&quot;&gt;&lt;/a&gt;RSSHub&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://docs.rsshub.app/zh/&quot;&gt;RSSHub&lt;/a&gt;是一款开源、简单易用的rss生成器，主要用于将不支持rss的网站变得可以使用rss这种方式订阅。目前已经支持数百个主流网站。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="rss" scheme="https://www.mfun.ink/categories/rss/"/>
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="RSSHub" scheme="https://www.mfun.ink/tags/RSSHub/"/>
+    
+    <category term="FreshRSS" scheme="https://www.mfun.ink/tags/FreshRSS/"/>
+    
+    <category term="FeedMe" scheme="https://www.mfun.ink/tags/FeedMe/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人笔记类应用使用体验</title>
+    <link href="https://www.mfun.ink/2024/01/06/note-software/"/>
+    <id>https://www.mfun.ink/2024/01/06/note-software/</id>
+    <published>2024-01-06T11:57:04.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用&lt;a href=&quot;https://joplinapp.org/&quot;&gt;Joplin&lt;/a&gt;、&lt;a href=&quot;https://b3log.org/siyuan/?lang=cn&quot;&gt;思源&lt;/a&gt;、&lt;a href=&quot;https://github.com/zadam/trilium&quot;&gt;Trilium&lt;/a&gt;、&lt;a href=&quot;https://github.com/blossom-editor/blossom&quot;&gt;Blossom&lt;/a&gt;都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="笔记应用" scheme="https://www.mfun.ink/categories/%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8/"/>
+    
+    <category term="知识管理" scheme="https://www.mfun.ink/categories/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="Joplin" scheme="https://www.mfun.ink/tags/Joplin/"/>
+    
+    <category term="笔记应用" scheme="https://www.mfun.ink/tags/%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8/"/>
+    
+    <category term="思源笔记" scheme="https://www.mfun.ink/tags/%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Trilium" scheme="https://www.mfun.ink/tags/Trilium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NAS部署wiki.js</title>
+    <link href="https://www.mfun.ink/2023/12/31/wiki-js-deploy/"/>
+    <id>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</id>
+    <published>2023-12-31T12:28:29.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。&lt;a href=&quot;https://js.wiki/&quot;&gt;官网&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/Requarks/wiki&quot;&gt;github&lt;/a&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="wiki" scheme="https://www.mfun.ink/categories/wiki/"/>
+    
+    
+    <category term="极空间" scheme="https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/"/>
+    
+    <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/tags/NAS/"/>
+    
+    <category term="wiki.js" scheme="https://www.mfun.ink/tags/wiki-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go 指针赋值是原子性的吗</title>
+    <link href="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/"/>
+    <id>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</id>
+    <published>2023-12-06T13:16:31.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;h3 id=&quot;问题提出&quot;&gt;&lt;a href=&quot;#问题提出&quot; class=&quot;headerlink&quot; title=&quot;问题提出&quot;&gt;&lt;/a&gt;问题提出&lt;/h3&gt;&lt;p&gt;提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/tags/go/"/>
+    
+    <category term="指针赋值的原子性" scheme="https://www.mfun.ink/tags/%E6%8C%87%E9%92%88%E8%B5%8B%E5%80%BC%E7%9A%84%E5%8E%9F%E5%AD%90%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go语言编程规范-命名篇</title>
+    <link href="https://www.mfun.ink/2023/11/26/go-name-standard/"/>
+    <id>https://www.mfun.ink/2023/11/26/go-name-standard/</id>
+    <published>2023-11-26T10:56:42.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    <category term="编程规范" scheme="https://www.mfun.ink/categories/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"/>
+    
+    
+    <category term="go编程规范" scheme="https://www.mfun.ink/tags/go%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/"/>
+    
+    <category term="命名规范" scheme="https://www.mfun.ink/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jellyfin安装及使用体验优化</title>
+    <link href="https://www.mfun.ink/2023/10/29/jellyfin-install-use/"/>
+    <id>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</id>
+    <published>2023-10-29T13:02:00.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="jellyfin" scheme="https://www.mfun.ink/categories/jellyfin/"/>
+    
+    
+    <category term="极空间" scheme="https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/"/>
+    
+    <category term="jellyfin" scheme="https://www.mfun.ink/tags/jellyfin/"/>
+    
+    <category term="docker" scheme="https://www.mfun.ink/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker部署calibre-web</title>
+    <link href="https://www.mfun.ink/2023/10/23/docker-calibre-web/"/>
+    <id>https://www.mfun.ink/2023/10/23/docker-calibre-web/</id>
+    <published>2023-10-23T15:18:33.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="calibre-web" scheme="https://www.mfun.ink/categories/calibre-web/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    
+    <category term="calibre-web" scheme="https://www.mfun.ink/tags/calibre-web/"/>
+    
+    <category term="个人数字图书馆" scheme="https://www.mfun.ink/tags/%E4%B8%AA%E4%BA%BA%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker部署joplin-server数据备份问题</title>
+    <link href="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/"/>
+    <id>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</id>
+    <published>2023-09-29T04:26:57.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在之前的一篇&lt;a href=&quot;https://www.mfun.ink/2023/09/12/joplin-docker-deploy/&quot;&gt;文章&lt;/a&gt;中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="joplin" scheme="https://www.mfun.ink/categories/joplin/"/>
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    
+    <category term="joplin-docker" scheme="https://www.mfun.ink/tags/joplin-docker/"/>
+    
+    <category term="joplin数据备份" scheme="https://www.mfun.ink/tags/joplin%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go处理zip压缩以及解压</title>
+    <link href="https://www.mfun.ink/2023/09/26/go-zip/"/>
+    <id>https://www.mfun.ink/2023/09/26/go-zip/</id>
+    <published>2023-09-26T14:47:26.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库&lt;code&gt;archive/zip&lt;/code&gt;。下面记录下具体使用方法，以及注意事项。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="go" scheme="https://www.mfun.ink/categories/go/"/>
+    
+    
+    <category term="zip" scheme="https://www.mfun.ink/tags/zip/"/>
+    
+    <category term="go zip" scheme="https://www.mfun.ink/tags/go-zip/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好用的浏览器插件——搜索结果屏蔽指定网页</title>
+    <link href="https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/"/>
+    <id>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</id>
+    <published>2023-09-19T13:35:21.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。&lt;br&gt;实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加&lt;code&gt;-csdn&lt;/code&gt;，效果如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="浏览器插件" scheme="https://www.mfun.ink/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="Chrome" scheme="https://www.mfun.ink/tags/Chrome/"/>
+    
+    <category term="Edge" scheme="https://www.mfun.ink/tags/Edge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>内网NAS使用docker部署Joplin笔记服务</title>
+    <link href="https://www.mfun.ink/2023/09/12/joplin-docker-deploy/"/>
+    <id>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</id>
+    <published>2023-09-12T14:45:49.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/laurent22/joplin&quot;&gt;Joplin&lt;/a&gt;是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="NAS" scheme="https://www.mfun.ink/categories/NAS/"/>
+    
+    <category term="Joplin" scheme="https://www.mfun.ink/categories/Joplin/"/>
+    
+    
+    <category term="Joplin" scheme="https://www.mfun.ink/tags/Joplin/"/>
+    
+    <category term="部署" scheme="https://www.mfun.ink/tags/%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="frp" scheme="https://www.mfun.ink/tags/frp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>curl proxy设置无效问题排查</title>
+    <link href="https://www.mfun.ink/2023/08/20/curl-proxy-no-use/"/>
+    <id>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</id>
+    <published>2023-08-20T02:34:19.000Z</published>
+    <updated>2024-10-19T02:25:36.343Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="curl" scheme="https://www.mfun.ink/categories/curl/"/>
+    
+    
+    <category term="curl" scheme="https://www.mfun.ink/tags/curl/"/>
+    
+    <category term="curl proxy" scheme="https://www.mfun.ink/tags/curl-proxy/"/>
+    
+  </entry>
+  
+</feed>

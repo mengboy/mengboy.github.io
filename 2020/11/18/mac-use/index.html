@@ -1,0 +1,795 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon.png">
+  <link rel="icon" href="/images/site/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="mengboy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="终端命令行brew包管理工具 brew mac下的神器，类似linux的包管理工具，可以通过brew安装各种软件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MacOS 使用笔记">
+<meta property="og:url" content="https://www.mfun.ink/2020/11/18/mac-use/index.html">
+<meta property="og:site_name" content="Mengboy&#39;s Blog">
+<meta property="og:description" content="终端命令行brew包管理工具 brew mac下的神器，类似linux的包管理工具，可以通过brew安装各种软件。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.mfun.ink/images/mac-use/iterm2theme.png">
+<meta property="og:image" content="https://www.mfun.ink/images/mac-use/iterm2font.png">
+<meta property="og:image" content="https://www.mfun.ink/images/mac-use/iterm2.png">
+<meta property="og:image" content="https://www.mfun.ink/images/mac-use/startup.png">
+<meta property="article:published_time" content="2020-11-18T11:00:56.000Z">
+<meta property="article:modified_time" content="2022-10-16T13:44:41.000Z">
+<meta property="article:author" content="mengboy">
+<meta property="article:tag" content="MacOS">
+<meta property="article:tag" content="iTerm2">
+<meta property="article:tag" content="zsh">
+<meta property="article:tag" content="brew">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.mfun.ink/images/mac-use/iterm2theme.png">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>MacOS 使用笔记 - Mengboy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Mengboy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://nav.mfun.ink/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>导航</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml" target="_self">
+                <i class="iconfont icon-rss"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/site/fluid.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="MacOS 使用笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2020-11-18 19:00" pubdate>
+          2020年11月18日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          506 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          5 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">MacOS 使用笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h3 id="终端命令行"><a href="#终端命令行" class="headerlink" title="终端命令行"></a>终端命令行</h3><h4 id="brew包管理工具"><a href="#brew包管理工具" class="headerlink" title="brew包管理工具"></a>brew包管理工具</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://brew.sh/">brew</a> mac下的神器，类似linux的包管理工具，可以通过brew安装各种软件。</li>
+</ul>
+<span id="more"></span>
+
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"> vector@vectordeMacBook-Pro  ~  brew -h<br>Example usage:<br>  brew search [TEXT|<span class="hljs-string">/REGEX/</span>] <span class="hljs-string">//</span> 查找软件<br>  brew info [FORMULA.<span class="hljs-string">..</span>] <span class="hljs-string">//</span> 软件包信息<br>  brew install FORMULA.<span class="hljs-string">..</span> <span class="hljs-string">//</span> 安装<br>  brew update <span class="hljs-string">//</span> 更新<br>  brew upgrade [FORMULA.<span class="hljs-string">..</span>] <span class="hljs-string">//</span> 更新指定包<br>  brew uninstall FORMULA.<span class="hljs-string">..</span> <span class="hljs-string">//</span> 卸载<br>  brew list [FORMULA.<span class="hljs-string">..</span>] <span class="hljs-string">//</span> 已安装列表<br><br>Troubleshooting:<br>  brew config<br>  brew doctor<br>  brew install <span class="hljs-params">--verbose</span> <span class="hljs-params">--debug</span> FORMULA<br><br>Contributing:<br>  brew create [URL [<span class="hljs-params">--no-fetch</span>]]<br>  brew edit [FORMULA.<span class="hljs-string">..</span>]<br><br>Further <span class="hljs-keyword">help</span>:<br>  brew commands<br>  brew <span class="hljs-keyword">help</span> [COMMAND]<br>  man brew<br>  https:<span class="hljs-string">//docs.brew.sh</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="iterm2-oh-my-zsh-powerline"><a href="#iterm2-oh-my-zsh-powerline" class="headerlink" title="iterm2 + oh-my-zsh + powerline"></a>iterm2 + oh-my-zsh + powerline</h4><ul>
+<li>安装 <a target="_blank" rel="noopener" href="https://iterm2.com/downloads.html">iterm2</a></li>
+<li>安装zsh并切换到zsh<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">brew install zsh <br>chsh -s <span class="hljs-regexp">/bin/</span>zsh<br></code></pre></td></tr></table></figure></li>
+<li>安装<a target="_blank" rel="noopener" href="https://github.com/zsh-users/antigen">antigen</a>, oh-my-zsh插件管理工具, 编辑~&#x2F;.zshrc文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br><span class="hljs-built_in">source</span> ~/antigen.zsh <span class="hljs-comment">#改成你的antigen安装路径</span><br><br><span class="hljs-comment"># Load the oh-my-zsh&#x27;s library.</span><br>antigen use oh-my-zsh<br><br><span class="hljs-comment"># Bundles from the default repo (robbyrussell&#x27;s oh-my-zsh).</span><br><span class="hljs-comment"># oh-my-zsh 的一些常用插件</span><br>antigen bundle git<br>antigen bundle heroku<br>antigen bundle pip<br>antigen bundle lein<br>antigen bundle command-not-found<br><br><span class="hljs-comment"># Syntax highlighting bundle.</span><br>antigen bundle zsh-users/zsh-syntax-highlighting<br><span class="hljs-comment"># 自动联想历史命令</span><br>antigen bundle zsh-users/zsh-autosuggestions<br><br><span class="hljs-comment"># 主题</span><br>antigen theme agnoster<br><br><span class="hljs-comment"># Tell Antigen that you&#x27;re done.</span><br>antigen apply<br></code></pre></td></tr></table></figure></li>
+<li>安装<a target="_blank" rel="noopener" href="https://github.com/powerline/fonts">powerline字体</a></li>
+<li>修改iTerm2配置<ul>
+<li>打开<code>iTerm2-&gt;Preferences-&gt;Profiles-Colors</code>配置主题<br><img src="/images/mac-use/iterm2theme.png" srcset="/img/loading.gif" lazyload></li>
+<li>打开<code>iTerm2-&gt;Preferences-&gt;Profiles-Text</code>配置字体<br><img src="/images/mac-use/iterm2font.png" srcset="/img/loading.gif" lazyload><br>最终效果如下<br><img src="/images/mac-use/iterm2.png" srcset="/img/loading.gif" lazyload></li>
+</ul>
+</li>
+</ul>
+<h3 id="根目录下创建目录"><a href="#根目录下创建目录" class="headerlink" title="根目录下创建目录"></a>根目录下创建目录</h3><p>在&#x2F;etc目录下使用root权限创建编辑<em>synthetic.conf</em>，添加想创建的目录, 如下home和后面的路径之间用tab符分隔，不能用空格，然后重启，这种方式会在&#x2F;(根目录)下创建一个home目录软连接到&#x2F;Users&#x2F;xxx&#x2F;data目录。可以直接通过cd &#x2F;home 进入该目录。通过这种方式可以解决在根目录下创建文件无权限问题。</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haskell"><span class="hljs-title">home</span>	/<span class="hljs-type">Users</span>/xxx/<span class="hljs-class"><span class="hljs-keyword">data</span></span><br></code></pre></td></tr></table></figure>
+
+<h3 id="安装tree命令"><a href="#安装tree命令" class="headerlink" title="安装tree命令"></a>安装tree命令</h3><p>linux下是自带tree命令，可以用来查看文件目录结构，mac下需要手动安装</p>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xl">brew install <span class="hljs-keyword">tree</span><br><span class="hljs-comment">// 显示前n级目录</span><br><span class="hljs-keyword">tree</span> -L 加数字<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="卸载锁定app"><a href="#卸载锁定app" class="headerlink" title="卸载锁定app"></a>卸载锁定app</h3><p>执行以下命令，解除锁定后可以正常卸载<br> <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">ls -dleO@ /Applications/xxx<br>sudo chflags -R noschg /Applications/xxx<br></code></pre></td></tr></table></figure></p>
+<h3 id="启动项"><a href="#启动项" class="headerlink" title="启动项"></a>启动项</h3><ul>
+<li>通过系统设置-〉登录项查看<br><img src="/images/mac-use/startup.png" srcset="/img/loading.gif" lazyload></li>
+<li>使用<strong>launchctl</strong>命令查看<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查看用户级启动项</span><br>launchctl list<br></code></pre></td></tr></table></figure>
+以上方式只能看到一部分，如过想看更加详细的启动项配置，可以到下面这些目录查看：<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs shell">// 用户级别启动项目<br>ls ~/Library/LaunchAgents <br>// 系统级<br>ls /Library/LaunchAgents<br>ls /Library/LaunchDaemons<br></code></pre></td></tr></table></figure></li>
+</ul>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="category-chain-item">操作系统</a>
+  
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/MacOS/" class="category-chain-item">MacOS</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/MacOS/" class="print-no-link">#MacOS</a>
+      
+        <a href="/tags/iTerm2/" class="print-no-link">#iTerm2</a>
+      
+        <a href="/tags/zsh/" class="print-no-link">#zsh</a>
+      
+        <a href="/tags/brew/" class="print-no-link">#brew</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>MacOS 使用笔记</div>
+      <div>https://www.mfun.ink/2020/11/18/mac-use/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>mengboy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2020年11月18日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/10/08/interview-2021/" title="2021年滴滴、腾讯视频、字节等面试记录">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">2021年滴滴、腾讯视频、字节等面试记录</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/10/27/go-start-up/" title="Go启动main函数都干了什么(一)">
+                        <span class="hidden-mobile">Go启动main函数都干了什么(一)</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
+          {
+            id: '387d9d272400bc6581a19ed8c7d489e1'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

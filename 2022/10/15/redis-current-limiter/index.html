@@ -1,0 +1,764 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon.png">
+  <link rel="icon" href="/images/site/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="mengboy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于redis实现一个简单的分布式限流器">
+<meta property="og:url" content="https://www.mfun.ink/2022/10/15/redis-current-limiter/index.html">
+<meta property="og:site_name" content="Mengboy&#39;s Blog">
+<meta property="og:description" content="分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-15T14:30:35.000Z">
+<meta property="article:modified_time" content="2022-10-15T14:30:35.000Z">
+<meta property="article:author" content="mengboy">
+<meta property="article:tag" content="go">
+<meta property="article:tag" content="分布式限流">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>基于redis实现一个简单的分布式限流器 - Mengboy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Mengboy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://nav.mfun.ink/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>导航</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml" target="_self">
+                <i class="iconfont icon-rss"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/site/fluid.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="基于redis实现一个简单的分布式限流器"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-10-15 22:30" pubdate>
+          2022年10月15日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          693 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          6 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">基于redis实现一个简单的分布式限流器</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。</p>
+<span id="more"></span>
+
+<h2 id="限流器相关属性"><a href="#限流器相关属性" class="headerlink" title="限流器相关属性"></a>限流器相关属性</h2><p><strong>counter</strong>计数器，这里把计数器单独定义为了一个接口，方便使用不同的方式实现，比如下文中将要介绍基于redis实现。<br><strong>window</strong>限流窗口，指计数时间周期，比如初始化为1000就是1秒内请求不得超过指定阈值limit。<br><strong>retryTimeout</strong>重试超时时间，用来控制达到限流阈值后，继续重试的超时时间。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// Limiter 限流器</span><br><span class="hljs-keyword">type</span> Limiter <span class="hljs-keyword">struct</span> &#123;<br>	name         <span class="hljs-type">string</span> <span class="hljs-comment">// 限流器名称</span><br>	window       <span class="hljs-type">int64</span> <span class="hljs-comment">// 限流窗口 ms</span><br>	limit        <span class="hljs-type">int64</span> <span class="hljs-comment">// 限流阈值</span><br>	retryTimeout <span class="hljs-type">int64</span> <span class="hljs-comment">// 超时时间</span><br>	counter      Count <span class="hljs-comment">// 计数器</span><br>&#125;<br><br><span class="hljs-comment">// Count 计数器</span><br><span class="hljs-keyword">type</span> Count <span class="hljs-keyword">interface</span> &#123;<br>	IncrBy(ctx context.Context, key <span class="hljs-type">string</span>, num <span class="hljs-type">int64</span>) (<span class="hljs-type">int64</span>, <span class="hljs-type">error</span>)<br>&#125;<br><br><span class="hljs-comment">// NewLimiter 初始化</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">NewLimiter</span><span class="hljs-params">(counter Count, name <span class="hljs-type">string</span>, window <span class="hljs-type">int64</span>, limit <span class="hljs-type">int64</span>,</span></span><br><span class="hljs-params"><span class="hljs-function"> retryTimeout <span class="hljs-type">int64</span>)</span></span> *Limiter &#123;<br>	<span class="hljs-keyword">return</span> &amp;Limiter&#123;<br>		counter:      counter,<br>		name:         name,<br>		window:       window,<br>		limit:        limit,<br>		retryTimeout: retryTimeout,<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="具体方法"><a href="#具体方法" class="headerlink" title="具体方法"></a>具体方法</h2><p><strong>Allow</strong> 到达阈值后，不再重试，直接返回false，丢弃掉超过阈值的请求。<br><strong>AllowRetry</strong> 到达阈值后，在超时时间范围内进行重试。<br><strong>wait</strong> 每次重试等待时间，保证重试是在下一个窗口，避免不必要的重试。使用随机数是为了尽量打散请求。<br><strong>getKey</strong> 计算当前窗口，根据当前窗口拼接计数key。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// AllowRetry 在超时时间内重试</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(l *Limiter)</span></span> AllowRetry(ctx context.Context, key <span class="hljs-type">string</span>,<br> num <span class="hljs-type">int64</span>) (<span class="hljs-type">bool</span>, <span class="hljs-type">error</span>) &#123;<br>	ctxWithTimeout, _ := context.WithTimeout(ctx, time.Duration(l.retryTimeout)*time.Millisecond)<br>	<span class="hljs-keyword">var</span> allow <span class="hljs-type">bool</span><br>	<span class="hljs-keyword">var</span> err <span class="hljs-type">error</span><br>	<span class="hljs-keyword">for</span> &#123;<br>		allow, err = l.Allow(ctx, key, num)<br>		<span class="hljs-keyword">if</span> err == <span class="hljs-literal">nil</span> &#123;<br>			<span class="hljs-keyword">return</span> allow, <span class="hljs-literal">nil</span><br>		&#125;<br>		<span class="hljs-keyword">if</span> ctxWithTimeout.Err() != <span class="hljs-literal">nil</span> &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>, ctxWithTimeout.Err()<br>		&#125;<br>		l.wait()<br>	&#125;<br>&#125;<br><br><span class="hljs-comment">// Allow 不重试</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(l *Limiter)</span></span> Allow(ctx context.Context, key <span class="hljs-type">string</span>,<br> num <span class="hljs-type">int64</span>) (<span class="hljs-type">bool</span>, <span class="hljs-type">error</span>) &#123;<br>	<span class="hljs-keyword">return</span> l.getToken(ctx, key, num)<br>&#125;<br><br><span class="hljs-comment">// getToken 进行计数</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(l *Limiter)</span></span> getToken(ctx context.Context, key <span class="hljs-type">string</span>,<br> num <span class="hljs-type">int64</span>) (<span class="hljs-type">bool</span>, <span class="hljs-type">error</span>) &#123;<br>	unionKey := l.getKey(key)<br>	num, err := l.counter.IncrBy(ctx, unionKey, num)<br>	<span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>, err<br>	&#125;<br>	<span class="hljs-keyword">return</span> num &lt; l.limit, <span class="hljs-literal">nil</span><br>&#125;<br><br><span class="hljs-comment">// wait 每次重试等待时间</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(l *Limiter)</span></span> wait() &#123;<br>	randWait := l.window - rand.Int63n(l.window/<span class="hljs-number">2</span>)<br>	time.Sleep(time.Duration(randWait) * time.Millisecond)<br>&#125;<br><br><span class="hljs-comment">// getKey 获取计数key</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(l *Limiter)</span></span> getKey(key <span class="hljs-type">string</span>) <span class="hljs-type">string</span> &#123;<br>    <span class="hljs-comment">// 计算当前窗口</span><br>	nowWindow := time.Now().UnixMilli() / l.window<br>	<span class="hljs-keyword">return</span> fmt.Sprintf(<span class="hljs-string">&quot;%s:%s:%d&quot;</span>, l.name, key, nowWindow)<br>&#125;<br><br></code></pre></td></tr></table></figure>
+<h2 id="redis-计数器"><a href="#redis-计数器" class="headerlink" title="redis 计数器"></a>redis 计数器</h2><p>redis计数器实现就比较简单了，直接调用redis的incr方法。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-comment">// RedisCounter 使用redis分布式限流</span><br><span class="hljs-keyword">type</span> RedisCounter <span class="hljs-keyword">struct</span> &#123;<br>	redisCli *redis.Client<br>	expire   <span class="hljs-type">int64</span><br>&#125;<br><br><span class="hljs-comment">// IncrBy ...计数</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(r *RedisCounter)</span></span> IncrBy(ctx context.Context, key <span class="hljs-type">string</span>,<br> num <span class="hljs-type">int64</span>) (<span class="hljs-type">int64</span>, <span class="hljs-type">error</span>) &#123;<br>	<span class="hljs-keyword">defer</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> &#123;<br>		_ = r.redisCli.Expire(ctx, key, time.Duration(r.expire)*time.Millisecond)<br>	&#125;()<br>	<span class="hljs-keyword">return</span> r.redisCli.IncrBy(ctx, key, num).Result()<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>以上就是基于redis实现的分布式限流器，把计数器以接口形式组装进去，可以使代码更加通用，直接基于内存实现就是单机限流。不想基于redis实现，也可以基于其他方式实现。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/go/" class="category-chain-item">go</a>
+  
+  
+
+      </span>
+    
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E9%99%90%E6%B5%81/" class="category-chain-item">分布式限流</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/go/" class="print-no-link">#go</a>
+      
+        <a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%99%90%E6%B5%81/" class="print-no-link">#分布式限流</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>基于redis实现一个简单的分布式限流器</div>
+      <div>https://www.mfun.ink/2022/10/15/redis-current-limiter/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>mengboy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年10月15日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/10/16/vue3-study-init/" title="Vue3学习笔记一.项目初始化">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Vue3学习笔记一.项目初始化</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/15/goroutine-limit/" title="goroutine 并发数量限制">
+                        <span class="hidden-mobile">goroutine 并发数量限制</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
+          {
+            id: '31d3acfaf6b804c5128ea8a773b57b7a'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

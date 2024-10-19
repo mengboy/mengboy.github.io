@@ -1,0 +1,776 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/images/site/favicon.png">
+  <link rel="icon" href="/images/site/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="mengboy">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="本文记录一下”科学上网”工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="trojan-go 安装配置">
+<meta property="og:url" content="https://www.mfun.ink/2023/03/04/trojan-install/index.html">
+<meta property="og:site_name" content="Mengboy&#39;s Blog">
+<meta property="og:description" content="本文记录一下”科学上网”工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-04T13:39:28.000Z">
+<meta property="article:modified_time" content="2024-10-19T02:25:36.343Z">
+<meta property="article:author" content="mengboy">
+<meta property="article:tag" content="trojan">
+<meta property="article:tag" content="科学上网">
+<meta property="article:tag" content="trojan-go">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>trojan-go 安装配置 - Mengboy&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.mfun.ink","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":"G-PPJ7YW67PL"},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Mengboy's Blog" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Mengboy</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="https://nav.mfun.ink/" target="_self">
+                <i class="iconfont icon-link-fill"></i>
+                <span>导航</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml" target="_self">
+                <i class="iconfont icon-rss"></i>
+                <span>RSS</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/site/fluid.webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="trojan-go 安装配置"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-04 21:39" pubdate>
+          2023年3月4日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.9k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          16 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">trojan-go 安装配置</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>本文记录一下”科学上网”工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。 </p>
+<span id="more"></span>
+<p>网上搜了一下发现了trojan，看介绍是把用户流量伪装成https流量绕过gfw的检测，由于https流量众多gfw不可能封锁所有https流量，毕竟如果真封锁那国内就真成局域网了，再者https流量是经过ssl加密的，保证了内容不被窃取，所以可以很好的混过gfw的检测。看着不错直接搞起，使用3个多月了现在依然坚挺。废话不多说下面进入正文安装配置流程。楼主go语言接触的比较多就选择了go版本trojan。<br>首先准备工作，一个国外的服务器，一个有ssl证书的域名。ssl证书用免费申请的就行，比如<a target="_blank" rel="noopener" href="https://freessl.cn/">freessl</a>。<br>登录机器命令行，切到root用户，执行以下命令，有现成的脚本就很舒服，感谢大佬的贡献。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/kenzok8/Trojan/master/trojan-go_install.sh)&quot;<br></code></pre></td></tr></table></figure>
+<p>输出如下，这里楼主选的nginx，不为啥就是对nginx更熟悉些</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs shell">===================================================<br>Trojan-go二合一脚本<br>===================================================<br>如果已经安装了下列脚本之一，想要安装其他的，不需要单独执行卸载，直接选择想要安装脚本对应的数字即可……<br>因为安装的同时会执行卸载，除非想卸载干净回到初始状态,可以执行3……<br>===================================================<br>1. 安装trojan-go + nginx +tls<br>===================================================<br>2. 安装trojan-go + caddy +tls<br>===================================================<br>3. 卸载全部，系统回到初始状态<br>===================================================<br>4. 安装BBR加速<br>===================================================<br>0. 啥也不做，退出<br>请输入数字：1<br></code></pre></td></tr></table></figure>
+<p>确定后就是相关依赖安装流程了，下载完成后输入你的域名（<a href="mailto:&#x6d;&#x79;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x6d;&#x79;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a> 替换为你域名）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell">[信息]  trojan-go下载 完成<br>Archive:  /etc/trojan/bin/trojan-go-linux-amd64.zip<br>  inflating: /etc/trojan/bin/trojan-go<br>  inflating: /etc/trojan/bin/geoip.dat<br>  inflating: /etc/trojan/bin/geosite.dat<br>  inflating: /etc/trojan/bin/example/client.json<br>  inflating: /etc/trojan/bin/example/server.json<br>  inflating: /etc/trojan/bin/example/trojan-go.service<br>[信息]  trojan-go解压 完成<br>[信息] 80 端口未被占用<br>[信息] 443 端口未被占用<br>请输入您的域名(如果用Cloudflare解析域名，请点击小云彩使其变灰):my@example.com<br></code></pre></td></tr></table></figure>
+
+<p>输入确定后，签发过程可能会遇到下面的问题，按照提示acme需要更新下邮件地址，可以执行<em>curl <a target="_blank" rel="noopener" href="https://get.acme.sh/">https://get.acme.sh</a> | sh -s email&#x3D;<a href="mailto:&#120;&#120;&#120;&#x40;&#120;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#120;&#120;&#120;&#x40;&#120;&#x78;&#46;&#x63;&#x6f;&#x6d;</a></em></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">[Sat Mar  4 10:14:35 PM CST 2023] No EAB credentials found for ZeroSSL, let&#x27;s get one<br>[Sat Mar  4 10:14:35 PM CST 2023] acme.sh is using ZeroSSL as default CA now.<br>[Sat Mar  4 10:14:35 PM CST 2023] Please update your account with an email address first.<br>[Sat Mar  4 10:14:35 PM CST 2023] acme.sh --register-account -m my@example.com<br>[Sat Mar  4 10:14:35 PM CST 2023] See: https://github.com/acmesh-official/acme.sh/wiki/ZeroSSL.com-CA<br>[Sat Mar  4 10:14:35 PM CST 2023] Please add &#x27;--debug&#x27; or &#x27;--log&#x27; to check more details.<br>[Sat Mar  4 10:14:35 PM CST 2023] See: https://github.com/acmesh-official/acme.sh/wiki/How-to-debug-acme.sh<br>[错误] TLS 证书生成失败<br></code></pre></td></tr></table></figure>
+<p>接下来再次执行最开始的shell命令就可以了，证书配置成功后提示配置伪装网站，这个是保证正常访问你的域名是能够正常返回页面，假如没有配置伪装网站，gfw识别到你的域名有异常流量，然后进行探测你没有任何返回，那么很明显你这个域名绝壁有问题，啪唧 给你封了。如果不想用下面列出的也可用自己的，比如自己blog站点啥的，这就可以一个域名多用了，明面上是正儿八经的博客网站，背地干着流量转发的活。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs shell">[信息]证书配置成功<br>[注意]伪装网站未下载或下载失败,请选择下面的任意一个进行下载:<br>      [信息]1. https://templated.co/intensify<br>      [信息]2. https://templated.co/binary<br>      [信息]3. https://templated.co/retrospect<br>      [信息]4. https://templated.co/spatial<br>      [信息]5. https://templated.co/monochromed<br>      [信息]6. https://templated.co/transit<br>      [信息]7. https://templated.co/interphase<br>      [信息]8. https://templated.co/ion<br>      [信息]9. https://templated.co/solarize<br>      [信息]10. https://templated.co/phaseshift<br>      [信息]11. https://templated.co/horizons<br>      [信息]12. https://templated.co/grassygrass<br>      [信息]13. https://templated.co/breadth<br>      [信息]14. https://templated.co/undeviating<br>      [信息]15. https://templated.co/breadth<br>[注意]请输入你要下载的网站的数字:15<br></code></pre></td></tr></table></figure>
+<p>再往下, 输入你的连接校验密码，再下面的是否启用websocket协议，websocket协议主要是用来开启cdn的，开启cdn后gfw探测的只会是cdn的ip，相当于再你自己服务外面挡了一层cdn，你自己的ip不会暴漏在外不会被探测到，自然就不会被封了，楼主这里没有cdn就没选。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">[信息]请输入您的Trojan-go密码:xxx <br>[信息]是否启用websocket协议?注意：开启这个选项不会改善你的链路速度（甚至有可能下降）<br>[信息]如果启用了websocket协议,您就可以开启CDN了，如果用cloudflare解析域名的，搭建完成后可以点亮小云彩了。<br>[信息]是否开启（Y/n）？（默认：n）n<br></code></pre></td></tr></table></figure>
+<p>再继续就是下载编译安装nginx的流程了，nginx正常安装完成后就是安装成功的提示了</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell">[信息]  修改密码、混淆密码、启用/禁用websocket、查询证书相关信息的管理脚本下载 完成<br><br>=========================Trojan-go+tls 安装成功==============================<br>=========================   Trojan-go 配置信息  =============================<br>地址：              my@example.com<br>端口：              443<br>密码：              xxxx<br>websocket状态：     关闭<br>websocket路径：<br>websocket多重TLS：  关闭<br>混淆密码：<br>=========================   客户端配置文件  ===============================<br></code></pre></td></tr></table></figure>
+<p>其他一些可以有的配置，比如把伪装网站配置成自己的blog，trojan默认伪装网站目录是 <em>&#x2F;usr&#x2F;wwwroot</em>，可以把自己的静态blog放到这个目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">ubuntu:/usr/wwwroot# ls<br>2020  about     categories  images      js          tags<br>2022  archives  css         index.html  manifest.json  page<br></code></pre></td></tr></table></figure>
+<p>然后修改nginx配置 <em>&#x2F;etc&#x2F;nginx&#x2F;conf&#x2F;nginx.conf</em> 把location root配置成&#x2F;usr&#x2F;wwwroot</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell">server &#123;<br>    listen       80;<br>    server_name  localhost;<br><br>    #charset koi8-r;<br><br>    #access_log  logs/host.access.log  main;<br><br>    location / &#123;<br>        root   /usr/wwwroot;<br>        index  index.html index.htm;<br>    &#125;<br></code></pre></td></tr></table></figure>
+<p>配置完成后重启nginx</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">ubuntu# </span><span class="language-bash">service nginx restart</span><br></code></pre></td></tr></table></figure>
+<p>上面通过acme创建的免费证书有效期只有90天，这里创建一个shell脚本刷新证书，通过crontab 任务定期检查更新。<br>创建refresh_ssl.sh文件添加如下内容，检查证书剩余有效期如果少于5天的话就刷新证书，执行<strong>chmod +x refresh_ssl.sh</strong>，添加可执行权限。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">!/bin/bash</span><br><br>DOMAIN_RST=100<br>domain=&quot;example.com&quot;<br><br>refresh_ssl()&#123;<br>    end_time=$(echo | openssl s_client -servername $domain -connect $domain:443 2&gt;/dev/null | openssl x509 -in /data/$domain/fullchain.cer -noout -dates |grep &#x27;After&#x27;| awk -F &#x27;=&#x27; &#x27;&#123;print $2&#125;&#x27;| awk -F &#x27; +&#x27; &#x27;&#123;print $1,$2,$4 &#125;&#x27; )<br>    end_times=$(date +%s -d &quot;$end_time&quot;)<br>    now_time=$(date +%s -d &quot;$(date | awk -F &#x27; +&#x27;  &#x27;&#123;print $2,$3,$6&#125;&#x27;)&quot;)<br>    DOMAIN_RST=$(($((end_times-now_time))/(60*60*24)))<br>    echo $DOMAIN_RST<br>    if [ $DOMAIN_RST -lt 5 ]; then<br>        /root/.acme.sh/acme.sh --renew  --domain $domain<br>        systemctl restart trojan.service<br>        systemctl restart nginx<br>    fi<br>&#125;<br><br>refresh_ssl<br></code></pre></td></tr></table></figure>
+<p>执行<strong>sudo crontab -e</strong> 添加定时任务，每隔5天执行一下脚本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">0 0 */5 * * /path/refresh_ssl.sh &gt; /dev/null<br></code></pre></td></tr></table></figure>
+
+
+<p>以上就是server端trojan的配置流程了，最后就是客户端下载了，<a target="_blank" rel="noopener" href="https://github.com/lncnxyz/Trojan-Qt5/releases">Trojan-Qt5</a>有mac和windows下客户端，安卓<a target="_blank" rel="noopener" href="https://github.com/xxf098/shadowsocksr-v2ray-trojan-android/releases">shadowsocksr-v2ray-trojan-android</a>找不到trojan的配置入口，可以直接通过扫码配置，上面mac、pc下Trojan-Qt5都支持通过二维码分享。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="category-chain-item">科学上网</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/trojan/" class="print-no-link">#trojan</a>
+      
+        <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="print-no-link">#科学上网</a>
+      
+        <a href="/tags/trojan-go/" class="print-no-link">#trojan-go</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>trojan-go 安装配置</div>
+      <div>https://www.mfun.ink/2023/03/04/trojan-install/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>mengboy</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年3月4日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/05/20/nginx-stream-to-trojan/" title="通过nginx流代理转发流量到trojan服务">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">通过nginx流代理转发流量到trojan服务</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/16/vue3-study-init/" title="Vue3学习笔记一.项目初始化">
+                        <span class="hidden-mobile">Vue3学习笔记一.项目初始化</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"1f7aa9c63376f075f434","clientSecret":"75cd4580bae87feb9216f02f9138b99440d612de","repo":"mengboy.github.io","owner":"mengboy","admin":["mengboy"],"language":"zh-CN","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":false,"createIssueManually":true,"proxy":"https://www.mfun.ink/login/oauth/access_token","id":"location.pathname"},
+          {
+            id: '2944f8358f6b81067b09396c237edeba'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
