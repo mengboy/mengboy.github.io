@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-10-19T08:08:48.731Z</updated>
+  <updated>2024-10-19T15:29:17.121Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>wsl Ubuntu 安装 stable-diffusion-webui</title>
+    <link href="https://www.mfun.ink/2024/10/19/wsl-sd-webui/"/>
+    <id>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</id>
+    <published>2024-10-19T12:11:04.000Z</published>
+    <updated>2024-10-19T15:29:17.121Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="wsl" scheme="https://www.mfun.ink/categories/wsl/"/>
+    
+    <category term="windows" scheme="https://www.mfun.ink/categories/windows/"/>
+    
+    
+    <category term="wsl" scheme="https://www.mfun.ink/tags/wsl/"/>
+    
+    <category term="stable-diffusion-webui" scheme="https://www.mfun.ink/tags/stable-diffusion-webui/"/>
+    
+  </entry>
   
   <entry>
     <title>windows-teminal 美化</title>
@@ -474,27 +497,6 @@
     <category term="部署" scheme="https://www.mfun.ink/tags/%E9%83%A8%E7%BD%B2/"/>
     
     <category term="frp" scheme="https://www.mfun.ink/tags/frp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>curl proxy设置无效问题排查</title>
-    <link href="https://www.mfun.ink/2023/08/20/curl-proxy-no-use/"/>
-    <id>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</id>
-    <published>2023-08-20T02:34:19.000Z</published>
-    <updated>2024-10-19T02:25:36.343Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="curl" scheme="https://www.mfun.ink/categories/curl/"/>
-    
-    
-    <category term="curl" scheme="https://www.mfun.ink/tags/curl/"/>
-    
-    <category term="curl proxy" scheme="https://www.mfun.ink/tags/curl-proxy/"/>
     
   </entry>
   
