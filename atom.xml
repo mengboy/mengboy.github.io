@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-10-19T15:29:17.121Z</updated>
+  <updated>2024-10-19T15:41:29.267Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.mfun.ink/2024/10/19/wsl-sd-webui/"/>
     <id>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</id>
     <published>2024-10-19T12:11:04.000Z</published>
-    <updated>2024-10-19T15:29:17.121Z</updated>
+    <updated>2024-10-19T15:41:29.267Z</updated>
     
     
     <summary type="html">&lt;p&gt;继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:&lt;/p&gt;</summary>
