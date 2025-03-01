@@ -6,7 +6,7 @@
   <link href="https://www.mfun.ink/atom.xml" rel="self"/>
   
   <link href="https://www.mfun.ink/"/>
-  <updated>2024-10-19T15:41:29.267Z</updated>
+  <updated>2025-03-01T14:49:04.703Z</updated>
   <id>https://www.mfun.ink/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>常见prompt框架</title>
+    <link href="https://www.mfun.ink/2025/03/01/ai-prompt-methodology/"/>
+    <id>https://www.mfun.ink/2025/03/01/ai-prompt-methodology/</id>
+    <published>2025-03-01T14:16:47.000Z</published>
+    <updated>2025-03-01T14:49:04.703Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;deepseek出现后，AI的势头更加一路不可阻挡， cursor最近又更新了Claude 3.7，编程体验进一步提高，身为码农对未来还有几年职业生涯充满了焦虑。熟话说打不过就加入，AI的浪潮已经阻挡不了，最好的方式就是学习接受，细节算法实现暂且不提门槛太高，还是先从使用上入手，下面整理常见的prompt框架。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="AI" scheme="https://www.mfun.ink/categories/AI/"/>
+    
+    <category term="prompt" scheme="https://www.mfun.ink/categories/prompt/"/>
+    
+    
+    <category term="AI" scheme="https://www.mfun.ink/tags/AI/"/>
+    
+    <category term="prompt 框架" scheme="https://www.mfun.ink/tags/prompt-%E6%A1%86%E6%9E%B6/"/>
+    
+    <category term="prompt 技巧" scheme="https://www.mfun.ink/tags/prompt-%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
     <title>wsl Ubuntu 安装 stable-diffusion-webui</title>
     <link href="https://www.mfun.ink/2024/10/19/wsl-sd-webui/"/>
     <id>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</id>
     <published>2024-10-19T12:11:04.000Z</published>
-    <updated>2024-10-19T15:41:29.267Z</updated>
+    <updated>2024-10-27T12:47:48.953Z</updated>
     
     
     <summary type="html">&lt;p&gt;继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:&lt;/p&gt;</summary>
@@ -59,33 +84,6 @@
     <category term="wsl" scheme="https://www.mfun.ink/tags/wsl/"/>
     
     <category term="ho my posh" scheme="https://www.mfun.ink/tags/ho-my-posh/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6年程序员，一些困扰</title>
-    <link href="https://www.mfun.ink/2024/07/27/career-development-issues/"/>
-    <id>https://www.mfun.ink/2024/07/27/career-development-issues/</id>
-    <published>2024-07-27T09:48:59.000Z</published>
-    <updated>2024-10-19T02:25:36.343Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="职业发展" scheme="https://www.mfun.ink/categories/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-    
-    <category term="职业发展" scheme="https://www.mfun.ink/tags/%E8%81%8C%E4%B8%9A%E5%8F%91%E5%B1%95/"/>
-    
-    <category term="困扰" scheme="https://www.mfun.ink/tags/%E5%9B%B0%E6%89%B0/"/>
     
   </entry>
   
