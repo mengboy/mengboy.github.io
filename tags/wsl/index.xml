@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wsl on Mengboy&#39;s Blog</title>
+    <link>https://www.mfun.ink/tags/wsl/</link>
+    <description>Recent content in Wsl on Mengboy&#39;s Blog</description>
+    <generator>Hugo -- 0.147.1</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 19 Oct 2024 20:11:04 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/wsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wsl Ubuntu 安装 stable-diffusion-webui</title>
+      <link>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</link>
+      <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</guid>
+      <description>&lt;p&gt;继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>windows-teminal 美化</title>
+      <link>https://www.mfun.ink/2024/10/19/windows-teminal/</link>
+      <pubDate>Sat, 19 Oct 2024 14:40:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/10/19/windows-teminal/</guid>
+      <description>&lt;p&gt;最近组了台台式机，日常主力机从Mac OS切到了Windows，Windows下的终端之前一直是被吐槽的对象，不过自从有了WSL后，Windows下的开发体验有了极大的提升，终端体验已经完全能赶得上Mac、Linux。贴两张调整后的终端截图：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>局域网下Windows docker 挂载 NAS 磁盘</title>
+      <link>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</link>
+      <pubDate>Sun, 28 Jan 2024 12:04:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</guid>
+      <description>&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
