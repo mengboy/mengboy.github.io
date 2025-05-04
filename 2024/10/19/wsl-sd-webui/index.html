@@ -104,7 +104,9 @@
     <meta property="article:modified_time" content="2024-10-19T20:11:04+08:00">
     <meta property="article:tag" content="Wsl">
     <meta property="article:tag" content="Stable-Diffusion-Webui">
-<meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://www.mfun.ink/images/sd-webui/general-girl.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.mfun.ink/images/sd-webui/general-girl.png">
 <meta name="twitter:title" content="wsl Ubuntu 安装 stable-diffusion-webui">
 <meta name="twitter:description" content="继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:">
 
@@ -142,7 +144,7 @@
   "articleBody": "继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:\nwsl 2 windows 11 ubuntu 24.04 安装python 安装pyenv ubuntu 24.04自带的python版本是3.12，sd-webui要求3.10或者3.11这里先安装python，可以参考sd-webui github文档直接apt安装，这里为了方便管理多版本安装pyenv $ curl https://pyenv.run | bash 安装编译依赖 pyenv安装成功后，执行pyenv install报错，安装编译python需要的依赖 # 安装依赖 $ sudo apt-get update $ sudo apt-get install make build-essential libssl-dev zlib1g-dev \\ libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \\ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev 再次安装成功\n# 安装python $ pyenv install 3.11.10 # 切换至3.11.10版本 $ pyenv global 3.11.10 安装cuda 参考nvida官网安装wsl cuda\n$ wget https://developer.download.nvidia.com/compute/cuda/repos/wsl-ubuntu/x86_64/cuda-wsl-ubuntu.pin $ sudo mv cuda-wsl-ubuntu.pin /etc/apt/preferences.d/cuda-repository-pin-600 $ wget https://developer.download.nvidia.com/compute/cuda/12.6.2/local_installers/cuda-repo-wsl-ubuntu-12-6-local_12.6.2-1_amd64.deb $ sudo dpkg -i cuda-repo-wsl-ubuntu-12-6-local_12.6.2-1_amd64.deb $ sudo cp /var/cuda-repo-wsl-ubuntu-12-6-local/cuda-*-keyring.gpg /usr/share/keyrings/ $ sudo apt-get update $ sudo apt-get -y install cuda-toolkit-12-6 安装后可以执行nvidia-smi查看安装情况\n$ nvidia-smi Sat Oct 19 22:41:42 2024 +-----------------------------------------------------------------------------------------+ | NVIDIA-SMI 565.51.01 Driver Version: 565.90 CUDA Version: 12.7 | |-----------------------------------------+------------------------+----------------------+ | GPU Name Persistence-M | Bus-Id Disp.A | Volatile Uncorr. ECC | | Fan Temp Perf Pwr:Usage/Cap | Memory-Usage | GPU-Util Compute M. | | | | MIG M. | |=========================================+========================+======================| | 0 NVIDIA GeForce RTX 4060 Ti On | 00000000:01:00.0 On | N/A | | 0% 37C P8 8W / 165W | 1050MiB / 16380MiB | 1% Default | | | | N/A | +-----------------------------------------+------------------------+----------------------+ +-----------------------------------------------------------------------------------------+ | Processes: | | GPU GI CI PID Type Process name GPU Memory | | ID ID Usage | |=========================================================================================| | 0 N/A N/A 23 G /Xwayland N/A | +-----------------------------------------------------------------------------------------+ 安装sd-webui 直接按照sd-webui GitHub 文档安装，安装完成后将模型放置**stable-diffusion-webui/models/Stable-diffusion/**目录，模型去c站下载，直接执行webui.sh启动\n# 安装 $ git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui.git # 启动 $ ./webui.sh 启动成功会提示访问http://127.0.0.1:7860， 问题 代理导致http://127.0.0.1:7860访问不通，可以增加 –listen 启动参数，会在0.0.0.0:7860地址启动 urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='192.168.1.11', port=1081): Max retries exceeded with url: http://127.0.0.1:7860/startup-events (Caused by ProxyError('Unable to connect to proxy', RemoteDisconnected('Remote end closed connection without response'))) $ ./webui.sh --listen 启动过程中还可能会报如下问题，提示安装TCMalloc，优化CPU、内存使用，不安装也不影响使用 Cannot locate TCMalloc. Do you have tcmalloc or google-perftool installed on your system? (improves CPU memory usage) # 安装TCMallocls $ sudo apt-get install libtcmalloc-minimal4 -y 整个安装下来需要下载很多软件包，国内的话需要代理，没有代理就要找其他离线包安装的方式了。\n",
   "wordCount" : "850",
   "inLanguage": "zh-cn",
-  "datePublished": "2024-10-19T20:11:04+08:00",
+  "image":"https://www.mfun.ink/images/sd-webui/general-girl.png","datePublished": "2024-10-19T20:11:04+08:00",
   "dateModified": "2024-10-19T20:11:04+08:00",
   "author":{
     "@type": "Person",
@@ -255,6 +257,10 @@
 
 </div>
   </header> 
+<figure class="entry-cover">
+        <img loading="eager" src="https://www.mfun.ink/images/sd-webui/general-girl.png" alt="Stable Diffusion WebUI生成的图片">
+        
+</figure>
   <div class="post-content"><p>继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wsl <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span>windows <span style="color:#ae81ff">11</span>
