@@ -156,5 +156,17 @@
                 hreflang="en"
                 href="https://www.mfun.ink/en/archives/"
                 />
+  </url><url>
+    <loc>https://www.mfun.ink/en/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/search/"
+                />
   </url>
 </urlset>

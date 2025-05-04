@@ -650,6 +650,8 @@
   </url><url>
     <loc>https://www.mfun.ink/en/categories/</loc>
   </url><url>
+    <loc>https://www.mfun.ink/en/search/</loc>
+  </url><url>
     <loc>https://www.mfun.ink/en/tags/</loc>
   </url><url>
     <loc>https://www.mfun.ink/archives/</loc>
@@ -662,6 +664,18 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/archives/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/search/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/search/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/search/"
                 />
   </url>
 </urlset>
