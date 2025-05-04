@@ -80,31 +80,6 @@
 </script>
 
 
-
-<script>
-  console.log('AdSense脚本开始加载');
-  
-  
-  window.addEventListener('load', function() {
-    console.log('页面加载完成，开始初始化AdSense广告');
-    
-    try {
-      
-      var adElements = document.querySelectorAll('ins.adsbygoogle');
-      console.log('找到广告单元数量:', adElements.length);
-      
-      
-      adElements.forEach(function(element, index) {
-        console.log('初始化广告单元 #' + index);
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      });
-      
-      console.log('AdSense广告初始化完成');
-    } catch (error) {
-      console.error('AdSense初始化出错:', error);
-    }
-  });
-</script> 
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL"></script>
       <script>
         var doNotTrack = false;
@@ -478,6 +453,9 @@
      data-ad-slot="6136665648"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
 </article>
     </main>
