@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on Mengboy&#39;s Blog</title>
+    <link>https://www.mfun.ink/categories/docker/</link>
+    <description>Recent content in Docker on Mengboy&#39;s Blog</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Feb 2024 00:18:54 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker应用挂载SMB网络目录遇到的问题</title>
+      <link>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</link>
+      <pubDate>Fri, 16 Feb 2024 00:18:54 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</guid>
+      <description>&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>局域网下Windows docker 挂载 NAS 磁盘</title>
+      <link>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</link>
+      <pubDate>Sun, 28 Jan 2024 12:04:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</guid>
+      <description>&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

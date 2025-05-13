@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Mengboy&#39;s Blog</title>
+    <link>https://www.mfun.ink/en/tags/</link>
+    <description>Recent content in Tags on Mengboy&#39;s Blog</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 13 May 2025 23:17:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cursor</title>
+      <link>https://www.mfun.ink/en/tags/cursor/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/cursor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>https://www.mfun.ink/en/tags/development/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://www.mfun.ink/en/tags/mcp/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://www.mfun.ink/en/tags/tutorial/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://www.mfun.ink/en/tags/windows/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WSL</title>
+      <link>https://www.mfun.ink/en/tags/wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog Migration</title>
+      <link>https://www.mfun.ink/en/tags/blog-migration/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/blog-migration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hexo</title>
+      <link>https://www.mfun.ink/en/tags/hexo/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/hexo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://www.mfun.ink/en/tags/hugo/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Static Site</title>
+      <link>https://www.mfun.ink/en/tags/static-site/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/static-site/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
