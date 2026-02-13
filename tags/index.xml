@@ -6,8 +6,330 @@
     <description>Recent content in 标签 on Mengboy&#39;s Blog</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 May 2025 13:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agent</title>
+      <link>https://www.mfun.ink/tags/agent/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/agent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI Workflow</title>
+      <link>https://www.mfun.ink/tags/ai-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/ai-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI 工作流</title>
+      <link>https://www.mfun.ink/tags/ai-%E5%B7%A5%E4%BD%9C%E6%B5%81/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/ai-%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Function Calling</title>
+      <link>https://www.mfun.ink/tags/function-calling/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/function-calling/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://www.mfun.ink/tags/mcp/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Responses API</title>
+      <link>https://www.mfun.ink/tags/openai-responses-api/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/openai-responses-api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>函数调用</title>
+      <link>https://www.mfun.ink/tags/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>https://www.mfun.ink/tags/dns/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker Networking</title>
+      <link>https://www.mfun.ink/tags/docker-networking/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/docker-networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker 网络</title>
+      <link>https://www.mfun.ink/tags/docker-%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/docker-%E7%BD%91%E7%BB%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image Pull Timeout</title>
+      <link>https://www.mfun.ink/tags/image-pull-timeout/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/image-pull-timeout/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.mfun.ink/tags/troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WSL2</title>
+      <link>https://www.mfun.ink/tags/wsl2/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/wsl2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>故障排查</title>
+      <link>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>镜像拉取失败</title>
+      <link>https://www.mfun.ink/tags/%E9%95%9C%E5%83%8F%E6%8B%89%E5%8F%96%E5%A4%B1%E8%B4%A5/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E9%95%9C%E5%83%8F%E6%8B%89%E5%8F%96%E5%A4%B1%E8%B4%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Browser Debugging</title>
+      <link>https://www.mfun.ink/tags/browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/browser-debugging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chrome DevTools</title>
+      <link>https://www.mfun.ink/tags/chrome-devtools/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/chrome-devtools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codex</title>
+      <link>https://www.mfun.ink/tags/codex/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/codex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Codex</title>
+      <link>https://www.mfun.ink/tags/openai-codex/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/openai-codex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wsl</title>
+      <link>https://www.mfun.ink/tags/wsl/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动化调试</title>
+      <link>https://www.mfun.ink/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%B0%83%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>https://www.mfun.ink/tags/claude/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CLI</title>
+      <link>https://www.mfun.ink/tags/cli/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer Workflow</title>
+      <link>https://www.mfun.ink/tags/developer-workflow/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/developer-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/tags/openai/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Productivity</title>
+      <link>https://www.mfun.ink/tags/productivity/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开发流程</title>
+      <link>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>效率</title>
+      <link>https://www.mfun.ink/tags/%E6%95%88%E7%8E%87/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%95%88%E7%8E%87/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agile</title>
+      <link>https://www.mfun.ink/tags/agile/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/agile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://www.mfun.ink/tags/devops/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://www.mfun.ink/tags/llm/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Crisis</title>
+      <link>https://www.mfun.ink/tags/software-crisis/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/software-crisis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering History</title>
+      <link>https://www.mfun.ink/tags/software-engineering-history/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/software-engineering-history/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>大模型</title>
+      <link>https://www.mfun.ink/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>敏捷</title>
+      <link>https://www.mfun.ink/tags/%E6%95%8F%E6%8D%B7/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%95%8F%E6%8D%B7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>软件工程史</title>
+      <link>https://www.mfun.ink/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%8F%B2/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%8F%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>软件危机</title>
+      <link>https://www.mfun.ink/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B1%E6%9C%BA/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B1%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chrome</title>
+      <link>https://www.mfun.ink/tags/chrome/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/chrome/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevTools</title>
+      <link>https://www.mfun.ink/tags/devtools/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/devtools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://www.mfun.ink/tags/guide/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://www.mfun.ink/tags/windows/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>教程</title>
+      <link>https://www.mfun.ink/tags/%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%95%99%E7%A8%8B/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cursor</title>
+      <link>https://www.mfun.ink/tags/cursor/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/cursor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>https://www.mfun.ink/tags/development/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://www.mfun.ink/tags/tutorial/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开发</title>
+      <link>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog Migration</title>
       <link>https://www.mfun.ink/tags/blog-migration/</link>
@@ -76,13 +398,6 @@
       <link>https://www.mfun.ink/tags/stable-diffusion-webui/</link>
       <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/stable-diffusion-webui/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Wsl</title>
-      <link>https://www.mfun.ink/tags/wsl/</link>
-      <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/wsl/</guid>
       <description></description>
     </item>
     <item>
@@ -314,13 +629,6 @@
       <link>https://www.mfun.ink/tags/zip/</link>
       <pubDate>Tue, 26 Sep 2023 22:47:26 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/zip/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Chrome</title>
-      <link>https://www.mfun.ink/tags/chrome/</link>
-      <pubDate>Tue, 19 Sep 2023 21:35:21 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/chrome/</guid>
       <description></description>
     </item>
     <item>

@@ -204,6 +204,97 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">go 指针赋值是原子性的吗
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>问题提出 提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-12-06 21:16:31 +0800 CST'>December 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to go 指针赋值是原子性的吗" href="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go语言编程规范-命名篇
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-11-26 18:56:42 +0800 CST'>November 26, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go语言编程规范-命名篇" href="https://www.mfun.ink/2023/11/26/go-name-standard/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Jellyfin安装及使用体验优化
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-29 21:02:00 +0800 CST'>October 29, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Jellyfin安装及使用体验优化" href="https://www.mfun.ink/2023/10/29/jellyfin-install-use/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">docker部署calibre-web
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-10-23 23:18:33 +0800 CST'>October 23, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to docker部署calibre-web" href="https://www.mfun.ink/2023/10/23/docker-calibre-web/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">docker部署joplin-server数据备份问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在之前的一篇文章中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-29 12:26:57 +0800 CST'>September 29, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to docker部署joplin-server数据备份问题" href="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go处理zip压缩以及解压
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库archive/zip。下面记录下具体使用方法，以及注意事项。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-26 22:47:26 +0800 CST'>September 26, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go处理zip压缩以及解压" href="https://www.mfun.ink/2023/09/26/go-zip/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">好用的浏览器插件——搜索结果屏蔽指定网页
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。 实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加-csdn，效果如下：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-19 21:35:21 +0800 CST'>September 19, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to 好用的浏览器插件——搜索结果屏蔽指定网页" href="https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">内网NAS使用docker部署Joplin笔记服务
     </h2>
   </header>
@@ -240,97 +331,6 @@
   <footer class="entry-footer"><span title='2023-08-19 13:17:15 +0800 CST'>August 19, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to 无缓冲channel导致的goroutine泄露" href="https://www.mfun.ink/2023/08/19/goroutine-leak/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">局域网下通过路由器虚拟服务访问子网
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近在折腾nas，遇到一种情况需要访问子网，当前nas通过网线连的光猫，路由器连的光猫，pc笔记本电脑连的路由器。网络拓补图如下，现在想要nas中跑的docker服务访问到pc中的服务。 ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-30 17:16:29 +0800 CST'>July 30, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to 局域网下通过路由器虚拟服务访问子网" href="https://www.mfun.ink/2023/07/30/lan-access-subnet/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">xorm使用map kv更新日期时间类型字段的时区问题
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？
-// demo type TimeTest struct { ID int64 `xorm:&#34;not null pk autoincr INT(11) &#39;id&#39;&#34;` UpdateTime time.Time `xorm:&#34;update_time&#34;` } func UpdateTime(o *xorm.Session) { o.Table(new(TimeTest)).Where(&#34;id = ?&#34;, 1).Update(&amp;TimeTest{ UpdateTime: time.Now(), }) o.Table(new(TimeTest)).Where(&#34;id = ?&#34;, 1).Update(map[string]interface{}{ &#34;update_time&#34;: time.Now(), }) } ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-29 21:44:10 +0800 CST'>July 29, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to xorm使用map kv更新日期时间类型字段的时区问题" href="https://www.mfun.ink/2023/07/29/xorm-update-time/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">redis分布式锁
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-06-03 21:10:31 +0800 CST'>June 3, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to redis分布式锁" href="https://www.mfun.ink/2023/06/03/redis-lua-lock/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">hexo版本升级
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>hexo版本升级还是很简单的，先切到hexo目录，使用npm i hexo-cli -g升级全局hexo，接下来再使用npm-check、npm-upgrade,npm-update升级相关依赖。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-05-21 22:11:01 +0800 CST'>May 21, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to hexo版本升级" href="https://www.mfun.ink/2023/05/21/hexo-upgrade/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">通过nginx流代理转发流量到trojan服务
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-05-20 20:14:28 +0800 CST'>May 20, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to 通过nginx流代理转发流量到trojan服务" href="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">trojan-go 安装配置
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>本文记录一下&#34;科学上网&#34;工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-03-04 21:39:28 +0800 CST'>March 4, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to trojan-go 安装配置" href="https://www.mfun.ink/2023/03/04/trojan-install/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Vue3学习笔记一.项目初始化
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>安装 vue的安装就直接参考官方文档，描述的已经很详细了。
-项目创建 直接使用vue create &#43; 项目名创建项目，默认有三种配置可选，vue2、vue3各有一个默认创建选项，也可以选第三种自定义项目创建要引入的features。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-10-16 21:44:41 +0800 CST'>October 16, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Vue3学习笔记一.项目初始化" href="https://www.mfun.ink/2022/10/16/vue3-study-init/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://www.mfun.ink/page/2/">
@@ -343,7 +343,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
 
     <span>
         Powered by

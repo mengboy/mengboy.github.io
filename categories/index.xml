@@ -6,8 +6,78 @@
     <description>Recent content in 分类 on Mengboy&#39;s Blog</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 May 2025 13:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI</title>
+      <link>https://www.mfun.ink/categories/ai/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MCP</title>
+      <link>https://www.mfun.ink/categories/mcp/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>https://www.mfun.ink/categories/workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://www.mfun.ink/categories/devops/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://www.mfun.ink/categories/docker/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WSL</title>
+      <link>https://www.mfun.ink/categories/wsl/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://www.mfun.ink/categories/automation/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devtools</title>
+      <link>https://www.mfun.ink/categories/devtools/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/devtools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>https://www.mfun.ink/categories/software-engineering/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/software-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>软件工程</title>
+      <link>https://www.mfun.ink/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog</title>
       <link>https://www.mfun.ink/categories/blog/</link>
@@ -23,13 +93,6 @@
       <description></description>
     </item>
     <item>
-      <title>AI</title>
-      <link>https://www.mfun.ink/categories/ai/</link>
-      <pubDate>Sat, 01 Mar 2025 22:16:47 +0800</pubDate>
-      <guid>https://www.mfun.ink/categories/ai/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Prompt</title>
       <link>https://www.mfun.ink/categories/prompt/</link>
       <pubDate>Sat, 01 Mar 2025 22:16:47 +0800</pubDate>
@@ -41,13 +104,6 @@
       <link>https://www.mfun.ink/categories/windows/</link>
       <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Wsl</title>
-      <link>https://www.mfun.ink/categories/wsl/</link>
-      <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
-      <guid>https://www.mfun.ink/categories/wsl/</guid>
       <description></description>
     </item>
     <item>
@@ -83,13 +139,6 @@
       <link>https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/</link>
       <pubDate>Sun, 16 Jun 2024 20:47:40 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/%E5%90%8D%E8%AF%8D%E8%A7%A3%E6%9E%90/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Docker</title>
-      <link>https://www.mfun.ink/categories/docker/</link>
-      <pubDate>Fri, 16 Feb 2024 00:18:54 +0800</pubDate>
-      <guid>https://www.mfun.ink/categories/docker/</guid>
       <description></description>
     </item>
     <item>

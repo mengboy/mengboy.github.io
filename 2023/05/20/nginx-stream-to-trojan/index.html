@@ -257,6 +257,17 @@
 
 </div>
   </header> 
+  <div class="ad-in-article ad-top" style="margin: 20px 0; text-align:center;">
+  <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-2789089615690497"
+      data-ad-slot="6136665648"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
   <div class="post-content"><p>上一篇<a href="https://www.mfun.ink/2023/03/04/trojan-install/">文章</a>记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。</p>
 <p>首先，443端口要给nginx用，我们需要修改trojan-go服务的端口，修改配置文件<code>/etc/trojan/conf/server.json</code>的local_port字段随便改成一个未被使用的端口，比如这里改成8089。这里的配置文件路径以及下文中的都是上篇文章<a href="https://www.mfun.ink/2023/03/04/trojan-install/">trojan-go 安装配置</a>中介绍的一键脚本默认安装的路径，如果不是使用的这个脚本可以根据自己安装部署时的配置文件路径进行更改。</p>
 <p>接下来修改nginx配置文件<code>/etc/nginx/conf/nginx.conf</code>，在配置文件下方添加stream流转发配置：</p>
@@ -351,9 +362,6 @@
 
   </div>
 
-  
-  
-
   <footer class="post-footer">
     <ul class="post-tags">
       <li><a href="https://www.mfun.ink/tags/trojan/">Trojan</a></li>
@@ -445,23 +453,22 @@
   </footer>
 
   
-  <div class="google-auto-ad">
-
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-2789089615690497"
-     data-ad-slot="6136665648"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  <div class="ad-in-article ad-bottom" style="margin: 20px 0; text-align:center;">
+  <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-2789089615690497"
+      data-ad-slot="6136665648"
+      data-ad-format="auto"
+      data-full-width-responsive="true"></ins>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
 </div>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
 
     <span>
         Powered by

@@ -6,8 +6,114 @@
     <description>Recent content on Mengboy&#39;s Blog</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 04 May 2025 13:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP 实战：从函数调用到 Agent 工作流</title>
+      <link>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;如果你已经做过函数调用（function calling），但一上复杂流程就开始写一堆胶水代码，那你差不多到了该用 &lt;strong&gt;Responses API + MCP&lt;/strong&gt; 的阶段。&lt;/p&gt;
+&lt;p&gt;这篇不讲空概念，直接给你一个可落地的路线：把“模型调用工具”升级成“可扩展 Agent 工作流”，让检索、执行、校验、回写变成标准流程。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
+      <link>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;If your &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; setup suddenly fails with &lt;code&gt;docker pull&lt;/code&gt; timeouts, &lt;code&gt;Temporary failure in name resolution&lt;/code&gt;, or containers that start but cannot access the internet, don&amp;rsquo;t nuke your environment yet. Most cases are recoverable in 15 minutes.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical sequence: identify whether the fault is DNS, proxy/VPN, virtual NIC, or Docker daemon config—then apply the smallest fix first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP 实战：自动化浏览器调试（DevTools MCP）从 0 到可用</title>
+      <link>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;很多人把 MCP 当成“让 AI 调工具”的概念词，但真落地时最常卡在浏览器调试：AI 连不上 Chrome、拿不到网络请求、看不到性能瓶颈。这篇直接给你一套能复制的流程，把 DevTools MCP 跑起来，让 AI 能自动查页面问题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude / Codex / OpenAI CLI 工作流对比：开发效率怎么选</title>
+      <link>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;如果你把 AI 只当“聊天工具”，三家看起来差不多；但一旦进入真实开发链路，差异会非常明显。&lt;/p&gt;
+&lt;p&gt;我的结论先放前面：&lt;strong&gt;日常编码+项目内改动优先 Codex，长文推理和方案拆解用 Claude，OpenAI CLI 适合做标准化自动化和跨工具串联。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software Engineering History: From Software Crisis to AI Co-Creation</title>
+      <link>https://www.mfun.ink/english/post/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;Large language models are changing how we clarify requirements, generate code, and design tests, and many teams feel that traditional workflows are being rewritten. To understand what is truly changing, it helps to place today inside the longer history of software engineering.&lt;/p&gt;
+&lt;p&gt;This article walks through the major stages of software engineering and ends with the AI-era variables and a simple checklist so you can map your current problems to the right time scale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>软件工程发展史：从软件危机到AI共创</title>
+      <link>https://www.mfun.ink/2025/12/31/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/31/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;AI大模型让需求澄清、代码生成、测试生成都出现了新的路径，很多团队感到传统开发流程被重写了。要看清这一轮变化的本质，先把软件工程的历史脉络梳理出来会更有帮助。&lt;/p&gt;
+&lt;p&gt;本文按阶段回顾软件工程的发展路径，最后落到AI时代的变量与判断方法，方便你把当下的问题放回更长的时间尺度里看清楚。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Chrome DevTools MCP in WSL</title>
+      <link>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP lets MCP clients connect to Chrome&amp;rsquo;s remote debugging endpoint. Because WSL2 and Windows are isolated at the network layer, you need port forwarding and a firewall rule. The commands below are split into clear steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中配置 Chrome DevTools MCP</title>
+      <link>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP 可以让 MCP 客户端直接连接到 Chrome 的远程调试接口。WSL2 和 Windows 的网络是隔离的，所以需要做端口转发与防火墙放行。下面把关键命令拆开说明，按步骤执行即可。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Cursor MCP Servers in WSL for a Seamless Dev Experience</title>
+      <link>https://www.mfun.ink/english/post/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;For developers who love the power of Linux tools but work on Windows, the Windows Subsystem for Linux (WSL) is a game-changer. Cursor, the AI-first code editor, can further enhance this setup by integrating with Model Control Program (MCP) servers. Running these MCP servers directly within your WSL environment keeps your development workflow clean and consolidated. This guide will walk you through configuring Cursor to use MCP servers running in WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中安装 Cursor MCP 服务器以获得无缝开发体验</title>
+      <link>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;对于喜欢 Linux 工具的强大功能但在 Windows 上工作的开发人员来说，Windows Subsystem for Linux (WSL) 是一个改变游戏规则的工具。Cursor，这款 AI 优先的代码编辑器，可以通过与模型控制程序 (MCP) 服务器集成来进一步增强此设置。直接在你的 WSL 环境中运行这些 MCP 服务器可以使你的开发工作流程保持整洁和统一。本指南将引导你完成配置 Cursor 以使用在 WSL 中运行的 MCP 服务器的步骤。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Complete Guide to Migrating from Hexo to Hugo</title>
       <link>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</link>
@@ -28,20 +134,29 @@
       <pubDate>Sat, 03 May 2025 12:00:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/about/</guid>
       <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
-&lt;p&gt;I&amp;rsquo;m a programmer who enjoys exploring new technologies and documenting my learning process.&lt;/p&gt;
-&lt;h2 id=&#34;technology-stack&#34;&gt;Technology Stack&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m Mengboy. I work a lot on backend systems, cloud-native tooling, and automation, and I turn hard-earned debugging experience into reusable notes.&lt;/p&gt;
+&lt;p&gt;This blog is not about generic theory. It&amp;rsquo;s about &lt;strong&gt;real problems + executable solutions&lt;/strong&gt;: commands you can run, configs you can apply, and workflows you can reuse.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-write-here&#34;&gt;What I Write Here&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Backend: Go, Python, Java&lt;/li&gt;
-&lt;li&gt;Frontend: Vue, JavaScript&lt;/li&gt;
-&lt;li&gt;Databases: MySQL, Redis, MongoDB&lt;/li&gt;
-&lt;li&gt;Others: Docker, Kubernetes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Engineering Practice&lt;/strong&gt;: troubleshooting and performance tuning for Go, Redis, Nginx, Docker, Linux/WSL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI in Production Workflows&lt;/strong&gt;: MCP, automation pipelines, and integrating AI into day-to-day development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deployment &amp;amp; Ops&lt;/strong&gt;: stable release strategies, rollback safety, and production-minded setup&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusable Methods&lt;/strong&gt;: decision frameworks, checklists, and templates that save time&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;contact-me&#34;&gt;Contact Me&lt;/h2&gt;
-&lt;p&gt;If you have any questions or suggestions, feel free to contact me through:&lt;/p&gt;
+&lt;h2 id=&#34;tech-preferences&#34;&gt;Tech Preferences&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Email: &lt;a href=&#34;mailto:bai.white86@gmail.com&#34;&gt;bai.white86@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/mengboy&#34;&gt;github.com/mengboy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;li&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go, Python&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Infrastructure&lt;/strong&gt;: Docker, Kubernetes, Linux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Layer&lt;/strong&gt;: MySQL, Redis, MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Engineering Habits&lt;/strong&gt;: incremental delivery, scripting-first, docs-first&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;writing-principles&#34;&gt;Writing Principles&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Conclusion first, then explanation.&lt;/li&gt;
+&lt;li&gt;Focus on why failures happen and how to locate them fast.&lt;/li&gt;
+&lt;li&gt;Include copy-paste-ready commands and configuration whenever possible.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If a post helps you solve a real issue faster, it has done its job.&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于我</title>
@@ -49,20 +164,8 @@
       <pubDate>Sat, 03 May 2025 12:00:00 +0800</pubDate>
       <guid>https://www.mfun.ink/about/</guid>
       <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
-&lt;p&gt;程序员一枚，喜欢探索新技术，记录学习过程。&lt;/p&gt;
-&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;后端: Go, Python, Java&lt;/li&gt;
-&lt;li&gt;前端: Vue, JavaScript&lt;/li&gt;
-&lt;li&gt;数据库: MySQL, Redis, MongoDB&lt;/li&gt;
-&lt;li&gt;其他: Docker, Kubernetes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;联系方式&#34;&gt;联系方式&lt;/h2&gt;
-&lt;p&gt;如有问题或建议，欢迎通过以下方式联系我:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Email: &lt;a href=&#34;mailto:bai.white86@gmail.com&#34;&gt;bai.white86@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;GitHub: &lt;a href=&#34;https://github.com/mengboy&#34;&gt;github.com/mengboy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;我是 Mengboy，长期折腾后端、云原生和自动化工具，习惯把踩坑过程写成可复用的实践笔记。&lt;/p&gt;
+&lt;p&gt;这个站不追“概念科普”，更偏向 &lt;strong&gt;真实问题 + 可执行方案&lt;/strong&gt;：能复制命令就跑，能落地配置就上线。&lt;/p&gt;</description>
     </item>
     <item>
       <title>常见prompt框架</title>
