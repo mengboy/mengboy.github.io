@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Nginx on Mengboy&#39;s Blog</title>
+    <title>Nginx on Mengboy 技术笔记</title>
     <link>https://www.mfun.ink/tags/nginx/</link>
-    <description>Recent content in Nginx on Mengboy&#39;s Blog</description>
+    <description>Recent content in Nginx on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sat, 20 May 2023 20:14:28 +0800</lastBuildDate>

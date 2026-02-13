@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Net on Mengboy&#39;s Blog</title>
+    <title>Net on Mengboy 技术笔记</title>
     <link>https://www.mfun.ink/categories/net/</link>
-    <description>Recent content in Net on Mengboy&#39;s Blog</description>
+    <description>Recent content in Net on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 27 Sep 2020 22:27:25 +0800</lastBuildDate>

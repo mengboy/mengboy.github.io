@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>通过nginx流代理转发流量到trojan服务 | Mengboy&#39;s Blog</title>
+<title>通过nginx流代理转发流量到trojan服务 | Mengboy 技术笔记</title>
 <meta name="keywords" content="trojan, 科学上网, trojan-go, nginx">
 <meta name="description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。">
 <meta name="author" content="mengboy">
@@ -94,7 +94,7 @@
           gtag('config', 'G-PPJ7YW67PL');
         }
       </script><meta property="og:url" content="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/">
-  <meta property="og:site_name" content="Mengboy&#39;s Blog">
+  <meta property="og:site_name" content="Mengboy 技术笔记">
   <meta property="og:title" content="通过nginx流代理转发流量到trojan服务">
   <meta property="og:description" content="上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。">
   <meta property="og:locale" content="zh-cn">
@@ -156,7 +156,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Mengboy's Blog",
+    "name": "Mengboy 技术笔记",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.mfun.ink/images/site/favicon.png"
@@ -181,7 +181,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy&#39;s Blog (Alt + H)">Mengboy&#39;s Blog</a>
+            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy 技术笔记 (Alt + H)">Mengboy 技术笔记</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -468,7 +468,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy 技术笔记</a></span> · 
 
     <span>
         Powered by

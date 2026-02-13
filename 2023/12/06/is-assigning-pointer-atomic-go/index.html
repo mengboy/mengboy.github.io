@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>go 指针赋值是原子性的吗 | Mengboy&#39;s Blog</title>
+<title>go 指针赋值是原子性的吗 | Mengboy 技术笔记</title>
 <meta name="keywords" content="go, 指针赋值的原子性">
 <meta name="description" content="问题提出
 提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：">
@@ -95,7 +95,7 @@
           gtag('config', 'G-PPJ7YW67PL');
         }
       </script><meta property="og:url" content="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/">
-  <meta property="og:site_name" content="Mengboy&#39;s Blog">
+  <meta property="og:site_name" content="Mengboy 技术笔记">
   <meta property="og:title" content="go 指针赋值是原子性的吗">
   <meta property="og:description" content="问题提出 提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：">
   <meta property="og:locale" content="zh-cn">
@@ -156,7 +156,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Mengboy's Blog",
+    "name": "Mengboy 技术笔记",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.mfun.ink/images/site/favicon.png"
@@ -181,7 +181,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy&#39;s Blog (Alt + H)">Mengboy&#39;s Blog</a>
+            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy 技术笔记 (Alt + H)">Mengboy 技术笔记</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -490,7 +490,7 @@ func main() {
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy 技术笔记</a></span> · 
 
     <span>
         Powered by

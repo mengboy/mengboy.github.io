@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>websocket引入epoll机制 | Mengboy&#39;s Blog</title>
+<title>websocket引入epoll机制 | Mengboy 技术笔记</title>
 <meta name="keywords" content="websocket, epoll, gorilla/websocket, gobwas/ws">
 <meta name="description" content="原理
 正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。
@@ -96,7 +96,7 @@
           gtag('config', 'G-PPJ7YW67PL');
         }
       </script><meta property="og:url" content="https://www.mfun.ink/2020/09/15/websocket-epoll/">
-  <meta property="og:site_name" content="Mengboy&#39;s Blog">
+  <meta property="og:site_name" content="Mengboy 技术笔记">
   <meta property="og:title" content="websocket引入epoll机制">
   <meta property="og:description" content="原理 正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。 使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。">
   <meta property="og:locale" content="zh-cn">
@@ -160,7 +160,7 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Mengboy's Blog",
+    "name": "Mengboy 技术笔记",
     "logo": {
       "@type": "ImageObject",
       "url": "https://www.mfun.ink/images/site/favicon.png"
@@ -185,7 +185,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy&#39;s Blog (Alt + H)">Mengboy&#39;s Blog</a>
+            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy 技术笔记 (Alt + H)">Mengboy 技术笔记</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -656,7 +656,7 @@ demo中用到了两种websocket框架，分别是<a href="github.com/gorilla/web
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy 技术笔记</a></span> · 
 
     <span>
         Powered by

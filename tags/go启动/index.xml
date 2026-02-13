@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Go启动 on Mengboy&#39;s Blog</title>
+    <title>Go启动 on Mengboy 技术笔记</title>
     <link>https://www.mfun.ink/tags/go%E5%90%AF%E5%8A%A8/</link>
-    <description>Recent content in Go启动 on Mengboy&#39;s Blog</description>
+    <description>Recent content in Go启动 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
     <lastBuildDate>Tue, 27 Oct 2020 15:27:33 +0800</lastBuildDate>
