@@ -2,6 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/english/</loc>
+    <lastmod>2026-02-14T21:35:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/</loc>
+    <lastmod>2026-02-14T21:35:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/post/</loc>
+    <lastmod>2026-02-14T21:35:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/post/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/tags/agent/</loc>
     <lastmod>2026-02-11T23:15:00+08:00</lastmod>
     <xhtml:link
@@ -44,9 +73,6 @@
     <loc>https://www.mfun.ink/tags/ai-%E5%B7%A5%E4%BD%9C%E6%B5%81/</loc>
     <lastmod>2026-02-11T23:15:00+08:00</lastmod>
   </url><url>
-    <loc>https://www.mfun.ink/english/</loc>
-    <lastmod>2026-02-11T23:15:00+08:00</lastmod>
-  </url><url>
     <loc>https://www.mfun.ink/tags/function-calling/</loc>
     <lastmod>2026-02-11T23:15:00+08:00</lastmod>
     <xhtml:link
@@ -86,19 +112,6 @@
                 href="https://www.mfun.ink/tags/mcp/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/</loc>
-    <lastmod>2026-02-11T23:15:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/tags/openai-responses-api/</loc>
     <lastmod>2026-02-11T23:15:00+08:00</lastmod>
     <xhtml:link
@@ -126,19 +139,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/post/</loc>
-    <lastmod>2026-02-11T23:15:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/post/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/categories/workflow/</loc>
