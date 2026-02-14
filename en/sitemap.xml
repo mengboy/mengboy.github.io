@@ -2,8 +2,99 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/en/categories/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/flamegraph/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/flamegraph/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/flamegraph/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/go/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/go/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/go-memory-leak/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/go-memory-leak/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/go-memory-leak/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/02/14/go-memory-leak-pprof-flamegraph/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/02/14/go-memory-leak-pprof-flamegraph/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/heap-profile/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/heap-profile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/heap-profile/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/incident-response/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/incident-response/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/incident-response/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-02-14T21:35:00+08:00</lastmod>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +106,21 @@
                 href="https://www.mfun.ink/en/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/categories/performance/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/performance/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/performance/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/post/</loc>
-    <lastmod>2026-02-14T21:35:00+08:00</lastmod>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -26,6 +130,45 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/post/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/pprof/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/pprof/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/pprof/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/troubleshooting/</loc>
+    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/troubleshooting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/troubleshooting/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/agent/</loc>
@@ -65,19 +208,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/ai-workflow/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-02-11T23:15:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/function-calling/</loc>
@@ -143,19 +273,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-02-11T23:15:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/workflow/</loc>

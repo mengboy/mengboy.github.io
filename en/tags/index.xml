@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Feb 2026 21:20:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FlameGraph</title>
+      <link>https://www.mfun.ink/en/tags/flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/flamegraph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go Memory Leak</title>
+      <link>https://www.mfun.ink/en/tags/go-memory-leak/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/go-memory-leak/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Heap Profile</title>
+      <link>https://www.mfun.ink/en/tags/heap-profile/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/heap-profile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Incident Response</title>
+      <link>https://www.mfun.ink/en/tags/incident-response/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/incident-response/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pprof</title>
+      <link>https://www.mfun.ink/en/tags/pprof/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/pprof/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agent</title>
       <link>https://www.mfun.ink/en/tags/agent/</link>
