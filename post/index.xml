@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Feb 2026 21:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 10:30:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code &#43; Codex 多模型协作开发：成本、速度与质量对比（含可复用流程）</title>
+      <link>https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/</guid>
+      <description>&lt;p&gt;如果你现在还在“一个模型干到底”，大概率会遇到三个问题：要么贵、要么慢、要么返工多。&lt;/p&gt;
+&lt;p&gt;更实用的做法是：把 Claude Code 和 Codex 当成两个不同岗位来配合——一个偏长链路规划和重构，一个偏快速代码落地和批量执行。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准</title>
       <link>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</link>

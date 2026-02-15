@@ -2,6 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/ai-engineering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/ai-engineering/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/claude-code/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/claude-code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/claude-code/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/02/15/claude-code-codex-multi-model-collaboration/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/02/15/claude-code-codex-multi-model-collaboration/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/codex/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/codex/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/codex/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/cost-optimization/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/cost-optimization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/cost-optimization/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/developer-productivity/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/developer-productivity/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/developer-productivity/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/engineering-quality/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/engineering-quality/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/engineering-quality/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/</loc>
     <lastmod>2026-02-15T10:30:00+08:00</lastmod>
     <xhtml:link
@@ -13,6 +117,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/multi-model-workflow/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/multi-model-workflow/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/multi-model-workflow/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/post/</loc>
@@ -28,17 +145,17 @@
                 href="https://www.mfun.ink/en/post/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
+                href="https://www.mfun.ink/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
+                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/flamegraph/</loc>
@@ -143,19 +260,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/pprof/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-02-14T21:20:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/troubleshooting/</loc>
@@ -442,19 +546,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/chrome-devtools/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/codex/</loc>
-    <lastmod>2026-02-10T22:10:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/codex/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/codex/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/devtools/</loc>

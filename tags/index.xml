@@ -6,8 +6,64 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Feb 2026 21:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 15 Feb 2026 10:30:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code</title>
+      <link>https://www.mfun.ink/tags/claude-code/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/claude-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Codex</title>
+      <link>https://www.mfun.ink/tags/codex/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/codex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cost Optimization</title>
+      <link>https://www.mfun.ink/tags/cost-optimization/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/cost-optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Engineering Quality</title>
+      <link>https://www.mfun.ink/tags/engineering-quality/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/engineering-quality/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Model Workflow</title>
+      <link>https://www.mfun.ink/tags/multi-model-workflow/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/multi-model-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>成本优化</title>
+      <link>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>多模型协作</title>
+      <link>https://www.mfun.ink/tags/%E5%A4%9A%E6%A8%A1%E5%9E%8B%E5%8D%8F%E4%BD%9C/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%A4%9A%E6%A8%A1%E5%9E%8B%E5%8D%8F%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>开发提效</title>
+      <link>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91%E6%8F%90%E6%95%88/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91%E6%8F%90%E6%95%88/</guid>
+      <description></description>
+    </item>
     <item>
       <title>FlameGraph</title>
       <link>https://www.mfun.ink/tags/flamegraph/</link>
@@ -181,13 +237,6 @@
       <link>https://www.mfun.ink/tags/chrome-devtools/</link>
       <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/chrome-devtools/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Codex</title>
-      <link>https://www.mfun.ink/tags/codex/</link>
-      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/codex/</guid>
       <description></description>
     </item>
     <item>
