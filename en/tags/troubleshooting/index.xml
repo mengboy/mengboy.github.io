@@ -6,8 +6,16 @@
     <description>Recent content in Troubleshooting on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Feb 2026 22:50:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2026 11:59:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
+      <link>https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;Your local &lt;code&gt;hugo&lt;/code&gt; build works, but GitHub Actions fails randomly. Classic.
+The root cause is usually not the workflow syntax. It is environment drift, missing permissions, and unstable dependencies.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
       <link>https://www.mfun.ink/en/2026/02/11/wsl2-docker-network-troubleshooting/</link>

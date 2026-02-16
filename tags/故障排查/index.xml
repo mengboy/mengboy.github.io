@@ -6,8 +6,16 @@
     <description>Recent content in 故障排查 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Feb 2026 22:50:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 16 Feb 2026 11:59:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions 自动部署 Hugo：防翻车配置与排障清单</title>
+      <link>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;本地 &lt;code&gt;hugo&lt;/code&gt; 能跑，到了 GitHub Actions 就翻车，是很多博客维护者的日常。
+最常见的问题不是“不会写 workflow”，而是环境不一致、版本漂移、权限设置遗漏。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
       <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
