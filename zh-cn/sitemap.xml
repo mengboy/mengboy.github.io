@@ -2,8 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/categories/ai/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/ai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/ai/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/english/</loc>
     <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/tags/evaluation/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/evaluation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/evaluation/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/llm/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/llm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/llm/"
+                />
   </url><url>
     <loc>https://www.mfun.ink/</loc>
     <lastmod>2026-02-17T10:56:00+08:00</lastmod>
@@ -30,6 +69,109 @@
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/post/"
                 />
+  </url><url>
+    <loc>https://www.mfun.ink/categories/rag/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/rag/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/rag/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/rag/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/rag/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/rag/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/english/post/rag-retrieval-rerank-eval-loop/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/reranker/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/reranker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/reranker/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/retrieval/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/retrieval/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/retrieval/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/categories/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/%E8%AF%84%E4%BC%B0/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/tags/%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/tags/%E9%87%8D%E6%8E%92/</loc>
+    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
   </url><url>
     <loc>https://www.mfun.ink/tags/ci/cd/</loc>
     <lastmod>2026-02-16T11:59:00+08:00</lastmod>
@@ -139,32 +281,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/tags/troubleshooting/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/tags/</loc>
-    <lastmod>2026-02-16T11:59:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/categories/</loc>
-    <lastmod>2026-02-16T11:59:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</loc>
@@ -438,19 +554,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/tags/agent/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/categories/ai/</loc>
-    <lastmod>2026-02-11T23:15:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/ai/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/ai/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/tags/ai-workflow/</loc>
@@ -851,19 +954,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/tags/devops/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/tags/llm/</loc>
-    <lastmod>2025-12-31T12:30:15+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/llm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/llm/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/tags/software-crisis/</loc>

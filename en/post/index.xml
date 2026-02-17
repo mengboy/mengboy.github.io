@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Feb 2026 11:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop</title>
+      <link>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.&lt;/p&gt;
+&lt;p&gt;This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline + online evaluation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
       <link>https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>

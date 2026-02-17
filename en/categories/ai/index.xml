@@ -6,8 +6,16 @@
     <description>Recent content in AI on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop</title>
+      <link>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.&lt;/p&gt;
+&lt;p&gt;This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline + online evaluation.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
       <link>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>

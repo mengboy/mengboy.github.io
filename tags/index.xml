@@ -6,8 +6,64 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Feb 2026 11:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evaluation</title>
+      <link>https://www.mfun.ink/tags/evaluation/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/evaluation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLM</title>
+      <link>https://www.mfun.ink/tags/llm/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/llm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://www.mfun.ink/tags/rag/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reranker</title>
+      <link>https://www.mfun.ink/tags/reranker/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/reranker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Retrieval</title>
+      <link>https://www.mfun.ink/tags/retrieval/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/retrieval/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>评估</title>
+      <link>https://www.mfun.ink/tags/%E8%AF%84%E4%BC%B0/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E8%AF%84%E4%BC%B0/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>向量检索</title>
+      <link>https://www.mfun.ink/tags/%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E5%90%91%E9%87%8F%E6%A3%80%E7%B4%A2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>重排</title>
+      <link>https://www.mfun.ink/tags/%E9%87%8D%E6%8E%92/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E9%87%8D%E6%8E%92/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CI/CD</title>
       <link>https://www.mfun.ink/tags/ci/cd/</link>
@@ -356,13 +412,6 @@
       <link>https://www.mfun.ink/tags/devops/</link>
       <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLM</title>
-      <link>https://www.mfun.ink/tags/llm/</link>
-      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/llm/</guid>
       <description></description>
     </item>
     <item>
