@@ -6,8 +6,36 @@
     <description>Recent content in 分类 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx</title>
+      <link>https://www.mfun.ink/categories/nginx/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operations</title>
+      <link>https://www.mfun.ink/categories/operations/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/operations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebSocket</title>
+      <link>https://www.mfun.ink/categories/websocket/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/websocket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>运维</title>
+      <link>https://www.mfun.ink/categories/%E8%BF%90%E7%BB%B4/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/%E8%BF%90%E7%BB%B4/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI</title>
       <link>https://www.mfun.ink/categories/ai/</link>

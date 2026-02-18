@@ -2,8 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/en/tags/101-switching-protocols/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/101-switching-protocols/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/101-switching-protocols/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-02-18T08:36:00+08:00</lastmod>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +41,60 @@
                 href="https://www.mfun.ink/en/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/categories/nginx/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/nginx/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/nginx/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/nginx-reverse-proxy/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/nginx-reverse-proxy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/nginx-reverse-proxy/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/operations/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/operations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/operations/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/post/</loc>
-    <lastmod>2026-02-18T08:36:00+08:00</lastmod>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -26,6 +104,71 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/post/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/proxy_read_timeout/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/proxy_read_timeout/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/proxy_read_timeout/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/troubleshooting/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/troubleshooting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/troubleshooting/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/websocket/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/websocket/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/websocket/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/websocket-disconnect/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/websocket-disconnect/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/websocket-disconnect/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/ai/</loc>
@@ -39,19 +182,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/ai/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/evaluation/</loc>
@@ -145,19 +275,6 @@
                 href="https://www.mfun.ink/en/tags/retrieval/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-02-17T10:56:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/ci/cd/</loc>
     <lastmod>2026-02-16T11:59:00+08:00</lastmod>
     <xhtml:link
@@ -247,19 +364,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/troubleshooting/</loc>
-    <lastmod>2026-02-16T11:59:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/troubleshooting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/troubleshooting/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>

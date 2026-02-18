@@ -217,6 +217,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">trojan-go 安装配置
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本文记录一下&#34;科学上网&#34;工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-03-04 21:39:28 +0800 CST'>March 4, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to trojan-go 安装配置" href="https://www.mfun.ink/2023/03/04/trojan-install/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Vue3学习笔记一.项目初始化
     </h2>
   </header>
@@ -350,19 +363,6 @@ Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (pl
   </div>
   <footer class="entry-footer"><span title='2020-09-27 22:27:25 +0800 CST'>September 27, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to go 获取 net.conn fd 反射和非反射" href="https://www.mfun.ink/2020/09/27/gogetfd/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">websocket引入epoll机制
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>原理 正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。 使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-09-15 20:02:08 +0800 CST'>September 15, 2020</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to websocket引入epoll机制" href="https://www.mfun.ink/2020/09/15/websocket-epoll/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

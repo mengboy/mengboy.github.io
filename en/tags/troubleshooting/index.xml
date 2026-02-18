@@ -6,8 +6,16 @@
     <description>Recent content in Troubleshooting on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Feb 2026 11:59:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes</title>
+      <link>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;If your WebSocket keeps reconnecting every few seconds, it&amp;rsquo;s usually not your app code. In most production incidents, the root cause is an incomplete reverse-proxy chain in Nginx (or one proxy layer before it).&lt;/p&gt;
+&lt;p&gt;This guide gives you a copy-paste checklist to stabilize WebSocket connections fast.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
       <link>https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>

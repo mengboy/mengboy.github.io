@@ -6,8 +6,64 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>101 Switching Protocols</title>
+      <link>https://www.mfun.ink/tags/101-switching-protocols/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/101-switching-protocols/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx Reverse Proxy</title>
+      <link>https://www.mfun.ink/tags/nginx-reverse-proxy/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/nginx-reverse-proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx 反向代理</title>
+      <link>https://www.mfun.ink/tags/nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy_read_timeout</title>
+      <link>https://www.mfun.ink/tags/proxy_read_timeout/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/proxy_read_timeout/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.mfun.ink/tags/troubleshooting/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebSocket Disconnect</title>
+      <link>https://www.mfun.ink/tags/websocket-disconnect/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/websocket-disconnect/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebSocket 断连</title>
+      <link>https://www.mfun.ink/tags/websocket-%E6%96%AD%E8%BF%9E/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/websocket-%E6%96%AD%E8%BF%9E/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>故障排查</title>
+      <link>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Evaluation</title>
       <link>https://www.mfun.ink/tags/evaluation/</link>
@@ -97,20 +153,6 @@
       <link>https://www.mfun.ink/tags/pages/</link>
       <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/pages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Troubleshooting</title>
-      <link>https://www.mfun.ink/tags/troubleshooting/</link>
-      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/troubleshooting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>故障排查</title>
-      <link>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
-      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</guid>
       <description></description>
     </item>
     <item>
