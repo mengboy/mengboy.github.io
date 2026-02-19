@@ -204,6 +204,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">go 获取 net.conn fd 反射和非反射
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>非反射获取 根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-09-27 22:27:25 +0800 CST'>September 27, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to go 获取 net.conn fd 反射和非反射" href="https://www.mfun.ink/2020/09/27/gogetfd/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">websocket引入epoll机制
     </h2>
   </header>

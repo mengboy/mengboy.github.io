@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Distributed Lock Best Practices (with Common Misuse Cases)</title>
+      <link>https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;In high-concurrency scenarios, distributed locks are essential for ensuring data consistency. However, many developers&amp;rsquo; understanding of Redis distributed locks stops at &amp;ldquo;SETNX&amp;rdquo;, leading to frequent production incidents.&lt;/p&gt;
+&lt;p&gt;This article comprehensively covers the correct usage of Redis distributed locks from principles, implementation, common misuse cases to production-grade solutions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes</title>
       <link>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</link>

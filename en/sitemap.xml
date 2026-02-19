@@ -2,21 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.mfun.ink/en/tags/101-switching-protocols/</loc>
-    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/101-switching-protocols/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/101-switching-protocols/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -28,8 +15,60 @@
                 href="https://www.mfun.ink/en/categories/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/tags/concurrency-control/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/concurrency-control/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/concurrency-control/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/devops/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/devops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/devops/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/distributed-lock/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/distributed-lock/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/distributed-lock/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/distributed-systems/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/distributed-systems/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/distributed-systems/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -39,6 +78,110 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/mutual-exclusion/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/mutual-exclusion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/mutual-exclusion/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/post/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/post/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/redis/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/redis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/redis/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/redis/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/redis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/redis/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/reentrancy/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/reentrancy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/reentrancy/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/101-switching-protocols/</loc>
+    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/101-switching-protocols/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/101-switching-protocols/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/nginx/</loc>
@@ -93,19 +236,6 @@
                 href="https://www.mfun.ink/en/categories/operations/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/post/</loc>
-    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/post/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/proxy_read_timeout/</loc>
     <lastmod>2026-02-18T08:20:00+08:00</lastmod>
     <xhtml:link
@@ -117,19 +247,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/proxy_read_timeout/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-02-18T08:20:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/troubleshooting/</loc>
@@ -286,19 +403,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/ci/cd/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/categories/devops/</loc>
-    <lastmod>2026-02-16T11:59:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/devops/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/devops/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/github-actions/</loc>

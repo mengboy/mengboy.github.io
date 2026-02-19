@@ -6,8 +6,36 @@
     <description>Recent content in 分类 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps</title>
+      <link>https://www.mfun.ink/categories/devops/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://www.mfun.ink/categories/distributed-systems/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis</title>
+      <link>https://www.mfun.ink/categories/redis/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/redis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>分布式系统</title>
+      <link>https://www.mfun.ink/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/categories/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Nginx</title>
       <link>https://www.mfun.ink/categories/nginx/</link>
@@ -48,13 +76,6 @@
       <link>https://www.mfun.ink/categories/rag/</link>
       <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/rag/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DevOps</title>
-      <link>https://www.mfun.ink/categories/devops/</link>
-      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/categories/devops/</guid>
       <description></description>
     </item>
     <item>
@@ -349,13 +370,6 @@
       <link>https://www.mfun.ink/categories/xorm/</link>
       <pubDate>Sat, 29 Jul 2023 21:44:10 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/xorm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Redis</title>
-      <link>https://www.mfun.ink/categories/redis/</link>
-      <pubDate>Sat, 03 Jun 2023 21:10:31 +0800</pubDate>
-      <guid>https://www.mfun.ink/categories/redis/</guid>
       <description></description>
     </item>
     <item>

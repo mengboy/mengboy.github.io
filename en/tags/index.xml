@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Concurrency Control</title>
+      <link>https://www.mfun.ink/en/tags/concurrency-control/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/concurrency-control/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Lock</title>
+      <link>https://www.mfun.ink/en/tags/distributed-lock/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/distributed-lock/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mutual Exclusion</title>
+      <link>https://www.mfun.ink/en/tags/mutual-exclusion/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/mutual-exclusion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis</title>
+      <link>https://www.mfun.ink/en/tags/redis/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/redis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reentrancy</title>
+      <link>https://www.mfun.ink/en/tags/reentrancy/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/tags/reentrancy/</guid>
+      <description></description>
+    </item>
     <item>
       <title>101 Switching Protocols</title>
       <link>https://www.mfun.ink/en/tags/101-switching-protocols/</link>
