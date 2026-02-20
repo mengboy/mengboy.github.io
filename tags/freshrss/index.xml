@@ -6,8 +6,24 @@
     <description>Recent content in FreshRSS on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 18 Jan 2024 23:35:51 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 01:11:51 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/freshrss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)</title>
+      <link>https://www.mfun.ink/english/post/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;Getting FreshRSS + RSSHub running is easy. Keeping it stable is the hard part: lost state after restarts, repeated 403 errors, broken proxy headers, and risky upgrades.&lt;/p&gt;
+&lt;p&gt;This guide gives a production-ready Linux baseline focused on &lt;strong&gt;long-term stability, observability, and safe upgrades&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）</title>
+      <link>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;很多人把 FreshRSS + RSSHub 跑起来很快，但跑稳很难：容器重启后订阅丢失、RSSHub 频繁 403、反代后回调地址异常、升级时服务中断。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接复制的 Linux 部署方案，目标是：&lt;strong&gt;可长期运行、可观测、可升级回滚&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>RSSHub&#43;FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
       <link>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</link>

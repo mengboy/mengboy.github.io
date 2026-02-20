@@ -6,8 +6,43 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 01:11:51 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker Compose</title>
+      <link>https://www.mfun.ink/tags/docker-compose/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FreshRSS</title>
+      <link>https://www.mfun.ink/tags/freshrss/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/freshrss/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://www.mfun.ink/tags/linux/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Proxy</title>
+      <link>https://www.mfun.ink/tags/reverse-proxy/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/reverse-proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RSSHub</title>
+      <link>https://www.mfun.ink/tags/rsshub/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/rsshub/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Concurrency Control</title>
       <link>https://www.mfun.ink/tags/concurrency-control/</link>
@@ -790,20 +825,6 @@
       <link>https://www.mfun.ink/tags/feedme/</link>
       <pubDate>Thu, 18 Jan 2024 23:35:51 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/feedme/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>FreshRSS</title>
-      <link>https://www.mfun.ink/tags/freshrss/</link>
-      <pubDate>Thu, 18 Jan 2024 23:35:51 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/freshrss/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>RSSHub</title>
-      <link>https://www.mfun.ink/tags/rsshub/</link>
-      <pubDate>Thu, 18 Jan 2024 23:35:51 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/rsshub/</guid>
       <description></description>
     </item>
     <item>

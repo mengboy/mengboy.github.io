@@ -6,8 +6,22 @@
     <description>Recent content in Categories on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 01:11:51 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Self-Hosting</title>
+      <link>https://www.mfun.ink/en/categories/self-hosting/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/self-hosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://www.mfun.ink/en/categories/tutorial/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/tutorial/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DevOps</title>
       <link>https://www.mfun.ink/en/categories/devops/</link>

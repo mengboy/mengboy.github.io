@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.147.1</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 20 Feb 2026 01:11:51 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）</title>
+      <link>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;很多人把 FreshRSS + RSSHub 跑起来很快，但跑稳很难：容器重启后订阅丢失、RSSHub 频繁 403、反代后回调地址异常、升级时服务中断。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接复制的 Linux 部署方案，目标是：&lt;strong&gt;可长期运行、可观测、可升级回滚&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Redis 分布式锁正确姿势（含误用案例）</title>
       <link>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</link>

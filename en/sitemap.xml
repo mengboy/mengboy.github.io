@@ -2,8 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -13,6 +26,136 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/docker-compose/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/docker-compose/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/docker-compose/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/freshrss/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/freshrss/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/freshrss/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/linux/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/linux/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/linux/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/post/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/post/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/reverse-proxy/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/reverse-proxy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/reverse-proxy/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/rsshub/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/rsshub/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/rsshub/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/self-hosting/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/self-hosting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/self-hosting/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/tutorial/</loc>
+    <lastmod>2026-02-20T01:11:51+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/tutorial/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/tutorial/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/concurrency-control/</loc>
@@ -67,19 +210,6 @@
                 href="https://www.mfun.ink/en/categories/distributed-systems/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/mutual-exclusion/</loc>
     <lastmod>2026-02-19T09:55:00+08:00</lastmod>
     <xhtml:link
@@ -91,19 +221,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/mutual-exclusion/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/post/</loc>
-    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/post/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/redis/</loc>
@@ -156,19 +273,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/reentrancy/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-02-19T09:55:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/101-switching-protocols/</loc>
