@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Net on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/net/</link>
+    <description>Recent content in Net on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 27 Sep 2020 22:27:25 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go 获取 net.conn fd 反射和非反射</title>
+      <link>https://www.mfun.ink/2020/09/27/gogetfd/</link>
+      <pubDate>Sun, 27 Sep 2020 22:27:25 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/27/gogetfd/</guid>
+      <description>&lt;h2 id=&#34;非反射获取&#34;&gt;非反射获取&lt;/h2&gt;
+&lt;p&gt;根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

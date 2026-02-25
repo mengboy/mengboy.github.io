@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>故障排查 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
+    <description>Recent content in 故障排查 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx 反向代理 WebSocket 频繁断连：7 个高频坑与可复制修复</title>
+      <link>https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;WebSocket 经常“连上又掉”，大多数不是后端代码锅，而是 &lt;strong&gt;Nginx 反代链路配置不完整&lt;/strong&gt;。典型症状是前端反复重连、日志出现 &lt;code&gt;upstream timed out&lt;/code&gt;、或者握手直接拿不到 &lt;code&gt;101 Switching Protocols&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这篇给你一套能直接抄的排查与修复清单，按顺序做，通常 30 分钟内能稳定。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub Actions 自动部署 Hugo：防翻车配置与排障清单</title>
+      <link>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;本地 &lt;code&gt;hugo&lt;/code&gt; 能跑，到了 GitHub Actions 就翻车，是很多博客维护者的日常。
+最常见的问题不是“不会写 workflow”，而是环境不一致、版本漂移、权限设置遗漏。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

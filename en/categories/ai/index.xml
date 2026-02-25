@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/categories/ai/</link>
+    <description>Recent content in AI on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/categories/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop</title>
+      <link>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.&lt;/p&gt;
+&lt;p&gt;This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline + online evaluation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software Engineering History: From Software Crisis to AI Co-Creation</title>
+      <link>https://www.mfun.ink/en/2025/12/31/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/12/31/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;Large language models are changing how we clarify requirements, generate code, and design tests, and many teams feel that traditional workflows are being rewritten. To understand what is truly changing, it helps to place today inside the longer history of software engineering.&lt;/p&gt;
+&lt;p&gt;This article walks through the major stages of software engineering and ends with the AI-era variables and a simple checklist so you can map your current problems to the right time scale.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

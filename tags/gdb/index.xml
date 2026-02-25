@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gdb on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/gdb/</link>
+    <description>Recent content in Gdb on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 26 Oct 2020 15:35:34 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>macos gdb解决Unable to find Mach task port for process-id</title>
+      <link>https://www.mfun.ink/2020/10/26/macos-gdb-install/</link>
+      <pubDate>Mon, 26 Oct 2020 15:35:34 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/10/26/macos-gdb-install/</guid>
+      <description>&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;p&gt;直接使用&lt;code&gt;brew install gdb&lt;/code&gt; 安装， 没有安装brew的需要先安装&lt;a href=&#34;https://brew.sh/&#34;&gt;brew&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;安装之后，使用过程中遇到这么一个错误:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (please check gdb is codesigned - see taskgated(8))
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+  </channel>
+</rss>

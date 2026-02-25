@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Devtools on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/categories/devtools/</link>
+    <description>Recent content in Devtools on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 10 Feb 2026 22:10:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/categories/devtools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

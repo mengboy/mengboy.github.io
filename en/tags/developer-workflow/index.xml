@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Developer Workflow on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/developer-workflow/</link>
+    <description>Recent content in Developer Workflow on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Feb 2026 23:28:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/developer-workflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

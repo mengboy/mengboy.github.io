@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>思源笔记 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 思源笔记 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 06 Jan 2024 19:57:04 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E6%80%9D%E6%BA%90%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>个人笔记类应用使用体验</title>
+      <link>https://www.mfun.ink/2024/01/06/note-software/</link>
+      <pubDate>Sat, 06 Jan 2024 19:57:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/06/note-software/</guid>
+      <description>&lt;p&gt;年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用&lt;a href=&#34;https://joplinapp.org/&#34;&gt;Joplin&lt;/a&gt;、&lt;a href=&#34;https://b3log.org/siyuan/?lang=cn&#34;&gt;思源&lt;/a&gt;、&lt;a href=&#34;https://github.com/zadam/trilium&#34;&gt;Trilium&lt;/a&gt;、&lt;a href=&#34;https://github.com/blossom-editor/blossom&#34;&gt;Blossom&lt;/a&gt;都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

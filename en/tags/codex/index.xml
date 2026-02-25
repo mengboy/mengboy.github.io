@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Codex on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/codex/</link>
+    <description>Recent content in Codex on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Feb 2026 10:30:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/codex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code &#43; Codex for Multi-Model Development: Cost, Speed, and Quality (Practical Workflow)</title>
+      <link>https://www.mfun.ink/en/2026/02/15/claude-code-codex-multi-model-collaboration/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/15/claude-code-codex-multi-model-collaboration/</guid>
+      <description>&lt;p&gt;If you still use one model for everything, you usually pay in one of three ways: higher cost, slower delivery, or more rework.&lt;/p&gt;
+&lt;p&gt;A better setup is role-based collaboration: Claude Code for planning and quality gates, Codex for fast implementation and batch edits.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

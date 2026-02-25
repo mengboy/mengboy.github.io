@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Gobwas/Ws on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/gobwas/ws/</link>
+    <description>Recent content in Gobwas/Ws on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 15 Sep 2020 20:02:08 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/gobwas/ws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>websocket引入epoll机制</title>
+      <link>https://www.mfun.ink/2020/09/15/websocket-epoll/</link>
+      <pubDate>Tue, 15 Sep 2020 20:02:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/15/websocket-epoll/</guid>
+      <description>&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。
+使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

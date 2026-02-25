@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vue on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/vue/</link>
+    <description>Recent content in Vue on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 16 Jun 2024 20:47:40 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/vue/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue名词介绍--单文件组件</title>
+      <link>https://www.mfun.ink/2024/06/16/vue-sfc/</link>
+      <pubDate>Sun, 16 Jun 2024 20:47:40 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/06/16/vue-sfc/</guid>
+      <description>&lt;h1 id=&#34;单文件组件&#34;&gt;单文件组件&lt;/h1&gt;
+&lt;p&gt;什么是单文件组件？
+简称SFC，将模版（template）、逻辑（script）、样式（style）整合在一个文件中，通常以`.vue`的形式存在。 简化组件开发和管理，使得代码更加清晰、模块化、便于维护&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vue名词介绍--应用</title>
+      <link>https://www.mfun.ink/2024/06/16/vue-application/</link>
+      <pubDate>Sun, 16 Jun 2024 20:21:26 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/06/16/vue-application/</guid>
+      <description>&lt;h2 id=&#34;核心概念&#34;&gt;核心概念&lt;/h2&gt;
+&lt;p&gt;在 Vue.js 中，“应用”（Application）是指整个 Vue 项目的一个实例。它是 Vue 应用的基础结构和运行的起点，负责管理和协调所有的组件、状态、路由、和其他功能模块。
+一个 Vue 应用通常是由一个 Vue 实例或多个 Vue 实例组成，通过实例化 Vue 对象创建应用。应用实例负责初始化应用的根组件，并提供应用范围内的配置和资源，例如插件、全局状态管理等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vue3学习笔记一.项目初始化</title>
+      <link>https://www.mfun.ink/2022/10/16/vue3-study-init/</link>
+      <pubDate>Sun, 16 Oct 2022 21:44:41 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/16/vue3-study-init/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;vue的安装就直接参考&lt;a href=&#34;https://cn.vuejs.org/guide/quick-start.html&#34;&gt;官方文档&lt;/a&gt;，描述的已经很详细了。&lt;/p&gt;
+&lt;h2 id=&#34;项目创建&#34;&gt;项目创建&lt;/h2&gt;
+&lt;p&gt;直接使用vue create + 项目名创建项目，默认有三种配置可选，vue2、vue3各有一个默认创建选项，也可以选第三种自定义项目创建要引入的features。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/go/</link>
+    <description>Recent content in Go on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;Production streaming fails in two predictable ways: users wait while the stream silently drops, and your logs say &amp;ldquo;timeout&amp;rdquo; without telling you where it actually broke.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go pattern for OpenAI Responses API streaming with strict timeout boundaries, safe retries, and useful telemetry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性</title>
+      <link>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;线上流式生成最怕两件事：用户在等，你的连接先断；日志里报错一堆，你却不知道是哪一层炸了。&lt;/p&gt;
+&lt;p&gt;这篇给你一个能直接落地的 Go 工程模板：把 OpenAI Responses API 的流式调用做成&lt;strong&gt;可超时、可重试、可观测&lt;/strong&gt;的生产级链路。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go Memory Leak Triage in Production: pprof &#43; FlameGraph Step by Step</title>
+      <link>https://www.mfun.ink/english/post/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;If your Go service RSS keeps climbing, drops after restart, then climbs again, you likely have a memory retention problem (or an actual leak pattern).&lt;/p&gt;
+&lt;p&gt;Do not start with random code edits. Run a clean evidence chain: &lt;strong&gt;metrics trend check → pprof snapshots → FlameGraph comparison → object growth path → regression validation&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准</title>
+      <link>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;线上 Go 服务 RSS 一路涨，重启后短暂恢复，过几小时继续涨——这就是典型“疑似内存泄漏”场景。&lt;/p&gt;
+&lt;p&gt;别先拍脑袋改代码，先把证据链跑通：&lt;strong&gt;监控确认 → pprof 采样 → FlameGraph 对比 → 定位对象增长路径 → 回归验证&lt;/strong&gt;。这套流程跑完，基本能把“玄学泄漏”打成“可复现 bug”。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 语言实现jpg和png图片的批量压缩</title>
+      <link>https://www.mfun.ink/2024/01/28/img-tool/</link>
+      <pubDate>Sun, 28 Jan 2024 21:42:10 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/28/img-tool/</guid>
+      <description>&lt;p&gt;记录笔记或者写博客的时候经常会直接复制mac截图插入图片，默认复制得到的是无损png图片，图片体积比较大，占空间带宽，就基于go实现了个命令行批量压缩工具。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>go 指针赋值是原子性的吗</title>
+      <link>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</link>
+      <pubDate>Wed, 06 Dec 2023 21:16:31 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</guid>
+      <description>&lt;h3 id=&#34;问题提出&#34;&gt;问题提出&lt;/h3&gt;
+&lt;p&gt;提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go语言编程规范-命名篇</title>
+      <link>https://www.mfun.ink/2023/11/26/go-name-standard/</link>
+      <pubDate>Sun, 26 Nov 2023 18:56:42 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/11/26/go-name-standard/</guid>
+      <description>&lt;p&gt;命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go处理zip压缩以及解压</title>
+      <link>https://www.mfun.ink/2023/09/26/go-zip/</link>
+      <pubDate>Tue, 26 Sep 2023 22:47:26 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/26/go-zip/</guid>
+      <description>&lt;p&gt;Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库&lt;code&gt;archive/zip&lt;/code&gt;。下面记录下具体使用方法，以及注意事项。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>无缓冲channel导致的goroutine泄露</title>
+      <link>https://www.mfun.ink/2023/08/19/goroutine-leak/</link>
+      <pubDate>Sat, 19 Aug 2023 13:17:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/08/19/goroutine-leak/</guid>
+      <description>&lt;p&gt;最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用
+select和time.After()实现超时控制，doSomething()一定会返回结果。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xorm使用map kv更新日期时间类型字段的时区问题</title>
+      <link>https://www.mfun.ink/2023/07/29/xorm-update-time/</link>
+      <pubDate>Sat, 29 Jul 2023 21:44:10 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/07/29/xorm-update-time/</guid>
+      <description>&lt;p&gt;最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-Go&#34; data-lang=&#34;Go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// demo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;         &lt;span style=&#34;color:#66d9ef&#34;&gt;int64&lt;/span&gt;     &lt;span style=&#34;color:#e6db74&#34;&gt;`xorm:&amp;#34;not null pk autoincr INT(11) &amp;#39;id&amp;#39;&amp;#34;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;UpdateTime&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Time&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;`xorm:&amp;#34;update_time&amp;#34;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UpdateTime&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;xorm&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Session&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Table&lt;/span&gt;(new(&lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt;)).&lt;span style=&#34;color:#a6e22e&#34;&gt;Where&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id = ?&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Update&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;UpdateTime&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Now&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Table&lt;/span&gt;(new(&lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt;)).&lt;span style=&#34;color:#a6e22e&#34;&gt;Where&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id = ?&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Update&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;]&lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt;{}{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;update_time&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Now&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>基于redis实现一个简单的分布式限流器</title>
+      <link>https://www.mfun.ink/2022/10/15/redis-current-limiter/</link>
+      <pubDate>Sat, 15 Oct 2022 22:30:35 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/15/redis-current-limiter/</guid>
+      <description>&lt;p&gt;分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>goroutine 并发数量限制</title>
+      <link>https://www.mfun.ink/2022/10/15/goroutine-limit/</link>
+      <pubDate>Sat, 15 Oct 2022 18:08:41 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/15/goroutine-limit/</guid>
+      <description>&lt;p&gt;最近经常用go写一些脚本，为了执行效率，一般会开启多个goroutine并发执行,脚本中通常会调用一些线上服务或者数据库读写数据，为了不影响线上服务运行,为了不影响线上服务运行就要对执行的goroutine数量进行限制，避免并发太大打垮线上服务。下面就简单写一个goroutine并发控制器。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go启动main函数都干了什么(一)</title>
+      <link>https://www.mfun.ink/2020/10/27/go-start-up/</link>
+      <pubDate>Tue, 27 Oct 2020 15:27:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/10/27/go-start-up/</guid>
+      <description>&lt;h3 id=&#34;生成二进制可执行文件&#34;&gt;生成二进制可执行文件&lt;/h3&gt;
+&lt;p&gt;首先，写一个go main函数，这里就简单输出以下hello world。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;package main
+
+import &amp;#34;fmt&amp;#34;
+
+func main()  {
+	fmt.Println(&amp;#34;hello word&amp;#34;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行&lt;code&gt;go build -gcflags &amp;quot;-N -l&amp;quot; -ldflags=-compressdwarf=false -o main main.go&lt;/code&gt;生成可执行二进制文件。&lt;/p&gt;
+&lt;h3 id=&#34;开启gdb调试&#34;&gt;开启gdb调试&lt;/h3&gt;
+&lt;p&gt;执行&lt;code&gt;gdb main&lt;/code&gt;开始gdb调试。通过i files查看程序入口地址，再这个地址打上断点。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>造轮子——go 版本控制(gvm)</title>
+      <link>https://www.mfun.ink/2020/09/29/gvm/</link>
+      <pubDate>Tue, 29 Sep 2020 20:36:24 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/29/gvm/</guid>
+      <description>&lt;h2 id=&#34;功能列表&#34;&gt;功能列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持linux、darwin&lt;/li&gt;
+&lt;li&gt;获取远程go版本列表 &lt;code&gt;gvm remote&lt;/code&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://www.mfun.ink/images/gvm/remote.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>go 获取 net.conn fd 反射和非反射</title>
+      <link>https://www.mfun.ink/2020/09/27/gogetfd/</link>
+      <pubDate>Sun, 27 Sep 2020 22:27:25 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/27/gogetfd/</guid>
+      <description>&lt;h2 id=&#34;非反射获取&#34;&gt;非反射获取&lt;/h2&gt;
+&lt;p&gt;根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>websocket引入epoll机制</title>
+      <link>https://www.mfun.ink/2020/09/15/websocket-epoll/</link>
+      <pubDate>Tue, 15 Sep 2020 20:02:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/15/websocket-epoll/</guid>
+      <description>&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。
+使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

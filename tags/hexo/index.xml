@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hexo on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/hexo/</link>
+    <description>Recent content in Hexo on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 04 May 2025 13:30:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Complete Guide to Migrating from Hexo to Hugo</title>
+      <link>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</guid>
+      <description>Detailed step-by-step instructions on how to smoothly migrate your Hexo blog to Hugo, including article conversion, multilingual setup, and metadata preservation</description>
+    </item>
+    <item>
+      <title>从Hexo迁移到Hugo完全指南</title>
+      <link>https://www.mfun.ink/2025/05/04/hexo-to-hugo-migration/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/05/04/hexo-to-hugo-migration/</guid>
+      <description>详细步骤指导如何将Hexo博客平滑迁移到Hugo，包括文章转换、多语言设置、元数据保留等完整流程</description>
+    </item>
+    <item>
+      <title>hexo版本升级</title>
+      <link>https://www.mfun.ink/2023/05/21/hexo-upgrade/</link>
+      <pubDate>Sun, 21 May 2023 22:11:01 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/05/21/hexo-upgrade/</guid>
+      <description>&lt;p&gt;hexo版本升级还是很简单的，先切到hexo目录，使用&lt;code&gt;npm i hexo-cli -g&lt;/code&gt;升级全局hexo，接下来再使用&lt;code&gt;npm-check&lt;/code&gt;、&lt;code&gt;npm-upgrade&lt;/code&gt;,&lt;code&gt;npm-update&lt;/code&gt;升级相关依赖。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

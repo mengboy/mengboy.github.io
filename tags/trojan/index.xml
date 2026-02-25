@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Trojan on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/trojan/</link>
+    <description>Recent content in Trojan on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 May 2023 20:14:28 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/trojan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通过nginx流代理转发流量到trojan服务</title>
+      <link>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</link>
+      <pubDate>Sat, 20 May 2023 20:14:28 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</guid>
+      <description>&lt;p&gt;上一篇&lt;a href=&#34;https://www.mfun.ink/2023/03/04/trojan-install/&#34;&gt;文章&lt;/a&gt;记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>trojan-go 安装配置</title>
+      <link>https://www.mfun.ink/2023/03/04/trojan-install/</link>
+      <pubDate>Sat, 04 Mar 2023 21:39:28 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/03/04/trojan-install/</guid>
+      <description>&lt;p&gt;本文记录一下&amp;quot;科学上网&amp;quot;工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

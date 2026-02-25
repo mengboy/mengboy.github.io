@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FreshRSS on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/freshrss/</link>
+    <description>Recent content in FreshRSS on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 20 Feb 2026 01:11:51 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/freshrss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)</title>
+      <link>https://www.mfun.ink/english/post/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;Getting FreshRSS + RSSHub running is easy. Keeping it stable is the hard part: lost state after restarts, repeated 403 errors, broken proxy headers, and risky upgrades.&lt;/p&gt;
+&lt;p&gt;This guide gives a production-ready Linux baseline focused on &lt;strong&gt;long-term stability, observability, and safe upgrades&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）</title>
+      <link>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;很多人把 FreshRSS + RSSHub 跑起来很快，但跑稳很难：容器重启后订阅丢失、RSSHub 频繁 403、反代后回调地址异常、升级时服务中断。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接复制的 Linux 部署方案，目标是：&lt;strong&gt;可长期运行、可观测、可升级回滚&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RSSHub&#43;FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
+      <link>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</link>
+      <pubDate>Thu, 18 Jan 2024 23:35:51 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</guid>
+      <description>&lt;p&gt;生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务&lt;/p&gt;
+&lt;h3 id=&#34;rss&#34;&gt;RSS&lt;/h3&gt;
+&lt;p&gt;rss是一种内容聚合工具，有rss和atom两种协议，xml为基础协议。通常在一些blog网站比较常见。通过订阅这种方式可以只接收自己选择自己想要关注的信息。&lt;/p&gt;
+&lt;h3 id=&#34;rsshub&#34;&gt;RSSHub&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.rsshub.app/zh/&#34;&gt;RSSHub&lt;/a&gt;是一款开源、简单易用的rss生成器，主要用于将不支持rss的网站变得可以使用rss这种方式订阅。目前已经支持数百个主流网站。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

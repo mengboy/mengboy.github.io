@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Joplin数据备份 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/joplin%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/</link>
+    <description>Recent content in Joplin数据备份 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 29 Sep 2023 12:26:57 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/joplin%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker部署joplin-server数据备份问题</title>
+      <link>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</link>
+      <pubDate>Fri, 29 Sep 2023 12:26:57 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</guid>
+      <description>&lt;p&gt;在之前的一篇&lt;a href=&#34;https://www.mfun.ink/2023/09/12/joplin-docker-deploy/&#34;&gt;文章&lt;/a&gt;中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

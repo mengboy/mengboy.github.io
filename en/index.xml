@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/</link>
+    <description>Recent content on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
+      <link>https://www.mfun.ink/en/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;Production streaming fails in two predictable ways: users wait while the stream silently drops, and your logs say &amp;ldquo;timeout&amp;rdquo; without telling you where it actually broke.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go pattern for OpenAI Responses API streaming with strict timeout boundaries, safe retries, and useful telemetry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)</title>
+      <link>https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;Getting FreshRSS + RSSHub running is easy. Keeping it stable is the hard part: lost state after restarts, repeated 403 errors, broken proxy headers, and risky upgrades.&lt;/p&gt;
+&lt;p&gt;This guide gives a production-ready Linux baseline focused on &lt;strong&gt;long-term stability, observability, and safe upgrades&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis Distributed Lock Best Practices (with Common Misuse Cases)</title>
+      <link>https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;In high-concurrency scenarios, distributed locks are essential for ensuring data consistency. However, many developers&amp;rsquo; understanding of Redis distributed locks stops at &amp;ldquo;SETNX&amp;rdquo;, leading to frequent production incidents.&lt;/p&gt;
+&lt;p&gt;This article comprehensively covers the correct usage of Redis distributed locks from principles, implementation, common misuse cases to production-grade solutions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes</title>
+      <link>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;If your WebSocket keeps reconnecting every few seconds, it&amp;rsquo;s usually not your app code. In most production incidents, the root cause is an incomplete reverse-proxy chain in Nginx (or one proxy layer before it).&lt;/p&gt;
+&lt;p&gt;This guide gives you a copy-paste checklist to stabilize WebSocket connections fast.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop</title>
+      <link>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/17/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.&lt;/p&gt;
+&lt;p&gt;This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline + online evaluation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
+      <link>https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;Your local &lt;code&gt;hugo&lt;/code&gt; build works, but GitHub Actions fails randomly. Classic.
+The root cause is usually not the workflow syntax. It is environment drift, missing permissions, and unstable dependencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code &#43; Codex for Multi-Model Development: Cost, Speed, and Quality (Practical Workflow)</title>
+      <link>https://www.mfun.ink/en/2026/02/15/claude-code-codex-multi-model-collaboration/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/15/claude-code-codex-multi-model-collaboration/</guid>
+      <description>&lt;p&gt;If you still use one model for everything, you usually pay in one of three ways: higher cost, slower delivery, or more rework.&lt;/p&gt;
+&lt;p&gt;A better setup is role-based collaboration: Claude Code for planning and quality gates, Codex for fast implementation and batch edits.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go Memory Leak Triage in Production: pprof &#43; FlameGraph Step by Step</title>
+      <link>https://www.mfun.ink/en/2026/02/14/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/14/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;If your Go service RSS keeps climbing, drops after restart, then climbs again, you likely have a memory retention problem (or an actual leak pattern).&lt;/p&gt;
+&lt;p&gt;Do not start with random code edits. Run a clean evidence chain: &lt;strong&gt;metrics trend check → pprof snapshots → FlameGraph comparison → object growth path → regression validation&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
+      <link>https://www.mfun.ink/en/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;If your &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; setup suddenly fails with &lt;code&gt;docker pull&lt;/code&gt; timeouts, &lt;code&gt;Temporary failure in name resolution&lt;/code&gt;, or containers that start but cannot access the internet, don&amp;rsquo;t nuke your environment yet. Most cases are recoverable in 15 minutes.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical sequence: identify whether the fault is DNS, proxy/VPN, virtual NIC, or Docker daemon config—then apply the smallest fix first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software Engineering History: From Software Crisis to AI Co-Creation</title>
+      <link>https://www.mfun.ink/en/2025/12/31/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/12/31/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;Large language models are changing how we clarify requirements, generate code, and design tests, and many teams feel that traditional workflows are being rewritten. To understand what is truly changing, it helps to place today inside the longer history of software engineering.&lt;/p&gt;
+&lt;p&gt;This article walks through the major stages of software engineering and ends with the AI-era variables and a simple checklist so you can map your current problems to the right time scale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Chrome DevTools MCP in WSL</title>
+      <link>https://www.mfun.ink/en/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP lets MCP clients connect to Chrome&amp;rsquo;s remote debugging endpoint. Because WSL2 and Windows are isolated at the network layer, you need port forwarding and a firewall rule. The commands below are split into clear steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Cursor MCP Servers in WSL for a Seamless Dev Experience</title>
+      <link>https://www.mfun.ink/en/2025/05/13/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/05/13/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;For developers who love the power of Linux tools but work on Windows, the Windows Subsystem for Linux (WSL) is a game-changer. Cursor, the AI-first code editor, can further enhance this setup by integrating with Model Control Program (MCP) servers. Running these MCP servers directly within your WSL environment keeps your development workflow clean and consolidated. This guide will walk you through configuring Cursor to use MCP servers running in WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Complete Guide to Migrating from Hexo to Hugo</title>
+      <link>https://www.mfun.ink/en/2025/05/04/hexo-to-hugo-migration/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/05/04/hexo-to-hugo-migration/</guid>
+      <description>Detailed step-by-step instructions on how to smoothly migrate your Hexo blog to Hugo, including article conversion, multilingual setup, and metadata preservation</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://www.mfun.ink/en/about/</link>
+      <pubDate>Sat, 03 May 2025 12:00:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/about/</guid>
+      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m Mengboy. I work a lot on backend systems, cloud-native tooling, and automation, and I turn hard-earned debugging experience into reusable notes.&lt;/p&gt;
+&lt;p&gt;This blog is not about generic theory. It&amp;rsquo;s about &lt;strong&gt;real problems + executable solutions&lt;/strong&gt;: commands you can run, configs you can apply, and workflows you can reuse.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-write-here&#34;&gt;What I Write Here&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Engineering Practice&lt;/strong&gt;: troubleshooting and performance tuning for Go, Redis, Nginx, Docker, Linux/WSL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI in Production Workflows&lt;/strong&gt;: MCP, automation pipelines, and integrating AI into day-to-day development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deployment &amp;amp; Ops&lt;/strong&gt;: stable release strategies, rollback safety, and production-minded setup&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusable Methods&lt;/strong&gt;: decision frameworks, checklists, and templates that save time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tech-preferences&#34;&gt;Tech Preferences&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go, Python&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Infrastructure&lt;/strong&gt;: Docker, Kubernetes, Linux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Layer&lt;/strong&gt;: MySQL, Redis, MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Engineering Habits&lt;/strong&gt;: incremental delivery, scripting-first, docs-first&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;writing-principles&#34;&gt;Writing Principles&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Conclusion first, then explanation.&lt;/li&gt;
+&lt;li&gt;Focus on why failures happen and how to locate them fast.&lt;/li&gt;
+&lt;li&gt;Include copy-paste-ready commands and configuration whenever possible.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If a post helps you solve a real issue faster, it has done its job.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MCP on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/mcp/</link>
+    <description>Recent content in MCP on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/mcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Chrome DevTools MCP in WSL</title>
+      <link>https://www.mfun.ink/en/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP lets MCP clients connect to Chrome&amp;rsquo;s remote debugging endpoint. Because WSL2 and Windows are isolated at the network layer, you need port forwarding and a firewall rule. The commands below are split into clear steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Cursor MCP Servers in WSL for a Seamless Dev Experience</title>
+      <link>https://www.mfun.ink/en/2025/05/13/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2025/05/13/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;For developers who love the power of Linux tools but work on Windows, the Windows Subsystem for Linux (WSL) is a game-changer. Cursor, the AI-first code editor, can further enhance this setup by integrating with Model Control Program (MCP) servers. Running these MCP servers directly within your WSL environment keeps your development workflow clean and consolidated. This guide will walk you through configuring Cursor to use MCP servers running in WSL.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

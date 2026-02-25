@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Agile on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/agile/</link>
+    <description>Recent content in Agile on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Dec 2025 12:30:15 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Engineering History: From Software Crisis to AI Co-Creation</title>
+      <link>https://www.mfun.ink/english/post/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;Large language models are changing how we clarify requirements, generate code, and design tests, and many teams feel that traditional workflows are being rewritten. To understand what is truly changing, it helps to place today inside the longer history of software engineering.&lt;/p&gt;
+&lt;p&gt;This article walks through the major stages of software engineering and ends with the AI-era variables and a simple checklist so you can map your current problems to the right time scale.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

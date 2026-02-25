@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>教程 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 28 Dec 2025 22:26:08 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在 WSL 中配置 Chrome DevTools MCP</title>
+      <link>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP 可以让 MCP 客户端直接连接到 Chrome 的远程调试接口。WSL2 和 Windows 的网络是隔离的，所以需要做端口转发与防火墙放行。下面把关键命令拆开说明，按步骤执行即可。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中安装 Cursor MCP 服务器以获得无缝开发体验</title>
+      <link>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;对于喜欢 Linux 工具的强大功能但在 Windows 上工作的开发人员来说，Windows Subsystem for Linux (WSL) 是一个改变游戏规则的工具。Cursor，这款 AI 优先的代码编辑器，可以通过与模型控制程序 (MCP) 服务器集成来进一步增强此设置。直接在你的 WSL 环境中运行这些 MCP 服务器可以使你的开发工作流程保持整洁和统一。本指南将引导你完成配置 Cursor 以使用在 WSL 中运行的 MCP 服务器的步骤。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

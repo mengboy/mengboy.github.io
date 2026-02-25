@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Edge on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/edge/</link>
+    <description>Recent content in Edge on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 19 Sep 2023 21:35:21 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/edge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>好用的浏览器插件——搜索结果屏蔽指定网页</title>
+      <link>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</link>
+      <pubDate>Tue, 19 Sep 2023 21:35:21 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</guid>
+      <description>&lt;p&gt;最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。
+实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加&lt;code&gt;-csdn&lt;/code&gt;，效果如下：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

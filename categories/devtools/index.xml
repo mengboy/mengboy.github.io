@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Devtools on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/devtools/</link>
+    <description>Recent content in Devtools on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 10 Feb 2026 22:10:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/devtools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP 实战：自动化浏览器调试（DevTools MCP）从 0 到可用</title>
+      <link>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;很多人把 MCP 当成“让 AI 调工具”的概念词，但真落地时最常卡在浏览器调试：AI 连不上 Chrome、拿不到网络请求、看不到性能瓶颈。这篇直接给你一套能复制的流程，把 DevTools MCP 跑起来，让 AI 能自动查页面问题。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

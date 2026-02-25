@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>MCP on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/mcp/</link>
+    <description>Recent content in MCP on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/mcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP 实战：从函数调用到 Agent 工作流</title>
+      <link>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;如果你已经做过函数调用（function calling），但一上复杂流程就开始写一堆胶水代码，那你差不多到了该用 &lt;strong&gt;Responses API + MCP&lt;/strong&gt; 的阶段。&lt;/p&gt;
+&lt;p&gt;这篇不讲空概念，直接给你一个可落地的路线：把“模型调用工具”升级成“可扩展 Agent 工作流”，让检索、执行、校验、回写变成标准流程。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP 实战：自动化浏览器调试（DevTools MCP）从 0 到可用</title>
+      <link>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;很多人把 MCP 当成“让 AI 调工具”的概念词，但真落地时最常卡在浏览器调试：AI 连不上 Chrome、拿不到网络请求、看不到性能瓶颈。这篇直接给你一套能复制的流程，把 DevTools MCP 跑起来，让 AI 能自动查页面问题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Chrome DevTools MCP in WSL</title>
+      <link>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP lets MCP clients connect to Chrome&amp;rsquo;s remote debugging endpoint. Because WSL2 and Windows are isolated at the network layer, you need port forwarding and a firewall rule. The commands below are split into clear steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中配置 Chrome DevTools MCP</title>
+      <link>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP 可以让 MCP 客户端直接连接到 Chrome 的远程调试接口。WSL2 和 Windows 的网络是隔离的，所以需要做端口转发与防火墙放行。下面把关键命令拆开说明，按步骤执行即可。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Cursor MCP Servers in WSL for a Seamless Dev Experience</title>
+      <link>https://www.mfun.ink/english/post/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;For developers who love the power of Linux tools but work on Windows, the Windows Subsystem for Linux (WSL) is a game-changer. Cursor, the AI-first code editor, can further enhance this setup by integrating with Model Control Program (MCP) servers. Running these MCP servers directly within your WSL environment keeps your development workflow clean and consolidated. This guide will walk you through configuring Cursor to use MCP servers running in WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中安装 Cursor MCP 服务器以获得无缝开发体验</title>
+      <link>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;对于喜欢 Linux 工具的强大功能但在 Windows 上工作的开发人员来说，Windows Subsystem for Linux (WSL) 是一个改变游戏规则的工具。Cursor，这款 AI 优先的代码编辑器，可以通过与模型控制程序 (MCP) 服务器集成来进一步增强此设置。直接在你的 WSL 环境中运行这些 MCP 服务器可以使你的开发工作流程保持整洁和统一。本指南将引导你完成配置 Cursor 以使用在 WSL 中运行的 MCP 服务器的步骤。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevTools on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/devtools/</link>
+    <description>Recent content in DevTools on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 28 Dec 2025 22:26:08 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/devtools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Configure Chrome DevTools MCP in WSL</title>
+      <link>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP lets MCP clients connect to Chrome&amp;rsquo;s remote debugging endpoint. Because WSL2 and Windows are isolated at the network layer, you need port forwarding and a firewall rule. The commands below are split into clear steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中配置 Chrome DevTools MCP</title>
+      <link>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP 可以让 MCP 客户端直接连接到 Chrome 的远程调试接口。WSL2 和 Windows 的网络是隔离的，所以需要做端口转发与防火墙放行。下面把关键命令拆开说明，按步骤执行即可。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

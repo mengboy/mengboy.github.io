@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Curl on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/curl/</link>
+    <description>Recent content in Curl on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 20 Aug 2023 10:34:19 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/curl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>curl proxy设置无效问题排查</title>
+      <link>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</link>
+      <pubDate>Sun, 20 Aug 2023 10:34:19 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</guid>
+      <description>&lt;p&gt;最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

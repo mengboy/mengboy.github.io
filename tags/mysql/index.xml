@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mysql on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/mysql/</link>
+    <description>Recent content in Mysql on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 16 Feb 2024 00:18:54 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker应用挂载SMB网络目录遇到的问题</title>
+      <link>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</link>
+      <pubDate>Fri, 16 Feb 2024 00:18:54 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</guid>
+      <description>&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vue3 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/vue3/</link>
+    <description>Recent content in Vue3 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 16 Oct 2022 21:44:41 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/vue3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vue3学习笔记一.项目初始化</title>
+      <link>https://www.mfun.ink/2022/10/16/vue3-study-init/</link>
+      <pubDate>Sun, 16 Oct 2022 21:44:41 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/16/vue3-study-init/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;vue的安装就直接参考&lt;a href=&#34;https://cn.vuejs.org/guide/quick-start.html&#34;&gt;官方文档&lt;/a&gt;，描述的已经很详细了。&lt;/p&gt;
+&lt;h2 id=&#34;项目创建&#34;&gt;项目创建&lt;/h2&gt;
+&lt;p&gt;直接使用vue create + 项目名创建项目，默认有三种配置可选，vue2、vue3各有一个默认创建选项，也可以选第三种自定义项目创建要引入的features。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

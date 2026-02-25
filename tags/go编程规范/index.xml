@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go编程规范 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/go%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/</link>
+    <description>Recent content in Go编程规范 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 26 Nov 2023 18:56:42 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/go%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go语言编程规范-命名篇</title>
+      <link>https://www.mfun.ink/2023/11/26/go-name-standard/</link>
+      <pubDate>Sun, 26 Nov 2023 18:56:42 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/11/26/go-name-standard/</guid>
+      <description>&lt;p&gt;命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

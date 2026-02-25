@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Zsh on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/zsh/</link>
+    <description>Recent content in Zsh on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Nov 2020 19:00:56 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MacOS 使用笔记</title>
+      <link>https://www.mfun.ink/2020/11/18/mac-use/</link>
+      <pubDate>Wed, 18 Nov 2020 19:00:56 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/11/18/mac-use/</guid>
+      <description>&lt;h3 id=&#34;终端命令行&#34;&gt;终端命令行&lt;/h3&gt;
+&lt;h4 id=&#34;brew包管理工具&#34;&gt;brew包管理工具&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://brew.sh/&#34;&gt;brew&lt;/a&gt; mac下的神器，类似linux的包管理工具，可以通过brew安装各种软件。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go 内存泄漏 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/go-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/</link>
+    <description>Recent content in Go 内存泄漏 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 14 Feb 2026 21:20:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/go-%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准</title>
+      <link>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;线上 Go 服务 RSS 一路涨，重启后短暂恢复，过几小时继续涨——这就是典型“疑似内存泄漏”场景。&lt;/p&gt;
+&lt;p&gt;别先拍脑袋改代码，先把证据链跑通：&lt;strong&gt;监控确认 → pprof 采样 → FlameGraph 对比 → 定位对象增长路径 → 回归验证&lt;/strong&gt;。这套流程跑完，基本能把“玄学泄漏”打成“可复现 bug”。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

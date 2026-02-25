@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>评估 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E8%AF%84%E4%BC%B0/</link>
+    <description>Recent content in 评估 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E8%AF%84%E4%BC%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG 不准怎么办：检索召回、重排与评估闭环落地指南</title>
+      <link>https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;很多团队做 RAG 的第一反应是“把 embedding 换成更贵的模型”，结果成本上去了，效果却不稳定。真正的问题通常不在生成，而在检索链路：召回不全、排序不准、评估缺失。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接落地的做法：先把召回做厚，再把重排做准，最后用离线 + 在线指标形成持续优化闭环。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

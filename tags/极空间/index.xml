@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>极空间 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/</link>
+    <description>Recent content in 极空间 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 31 Dec 2023 20:28:29 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E6%9E%81%E7%A9%BA%E9%97%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NAS部署wiki.js</title>
+      <link>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</link>
+      <pubDate>Sun, 31 Dec 2023 20:28:29 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</guid>
+      <description>&lt;p&gt;wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。&lt;a href=&#34;https://js.wiki/&#34;&gt;官网&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/Requarks/wiki&#34;&gt;github&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jellyfin安装及使用体验优化</title>
+      <link>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</link>
+      <pubDate>Sun, 29 Oct 2023 21:02:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</guid>
+      <description>&lt;p&gt;Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

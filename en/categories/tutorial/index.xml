@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tutorial on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/categories/tutorial/</link>
+    <description>Recent content in Tutorial on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 20 Feb 2026 01:11:51 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)</title>
+      <link>https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;Getting FreshRSS + RSSHub running is easy. Keeping it stable is the hard part: lost state after restarts, repeated 403 errors, broken proxy headers, and risky upgrades.&lt;/p&gt;
+&lt;p&gt;This guide gives a production-ready Linux baseline focused on &lt;strong&gt;long-term stability, observability, and safe upgrades&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

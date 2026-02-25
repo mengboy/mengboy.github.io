@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Responses API on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/responses-api/</link>
+    <description>Recent content in Responses API on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/responses-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
+      <link>https://www.mfun.ink/en/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;Production streaming fails in two predictable ways: users wait while the stream silently drops, and your logs say &amp;ldquo;timeout&amp;rdquo; without telling you where it actually broke.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go pattern for OpenAI Responses API streaming with strict timeout boundaries, safe retries, and useful telemetry.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

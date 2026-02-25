@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terminal on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/terminal/</link>
+    <description>Recent content in Terminal on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 19 Oct 2024 14:40:08 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows-teminal 美化</title>
+      <link>https://www.mfun.ink/2024/10/19/windows-teminal/</link>
+      <pubDate>Sat, 19 Oct 2024 14:40:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/10/19/windows-teminal/</guid>
+      <description>&lt;p&gt;最近组了台台式机，日常主力机从Mac OS切到了Windows，Windows下的终端之前一直是被吐槽的对象，不过自从有了WSL后，Windows下的开发体验有了极大的提升，终端体验已经完全能赶得上Mac、Linux。贴两张调整后的终端截图：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

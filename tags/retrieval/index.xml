@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Retrieval on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/retrieval/</link>
+    <description>Recent content in Retrieval on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 17 Feb 2026 10:56:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/retrieval/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop</title>
+      <link>https://www.mfun.ink/english/post/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.&lt;/p&gt;
+&lt;p&gt;This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline + online evaluation.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

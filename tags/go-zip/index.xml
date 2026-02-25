@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go Zip on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/go-zip/</link>
+    <description>Recent content in Go Zip on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 26 Sep 2023 22:47:26 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/go-zip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go处理zip压缩以及解压</title>
+      <link>https://www.mfun.ink/2023/09/26/go-zip/</link>
+      <pubDate>Tue, 26 Sep 2023 22:47:26 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/26/go-zip/</guid>
+      <description>&lt;p&gt;Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库&lt;code&gt;archive/zip&lt;/code&gt;。下面记录下具体使用方法，以及注意事项。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

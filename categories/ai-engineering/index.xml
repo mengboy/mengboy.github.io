@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>AI Engineering on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/ai-engineering/</link>
+    <description>Recent content in AI Engineering on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/ai-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;Production streaming fails in two predictable ways: users wait while the stream silently drops, and your logs say &amp;ldquo;timeout&amp;rdquo; without telling you where it actually broke.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go pattern for OpenAI Responses API streaming with strict timeout boundaries, safe retries, and useful telemetry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code &#43; Codex for Multi-Model Development: Cost, Speed, and Quality (Practical Workflow)</title>
+      <link>https://www.mfun.ink/english/post/claude-code-codex-multi-model-collaboration/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-code-codex-multi-model-collaboration/</guid>
+      <description>&lt;p&gt;If you still use one model for everything, you usually pay in one of three ways: higher cost, slower delivery, or more rework.&lt;/p&gt;
+&lt;p&gt;A better setup is role-based collaboration: Claude Code for planning and quality gates, Codex for fast implementation and batch edits.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

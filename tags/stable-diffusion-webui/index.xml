@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Stable-Diffusion-Webui on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/stable-diffusion-webui/</link>
+    <description>Recent content in Stable-Diffusion-Webui on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 19 Oct 2024 20:11:04 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/stable-diffusion-webui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>wsl Ubuntu 安装 stable-diffusion-webui</title>
+      <link>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</link>
+      <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</guid>
+      <description>&lt;p&gt;继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DNS on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/dns/</link>
+    <description>Recent content in DNS on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Feb 2026 22:50:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
+      <link>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;If your &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; setup suddenly fails with &lt;code&gt;docker pull&lt;/code&gt; timeouts, &lt;code&gt;Temporary failure in name resolution&lt;/code&gt;, or containers that start but cannot access the internet, don&amp;rsquo;t nuke your environment yet. Most cases are recoverable in 15 minutes.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical sequence: identify whether the fault is DNS, proxy/VPN, virtual NIC, or Docker daemon config—then apply the smallest fix first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

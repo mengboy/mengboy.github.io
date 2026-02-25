@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.156.0"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mengboy 技术笔记</title>
+
+<meta name="description" content="">
+<meta name="author" content="mengboy">
+<link rel="canonical" href="https://www.mfun.ink/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b407885730516c77be0e6285ab84c0e6c304358f0d1d813f99cea6add2695ff3.css" integrity="sha256-tAeIVzBRbHe&#43;DmKFq4TA5sMENY8NHYE/mc6mrdJpX/M=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.mfun.ink/images/site/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.mfun.ink/images/site/favicon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.mfun.ink/images/site/favicon.png">
+<link rel="apple-touch-icon" href="https://www.mfun.ink/images/site/favicon.png">
+<link rel="mask-icon" href="https://www.mfun.ink/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.mfun.ink/index.xml">
+<link rel="alternate" type="application/json" href="https://www.mfun.ink/index.json">
+<link rel="alternate" hreflang="zh-cn" href="https://www.mfun.ink/">
+<link rel="alternate" hreflang="en" href="https://www.mfun.ink/en/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2789089615690497" crossorigin="anonymous"></script>
+
+
+<script>
+     window.adsbygoogle = window.adsbygoogle || [];
+     
+</script>
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PPJ7YW67PL');
+</script>
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPJ7YW67PL"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PPJ7YW67PL');
+        }
+      </script><meta property="og:url" content="https://www.mfun.ink/">
+  <meta property="og:site_name" content="Mengboy 技术笔记">
+  <meta property="og:title" content="Mengboy 技术笔记">
+  <meta property="og:locale" content="zh-cn">
+  <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mengboy 技术笔记">
+<meta name="twitter:description" content="">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mengboy 技术笔记",
+  "url": "https://www.mfun.ink/",
+  "description": "",
+  "logo": "https://www.mfun.ink/images/site/favicon.png",
+  "sameAs": [
+      "https://github.com/mengboy"
+  ]
+}
+</script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.mfun.ink/" accesskey="h" title="Mengboy 技术笔记 (Alt + H)">Mengboy 技术笔记</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+                <ul class="lang-switch"><li>|</li>
+                    <li>
+                        <a href="https://www.mfun.ink/en/" title="English"
+                            aria-label="English">En</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.mfun.ink/" title="首页">
+                    <span class="active">首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mfun.ink/categories/" title="分类">
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mfun.ink/tags/" title="标签">
+                    <span>标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mfun.ink/archives/" title="归档">
+                    <span>归档</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mfun.ink/search/" title="搜索 (Alt &#43; /)" accesskey=/>
+                    <span>搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.mfun.ink/about/" title="关于我">
+                    <span>关于我</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>AI 开发、后端排障与自动化实战</h1>
+    </header>
+    <div class="entry-content">
+        
+    </div>
+    <footer class="entry-footer">
+        <div class="social-icons" >
+    <a href="https://github.com/mengboy" target="_blank" rel="noopener noreferrer me"
+        title="Github">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round">
+    <path
+        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+    </path>
+</svg>
+    </a>
+</div>
+
+    </footer>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上流式生成最怕两件事：用户在等，你的连接先断；日志里报错一堆，你却不知道是哪一层炸了。
+这篇给你一个能直接落地的 Go 工程模板：把 OpenAI Responses API 的流式调用做成可超时、可重试、可观测的生产级链路。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-23 01:15:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性" href="https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>很多人把 FreshRSS &#43; RSSHub 跑起来很快，但跑稳很难：容器重启后订阅丢失、RSSHub 频繁 403、反代后回调地址异常、升级时服务中断。
+这篇给一套可直接复制的 Linux 部署方案，目标是：可长期运行、可观测、可升级回滚。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-20 01:11:51 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）" href="https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Redis 分布式锁正确姿势（含误用案例）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在高并发场景下，分布式锁是保证数据一致性的关键组件。但很多开发者对Redis分布式锁的理解停留在&#34;SETNX&#34;层面，导致线上事故频发。
+本文将从原理、实现、常见误用到生产级解决方案，全面梳理Redis分布式锁的正确使用姿势。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-19 09:55:00 +0800 CST'>February 19, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Redis 分布式锁正确姿势（含误用案例）" href="https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Nginx 反向代理 WebSocket 频繁断连：7 个高频坑与可复制修复
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>WebSocket 经常“连上又掉”，大多数不是后端代码锅，而是 Nginx 反代链路配置不完整。典型症状是前端反复重连、日志出现 upstream timed out、或者握手直接拿不到 101 Switching Protocols。
+这篇给你一套能直接抄的排查与修复清单，按顺序做，通常 30 分钟内能稳定。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-18 08:20:00 +0800 CST'>February 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Nginx 反向代理 WebSocket 频繁断连：7 个高频坑与可复制修复" href="https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">RAG 不准怎么办：检索召回、重排与评估闭环落地指南
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>很多团队做 RAG 的第一反应是“把 embedding 换成更贵的模型”，结果成本上去了，效果却不稳定。真正的问题通常不在生成，而在检索链路：召回不全、排序不准、评估缺失。
+这篇给一套可直接落地的做法：先把召回做厚，再把重排做准，最后用离线 &#43; 在线指标形成持续优化闭环。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-17 10:56:00 +0800 CST'>February 17, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to RAG 不准怎么办：检索召回、重排与评估闭环落地指南" href="https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">GitHub Actions 自动部署 Hugo：防翻车配置与排障清单
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>本地 hugo 能跑，到了 GitHub Actions 就翻车，是很多博客维护者的日常。 最常见的问题不是“不会写 workflow”，而是环境不一致、版本漂移、权限设置遗漏。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-16 11:59:00 +0800 CST'>February 16, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to GitHub Actions 自动部署 Hugo：防翻车配置与排障清单" href="https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Claude Code &#43; Codex 多模型协作开发：成本、速度与质量对比（含可复用流程）
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>如果你现在还在“一个模型干到底”，大概率会遇到三个问题：要么贵、要么慢、要么返工多。
+更实用的做法是：把 Claude Code 和 Codex 当成两个不同岗位来配合——一个偏长链路规划和重构，一个偏快速代码落地和批量执行。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-15 10:30:00 +0800 CST'>February 15, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Claude Code &#43; Codex 多模型协作开发：成本、速度与质量对比（含可复用流程）" href="https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上 Go 服务 RSS 一路涨，重启后短暂恢复，过几小时继续涨——这就是典型“疑似内存泄漏”场景。
+别先拍脑袋改代码，先把证据链跑通：监控确认 → pprof 采样 → FlameGraph 对比 → 定位对象增长路径 → 回归验证。这套流程跑完，基本能把“玄学泄漏”打成“可复现 bug”。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-14 21:20:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准" href="https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses API &#43; MCP 实战：从函数调用到 Agent 工作流
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>如果你已经做过函数调用（function calling），但一上复杂流程就开始写一堆胶水代码，那你差不多到了该用 Responses API &#43; MCP 的阶段。
+这篇不讲空概念，直接给你一个可落地的路线：把“模型调用工具”升级成“可扩展 Agent 工作流”，让检索、执行、校验、回写变成标准流程。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-11 23:15:00 +0800 CST'>February 11, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses API &#43; MCP 实战：从函数调用到 Agent 工作流" href="https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>如果你在 WSL2 &#43; Docker 环境里遇到 docker pull 超时、Temporary failure in name resolution、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。
+这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-11 22:50:00 +0800 CST'>February 11, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用" href="https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://www.mfun.ink/page/2/">&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="https://www.mfun.ink/">Mengboy 技术笔记</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

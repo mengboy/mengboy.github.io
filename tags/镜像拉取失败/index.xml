@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>镜像拉取失败 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E9%95%9C%E5%83%8F%E6%8B%89%E5%8F%96%E5%A4%B1%E8%B4%A5/</link>
+    <description>Recent content in 镜像拉取失败 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Feb 2026 22:50:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E9%95%9C%E5%83%8F%E6%8B%89%E5%8F%96%E5%A4%B1%E8%B4%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

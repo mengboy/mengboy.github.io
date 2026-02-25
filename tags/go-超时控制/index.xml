@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go 超时控制 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/go-%E8%B6%85%E6%97%B6%E6%8E%A7%E5%88%B6/</link>
+    <description>Recent content in Go 超时控制 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 19 Aug 2023 13:17:15 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/go-%E8%B6%85%E6%97%B6%E6%8E%A7%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>无缓冲channel导致的goroutine泄露</title>
+      <link>https://www.mfun.ink/2023/08/19/goroutine-leak/</link>
+      <pubDate>Sat, 19 Aug 2023 13:17:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/08/19/goroutine-leak/</guid>
+      <description>&lt;p&gt;最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用
+select和time.After()实现超时控制，doSomething()一定会返回结果。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

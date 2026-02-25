@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WebSocket Disconnect on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/websocket-disconnect/</link>
+    <description>Recent content in WebSocket Disconnect on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/websocket-disconnect/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes</title>
+      <link>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/2026/02/18/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;If your WebSocket keeps reconnecting every few seconds, it&amp;rsquo;s usually not your app code. In most production incidents, the root cause is an incomplete reverse-proxy chain in Nginx (or one proxy layer before it).&lt;/p&gt;
+&lt;p&gt;This guide gives you a copy-paste checklist to stabilize WebSocket connections fast.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

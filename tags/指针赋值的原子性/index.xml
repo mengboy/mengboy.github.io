@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>指针赋值的原子性 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E6%8C%87%E9%92%88%E8%B5%8B%E5%80%BC%E7%9A%84%E5%8E%9F%E5%AD%90%E6%80%A7/</link>
+    <description>Recent content in 指针赋值的原子性 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 06 Dec 2023 21:16:31 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E6%8C%87%E9%92%88%E8%B5%8B%E5%80%BC%E7%9A%84%E5%8E%9F%E5%AD%90%E6%80%A7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>go 指针赋值是原子性的吗</title>
+      <link>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</link>
+      <pubDate>Wed, 06 Dec 2023 21:16:31 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</guid>
+      <description>&lt;h3 id=&#34;问题提出&#34;&gt;问题提出&lt;/h3&gt;
+&lt;p&gt;提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

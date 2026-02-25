@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>开发流程 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</link>
+    <description>Recent content in 开发流程 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 09 Feb 2026 23:28:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude / Codex / OpenAI CLI 工作流对比：开发效率怎么选</title>
+      <link>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;如果你把 AI 只当“聊天工具”，三家看起来差不多；但一旦进入真实开发链路，差异会非常明显。&lt;/p&gt;
+&lt;p&gt;我的结论先放前面：&lt;strong&gt;日常编码+项目内改动优先 Codex，长文推理和方案拆解用 Claude，OpenAI CLI 适合做标准化自动化和跨工具串联。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

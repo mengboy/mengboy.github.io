@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/</link>
+    <description>Recent content on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;Production streaming fails in two predictable ways: users wait while the stream silently drops, and your logs say &amp;ldquo;timeout&amp;rdquo; without telling you where it actually broke.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go pattern for OpenAI Responses API streaming with strict timeout boundaries, safe retries, and useful telemetry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性</title>
+      <link>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;线上流式生成最怕两件事：用户在等，你的连接先断；日志里报错一堆，你却不知道是哪一层炸了。&lt;/p&gt;
+&lt;p&gt;这篇给你一个能直接落地的 Go 工程模板：把 OpenAI Responses API 的流式调用做成&lt;strong&gt;可超时、可重试、可观测&lt;/strong&gt;的生产级链路。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)</title>
+      <link>https://www.mfun.ink/english/post/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;Getting FreshRSS + RSSHub running is easy. Keeping it stable is the hard part: lost state after restarts, repeated 403 errors, broken proxy headers, and risky upgrades.&lt;/p&gt;
+&lt;p&gt;This guide gives a production-ready Linux baseline focused on &lt;strong&gt;long-term stability, observability, and safe upgrades&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）</title>
+      <link>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/</guid>
+      <description>&lt;p&gt;很多人把 FreshRSS + RSSHub 跑起来很快，但跑稳很难：容器重启后订阅丢失、RSSHub 频繁 403、反代后回调地址异常、升级时服务中断。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接复制的 Linux 部署方案，目标是：&lt;strong&gt;可长期运行、可观测、可升级回滚&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis Distributed Lock Best Practices (with Common Misuse Cases)</title>
+      <link>https://www.mfun.ink/english/post/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;In high-concurrency scenarios, distributed locks are essential for ensuring data consistency. However, many developers&amp;rsquo; understanding of Redis distributed locks stops at &amp;ldquo;SETNX&amp;rdquo;, leading to frequent production incidents.&lt;/p&gt;
+&lt;p&gt;This article comprehensively covers the correct usage of Redis distributed locks from principles, implementation, common misuse cases to production-grade solutions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis 分布式锁正确姿势（含误用案例）</title>
+      <link>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;在高并发场景下，分布式锁是保证数据一致性的关键组件。但很多开发者对Redis分布式锁的理解停留在&amp;quot;SETNX&amp;quot;层面，导致线上事故频发。&lt;/p&gt;
+&lt;p&gt;本文将从原理、实现、常见误用到生产级解决方案，全面梳理Redis分布式锁的正确使用姿势。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes</title>
+      <link>https://www.mfun.ink/english/post/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;If your WebSocket keeps reconnecting every few seconds, it&amp;rsquo;s usually not your app code. In most production incidents, the root cause is an incomplete reverse-proxy chain in Nginx (or one proxy layer before it).&lt;/p&gt;
+&lt;p&gt;This guide gives you a copy-paste checklist to stabilize WebSocket connections fast.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nginx 反向代理 WebSocket 频繁断连：7 个高频坑与可复制修复</title>
+      <link>https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;WebSocket 经常“连上又掉”，大多数不是后端代码锅，而是 &lt;strong&gt;Nginx 反代链路配置不完整&lt;/strong&gt;。典型症状是前端反复重连、日志出现 &lt;code&gt;upstream timed out&lt;/code&gt;、或者握手直接拿不到 &lt;code&gt;101 Switching Protocols&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这篇给你一套能直接抄的排查与修复清单，按顺序做，通常 30 分钟内能稳定。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop</title>
+      <link>https://www.mfun.ink/english/post/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.&lt;/p&gt;
+&lt;p&gt;This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline + online evaluation.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RAG 不准怎么办：检索召回、重排与评估闭环落地指南</title>
+      <link>https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/17/rag-retrieval-rerank-eval-loop/</guid>
+      <description>&lt;p&gt;很多团队做 RAG 的第一反应是“把 embedding 换成更贵的模型”，结果成本上去了，效果却不稳定。真正的问题通常不在生成，而在检索链路：召回不全、排序不准、评估缺失。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接落地的做法：先把召回做厚，再把重排做准，最后用离线 + 在线指标形成持续优化闭环。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub Actions 自动部署 Hugo：防翻车配置与排障清单</title>
+      <link>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;本地 &lt;code&gt;hugo&lt;/code&gt; 能跑，到了 GitHub Actions 就翻车，是很多博客维护者的日常。
+最常见的问题不是“不会写 workflow”，而是环境不一致、版本漂移、权限设置遗漏。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
+      <link>https://www.mfun.ink/english/post/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;Your local &lt;code&gt;hugo&lt;/code&gt; build works, but GitHub Actions fails randomly. Classic.
+The root cause is usually not the workflow syntax. It is environment drift, missing permissions, and unstable dependencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code &#43; Codex for Multi-Model Development: Cost, Speed, and Quality (Practical Workflow)</title>
+      <link>https://www.mfun.ink/english/post/claude-code-codex-multi-model-collaboration/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-code-codex-multi-model-collaboration/</guid>
+      <description>&lt;p&gt;If you still use one model for everything, you usually pay in one of three ways: higher cost, slower delivery, or more rework.&lt;/p&gt;
+&lt;p&gt;A better setup is role-based collaboration: Claude Code for planning and quality gates, Codex for fast implementation and batch edits.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code &#43; Codex 多模型协作开发：成本、速度与质量对比（含可复用流程）</title>
+      <link>https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/</guid>
+      <description>&lt;p&gt;如果你现在还在“一个模型干到底”，大概率会遇到三个问题：要么贵、要么慢、要么返工多。&lt;/p&gt;
+&lt;p&gt;更实用的做法是：把 Claude Code 和 Codex 当成两个不同岗位来配合——一个偏长链路规划和重构，一个偏快速代码落地和批量执行。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go Memory Leak Triage in Production: pprof &#43; FlameGraph Step by Step</title>
+      <link>https://www.mfun.ink/english/post/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;If your Go service RSS keeps climbing, drops after restart, then climbs again, you likely have a memory retention problem (or an actual leak pattern).&lt;/p&gt;
+&lt;p&gt;Do not start with random code edits. Run a clean evidence chain: &lt;strong&gt;metrics trend check → pprof snapshots → FlameGraph comparison → object growth path → regression validation&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准</title>
+      <link>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;线上 Go 服务 RSS 一路涨，重启后短暂恢复，过几小时继续涨——这就是典型“疑似内存泄漏”场景。&lt;/p&gt;
+&lt;p&gt;别先拍脑袋改代码，先把证据链跑通：&lt;strong&gt;监控确认 → pprof 采样 → FlameGraph 对比 → 定位对象增长路径 → 回归验证&lt;/strong&gt;。这套流程跑完，基本能把“玄学泄漏”打成“可复现 bug”。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP 实战：从函数调用到 Agent 工作流</title>
+      <link>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;如果你已经做过函数调用（function calling），但一上复杂流程就开始写一堆胶水代码，那你差不多到了该用 &lt;strong&gt;Responses API + MCP&lt;/strong&gt; 的阶段。&lt;/p&gt;
+&lt;p&gt;这篇不讲空概念，直接给你一个可落地的路线：把“模型调用工具”升级成“可扩展 Agent 工作流”，让检索、执行、校验、回写变成标准流程。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
+      <link>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;If your &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; setup suddenly fails with &lt;code&gt;docker pull&lt;/code&gt; timeouts, &lt;code&gt;Temporary failure in name resolution&lt;/code&gt;, or containers that start but cannot access the internet, don&amp;rsquo;t nuke your environment yet. Most cases are recoverable in 15 minutes.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical sequence: identify whether the fault is DNS, proxy/VPN, virtual NIC, or Docker daemon config—then apply the smallest fix first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP in Practice: Automated Browser Debugging with DevTools MCP</title>
+      <link>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;MCP sounds great in theory, but real-world setup often fails at browser debugging: AI cannot reach Chrome, cannot inspect network requests, and cannot collect performance traces. This guide gives you a copy-paste setup that works on Windows + WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MCP 实战：自动化浏览器调试（DevTools MCP）从 0 到可用</title>
+      <link>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/10/mcp-devtools-mcp-auto-browser-debugging/</guid>
+      <description>&lt;p&gt;很多人把 MCP 当成“让 AI 调工具”的概念词，但真落地时最常卡在浏览器调试：AI 连不上 Chrome、拿不到网络请求、看不到性能瓶颈。这篇直接给你一套能复制的流程，把 DevTools MCP 跑起来，让 AI 能自动查页面问题。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude / Codex / OpenAI CLI 工作流对比：开发效率怎么选</title>
+      <link>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;如果你把 AI 只当“聊天工具”，三家看起来差不多；但一旦进入真实开发链路，差异会非常明显。&lt;/p&gt;
+&lt;p&gt;我的结论先放前面：&lt;strong&gt;日常编码+项目内改动优先 Codex，长文推理和方案拆解用 Claude，OpenAI CLI 适合做标准化自动化和跨工具串联。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Software Engineering History: From Software Crisis to AI Co-Creation</title>
+      <link>https://www.mfun.ink/english/post/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;Large language models are changing how we clarify requirements, generate code, and design tests, and many teams feel that traditional workflows are being rewritten. To understand what is truly changing, it helps to place today inside the longer history of software engineering.&lt;/p&gt;
+&lt;p&gt;This article walks through the major stages of software engineering and ends with the AI-era variables and a simple checklist so you can map your current problems to the right time scale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>软件工程发展史：从软件危机到AI共创</title>
+      <link>https://www.mfun.ink/2025/12/31/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/31/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;AI大模型让需求澄清、代码生成、测试生成都出现了新的路径，很多团队感到传统开发流程被重写了。要看清这一轮变化的本质，先把软件工程的历史脉络梳理出来会更有帮助。&lt;/p&gt;
+&lt;p&gt;本文按阶段回顾软件工程的发展路径，最后落到AI时代的变量与判断方法，方便你把当下的问题放回更长的时间尺度里看清楚。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Configure Chrome DevTools MCP in WSL</title>
+      <link>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP lets MCP clients connect to Chrome&amp;rsquo;s remote debugging endpoint. Because WSL2 and Windows are isolated at the network layer, you need port forwarding and a firewall rule. The commands below are split into clear steps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中配置 Chrome DevTools MCP</title>
+      <link>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</link>
+      <pubDate>Sun, 28 Dec 2025 22:26:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/28/chrome-devtools-mcp-wsl/</guid>
+      <description>&lt;p&gt;Chrome DevTools MCP 可以让 MCP 客户端直接连接到 Chrome 的远程调试接口。WSL2 和 Windows 的网络是隔离的，所以需要做端口转发与防火墙放行。下面把关键命令拆开说明，按步骤执行即可。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Cursor MCP Servers in WSL for a Seamless Dev Experience</title>
+      <link>https://www.mfun.ink/english/post/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;For developers who love the power of Linux tools but work on Windows, the Windows Subsystem for Linux (WSL) is a game-changer. Cursor, the AI-first code editor, can further enhance this setup by integrating with Model Control Program (MCP) servers. Running these MCP servers directly within your WSL environment keeps your development workflow clean and consolidated. This guide will walk you through configuring Cursor to use MCP servers running in WSL.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>在 WSL 中安装 Cursor MCP 服务器以获得无缝开发体验</title>
+      <link>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</link>
+      <pubDate>Tue, 13 May 2025 23:17:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/05/13/installing-cursor-mcp-in-wsl/</guid>
+      <description>&lt;p&gt;对于喜欢 Linux 工具的强大功能但在 Windows 上工作的开发人员来说，Windows Subsystem for Linux (WSL) 是一个改变游戏规则的工具。Cursor，这款 AI 优先的代码编辑器，可以通过与模型控制程序 (MCP) 服务器集成来进一步增强此设置。直接在你的 WSL 环境中运行这些 MCP 服务器可以使你的开发工作流程保持整洁和统一。本指南将引导你完成配置 Cursor 以使用在 WSL 中运行的 MCP 服务器的步骤。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Complete Guide to Migrating from Hexo to Hugo</title>
+      <link>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</guid>
+      <description>Detailed step-by-step instructions on how to smoothly migrate your Hexo blog to Hugo, including article conversion, multilingual setup, and metadata preservation</description>
+    </item>
+    <item>
+      <title>从Hexo迁移到Hugo完全指南</title>
+      <link>https://www.mfun.ink/2025/05/04/hexo-to-hugo-migration/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/05/04/hexo-to-hugo-migration/</guid>
+      <description>详细步骤指导如何将Hexo博客平滑迁移到Hugo，包括文章转换、多语言设置、元数据保留等完整流程</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>https://www.mfun.ink/en/about/</link>
+      <pubDate>Sat, 03 May 2025 12:00:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/about/</guid>
+      <description>&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m Mengboy. I work a lot on backend systems, cloud-native tooling, and automation, and I turn hard-earned debugging experience into reusable notes.&lt;/p&gt;
+&lt;p&gt;This blog is not about generic theory. It&amp;rsquo;s about &lt;strong&gt;real problems + executable solutions&lt;/strong&gt;: commands you can run, configs you can apply, and workflows you can reuse.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-write-here&#34;&gt;What I Write Here&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Engineering Practice&lt;/strong&gt;: troubleshooting and performance tuning for Go, Redis, Nginx, Docker, Linux/WSL&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI in Production Workflows&lt;/strong&gt;: MCP, automation pipelines, and integrating AI into day-to-day development&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Deployment &amp;amp; Ops&lt;/strong&gt;: stable release strategies, rollback safety, and production-minded setup&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reusable Methods&lt;/strong&gt;: decision frameworks, checklists, and templates that save time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tech-preferences&#34;&gt;Tech Preferences&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Go, Python&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Infrastructure&lt;/strong&gt;: Docker, Kubernetes, Linux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Layer&lt;/strong&gt;: MySQL, Redis, MongoDB&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Engineering Habits&lt;/strong&gt;: incremental delivery, scripting-first, docs-first&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;writing-principles&#34;&gt;Writing Principles&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Conclusion first, then explanation.&lt;/li&gt;
+&lt;li&gt;Focus on why failures happen and how to locate them fast.&lt;/li&gt;
+&lt;li&gt;Include copy-paste-ready commands and configuration whenever possible.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;If a post helps you solve a real issue faster, it has done its job.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于我</title>
+      <link>https://www.mfun.ink/about/</link>
+      <pubDate>Sat, 03 May 2025 12:00:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/about/</guid>
+      <description>&lt;h2 id=&#34;关于我&#34;&gt;关于我&lt;/h2&gt;
+&lt;p&gt;我是 Mengboy，长期折腾后端、云原生和自动化工具，习惯把踩坑过程写成可复用的实践笔记。&lt;/p&gt;
+&lt;p&gt;这个站不追“概念科普”，更偏向 &lt;strong&gt;真实问题 + 可执行方案&lt;/strong&gt;：能复制命令就跑，能落地配置就上线。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>常见prompt框架</title>
+      <link>https://www.mfun.ink/2025/03/01/ai-prompt-methodology/</link>
+      <pubDate>Sat, 01 Mar 2025 22:16:47 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/03/01/ai-prompt-methodology/</guid>
+      <description>&lt;p&gt;deepseek出现后，AI的势头更加一路不可阻挡， cursor最近又更新了Claude 3.7，编程体验进一步提高，身为码农对未来还有几年职业生涯充满了焦虑。熟话说打不过就加入，AI的浪潮已经阻挡不了，最好的方式就是学习接受，细节算法实现暂且不提门槛太高，还是先从使用上入手，下面整理常见的prompt框架。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>wsl Ubuntu 安装 stable-diffusion-webui</title>
+      <link>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</link>
+      <pubDate>Sat, 19 Oct 2024 20:11:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/10/19/wsl-sd-webui/</guid>
+      <description>&lt;p&gt;继续压榨主机生产力，在wsl Ubuntu中部署ai绘图，安装过程中需要代理，系统版本如下:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>windows-teminal 美化</title>
+      <link>https://www.mfun.ink/2024/10/19/windows-teminal/</link>
+      <pubDate>Sat, 19 Oct 2024 14:40:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/10/19/windows-teminal/</guid>
+      <description>&lt;p&gt;最近组了台台式机，日常主力机从Mac OS切到了Windows，Windows下的终端之前一直是被吐槽的对象，不过自从有了WSL后，Windows下的开发体验有了极大的提升，终端体验已经完全能赶得上Mac、Linux。贴两张调整后的终端截图：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>seo 优化措施</title>
+      <link>https://www.mfun.ink/2024/07/20/seo-base/</link>
+      <pubDate>Sat, 20 Jul 2024 09:47:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/07/20/seo-base/</guid>
+      <description>&lt;h2 id=&#34;seo-是什么&#34;&gt;seo 是什么&lt;/h2&gt;
+&lt;p&gt;SEO，即搜索引擎优化（Search Engine Optimization），是一种通过优化网站结构、内容和外部链接来提高网站在搜索引擎中的排名的技术和策略。SEO的目的是增加网站的可见性，从而吸引更多的自然流量（即非付费流量）。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vue名词介绍--单文件组件</title>
+      <link>https://www.mfun.ink/2024/06/16/vue-sfc/</link>
+      <pubDate>Sun, 16 Jun 2024 20:47:40 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/06/16/vue-sfc/</guid>
+      <description>&lt;h1 id=&#34;单文件组件&#34;&gt;单文件组件&lt;/h1&gt;
+&lt;p&gt;什么是单文件组件？
+简称SFC，将模版（template）、逻辑（script）、样式（style）整合在一个文件中，通常以`.vue`的形式存在。 简化组件开发和管理，使得代码更加清晰、模块化、便于维护&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vue名词介绍--应用</title>
+      <link>https://www.mfun.ink/2024/06/16/vue-application/</link>
+      <pubDate>Sun, 16 Jun 2024 20:21:26 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/06/16/vue-application/</guid>
+      <description>&lt;h2 id=&#34;核心概念&#34;&gt;核心概念&lt;/h2&gt;
+&lt;p&gt;在 Vue.js 中，“应用”（Application）是指整个 Vue 项目的一个实例。它是 Vue 应用的基础结构和运行的起点，负责管理和协调所有的组件、状态、路由、和其他功能模块。
+一个 Vue 应用通常是由一个 Vue 实例或多个 Vue 实例组成，通过实例化 Vue 对象创建应用。应用实例负责初始化应用的根组件，并提供应用范围内的配置和资源，例如插件、全局状态管理等。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>docker应用挂载SMB网络目录遇到的问题</title>
+      <link>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</link>
+      <pubDate>Fri, 16 Feb 2024 00:18:54 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</guid>
+      <description>&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 语言实现jpg和png图片的批量压缩</title>
+      <link>https://www.mfun.ink/2024/01/28/img-tool/</link>
+      <pubDate>Sun, 28 Jan 2024 21:42:10 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/28/img-tool/</guid>
+      <description>&lt;p&gt;记录笔记或者写博客的时候经常会直接复制mac截图插入图片，默认复制得到的是无损png图片，图片体积比较大，占空间带宽，就基于go实现了个命令行批量压缩工具。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>局域网下Windows docker 挂载 NAS 磁盘</title>
+      <link>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</link>
+      <pubDate>Sun, 28 Jan 2024 12:04:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</guid>
+      <description>&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RSSHub&#43;FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
+      <link>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</link>
+      <pubDate>Thu, 18 Jan 2024 23:35:51 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</guid>
+      <description>&lt;p&gt;生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务&lt;/p&gt;
+&lt;h3 id=&#34;rss&#34;&gt;RSS&lt;/h3&gt;
+&lt;p&gt;rss是一种内容聚合工具，有rss和atom两种协议，xml为基础协议。通常在一些blog网站比较常见。通过订阅这种方式可以只接收自己选择自己想要关注的信息。&lt;/p&gt;
+&lt;h3 id=&#34;rsshub&#34;&gt;RSSHub&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.rsshub.app/zh/&#34;&gt;RSSHub&lt;/a&gt;是一款开源、简单易用的rss生成器，主要用于将不支持rss的网站变得可以使用rss这种方式订阅。目前已经支持数百个主流网站。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>个人笔记类应用使用体验</title>
+      <link>https://www.mfun.ink/2024/01/06/note-software/</link>
+      <pubDate>Sat, 06 Jan 2024 19:57:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/06/note-software/</guid>
+      <description>&lt;p&gt;年纪越来越大，脑力变得大不如之前，这两年越发感觉到记忆力的衰退，好多事情想的时候就是想不起来，找一个趁手的笔记类应用越来越迫在眉睫。正好买了NAS物尽其用就把常见的几款开源支持docker部署的笔记类应用&lt;a href=&#34;https://joplinapp.org/&#34;&gt;Joplin&lt;/a&gt;、&lt;a href=&#34;https://b3log.org/siyuan/?lang=cn&#34;&gt;思源&lt;/a&gt;、&lt;a href=&#34;https://github.com/zadam/trilium&#34;&gt;Trilium&lt;/a&gt;、&lt;a href=&#34;https://github.com/blossom-editor/blossom&#34;&gt;Blossom&lt;/a&gt;都部署体验了下，最终选择了Joplin+Trilium下面记录下个人使用体验。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NAS部署wiki.js</title>
+      <link>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</link>
+      <pubDate>Sun, 31 Dec 2023 20:28:29 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</guid>
+      <description>&lt;p&gt;wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。&lt;a href=&#34;https://js.wiki/&#34;&gt;官网&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/Requarks/wiki&#34;&gt;github&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>go 指针赋值是原子性的吗</title>
+      <link>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</link>
+      <pubDate>Wed, 06 Dec 2023 21:16:31 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/</guid>
+      <description>&lt;h3 id=&#34;问题提出&#34;&gt;问题提出&lt;/h3&gt;
+&lt;p&gt;提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go语言编程规范-命名篇</title>
+      <link>https://www.mfun.ink/2023/11/26/go-name-standard/</link>
+      <pubDate>Sun, 26 Nov 2023 18:56:42 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/11/26/go-name-standard/</guid>
+      <description>&lt;p&gt;命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jellyfin安装及使用体验优化</title>
+      <link>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</link>
+      <pubDate>Sun, 29 Oct 2023 21:02:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/10/29/jellyfin-install-use/</guid>
+      <description>&lt;p&gt;Jellyfin是一款免费开源的媒体影音系统，集刮削、媒体库、转码等功能于一体，类似极空间自带的极影视。就目前个人使用体验来看，极影视的刮削、以及影视库管理功能已经非常强大了，那为何还要安装Jellyfin呢，当然是给收集的小姐姐们一个家啊。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>docker部署calibre-web</title>
+      <link>https://www.mfun.ink/2023/10/23/docker-calibre-web/</link>
+      <pubDate>Mon, 23 Oct 2023 23:18:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/10/23/docker-calibre-web/</guid>
+      <description>&lt;p&gt;有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>docker部署joplin-server数据备份问题</title>
+      <link>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</link>
+      <pubDate>Fri, 29 Sep 2023 12:26:57 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/</guid>
+      <description>&lt;p&gt;在之前的一篇&lt;a href=&#34;https://www.mfun.ink/2023/09/12/joplin-docker-deploy/&#34;&gt;文章&lt;/a&gt;中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go处理zip压缩以及解压</title>
+      <link>https://www.mfun.ink/2023/09/26/go-zip/</link>
+      <pubDate>Tue, 26 Sep 2023 22:47:26 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/26/go-zip/</guid>
+      <description>&lt;p&gt;Go语言处理zip压缩还是比较方便的，可以直接使用Go标准库&lt;code&gt;archive/zip&lt;/code&gt;。下面记录下具体使用方法，以及注意事项。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>好用的浏览器插件——搜索结果屏蔽指定网页</title>
+      <link>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</link>
+      <pubDate>Tue, 19 Sep 2023 21:35:21 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/19/chrome-edge-add-black-list/</guid>
+      <description>&lt;p&gt;最近使用搜索引擎被返回的某些网站搞的有些烦，于是就查了下该如何屏蔽某些搜索结果。
+实际上搜索引擎本身是支持一些参数来达到目的的，比如使用Chrome时如果不想搜索结果里出现CSDN网站的内容可以在搜索框里加&lt;code&gt;-csdn&lt;/code&gt;，效果如下：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>内网NAS使用docker部署Joplin笔记服务</title>
+      <link>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</link>
+      <pubDate>Tue, 12 Sep 2023 22:45:49 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/laurent22/joplin&#34;&gt;Joplin&lt;/a&gt;是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>curl proxy设置无效问题排查</title>
+      <link>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</link>
+      <pubDate>Sun, 20 Aug 2023 10:34:19 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/08/20/curl-proxy-no-use/</guid>
+      <description>&lt;p&gt;最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>无缓冲channel导致的goroutine泄露</title>
+      <link>https://www.mfun.ink/2023/08/19/goroutine-leak/</link>
+      <pubDate>Sat, 19 Aug 2023 13:17:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/08/19/goroutine-leak/</guid>
+      <description>&lt;p&gt;最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用
+select和time.After()实现超时控制，doSomething()一定会返回结果。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>局域网下通过路由器虚拟服务访问子网</title>
+      <link>https://www.mfun.ink/2023/07/30/lan-access-subnet/</link>
+      <pubDate>Sun, 30 Jul 2023 17:16:29 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/07/30/lan-access-subnet/</guid>
+      <description>&lt;p&gt;最近在折腾nas，遇到一种情况需要访问子网，当前nas通过网线连的光猫，路由器连的光猫，pc笔记本电脑连的路由器。网络拓补图如下，现在想要nas中跑的docker服务访问到pc中的服务。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://www.mfun.ink/images/lan-access-subnet/net.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>xorm使用map kv更新日期时间类型字段的时区问题</title>
+      <link>https://www.mfun.ink/2023/07/29/xorm-update-time/</link>
+      <pubDate>Sat, 29 Jul 2023 21:44:10 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/07/29/xorm-update-time/</guid>
+      <description>&lt;p&gt;最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-Go&#34; data-lang=&#34;Go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// demo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;type&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;ID&lt;/span&gt;         &lt;span style=&#34;color:#66d9ef&#34;&gt;int64&lt;/span&gt;     &lt;span style=&#34;color:#e6db74&#34;&gt;`xorm:&amp;#34;not null pk autoincr INT(11) &amp;#39;id&amp;#39;&amp;#34;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;UpdateTime&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Time&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;`xorm:&amp;#34;update_time&amp;#34;`&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UpdateTime&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;xorm&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Session&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Table&lt;/span&gt;(new(&lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt;)).&lt;span style=&#34;color:#a6e22e&#34;&gt;Where&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id = ?&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Update&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#a6e22e&#34;&gt;UpdateTime&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Now&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#a6e22e&#34;&gt;o&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Table&lt;/span&gt;(new(&lt;span style=&#34;color:#a6e22e&#34;&gt;TimeTest&lt;/span&gt;)).&lt;span style=&#34;color:#a6e22e&#34;&gt;Where&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id = ?&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;).&lt;span style=&#34;color:#a6e22e&#34;&gt;Update&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;map&lt;/span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;]&lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt;{}{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;update_time&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#a6e22e&#34;&gt;time&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Now&lt;/span&gt;(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	})
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>redis分布式锁</title>
+      <link>https://www.mfun.ink/2023/06/03/redis-lua-lock/</link>
+      <pubDate>Sat, 03 Jun 2023 21:10:31 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/06/03/redis-lua-lock/</guid>
+      <description>&lt;p&gt;分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>hexo版本升级</title>
+      <link>https://www.mfun.ink/2023/05/21/hexo-upgrade/</link>
+      <pubDate>Sun, 21 May 2023 22:11:01 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/05/21/hexo-upgrade/</guid>
+      <description>&lt;p&gt;hexo版本升级还是很简单的，先切到hexo目录，使用&lt;code&gt;npm i hexo-cli -g&lt;/code&gt;升级全局hexo，接下来再使用&lt;code&gt;npm-check&lt;/code&gt;、&lt;code&gt;npm-upgrade&lt;/code&gt;,&lt;code&gt;npm-update&lt;/code&gt;升级相关依赖。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>通过nginx流代理转发流量到trojan服务</title>
+      <link>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</link>
+      <pubDate>Sat, 20 May 2023 20:14:28 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/</guid>
+      <description>&lt;p&gt;上一篇&lt;a href=&#34;https://www.mfun.ink/2023/03/04/trojan-install/&#34;&gt;文章&lt;/a&gt;记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>trojan-go 安装配置</title>
+      <link>https://www.mfun.ink/2023/03/04/trojan-install/</link>
+      <pubDate>Sat, 04 Mar 2023 21:39:28 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/03/04/trojan-install/</guid>
+      <description>&lt;p&gt;本文记录一下&amp;quot;科学上网&amp;quot;工具trojan的安装和配置，至于为什么是trojan，说出来也是够坎坷。楼主之前搭的梯子使用过ss、ssr、v2ray，后来不想折腾了买了Lantern，不过最近Lantern用起来也各种不稳定，终于到了无法忍受的地步，刚好手里有国外的服务器就想着的自己再搭一个。一开始搭的ssr结果不到一周ip就被封了，看来伟大的gfw已经能够精准识别ssr流量了，无奈只好寻求其他的方法。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vue3学习笔记一.项目初始化</title>
+      <link>https://www.mfun.ink/2022/10/16/vue3-study-init/</link>
+      <pubDate>Sun, 16 Oct 2022 21:44:41 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/16/vue3-study-init/</guid>
+      <description>&lt;h2 id=&#34;安装&#34;&gt;安装&lt;/h2&gt;
+&lt;p&gt;vue的安装就直接参考&lt;a href=&#34;https://cn.vuejs.org/guide/quick-start.html&#34;&gt;官方文档&lt;/a&gt;，描述的已经很详细了。&lt;/p&gt;
+&lt;h2 id=&#34;项目创建&#34;&gt;项目创建&lt;/h2&gt;
+&lt;p&gt;直接使用vue create + 项目名创建项目，默认有三种配置可选，vue2、vue3各有一个默认创建选项，也可以选第三种自定义项目创建要引入的features。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>基于redis实现一个简单的分布式限流器</title>
+      <link>https://www.mfun.ink/2022/10/15/redis-current-limiter/</link>
+      <pubDate>Sat, 15 Oct 2022 22:30:35 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/15/redis-current-limiter/</guid>
+      <description>&lt;p&gt;分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>goroutine 并发数量限制</title>
+      <link>https://www.mfun.ink/2022/10/15/goroutine-limit/</link>
+      <pubDate>Sat, 15 Oct 2022 18:08:41 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/15/goroutine-limit/</guid>
+      <description>&lt;p&gt;最近经常用go写一些脚本，为了执行效率，一般会开启多个goroutine并发执行,脚本中通常会调用一些线上服务或者数据库读写数据，为了不影响线上服务运行,为了不影响线上服务运行就要对执行的goroutine数量进行限制，避免并发太大打垮线上服务。下面就简单写一个goroutine并发控制器。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2021年滴滴、腾讯视频、字节等面试记录</title>
+      <link>https://www.mfun.ink/2022/10/08/interview-2021/</link>
+      <pubDate>Sat, 08 Oct 2022 20:44:52 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/08/interview-2021/</guid>
+      <description>&lt;h2 id=&#34;好未来&#34;&gt;好未来&lt;/h2&gt;
+&lt;h3 id=&#34;一面&#34;&gt;一面&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;自我介绍&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最近做到项目 没细聊&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;redis 常用结构&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;redis 宕机恢复 aop rdb&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连接池 获取句柄时并发控制&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;mysql 引擎 区别&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;索引结构 b树 b+树 二叉树&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;算法 求数组交集 复杂度&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;算法 链表 快慢指针&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;http code 码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用orm框架&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;tcp udp&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;日志存储 elk&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口稳定性监控&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sync map&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GMP&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;垃圾回收&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你有什么想问的 问了下对面部门&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;期望薪资&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    <item>
+      <title>MacOS 使用笔记</title>
+      <link>https://www.mfun.ink/2020/11/18/mac-use/</link>
+      <pubDate>Wed, 18 Nov 2020 19:00:56 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/11/18/mac-use/</guid>
+      <description>&lt;h3 id=&#34;终端命令行&#34;&gt;终端命令行&lt;/h3&gt;
+&lt;h4 id=&#34;brew包管理工具&#34;&gt;brew包管理工具&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://brew.sh/&#34;&gt;brew&lt;/a&gt; mac下的神器，类似linux的包管理工具，可以通过brew安装各种软件。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Go启动main函数都干了什么(一)</title>
+      <link>https://www.mfun.ink/2020/10/27/go-start-up/</link>
+      <pubDate>Tue, 27 Oct 2020 15:27:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/10/27/go-start-up/</guid>
+      <description>&lt;h3 id=&#34;生成二进制可执行文件&#34;&gt;生成二进制可执行文件&lt;/h3&gt;
+&lt;p&gt;首先，写一个go main函数，这里就简单输出以下hello world。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;package main
+
+import &amp;#34;fmt&amp;#34;
+
+func main()  {
+	fmt.Println(&amp;#34;hello word&amp;#34;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行&lt;code&gt;go build -gcflags &amp;quot;-N -l&amp;quot; -ldflags=-compressdwarf=false -o main main.go&lt;/code&gt;生成可执行二进制文件。&lt;/p&gt;
+&lt;h3 id=&#34;开启gdb调试&#34;&gt;开启gdb调试&lt;/h3&gt;
+&lt;p&gt;执行&lt;code&gt;gdb main&lt;/code&gt;开始gdb调试。通过i files查看程序入口地址，再这个地址打上断点。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>macos gdb解决Unable to find Mach task port for process-id</title>
+      <link>https://www.mfun.ink/2020/10/26/macos-gdb-install/</link>
+      <pubDate>Mon, 26 Oct 2020 15:35:34 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/10/26/macos-gdb-install/</guid>
+      <description>&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;p&gt;直接使用&lt;code&gt;brew install gdb&lt;/code&gt; 安装， 没有安装brew的需要先安装&lt;a href=&#34;https://brew.sh/&#34;&gt;brew&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;问题&#34;&gt;问题&lt;/h3&gt;
+&lt;p&gt;安装之后，使用过程中遇到这么一个错误:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (please check gdb is codesigned - see taskgated(8))
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>造轮子——go 版本控制(gvm)</title>
+      <link>https://www.mfun.ink/2020/09/29/gvm/</link>
+      <pubDate>Tue, 29 Sep 2020 20:36:24 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/29/gvm/</guid>
+      <description>&lt;h2 id=&#34;功能列表&#34;&gt;功能列表&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;支持linux、darwin&lt;/li&gt;
+&lt;li&gt;获取远程go版本列表 &lt;code&gt;gvm remote&lt;/code&gt;
+&lt;img loading=&#34;lazy&#34; src=&#34;https://www.mfun.ink/images/gvm/remote.png&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>go 获取 net.conn fd 反射和非反射</title>
+      <link>https://www.mfun.ink/2020/09/27/gogetfd/</link>
+      <pubDate>Sun, 27 Sep 2020 22:27:25 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/27/gogetfd/</guid>
+      <description>&lt;h2 id=&#34;非反射获取&#34;&gt;非反射获取&lt;/h2&gt;
+&lt;p&gt;根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>websocket引入epoll机制</title>
+      <link>https://www.mfun.ink/2020/09/15/websocket-epoll/</link>
+      <pubDate>Tue, 15 Sep 2020 20:02:08 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/15/websocket-epoll/</guid>
+      <description>&lt;h2 id=&#34;原理&#34;&gt;原理&lt;/h2&gt;
+&lt;p&gt;正常情况下，不使用epoll，每建立一个ws连接我们都会启一个goroutine来处理客户端发来的消息，如果客户端没有消息，这个goroutine就会阻塞在读消息的状态。有多少个连接就会有多少个goroutine，虽然goroutine比较轻量，但在大量连接的情况下还是比较耗费资源还是很大的。
+使用epoll后会把所有ws连接的fd(文件描述符)放入一个epoll队列中，只启一个goroutine对epoll wait进行轮询获取缓冲区有内容的ws连接。这样就把之前要起n个goroutine变成了1个，随着连接数的增加性能的提升也会越来越明显。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>sse(serve send events) 服务端推送技术</title>
+      <link>https://www.mfun.ink/2020/09/12/sse/</link>
+      <pubDate>Sat, 12 Sep 2020 22:58:30 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/12/sse/</guid>
+      <description>&lt;h3 id=&#34;什么是sse&#34;&gt;什么是sse&lt;/h3&gt;
+&lt;p&gt;sse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求&amp;ndash;&amp;gt;应答的模式，一次request&amp;ndash;&amp;gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

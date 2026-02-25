@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Static Site on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/static-site/</link>
+    <description>Recent content in Static Site on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 04 May 2025 13:30:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/static-site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Complete Guide to Migrating from Hexo to Hugo</title>
+      <link>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/hexo-to-hugo-migration-guide/</guid>
+      <description>Detailed step-by-step instructions on how to smoothly migrate your Hexo blog to Hugo, including article conversion, multilingual setup, and metadata preservation</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Goroutine on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/goroutine/</link>
+    <description>Recent content in Goroutine on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 15 Oct 2022 18:08:41 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/goroutine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>goroutine 并发数量限制</title>
+      <link>https://www.mfun.ink/2022/10/15/goroutine-limit/</link>
+      <pubDate>Sat, 15 Oct 2022 18:08:41 +0800</pubDate>
+      <guid>https://www.mfun.ink/2022/10/15/goroutine-limit/</guid>
+      <description>&lt;p&gt;最近经常用go写一些脚本，为了执行效率，一般会开启多个goroutine并发执行,脚本中通常会调用一些线上服务或者数据库读写数据，为了不影响线上服务运行,为了不影响线上服务运行就要对执行的goroutine数量进行限制，避免并发太大打垮线上服务。下面就简单写一个goroutine并发控制器。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

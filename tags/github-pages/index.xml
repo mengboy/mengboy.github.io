@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GitHub Pages on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/github-pages/</link>
+    <description>Recent content in GitHub Pages on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 16 Feb 2026 11:59:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
+      <link>https://www.mfun.ink/english/post/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;Your local &lt;code&gt;hugo&lt;/code&gt; build works, but GitHub Actions fails randomly. Classic.
+The root cause is usually not the workflow syntax. It is environment drift, missing permissions, and unstable dependencies.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

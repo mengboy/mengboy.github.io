@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Go启动 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/go%E5%90%AF%E5%8A%A8/</link>
+    <description>Recent content in Go启动 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 27 Oct 2020 15:27:33 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/go%E5%90%AF%E5%8A%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go启动main函数都干了什么(一)</title>
+      <link>https://www.mfun.ink/2020/10/27/go-start-up/</link>
+      <pubDate>Tue, 27 Oct 2020 15:27:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/10/27/go-start-up/</guid>
+      <description>&lt;h3 id=&#34;生成二进制可执行文件&#34;&gt;生成二进制可执行文件&lt;/h3&gt;
+&lt;p&gt;首先，写一个go main函数，这里就简单输出以下hello world。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;package main
+
+import &amp;#34;fmt&amp;#34;
+
+func main()  {
+	fmt.Println(&amp;#34;hello word&amp;#34;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;执行&lt;code&gt;go build -gcflags &amp;quot;-N -l&amp;quot; -ldflags=-compressdwarf=false -o main main.go&lt;/code&gt;生成可执行二进制文件。&lt;/p&gt;
+&lt;h3 id=&#34;开启gdb调试&#34;&gt;开启gdb调试&lt;/h3&gt;
+&lt;p&gt;执行&lt;code&gt;gdb main&lt;/code&gt;开始gdb调试。通过i files查看程序入口地址，再这个地址打上断点。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

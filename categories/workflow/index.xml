@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Workflow on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/workflow/</link>
+    <description>Recent content in Workflow on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Feb 2026 23:15:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/workflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API &#43; MCP in Practice: From Function Calling to Agent Workflows</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve already used function calling but keep writing glue code for every non-trivial task, you&amp;rsquo;re likely at the point where &lt;strong&gt;Responses API + MCP&lt;/strong&gt; makes more sense.&lt;/p&gt;
+&lt;p&gt;This guide is practical: how to move from single tool calls to a scalable agent workflow where retrieval, execution, validation, and write-back follow a consistent structure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API &#43; MCP 实战：从函数调用到 Agent 工作流</title>
+      <link>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/openai-responses-api-mcp-agent-workflow/</guid>
+      <description>&lt;p&gt;如果你已经做过函数调用（function calling），但一上复杂流程就开始写一堆胶水代码，那你差不多到了该用 &lt;strong&gt;Responses API + MCP&lt;/strong&gt; 的阶段。&lt;/p&gt;
+&lt;p&gt;这篇不讲空概念，直接给你一个可落地的路线：把“模型调用工具”升级成“可扩展 Agent 工作流”，让检索、执行、校验、回写变成标准流程。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude / Codex / OpenAI CLI 工作流对比：开发效率怎么选</title>
+      <link>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;如果你把 AI 只当“聊天工具”，三家看起来差不多；但一旦进入真实开发链路，差异会非常明显。&lt;/p&gt;
+&lt;p&gt;我的结论先放前面：&lt;strong&gt;日常编码+项目内改动优先 Codex，长文推理和方案拆解用 Claude，OpenAI CLI 适合做标准化自动化和跨工具串联。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
+      <link>https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/</link>
+      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/</guid>
+      <description>&lt;p&gt;If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.&lt;/p&gt;
+&lt;p&gt;My conclusion first: &lt;strong&gt;use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

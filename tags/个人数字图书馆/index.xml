@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>个人数字图书馆 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E4%B8%AA%E4%BA%BA%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/</link>
+    <description>Recent content in 个人数字图书馆 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Oct 2023 23:18:33 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E4%B8%AA%E4%BA%BA%E6%95%B0%E5%AD%97%E5%9B%BE%E4%B9%A6%E9%A6%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker部署calibre-web</title>
+      <link>https://www.mfun.ink/2023/10/23/docker-calibre-web/</link>
+      <pubDate>Mon, 23 Oct 2023 23:18:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/10/23/docker-calibre-web/</guid>
+      <description>&lt;p&gt;有了NAS之后就想着物尽其用，把能够私有化部署的都全部都私有化部署，突出一个折腾。下面基于calibre-web打造个人数字图书馆。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

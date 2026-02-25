@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/categories/</link>
+    <description>Recent content in Categories on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Engineering</title>
+      <link>https://www.mfun.ink/en/categories/ai-engineering/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/ai-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/en/categories/go/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Self-Hosting</title>
+      <link>https://www.mfun.ink/en/categories/self-hosting/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/self-hosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://www.mfun.ink/en/categories/tutorial/</link>
+      <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://www.mfun.ink/en/categories/devops/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Distributed Systems</title>
+      <link>https://www.mfun.ink/en/categories/distributed-systems/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/distributed-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redis</title>
+      <link>https://www.mfun.ink/en/categories/redis/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/redis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>https://www.mfun.ink/en/categories/nginx/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Operations</title>
+      <link>https://www.mfun.ink/en/categories/operations/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/operations/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebSocket</title>
+      <link>https://www.mfun.ink/en/categories/websocket/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/websocket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>https://www.mfun.ink/en/categories/ai/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RAG</title>
+      <link>https://www.mfun.ink/en/categories/rag/</link>
+      <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/rag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://www.mfun.ink/en/categories/hugo/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Developer Productivity</title>
+      <link>https://www.mfun.ink/en/categories/developer-productivity/</link>
+      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/developer-productivity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>https://www.mfun.ink/en/categories/performance/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.mfun.ink/en/categories/troubleshooting/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/troubleshooting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mcp</title>
+      <link>https://www.mfun.ink/en/categories/mcp/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/mcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Workflow</title>
+      <link>https://www.mfun.ink/en/categories/workflow/</link>
+      <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://www.mfun.ink/en/categories/docker/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WSL</title>
+      <link>https://www.mfun.ink/en/categories/wsl/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/wsl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automation</title>
+      <link>https://www.mfun.ink/en/categories/automation/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Devtools</title>
+      <link>https://www.mfun.ink/en/categories/devtools/</link>
+      <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/devtools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software Engineering</title>
+      <link>https://www.mfun.ink/en/categories/software-engineering/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/software-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>https://www.mfun.ink/en/categories/blog/</link>
+      <pubDate>Sun, 04 May 2025 13:30:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/en/categories/blog/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

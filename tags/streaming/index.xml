@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Streaming on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/streaming/</link>
+    <description>Recent content in Streaming on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/streaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;Production streaming fails in two predictable ways: users wait while the stream silently drops, and your logs say &amp;ldquo;timeout&amp;rdquo; without telling you where it actually broke.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go pattern for OpenAI Responses API streaming with strict timeout boundaries, safe retries, and useful telemetry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性</title>
+      <link>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</link>
+      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</guid>
+      <description>&lt;p&gt;线上流式生成最怕两件事：用户在等，你的连接先断；日志里报错一堆，你却不知道是哪一层炸了。&lt;/p&gt;
+&lt;p&gt;这篇给你一个能直接落地的 Go 工程模板：把 OpenAI Responses API 的流式调用做成&lt;strong&gt;可超时、可重试、可观测&lt;/strong&gt;的生产级链路。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

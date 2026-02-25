@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/devops/</link>
+    <description>Recent content in DevOps on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 31 Dec 2025 12:30:15 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Software Engineering History: From Software Crisis to AI Co-Creation</title>
+      <link>https://www.mfun.ink/english/post/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;Large language models are changing how we clarify requirements, generate code, and design tests, and many teams feel that traditional workflows are being rewritten. To understand what is truly changing, it helps to place today inside the longer history of software engineering.&lt;/p&gt;
+&lt;p&gt;This article walks through the major stages of software engineering and ends with the AI-era variables and a simple checklist so you can map your current problems to the right time scale.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>软件工程发展史：从软件危机到AI共创</title>
+      <link>https://www.mfun.ink/2025/12/31/software-engineering-history-ai/</link>
+      <pubDate>Wed, 31 Dec 2025 12:30:15 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/12/31/software-engineering-history-ai/</guid>
+      <description>&lt;p&gt;AI大模型让需求澄清、代码生成、测试生成都出现了新的路径，很多团队感到传统开发流程被重写了。要看清这一轮变化的本质，先把软件工程的历史脉络梳理出来会更有帮助。&lt;/p&gt;
+&lt;p&gt;本文按阶段回顾软件工程的发展路径，最后落到AI时代的变量与判断方法，方便你把当下的问题放回更长的时间尺度里看清楚。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

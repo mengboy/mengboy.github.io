@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Docker on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/docker/</link>
+    <description>Recent content in Docker on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 11 Feb 2026 22:50:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
+      <link>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;If your &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; setup suddenly fails with &lt;code&gt;docker pull&lt;/code&gt; timeouts, &lt;code&gt;Temporary failure in name resolution&lt;/code&gt;, or containers that start but cannot access the internet, don&amp;rsquo;t nuke your environment yet. Most cases are recoverable in 15 minutes.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical sequence: identify whether the fault is DNS, proxy/VPN, virtual NIC, or Docker daemon config—then apply the smallest fix first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>docker应用挂载SMB网络目录遇到的问题</title>
+      <link>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</link>
+      <pubDate>Fri, 16 Feb 2024 00:18:54 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/02/16/docker-app-mount-smb/</guid>
+      <description>&lt;p&gt;最近在服务器上跑docker应用映射通过smb挂载的nas目录时遇到一些问题，在这里记录下，服务器系统是Linux Ubuntu 22.04。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>局域网下Windows docker 挂载 NAS 磁盘</title>
+      <link>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</link>
+      <pubDate>Sun, 28 Jan 2024 12:04:04 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/28/windows-wsl-docker/</guid>
+      <description>&lt;p&gt;在部署了N个docker服务后，我的极空间Z4CPU性能终于是被榨的一点不剩了，还想继续折腾怎么办，一是升级新款Z423，看了眼价格还是算了；二是服务和存储分开，搞个专门的服务器用来部署服务，NAS回归到它原本的定位上只用来做网络存储，刚好有台闲置的Windows笔记本搞起！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

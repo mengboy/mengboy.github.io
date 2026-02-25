@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>FeedMe on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/feedme/</link>
+    <description>Recent content in FeedMe on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 18 Jan 2024 23:35:51 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/feedme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RSSHub&#43;FreshRSS-FeedMe 打造个人RSS信息聚合服务</title>
+      <link>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</link>
+      <pubDate>Thu, 18 Jan 2024 23:35:51 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/01/18/rsshub-freshrss-feedme/</guid>
+      <description>&lt;p&gt;生命不息，折腾不止，继续压榨NAS的CPU，RSSHub+FreshRSS-FeedMe 打造个人RSS信息聚合服务&lt;/p&gt;
+&lt;h3 id=&#34;rss&#34;&gt;RSS&lt;/h3&gt;
+&lt;p&gt;rss是一种内容聚合工具，有rss和atom两种协议，xml为基础协议。通常在一些blog网站比较常见。通过订阅这种方式可以只接收自己选择自己想要关注的信息。&lt;/p&gt;
+&lt;h3 id=&#34;rsshub&#34;&gt;RSSHub&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.rsshub.app/zh/&#34;&gt;RSSHub&lt;/a&gt;是一款开源、简单易用的rss生成器，主要用于将不支持rss的网站变得可以使用rss这种方式订阅。目前已经支持数百个主流网站。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sse on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/sse/</link>
+    <description>Recent content in Sse on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 12 Sep 2020 22:58:30 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/sse/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sse(serve send events) 服务端推送技术</title>
+      <link>https://www.mfun.ink/2020/09/12/sse/</link>
+      <pubDate>Sat, 12 Sep 2020 22:58:30 +0800</pubDate>
+      <guid>https://www.mfun.ink/2020/09/12/sse/</guid>
+      <description>&lt;h3 id=&#34;什么是sse&#34;&gt;什么是sse&lt;/h3&gt;
+&lt;p&gt;sse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求&amp;ndash;&amp;gt;应答的模式，一次request&amp;ndash;&amp;gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>网络 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 网络 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 30 Jul 2023 17:16:29 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>局域网下通过路由器虚拟服务访问子网</title>
+      <link>https://www.mfun.ink/2023/07/30/lan-access-subnet/</link>
+      <pubDate>Sun, 30 Jul 2023 17:16:29 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/07/30/lan-access-subnet/</guid>
+      <description>&lt;p&gt;最近在折腾nas，遇到一种情况需要访问子网，当前nas通过网线连的光猫，路由器连的光猫，pc笔记本电脑连的路由器。网络拓补图如下，现在想要nas中跑的docker服务访问到pc中的服务。
+&lt;img loading=&#34;lazy&#34; src=&#34;https://www.mfun.ink/images/lan-access-subnet/net.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

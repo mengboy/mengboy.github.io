@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Incident Response on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/incident-response/</link>
+    <description>Recent content in Incident Response on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 14 Feb 2026 21:20:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/incident-response/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Memory Leak Triage in Production: pprof &#43; FlameGraph Step by Step</title>
+      <link>https://www.mfun.ink/english/post/go-memory-leak-pprof-flamegraph/</link>
+      <pubDate>Sat, 14 Feb 2026 21:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-memory-leak-pprof-flamegraph/</guid>
+      <description>&lt;p&gt;If your Go service RSS keeps climbing, drops after restart, then climbs again, you likely have a memory retention problem (or an actual leak pattern).&lt;/p&gt;
+&lt;p&gt;Do not start with random code edits. Run a clean evidence chain: &lt;strong&gt;metrics trend check → pprof snapshots → FlameGraph comparison → object growth path → regression validation&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

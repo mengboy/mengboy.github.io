@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Prompt on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/prompt/</link>
+    <description>Recent content in Prompt on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 01 Mar 2025 22:16:47 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/prompt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常见prompt框架</title>
+      <link>https://www.mfun.ink/2025/03/01/ai-prompt-methodology/</link>
+      <pubDate>Sat, 01 Mar 2025 22:16:47 +0800</pubDate>
+      <guid>https://www.mfun.ink/2025/03/01/ai-prompt-methodology/</guid>
+      <description>&lt;p&gt;deepseek出现后，AI的势头更加一路不可阻挡， cursor最近又更新了Claude 3.7，编程体验进一步提高，身为码农对未来还有几年职业生涯充满了焦虑。熟话说打不过就加入，AI的浪潮已经阻挡不了，最好的方式就是学习接受，细节算法实现暂且不提门槛太高，还是先从使用上入手，下面整理常见的prompt框架。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

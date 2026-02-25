@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>部署 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E9%83%A8%E7%BD%B2/</link>
+    <description>Recent content in 部署 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 Sep 2023 22:45:49 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E9%83%A8%E7%BD%B2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>内网NAS使用docker部署Joplin笔记服务</title>
+      <link>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</link>
+      <pubDate>Tue, 12 Sep 2023 22:45:49 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/09/12/joplin-docker-deploy/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/laurent22/joplin&#34;&gt;Joplin&lt;/a&gt;是一款开源的笔记系统，跨平台，支持同步，支持docker私有化部署。除了UI界面有点一言难进，作为笔记本身功能很全面。我是部署到了内网nas上，通过frp内网穿透实现的公网访问。部署过程如下：&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

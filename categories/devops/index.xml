@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/devops/</link>
+    <description>Recent content in DevOps on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis Distributed Lock Best Practices (with Common Misuse Cases)</title>
+      <link>https://www.mfun.ink/english/post/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;In high-concurrency scenarios, distributed locks are essential for ensuring data consistency. However, many developers&amp;rsquo; understanding of Redis distributed locks stops at &amp;ldquo;SETNX&amp;rdquo;, leading to frequent production incidents.&lt;/p&gt;
+&lt;p&gt;This article comprehensively covers the correct usage of Redis distributed locks from principles, implementation, common misuse cases to production-grade solutions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Redis 分布式锁正确姿势（含误用案例）</title>
+      <link>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;在高并发场景下，分布式锁是保证数据一致性的关键组件。但很多开发者对Redis分布式锁的理解停留在&amp;quot;SETNX&amp;quot;层面，导致线上事故频发。&lt;/p&gt;
+&lt;p&gt;本文将从原理、实现、常见误用到生产级解决方案，全面梳理Redis分布式锁的正确使用姿势。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub Actions 自动部署 Hugo：防翻车配置与排障清单</title>
+      <link>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/16/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;本地 &lt;code&gt;hugo&lt;/code&gt; 能跑，到了 GitHub Actions 就翻车，是很多博客维护者的日常。
+最常见的问题不是“不会写 workflow”，而是环境不一致、版本漂移、权限设置遗漏。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Auto Deploy with GitHub Actions: Safe Config and Troubleshooting</title>
+      <link>https://www.mfun.ink/english/post/github-actions-hugo-auto-deploy-safe-config/</link>
+      <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/github-actions-hugo-auto-deploy-safe-config/</guid>
+      <description>&lt;p&gt;Your local &lt;code&gt;hugo&lt;/code&gt; build works, but GitHub Actions fails randomly. Classic.
+The root cause is usually not the workflow syntax. It is environment drift, missing permissions, and unstable dependencies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker Network Troubleshooting: Fix DNS Timeouts and Image Pull Failures</title>
+      <link>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/english/post/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;If your &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; setup suddenly fails with &lt;code&gt;docker pull&lt;/code&gt; timeouts, &lt;code&gt;Temporary failure in name resolution&lt;/code&gt;, or containers that start but cannot access the internet, don&amp;rsquo;t nuke your environment yet. Most cases are recoverable in 15 minutes.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical sequence: identify whether the fault is DNS, proxy/VPN, virtual NIC, or Docker daemon config—then apply the smallest fix first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WSL2 &#43; Docker 网络异常排查：DNS 超时、拉镜像失败到恢复可用</title>
+      <link>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</link>
+      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/11/wsl2-docker-network-troubleshooting/</guid>
+      <description>&lt;p&gt;如果你在 &lt;strong&gt;WSL2 + Docker&lt;/strong&gt; 环境里遇到 &lt;code&gt;docker pull&lt;/code&gt; 超时、&lt;code&gt;Temporary failure in name resolution&lt;/code&gt;、容器能启动但不能联网，先别重装系统。绝大多数问题都能在 15 分钟内定位并修好。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可复制的排查顺序：先确认是 DNS、代理、虚拟网卡还是 Docker daemon 配置，再按最小改动恢复网络。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

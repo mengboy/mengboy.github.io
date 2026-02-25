@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Wiki on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/wiki/</link>
+    <description>Recent content in Wiki on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 31 Dec 2023 20:28:29 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/wiki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NAS部署wiki.js</title>
+      <link>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</link>
+      <pubDate>Sun, 31 Dec 2023 20:28:29 +0800</pubDate>
+      <guid>https://www.mfun.ink/2023/12/31/wiki-js-deploy/</guid>
+      <description>&lt;p&gt;wiki.js 是一款开源、颜值极高，功能强大的wiki软件，基于Node构建，本身支持嵌入draw.io画流程图，这个是真的方便，就果断部署来体验下。&lt;a href=&#34;https://js.wiki/&#34;&gt;官网&lt;/a&gt; 和 &lt;a href=&#34;https://github.com/Requarks/wiki&#34;&gt;github&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

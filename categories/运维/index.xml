@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>运维 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/%E8%BF%90%E7%BB%B4/</link>
+    <description>Recent content in 运维 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx 反向代理 WebSocket 频繁断连：7 个高频坑与可复制修复</title>
+      <link>https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/</link>
+      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/18/nginx-websocket-disconnect-traps/</guid>
+      <description>&lt;p&gt;WebSocket 经常“连上又掉”，大多数不是后端代码锅，而是 &lt;strong&gt;Nginx 反代链路配置不完整&lt;/strong&gt;。典型症状是前端反复重连、日志出现 &lt;code&gt;upstream timed out&lt;/code&gt;、或者握手直接拿不到 &lt;code&gt;101 Switching Protocols&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这篇给你一套能直接抄的排查与修复清单，按顺序做，通常 30 分钟内能稳定。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

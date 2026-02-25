@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>搜索引擎 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/</link>
+    <description>Recent content in 搜索引擎 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 20 Jul 2024 09:47:33 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/categories/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>seo 优化措施</title>
+      <link>https://www.mfun.ink/2024/07/20/seo-base/</link>
+      <pubDate>Sat, 20 Jul 2024 09:47:33 +0800</pubDate>
+      <guid>https://www.mfun.ink/2024/07/20/seo-base/</guid>
+      <description>&lt;h2 id=&#34;seo-是什么&#34;&gt;seo 是什么&lt;/h2&gt;
+&lt;p&gt;SEO，即搜索引擎优化（Search Engine Optimization），是一种通过优化网站结构、内容和外部链接来提高网站在搜索引擎中的排名的技术和策略。SEO的目的是增加网站的可见性，从而吸引更多的自然流量（即非付费流量）。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

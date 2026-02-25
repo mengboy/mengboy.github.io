@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>防重入 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E9%98%B2%E9%87%8D%E5%85%A5/</link>
+    <description>Recent content in 防重入 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 19 Feb 2026 09:55:00 +0800</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E9%98%B2%E9%87%8D%E5%85%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Redis 分布式锁正确姿势（含误用案例）</title>
+      <link>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</link>
+      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
+      <guid>https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/</guid>
+      <description>&lt;p&gt;在高并发场景下，分布式锁是保证数据一致性的关键组件。但很多开发者对Redis分布式锁的理解停留在&amp;quot;SETNX&amp;quot;层面，导致线上事故频发。&lt;/p&gt;
+&lt;p&gt;本文将从原理、实现、常见误用到生产级解决方案，全面梳理Redis分布式锁的正确使用姿势。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
