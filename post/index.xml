@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Feb 2026 01:18:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Agents SDK &#43; Go 落地指南：Tool Calling、会话记忆与错误恢复</title>
+      <link>https://www.mfun.ink/2026/02/25/openai-agents-sdk-go-tool-calling/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/25/openai-agents-sdk-go-tool-calling/</guid>
+      <description>&lt;p&gt;很多团队已经把 LLM 接进业务，但一到“多步任务 + 调工具 + 失败重试”就开始失控：日志看不懂、状态回不去、成本还飙升。&lt;/p&gt;
+&lt;p&gt;这篇给你一个能直接落地到 Go 服务里的最小可用方案：&lt;strong&gt;工具调用闭环、会话记忆分层、错误恢复可回放&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性</title>
       <link>https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/</link>

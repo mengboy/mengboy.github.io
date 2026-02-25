@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Agents SDK &#43; Go 落地指南：Tool Calling、会话记忆与错误恢复
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>很多团队已经把 LLM 接进业务，但一到“多步任务 &#43; 调工具 &#43; 失败重试”就开始失控：日志看不懂、状态回不去、成本还飙升。
+这篇给你一个能直接落地到 Go 服务里的最小可用方案：工具调用闭环、会话记忆分层、错误恢复可回放。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-25 01:18:00 +0000 UTC'>February 25, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Agents SDK &#43; Go 落地指南：Tool Calling、会话记忆与错误恢复" href="https://www.mfun.ink/2026/02/25/openai-agents-sdk-go-tool-calling/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Agents SDK with Go: Tool Calling, Session Memory, and Error Recovery
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Most teams can connect an LLM in a demo. The real pain starts in production: multi-step tasks, flaky tool calls, unclear retries, and rising cost.
+This guide gives you a pragmatic Go-first blueprint for shipping an Agent workflow that can survive real incidents.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-25 01:18:00 +0000 UTC'>February 25, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Agents SDK with Go: Tool Calling, Session Memory, and Error Recovery" href="https://www.mfun.ink/english/post/openai-agents-sdk-go-tool-calling/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability
     </h2>
   </header>
@@ -306,32 +334,6 @@ Do not start with random code edits. Run a clean evidence chain: metrics trend c
   </div>
   <footer class="entry-footer"><span title='2023-09-26 22:47:26 +0800 CST'>September 26, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Go处理zip压缩以及解压" href="https://www.mfun.ink/2023/09/26/go-zip/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">无缓冲channel导致的goroutine泄露
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近搞出来一个挺弱智的问题，记录一下，以示警戒。代码主要逻辑如下，使用 select和time.After()实现超时控制，doSomething()一定会返回结果。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-08-19 13:17:15 +0800 CST'>August 19, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to 无缓冲channel导致的goroutine泄露" href="https://www.mfun.ink/2023/08/19/goroutine-leak/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">xorm使用map kv更新日期时间类型字段的时区问题
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？
-// demo type TimeTest struct { ID int64 `xorm:&#34;not null pk autoincr INT(11) &#39;id&#39;&#34;` UpdateTime time.Time `xorm:&#34;update_time&#34;` } func UpdateTime(o *xorm.Session) { o.Table(new(TimeTest)).Where(&#34;id = ?&#34;, 1).Update(&amp;TimeTest{ UpdateTime: time.Now(), }) o.Table(new(TimeTest)).Where(&#34;id = ?&#34;, 1).Update(map[string]interface{}{ &#34;update_time&#34;: time.Now(), }) } ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-29 21:44:10 +0800 CST'>July 29, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to xorm使用map kv更新日期时间类型字段的时区问题" href="https://www.mfun.ink/2023/07/29/xorm-update-time/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

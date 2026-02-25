@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Feb 2026 01:18:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error Recovery</title>
+      <link>https://www.mfun.ink/en/tags/error-recovery/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/error-recovery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/en/tags/go/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Agents SDK</title>
+      <link>https://www.mfun.ink/en/tags/openai-agents-sdk/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai-agents-sdk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Session Memory</title>
+      <link>https://www.mfun.ink/en/tags/session-memory/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/session-memory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool Calling</title>
+      <link>https://www.mfun.ink/en/tags/tool-calling/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/tool-calling/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Golang</title>
       <link>https://www.mfun.ink/en/tags/golang/</link>

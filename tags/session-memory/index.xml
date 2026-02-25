@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Session Memory on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/session-memory/</link>
+    <description>Recent content in Session Memory on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Feb 2026 01:18:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/session-memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Agents SDK &#43; Go 落地指南：Tool Calling、会话记忆与错误恢复</title>
+      <link>https://www.mfun.ink/2026/02/25/openai-agents-sdk-go-tool-calling/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/25/openai-agents-sdk-go-tool-calling/</guid>
+      <description>&lt;p&gt;很多团队已经把 LLM 接进业务，但一到“多步任务 + 调工具 + 失败重试”就开始失控：日志看不懂、状态回不去、成本还飙升。&lt;/p&gt;
+&lt;p&gt;这篇给你一个能直接落地到 Go 服务里的最小可用方案：&lt;strong&gt;工具调用闭环、会话记忆分层、错误恢复可回放&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Agents SDK with Go: Tool Calling, Session Memory, and Error Recovery</title>
+      <link>https://www.mfun.ink/english/post/openai-agents-sdk-go-tool-calling/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-agents-sdk-go-tool-calling/</guid>
+      <description>&lt;p&gt;Most teams can connect an LLM in a demo. The real pain starts in production: multi-step tasks, flaky tool calls, unclear retries, and rising cost.&lt;/p&gt;
+&lt;p&gt;This guide gives you a pragmatic Go-first blueprint for shipping an Agent workflow that can survive real incidents.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

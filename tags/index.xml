@@ -6,8 +6,43 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Feb 2026 01:18:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error Recovery</title>
+      <link>https://www.mfun.ink/tags/error-recovery/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/error-recovery/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/tags/go/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Agents SDK</title>
+      <link>https://www.mfun.ink/tags/openai-agents-sdk/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/openai-agents-sdk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Session Memory</title>
+      <link>https://www.mfun.ink/tags/session-memory/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/session-memory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tool Calling</title>
+      <link>https://www.mfun.ink/tags/tool-calling/</link>
+      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/tool-calling/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Golang</title>
       <link>https://www.mfun.ink/tags/golang/</link>
@@ -818,13 +853,6 @@
       <link>https://www.mfun.ink/tags/sqlite/</link>
       <pubDate>Fri, 16 Feb 2024 00:18:54 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/sqlite/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://www.mfun.ink/tags/go/</link>
-      <pubDate>Sun, 28 Jan 2024 21:42:10 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/go/</guid>
       <description></description>
     </item>
     <item>
