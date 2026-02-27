@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>回归测试 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E5%9B%9E%E5%BD%92%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 回归测试 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 27 Feb 2026 01:18:38 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E5%9B%9E%E5%BD%92%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions &#43; AI Agent 自动修复流水线：失败分级、回归测试与安全闸门</title>
+      <link>https://www.mfun.ink/2026/02/27/github-actions-ai-agent-auto-fix-pipeline/</link>
+      <pubDate>Fri, 27 Feb 2026 01:18:38 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/02/27/github-actions-ai-agent-auto-fix-pipeline/</guid>
+      <description>&lt;p&gt;线上 CI 一旦连续红灯，团队最怕的不是“修得慢”，而是“修坏更多”。
+这篇给你一套可落地的 &lt;strong&gt;GitHub Actions + AI Agent 自动修复流水线&lt;/strong&gt;：先做失败分级，再限制 AI 修改范围，最后用回归与安全闸门兜底。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

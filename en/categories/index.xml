@@ -6,13 +6,20 @@
     <description>Recent content in Categories on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Feb 2026 01:18:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 01:18:38 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Engineering</title>
       <link>https://www.mfun.ink/en/categories/ai-engineering/</link>
-      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
+      <pubDate>Fri, 27 Feb 2026 01:18:38 +0000</pubDate>
       <guid>https://www.mfun.ink/en/categories/ai-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>https://www.mfun.ink/en/categories/devops/</link>
+      <pubDate>Fri, 27 Feb 2026 01:18:38 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/devops/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +41,6 @@
       <link>https://www.mfun.ink/en/categories/tutorial/</link>
       <pubDate>Fri, 20 Feb 2026 01:11:51 +0000</pubDate>
       <guid>https://www.mfun.ink/en/categories/tutorial/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DevOps</title>
-      <link>https://www.mfun.ink/en/categories/devops/</link>
-      <pubDate>Thu, 19 Feb 2026 09:55:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/en/categories/devops/</guid>
       <description></description>
     </item>
     <item>
@@ -79,7 +79,7 @@
       <description></description>
     </item>
     <item>
-      <title>Ai</title>
+      <title>AI</title>
       <link>https://www.mfun.ink/en/categories/ai/</link>
       <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/categories/ai/</guid>
@@ -121,7 +121,7 @@
       <description></description>
     </item>
     <item>
-      <title>Mcp</title>
+      <title>MCP</title>
       <link>https://www.mfun.ink/en/categories/mcp/</link>
       <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/categories/mcp/</guid>

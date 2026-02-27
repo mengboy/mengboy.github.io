@@ -216,6 +216,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">go 指针赋值是原子性的吗
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>问题提出 提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-12-06 21:16:31 +0800 CST'>December 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to go 指针赋值是原子性的吗" href="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Go语言编程规范-命名篇
     </h2>
   </header>
@@ -329,18 +342,6 @@
   </div>
   <footer class="entry-footer"><span title='2023-08-19 13:17:15 +0800 CST'>August 19, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to 无缓冲channel导致的goroutine泄露" href="https://www.mfun.ink/2023/08/19/goroutine-leak/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">局域网下通过路由器虚拟服务访问子网
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近在折腾nas，遇到一种情况需要访问子网，当前nas通过网线连的光猫，路由器连的光猫，pc笔记本电脑连的路由器。网络拓补图如下，现在想要nas中跑的docker服务访问到pc中的服务。 ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-30 17:16:29 +0800 CST'>July 30, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to 局域网下通过路由器虚拟服务访问子网" href="https://www.mfun.ink/2023/07/30/lan-access-subnet/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
