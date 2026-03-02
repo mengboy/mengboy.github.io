@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Feb 2026 01:18:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 01:12:10 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Connection Pool</title>
+      <link>https://www.mfun.ink/en/tags/connection-pool/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/connection-pool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>https://www.mfun.ink/en/tags/dns/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/en/tags/go/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/en/tags/openai/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy</title>
+      <link>https://www.mfun.ink/en/tags/proxy/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Timeout</title>
+      <link>https://www.mfun.ink/en/tags/timeout/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/timeout/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TLS</title>
+      <link>https://www.mfun.ink/en/tags/tls/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/tls/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI Agent</title>
       <link>https://www.mfun.ink/en/tags/ai-agent/</link>
@@ -51,13 +100,6 @@
       <description></description>
     </item>
     <item>
-      <title>Go</title>
-      <link>https://www.mfun.ink/en/tags/go/</link>
-      <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>OpenAI Agents SDK</title>
       <link>https://www.mfun.ink/en/tags/openai-agents-sdk/</link>
       <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
@@ -90,13 +132,6 @@
       <link>https://www.mfun.ink/en/tags/observability/</link>
       <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/observability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/en/tags/openai/</link>
-      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/openai/</guid>
       <description></description>
     </item>
     <item>
@@ -370,13 +405,6 @@
       <link>https://www.mfun.ink/en/tags/openai-responses-api/</link>
       <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/tags/openai-responses-api/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DNS</title>
-      <link>https://www.mfun.ink/en/tags/dns/</link>
-      <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/en/tags/dns/</guid>
       <description></description>
     </item>
     <item>

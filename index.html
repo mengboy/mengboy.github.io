@@ -226,6 +226,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上调用 OpenAI API 一旦出现超时，最烦的不是“偶发失败”，而是你不知道到底卡在 DNS、TLS、代理，还是你自己的连接池。
+这篇给你一套可直接落地的排查顺序：先判定超时发生在哪一段，再用指标和最小实验定位，最后给可复制的 Go 配置模板，避免同类事故反复出现。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-02 01:12:10 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清" href="https://www.mfun.ink/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">GitHub Actions &#43; AI Agent 自动修复流水线：失败分级、回归测试与安全闸门
     </h2>
   </header>
@@ -346,20 +360,6 @@
   </div>
   <footer class="entry-footer"><span title='2026-02-15 10:30:00 +0800 CST'>February 15, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Claude Code &#43; Codex 多模型协作开发：成本、速度与质量对比（含可复用流程）" href="https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>线上 Go 服务 RSS 一路涨，重启后短暂恢复，过几小时继续涨——这就是典型“疑似内存泄漏”场景。
-别先拍脑袋改代码，先把证据链跑通：监控确认 → pprof 采样 → FlameGraph 对比 → 定位对象增长路径 → 回归验证。这套流程跑完，基本能把“玄学泄漏”打成“可复现 bug”。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-14 21:20:00 +0800 CST'>February 14, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准" href="https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

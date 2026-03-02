@@ -6,8 +6,16 @@
     <description>Recent content in AI Engineering on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Feb 2026 01:18:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 01:12:10 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/ai-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go &#43; OpenAI API Timeout Troubleshooting: DNS, TLS, Proxy, and Connection Pool</title>
+      <link>https://www.mfun.ink/english/post/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/</link>
+      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/</guid>
+      <description>&lt;p&gt;When OpenAI API calls start timing out in production, the real problem is usually not “OpenAI is down.”&lt;/p&gt;
+&lt;p&gt;The real problem is you don’t know which hop is failing: DNS, TLS handshake, proxy path, or your own connection pool.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>GitHub Actions &#43; AI Agent Auto-Fix Pipeline: Failure Tiers, Regression Gates, and Security Guardrails</title>
       <link>https://www.mfun.ink/english/post/github-actions-ai-agent-auto-fix-pipeline/</link>

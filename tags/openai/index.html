@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go &#43; OpenAI API Timeout Troubleshooting: DNS, TLS, Proxy, and Connection Pool
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When OpenAI API calls start timing out in production, the real problem is usually not “OpenAI is down.”
+The real problem is you don’t know which hop is failing: DNS, TLS handshake, proxy path, or your own connection pool.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-02 01:12:10 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go &#43; OpenAI API Timeout Troubleshooting: DNS, TLS, Proxy, and Connection Pool" href="https://www.mfun.ink/english/post/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上调用 OpenAI API 一旦出现超时，最烦的不是“偶发失败”，而是你不知道到底卡在 DNS、TLS、代理，还是你自己的连接池。
+这篇给你一套可直接落地的排查顺序：先判定超时发生在哪一段，再用指标和最小实验定位，最后给可复制的 Go 配置模板，避免同类事故反复出现。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-02 01:12:10 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清" href="https://www.mfun.ink/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability
     </h2>
   </header>
