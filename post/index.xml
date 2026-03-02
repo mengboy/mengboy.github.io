@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 Mar 2026 01:12:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 12:44:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Assistants/Responses 在 Go 里的上下文爆炸治理：截断策略、摘要回填与成本上限</title>
+      <link>https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/</guid>
+      <description>&lt;p&gt;线上 Agent 一跑久了就会遇到同一个坑：上下文越来越长，延迟飙升、费用失控，最后还更容易答偏。&lt;/p&gt;
+&lt;p&gt;这不是模型“变笨”了，通常是上下文治理没做：该留的没留、该删的没删、该摘要的摘要坏了。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清</title>
       <link>https://www.mfun.ink/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Context Management on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/context-management/</link>
+    <description>Recent content in Context Management on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 02 Mar 2026 12:44:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/context-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Taming Context Explosion in OpenAI Assistants/Responses with Go: Truncation, Summary Backfill, and Cost Caps</title>
+      <link>https://www.mfun.ink/english/post/openai-assistants-responses-go/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-assistants-responses-go/</guid>
+      <description>&lt;p&gt;Long-running agent sessions usually fail the same way: context keeps growing, latency spikes, costs blow up, and answer quality gets worse.&lt;/p&gt;
+&lt;p&gt;That is rarely a model-quality issue. It is almost always missing context governance.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

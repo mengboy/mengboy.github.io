@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +15,21 @@
                 href="https://www.mfun.ink/en/categories/ai-engineering/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/tags/assistants/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/assistants/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/assistants/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -26,6 +39,123 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/context-management/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/context-management/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/context-management/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/cost-optimization/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/cost-optimization/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/cost-optimization/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/go/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/go/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/go/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/go/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/openai/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/openai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/openai/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/responses-api/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/responses-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/responses-api/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/03/02/openai-assistants-responses-go/</loc>
+    <lastmod>2026-03-02T12:44:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/03/02/openai-assistants-responses-go/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/connection-pool/</loc>
@@ -54,32 +184,6 @@
                 href="https://www.mfun.ink/en/tags/dns/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/categories/go/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/go/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/go/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/go/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/</loc>
     <lastmod>2026-03-02T01:12:10+00:00</lastmod>
     <xhtml:link
@@ -93,32 +197,6 @@
                 href="https://www.mfun.ink/en/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/openai/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/openai/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/openai/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/proxy/</loc>
     <lastmod>2026-03-02T01:12:10+00:00</lastmod>
     <xhtml:link
@@ -130,19 +208,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/proxy/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-03-02T01:12:10+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/timeout/</loc>
@@ -364,19 +429,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/responses-api/</loc>
-    <lastmod>2026-02-23T01:15:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/responses-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/responses-api/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/streaming/</loc>
@@ -910,19 +962,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/codex/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/cost-optimization/</loc>
-    <lastmod>2026-02-15T10:30:00+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/cost-optimization/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/cost-optimization/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/developer-productivity/</loc>

@@ -6,8 +6,16 @@
     <description>Recent content in OpenAI on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Mar 2026 01:12:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 12:44:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Taming Context Explosion in OpenAI Assistants/Responses with Go: Truncation, Summary Backfill, and Cost Caps</title>
+      <link>https://www.mfun.ink/en/2026/03/02/openai-assistants-responses-go/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/02/openai-assistants-responses-go/</guid>
+      <description>&lt;p&gt;Long-running agent sessions usually fail the same way: context keeps growing, latency spikes, costs blow up, and answer quality gets worse.&lt;/p&gt;
+&lt;p&gt;That is rarely a model-quality issue. It is almost always missing context governance.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go &#43; OpenAI API Timeout Troubleshooting: DNS, TLS, Proxy, and Connection Pool</title>
       <link>https://www.mfun.ink/en/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/</link>

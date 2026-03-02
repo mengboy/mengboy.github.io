@@ -216,6 +216,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">curl proxy设置无效问题排查
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>最近碰到一个curl使用问题，现象是在终端里设置proxy环境变量然后curl没有生效，其他命令比如git clone、brew等等都是有效的，于是怀疑curl是不是有什么不为认知的特殊配置，想到这里就来了兴致，立马开始查起。最终发现是被自己遗忘的一个配置，属实大乌龙。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-08-20 10:34:19 +0800 CST'>August 20, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to curl proxy设置无效问题排查" href="https://www.mfun.ink/2023/08/20/curl-proxy-no-use/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">无缓冲channel导致的goroutine泄露
     </h2>
   </header>
@@ -329,19 +342,6 @@
   </div>
   <footer class="entry-footer"><span title='2022-10-15 22:30:35 +0800 CST'>October 15, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to 基于redis实现一个简单的分布式限流器" href="https://www.mfun.ink/2022/10/15/redis-current-limiter/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">goroutine 并发数量限制
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近经常用go写一些脚本，为了执行效率，一般会开启多个goroutine并发执行,脚本中通常会调用一些线上服务或者数据库读写数据，为了不影响线上服务运行,为了不影响线上服务运行就要对执行的goroutine数量进行限制，避免并发太大打垮线上服务。下面就简单写一个goroutine并发控制器。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2022-10-15 18:08:41 +0800 CST'>October 15, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to goroutine 并发数量限制" href="https://www.mfun.ink/2022/10/15/goroutine-limit/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

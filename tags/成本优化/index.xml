@@ -6,8 +6,16 @@
     <description>Recent content in 成本优化 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 15 Feb 2026 10:30:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 12:44:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Assistants/Responses 在 Go 里的上下文爆炸治理：截断策略、摘要回填与成本上限</title>
+      <link>https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/</guid>
+      <description>&lt;p&gt;线上 Agent 一跑久了就会遇到同一个坑：上下文越来越长，延迟飙升、费用失控，最后还更容易答偏。&lt;/p&gt;
+&lt;p&gt;这不是模型“变笨”了，通常是上下文治理没做：该留的没留、该删的没删、该摘要的摘要坏了。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude Code &#43; Codex 多模型协作开发：成本、速度与质量对比（含可复用流程）</title>
       <link>https://www.mfun.ink/2026/02/15/claude-code-codex-multi-model-collaboration/</link>

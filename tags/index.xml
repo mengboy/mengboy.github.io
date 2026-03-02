@@ -6,8 +6,64 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 Mar 2026 01:12:10 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 12:44:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Assistants</title>
+      <link>https://www.mfun.ink/tags/assistants/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/assistants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Context Management</title>
+      <link>https://www.mfun.ink/tags/context-management/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/context-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cost Optimization</title>
+      <link>https://www.mfun.ink/tags/cost-optimization/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/cost-optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/tags/go/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/tags/openai/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Responses API</title>
+      <link>https://www.mfun.ink/tags/responses-api/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/responses-api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>成本优化</title>
+      <link>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>上下文管理</title>
+      <link>https://www.mfun.ink/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Connection Pool</title>
       <link>https://www.mfun.ink/tags/connection-pool/</link>
@@ -20,20 +76,6 @@
       <link>https://www.mfun.ink/tags/dns/</link>
       <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/dns/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://www.mfun.ink/tags/go/</link>
-      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/tags/openai/</link>
-      <pubDate>Mon, 02 Mar 2026 01:12:10 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/openai/</guid>
       <description></description>
     </item>
     <item>
@@ -146,13 +188,6 @@
       <link>https://www.mfun.ink/tags/observability/</link>
       <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/observability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Responses API</title>
-      <link>https://www.mfun.ink/tags/responses-api/</link>
-      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/responses-api/</guid>
       <description></description>
     </item>
     <item>
@@ -408,13 +443,6 @@
       <description></description>
     </item>
     <item>
-      <title>Cost Optimization</title>
-      <link>https://www.mfun.ink/tags/cost-optimization/</link>
-      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/cost-optimization/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Engineering Quality</title>
       <link>https://www.mfun.ink/tags/engineering-quality/</link>
       <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
@@ -426,13 +454,6 @@
       <link>https://www.mfun.ink/tags/multi-model-workflow/</link>
       <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/multi-model-workflow/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>成本优化</title>
-      <link>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</link>
-      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
