@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Idempotency on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/idempotency/</link>
+    <description>Recent content in Idempotency on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 04 Mar 2026 01:10:40 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/idempotency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; Go: Taming Retry Storms with Idempotency Keys, Jittered Backoff, and Circuit Breakers</title>
+      <link>https://www.mfun.ink/en/2026/03/04/openai-responses-go-retry-storm-idempotency-backoff-circuit-breaker/</link>
+      <pubDate>Wed, 04 Mar 2026 01:10:40 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/04/openai-responses-go-retry-storm-idempotency-backoff-circuit-breaker/</guid>
+      <description>&lt;p&gt;The most expensive outage is not a single failure — it is a failure amplified by retries.&lt;/p&gt;
+&lt;p&gt;In an OpenAI Responses + Go tool-calling stack, missing idempotency, jittered backoff, and breaker thresholds can turn 10 failing requests into 1000 downstream calls in minutes.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
