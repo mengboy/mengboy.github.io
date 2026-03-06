@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When Go services call the OpenAI Responses API in production, the real failures are rarely about model quality. Most incidents come from transport instability: weak connection pooling, conflicting timeout layers, and retry storms.
+This guide gives you a practical baseline: HTTP/2 reuse, layered timeout budgets, bounded retries, and error-budget driven operations.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-06 01:13:12 +0000 UTC'>March 6, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control" href="https://www.mfun.ink/english/post/go-openai-responses-connection-pool-timeout-budget/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上 Go 服务调用 OpenAI Responses 时，最容易踩的坑不是“模型不准”，而是链路抖动：连接池不稳、超时预算乱配、重试叠加把自己打挂。
+这篇给一套可落地的基线配置：HTTP/2 连接复用、分层超时、错误预算和退避重试，目标是把 5xx 与超时比例压到可控范围，并且能快速定位瓶颈。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-06 01:13:12 +0000 UTC'>March 6, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环" href="https://www.mfun.ink/2026/03/06/go-openai-responses-connection-pool-timeout-budget/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses &#43; Go 工具调用重试风暴治理：幂等键、退避抖动与熔断阈值
     </h2>
   </header>
@@ -311,34 +339,12 @@ This guide gives you a practical Go pattern for OpenAI Responses API streaming w
   <footer class="entry-footer"><span title='2026-02-23 01:15:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性" href="https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/"></a>
 </article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Claude / Codex / OpenAI CLI 工作流对比：开发效率怎么选
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>如果你把 AI 只当“聊天工具”，三家看起来差不多；但一旦进入真实开发链路，差异会非常明显。
-我的结论先放前面：日常编码&#43;项目内改动优先 Codex，长文推理和方案拆解用 Claude，OpenAI CLI 适合做标准化自动化和跨工具串联。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-09 23:28:00 +0800 CST'>February 9, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Claude / Codex / OpenAI CLI 工作流对比：开发效率怎么选" href="https://www.mfun.ink/2026/02/09/claude-codex-openai-cli-workflow-comparison/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>If you use AI as a chatbot only, these tools feel similar. In real engineering workflows, they behave very differently.
-My conclusion first: use Codex for repo-native coding changes, Claude for deep reasoning and long-form planning, and OpenAI CLI for standardized automation pipelines.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-09 23:28:00 +0800 CST'>February 9, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity" href="https://www.mfun.ink/english/post/claude-codex-openai-cli-workflow-comparison/"></a>
-</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://www.mfun.ink/tags/openai/page/2/">&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">

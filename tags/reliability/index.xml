@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reliability on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/reliability/</link>
+    <description>Recent content in Reliability on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 06 Mar 2026 01:13:12 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control</title>
+      <link>https://www.mfun.ink/english/post/go-openai-responses-connection-pool-timeout-budget/</link>
+      <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-openai-responses-connection-pool-timeout-budget/</guid>
+      <description>&lt;p&gt;When Go services call the OpenAI Responses API in production, the real failures are rarely about model quality. Most incidents come from transport instability: weak connection pooling, conflicting timeout layers, and retry storms.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical baseline: HTTP/2 reuse, layered timeout budgets, bounded retries, and error-budget driven operations.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环</title>
+      <link>https://www.mfun.ink/2026/03/06/go-openai-responses-connection-pool-timeout-budget/</link>
+      <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/06/go-openai-responses-connection-pool-timeout-budget/</guid>
+      <description>&lt;p&gt;线上 Go 服务调用 OpenAI Responses 时，最容易踩的坑不是“模型不准”，而是链路抖动：连接池不稳、超时预算乱配、重试叠加把自己打挂。&lt;/p&gt;
+&lt;p&gt;这篇给一套可落地的基线配置：HTTP/2 连接复用、分层超时、错误预算和退避重试，目标是把 5xx 与超时比例压到可控范围，并且能快速定位瓶颈。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
