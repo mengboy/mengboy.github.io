@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WebRTC on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/webrtc/</link>
+    <description>Recent content in WebRTC on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 09 Mar 2026 01:13:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/webrtc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets</title>
+      <link>https://www.mfun.ink/english/post/openai-realtime-go-webrtc-auth-recovery-latency-budget/</link>
+      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-realtime-go-webrtc-auth-recovery-latency-budget/</guid>
+      <description>&lt;p&gt;If you plan to put OpenAI Realtime into production, do not let a passing demo fool you.&lt;/p&gt;
+&lt;p&gt;What usually breaks the system is not the model itself. It is &lt;strong&gt;non-rotating short-lived auth, missing interruption state, and zero end-to-end latency budgeting&lt;/strong&gt;. Miss those three and your voice UX starts sounding like an angry walkie-talkie.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Realtime &#43; Go 生产落地：WebRTC 鉴权轮换、打断恢复与端到端延迟预算</title>
+      <link>https://www.mfun.ink/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/</link>
+      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/</guid>
+      <description>&lt;p&gt;如果你准备把 OpenAI Realtime 真上生产，先别被“能跑通 demo”骗了。&lt;/p&gt;
+&lt;p&gt;真正把系统打爆的，通常不是模型本身，而是 &lt;strong&gt;短时鉴权没轮换、打断恢复没状态机、端到端延迟没预算&lt;/strong&gt;。这三件事不补，语音体验会像在和一台卡顿的对讲机吵架。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

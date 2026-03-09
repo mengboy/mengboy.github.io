@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Realtime Systems on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/categories/realtime-systems/</link>
+    <description>Recent content in Realtime Systems on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Mar 2026 01:13:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/categories/realtime-systems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets</title>
+      <link>https://www.mfun.ink/en/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/</link>
+      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/</guid>
+      <description>&lt;p&gt;If you plan to put OpenAI Realtime into production, do not let a passing demo fool you.&lt;/p&gt;
+&lt;p&gt;What usually breaks the system is not the model itself. It is &lt;strong&gt;non-rotating short-lived auth, missing interruption state, and zero end-to-end latency budgeting&lt;/strong&gt;. Miss those three and your voice UX starts sounding like an angry walkie-talkie.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

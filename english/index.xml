@@ -6,8 +6,16 @@
     <description>Recent content in Englishes on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 06 Mar 2026 01:13:12 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2026 01:13:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/english/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets</title>
+      <link>https://www.mfun.ink/english/post/openai-realtime-go-webrtc-auth-recovery-latency-budget/</link>
+      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-realtime-go-webrtc-auth-recovery-latency-budget/</guid>
+      <description>&lt;p&gt;If you plan to put OpenAI Realtime into production, do not let a passing demo fool you.&lt;/p&gt;
+&lt;p&gt;What usually breaks the system is not the model itself. It is &lt;strong&gt;non-rotating short-lived auth, missing interruption state, and zero end-to-end latency budgeting&lt;/strong&gt;. Miss those three and your voice UX starts sounding like an angry walkie-talkie.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control</title>
       <link>https://www.mfun.ink/english/post/go-openai-responses-connection-pool-timeout-budget/</link>
