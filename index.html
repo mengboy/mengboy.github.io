@@ -226,6 +226,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Structured Outputs 最容易翻车的地方，不是“模型不听话”，而是你把 schema 当成了永远不变的圣旨。
+线上一旦进入版本演进期，最常见的事故就是：字段新增后老消费端崩、枚举值扩展后校验误杀、坏样本把整条链路拖死，最后只能半夜回滚，像在给自己写惊悚片。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚" href="https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Realtime &#43; Go 生产落地：WebRTC 鉴权轮换、打断恢复与端到端延迟预算
     </h2>
   </header>
@@ -347,20 +361,6 @@
   </div>
   <footer class="entry-footer"><span title='2026-02-20 01:11:51 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）" href="https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Redis 分布式锁正确姿势（含误用案例）
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>在高并发场景下，分布式锁是保证数据一致性的关键组件。但很多开发者对Redis分布式锁的理解停留在&#34;SETNX&#34;层面，导致线上事故频发。
-本文将从原理、实现、常见误用到生产级解决方案，全面梳理Redis分布式锁的正确使用姿势。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-19 09:55:00 +0800 CST'>February 19, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Redis 分布式锁正确姿势（含误用案例）" href="https://www.mfun.ink/2026/02/19/redis-distributed-lock-best-practices/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

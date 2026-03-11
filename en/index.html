@@ -226,6 +226,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The hardest part of Structured Outputs is not getting JSON once. It is surviving schema changes without turning production into a small fire with excellent logs and terrible business results.
+Once a Go service starts evolving prompts and response contracts, the usual failure modes show up fast: a new required field breaks older consumers, an enum expands and strict validation kills valid requests, or one bad sample drags the whole chain into retries and rollback panic.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback" href="https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets
     </h2>
   </header>
@@ -347,20 +361,6 @@ This guide gives a production-ready Linux baseline focused on long-term stabilit
   </div>
   <footer class="entry-footer"><span title='2026-02-20 01:11:51 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)" href="https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Redis Distributed Lock Best Practices (with Common Misuse Cases)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>In high-concurrency scenarios, distributed locks are essential for ensuring data consistency. However, many developers’ understanding of Redis distributed locks stops at “SETNX”, leading to frequent production incidents.
-This article comprehensively covers the correct usage of Redis distributed locks from principles, implementation, common misuse cases to production-grade solutions.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-19 09:55:00 +0800 CST'>February 19, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Redis Distributed Lock Best Practices (with Common Misuse Cases)" href="https://www.mfun.ink/en/2026/02/19/redis-distributed-lock-best-practices/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

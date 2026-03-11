@@ -216,6 +216,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">docker部署joplin-server数据备份问题
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在之前的一篇文章中记录了使用docker部署joplin-server的流程。有提到joplin-server可以使用SQLite或者PostgresSQL，这两种存储方式分别该如何备份数据呢？
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-09-29 12:26:57 +0800 CST'>September 29, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to docker部署joplin-server数据备份问题" href="https://www.mfun.ink/2023/09/29/docker-joplin-server-data-backup/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Go处理zip压缩以及解压
     </h2>
   </header>
@@ -328,19 +341,6 @@
   </div>
   <footer class="entry-footer"><span title='2023-05-21 22:11:01 +0800 CST'>May 21, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to hexo版本升级" href="https://www.mfun.ink/2023/05/21/hexo-upgrade/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">通过nginx流代理转发流量到trojan服务
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-05-20 20:14:28 +0800 CST'>May 20, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to 通过nginx流代理转发流量到trojan服务" href="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

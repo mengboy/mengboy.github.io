@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go &#43; OpenAI API Timeout Troubleshooting: DNS, TLS, Proxy, and Connection Pool
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When OpenAI API calls start timing out in production, the real problem is usually not “OpenAI is down.”
+The real problem is you don’t know which hop is failing: DNS, TLS handshake, proxy path, or your own connection pool.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-02 01:12:10 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go &#43; OpenAI API Timeout Troubleshooting: DNS, TLS, Proxy, and Connection Pool" href="https://www.mfun.ink/english/post/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上调用 OpenAI API 一旦出现超时，最烦的不是“偶发失败”，而是你不知道到底卡在 DNS、TLS、代理，还是你自己的连接池。
+这篇给你一套可直接落地的排查顺序：先判定超时发生在哪一段，再用指标和最小实验定位，最后给可复制的 Go 配置模板，避免同类事故反复出现。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-02 01:12:10 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 调 OpenAI API 常见超时链路排查：DNS/TLS/代理/连接池一次讲清" href="https://www.mfun.ink/2026/03/02/go-openai-api-timeout-troubleshooting-dns-tls-proxy-connection-pool/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Agents SDK &#43; Go 落地指南：Tool Calling、会话记忆与错误恢复
     </h2>
   </header>
@@ -307,35 +335,12 @@ package main import &#34;fmt&#34; func main() { fmt.Println(&#34;hello word&#34;
   <footer class="entry-footer"><span title='2020-10-27 15:27:33 +0800 CST'>October 27, 2020</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Go启动main函数都干了什么(一)" href="https://www.mfun.ink/2020/10/27/go-start-up/"></a>
 </article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">造轮子——go 版本控制(gvm)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>功能列表 支持linux、darwin 获取远程go版本列表 gvm remote ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-09-29 20:36:24 +0800 CST'>September 29, 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to 造轮子——go 版本控制(gvm)" href="https://www.mfun.ink/2020/09/29/gvm/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">sse(serve send events) 服务端推送技术
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>什么是sse sse 指 serve send events，是一种基于http的服务端想客户端推送事件的技术，通常http请求都是请求–&gt;应答的模式，一次request–&gt;response结束后，连接就断开了，前端需要请求新的资源就需要重新建立连接，再次发起请求，当然http2.0后可以使用多路复用，不必建立新的连接。而sse指连接建立成功后，后端可以不断向前端推送消息。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-09-12 22:58:30 +0800 CST'>September 12, 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to sse(serve send events) 服务端推送技术" href="https://www.mfun.ink/2020/09/12/sse/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="prev" href="https://www.mfun.ink/tags/go/">
       «&nbsp;&nbsp;
+    </a>
+    <a class="next" href="https://www.mfun.ink/tags/go/page/3/">&nbsp;&nbsp;»
     </a>
   </nav>
 </footer>

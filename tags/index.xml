@@ -6,8 +6,50 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Mar 2026 01:13:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/tags/go/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/tags/openai/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Responses API</title>
+      <link>https://www.mfun.ink/tags/responses-api/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/responses-api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rollback</title>
+      <link>https://www.mfun.ink/tags/rollback/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/rollback/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Schema</title>
+      <link>https://www.mfun.ink/tags/schema/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/schema/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Structured Outputs</title>
+      <link>https://www.mfun.ink/tags/structured-outputs/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/structured-outputs/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Authentication</title>
       <link>https://www.mfun.ink/tags/authentication/</link>
@@ -16,24 +58,10 @@
       <description></description>
     </item>
     <item>
-      <title>Go</title>
-      <link>https://www.mfun.ink/tags/go/</link>
-      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Latency</title>
       <link>https://www.mfun.ink/tags/latency/</link>
       <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/latency/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/tags/openai/</link>
-      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/openai/</guid>
       <description></description>
     </item>
     <item>
@@ -62,13 +90,6 @@
       <link>https://www.mfun.ink/tags/reliability/</link>
       <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/reliability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Responses API</title>
-      <link>https://www.mfun.ink/tags/responses-api/</link>
-      <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/responses-api/</guid>
       <description></description>
     </item>
     <item>

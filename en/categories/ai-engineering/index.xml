@@ -6,8 +6,16 @@
     <description>Recent content in AI Engineering on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Mar 2026 01:13:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/ai-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback</title>
+      <link>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</guid>
+      <description>&lt;p&gt;The hardest part of Structured Outputs is not getting JSON once. It is surviving schema changes without turning production into a small fire with excellent logs and terrible business results.&lt;/p&gt;
+&lt;p&gt;Once a Go service starts evolving prompts and response contracts, the usual failure modes show up fast: a new required field breaks older consumers, an enum expands and strict validation kills valid requests, or one bad sample drags the whole chain into retries and rollback panic.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets</title>
       <link>https://www.mfun.ink/en/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/</link>

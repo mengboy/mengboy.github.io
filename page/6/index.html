@@ -204,6 +204,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">通过nginx流代理转发流量到trojan服务
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>上一篇文章记录了trojan的安装过程，但是使用过程发现443端口被trojan服务占用后，就不好部署一些自己的服务网站了。比如我想实现一个在线json解析的页面，并给这个页面申请个子域名json.mfun.ink，由于443端口已经被占用，我们无法直接使用nginx给json.mfun.ink在443端口上配置ssl。那该如何解决呢？我们可以通过nginx的流(stream)代理转发443端口的流量。把trojan的流量转发给trojan服务，把其他https域名的流量转发相应的https服务。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-05-20 20:14:28 +0800 CST'>May 20, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to 通过nginx流代理转发流量到trojan服务" href="https://www.mfun.ink/2023/05/20/nginx-stream-to-trojan/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">trojan-go 安装配置
     </h2>
   </header>
@@ -337,19 +350,6 @@ Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (pl
   </div>
   <footer class="entry-footer"><span title='2020-09-29 20:36:24 +0800 CST'>September 29, 2020</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to 造轮子——go 版本控制(gvm)" href="https://www.mfun.ink/2020/09/29/gvm/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">go 获取 net.conn fd 反射和非反射
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>非反射获取 根据conn类型，将conn断言成相应conn对象，在使用File方法获取file对象，至于为什么是file，参考unix、linux设计哲学：万物皆文件。拿到相应file后直接通过FD方法获取fd句柄。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-09-27 22:27:25 +0800 CST'>September 27, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to go 获取 net.conn fd 反射和非反射" href="https://www.mfun.ink/2020/09/27/gogetfd/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

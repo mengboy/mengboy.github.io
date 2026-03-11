@@ -202,6 +202,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The hardest part of Structured Outputs is not getting JSON once. It is surviving schema changes without turning production into a small fire with excellent logs and terrible business results.
+Once a Go service starts evolving prompts and response contracts, the usual failure modes show up fast: a new required field breaks older consumers, an enum expands and strict validation kills valid requests, or one bad sample drags the whole chain into retries and rollback panic.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback" href="https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control
     </h2>
   </header>

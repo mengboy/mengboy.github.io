@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
-    <lastmod>2026-03-09T01:13:00+00:00</lastmod>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -13,6 +13,149 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/ai-engineering/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/go/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/go/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/openai/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/openai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/openai/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/responses-api/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/responses-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/responses-api/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/rollback/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/rollback/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/rollback/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/schema/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/schema/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/schema/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/structured-outputs/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/structured-outputs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/structured-outputs/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/troubleshooting/</loc>
+    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/troubleshooting/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/troubleshooting/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/authentication/</loc>
@@ -28,32 +171,6 @@
                 href="https://www.mfun.ink/en/tags/authentication/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-03-09T01:13:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/go/</loc>
-    <lastmod>2026-03-09T01:13:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/go/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/latency/</loc>
     <lastmod>2026-03-09T01:13:00+00:00</lastmod>
     <xhtml:link
@@ -65,32 +182,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/latency/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-03-09T01:13:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/openai/</loc>
-    <lastmod>2026-03-09T01:13:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/openai/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/openai/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/</loc>
@@ -130,19 +221,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/realtime-systems/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-03-09T01:13:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/webrtc/</loc>
@@ -195,19 +273,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/reliability/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/responses-api/</loc>
-    <lastmod>2026-03-06T01:13:12+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/responses-api/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/responses-api/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/timeout/</loc>
@@ -273,19 +338,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/retry/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/categories/troubleshooting/</loc>
-    <lastmod>2026-03-04T01:10:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/troubleshooting/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/troubleshooting/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/assistants/</loc>

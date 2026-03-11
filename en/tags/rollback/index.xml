@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rollback on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/rollback/</link>
+    <description>Recent content in Rollback on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/rollback/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback</title>
+      <link>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</link>
+      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</guid>
+      <description>&lt;p&gt;The hardest part of Structured Outputs is not getting JSON once. It is surviving schema changes without turning production into a small fire with excellent logs and terrible business results.&lt;/p&gt;
+&lt;p&gt;Once a Go service starts evolving prompts and response contracts, the usual failure modes show up fast: a new required field breaks older consumers, an enum expands and strict validation kills valid requests, or one bad sample drags the whole chain into retries and rollback panic.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
