@@ -6,13 +6,20 @@
     <description>Recent content in Categories on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Engineering</title>
       <link>https://www.mfun.ink/en/categories/ai-engineering/</link>
-      <pubDate>Wed, 11 Mar 2026 01:08:00 +0000</pubDate>
+      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/categories/ai-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guide</title>
+      <link>https://www.mfun.ink/en/categories/guide/</link>
+      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/guide/</guid>
       <description></description>
     </item>
     <item>

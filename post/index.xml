@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界</title>
+      <link>https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</link>
+      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</guid>
+      <description>&lt;p&gt;一句话结论：如果你的调用是&lt;strong&gt;可延迟、可批处理、可回放&lt;/strong&gt;，就该把在线请求下沉到 Batch API；省钱最明显，但前提是你把拆批、失败分流和回放链路先做好。&lt;/p&gt;
+&lt;p&gt;很多团队把 Batch API 当“便宜版同步接口”来用，结果不是省钱，而是把失败样本堆成事故池。真正的保守做法是：先定义成本边界和SLO，再做离线拆批与失败回放。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚</title>
       <link>https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</link>

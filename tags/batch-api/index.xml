@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Batch API on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/batch-api/</link>
+    <description>Recent content in Batch API on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 13 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/batch-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界</title>
+      <link>https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</link>
+      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</guid>
+      <description>&lt;p&gt;一句话结论：如果你的调用是&lt;strong&gt;可延迟、可批处理、可回放&lt;/strong&gt;，就该把在线请求下沉到 Batch API；省钱最明显，但前提是你把拆批、失败分流和回放链路先做好。&lt;/p&gt;
+&lt;p&gt;很多团队把 Batch API 当“便宜版同步接口”来用，结果不是省钱，而是把失败样本堆成事故池。真正的保守做法是：先定义成本边界和SLO，再做离线拆批与失败回放。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries</title>
+      <link>https://www.mfun.ink/english/post/openai-batch-api-go-cost-control-offline-batching-failure-replay/</link>
+      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-batch-api-go-cost-control-offline-batching-failure-replay/</guid>
+      <description>&lt;p&gt;Short answer: if your workload is &lt;strong&gt;delay-tolerant, batchable, and replay-safe&lt;/strong&gt;, move it from online calls to Batch API. The savings are real, but only if you design splitting, failure routing, and replay first.&lt;/p&gt;
+&lt;p&gt;Many teams treat Batch API as a cheaper sync endpoint. That usually creates a replay mess instead of stable savings. A conservative rollout starts with cost boundaries and SLOs, then implements offline batching and controlled replay.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

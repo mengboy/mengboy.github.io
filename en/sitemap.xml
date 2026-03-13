@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
-    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +15,21 @@
                 href="https://www.mfun.ink/en/categories/ai-engineering/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/tags/batch-api/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/batch-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/batch-api/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -28,8 +41,21 @@
                 href="https://www.mfun.ink/en/categories/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/tags/cost-control/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/cost-control/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/cost-control/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/tags/go/</loc>
-    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -41,8 +67,21 @@
                 href="https://www.mfun.ink/en/tags/go/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/categories/guide/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/guide/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/guide/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -55,7 +94,7 @@
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/openai/</loc>
-    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -65,6 +104,58 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/openai/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/operations/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/operations/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/operations/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/retry/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/retry/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/retry/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</loc>
@@ -130,19 +221,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/structured-outputs/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-03-11T01:08:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/troubleshooting/</loc>
@@ -325,19 +403,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/2026/03/04/openai-responses-go-retry-storm-idempotency-backoff-circuit-breaker/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/retry/</loc>
-    <lastmod>2026-03-04T01:10:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/retry/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/retry/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/assistants/</loc>

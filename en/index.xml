@@ -6,8 +6,16 @@
     <description>Recent content on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries</title>
+      <link>https://www.mfun.ink/en/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</link>
+      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</guid>
+      <description>&lt;p&gt;Short answer: if your workload is &lt;strong&gt;delay-tolerant, batchable, and replay-safe&lt;/strong&gt;, move it from online calls to Batch API. The savings are real, but only if you design splitting, failure routing, and replay first.&lt;/p&gt;
+&lt;p&gt;Many teams treat Batch API as a cheaper sync endpoint. That usually creates a replay mess instead of stable savings. A conservative rollout starts with cost boundaries and SLOs, then implements offline batching and controlled replay.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback</title>
       <link>https://www.mfun.ink/en/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</link>
