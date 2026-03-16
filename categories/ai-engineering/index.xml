@@ -6,8 +6,24 @@
     <description>Recent content in AI Engineering on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/ai-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; GitHub Actions PR Risk Gate: Automated Evals, Tiered Blocking, and One-Click Rollback</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-github-actions-pr-risk-gate/</link>
+      <pubDate>Mon, 16 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-github-actions-pr-risk-gate/</guid>
+      <description>&lt;p&gt;You don&amp;rsquo;t need an AI reviewer that “sounds smart.” You need a gate that &lt;strong&gt;stops risky PRs before they hit main&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This post shows a production-ready minimum setup: OpenAI Responses generates structured risk output, GitHub Actions enforces tiered policies, and critical failures can trigger a one-click rollback.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses &#43; GitHub Actions 的 PR 风险闸门：自动评测、分级阻断与一键回滚</title>
+      <link>https://www.mfun.ink/2026/03/16/openai-responses-github-actions-pr-risk-gate/</link>
+      <pubDate>Mon, 16 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/16/openai-responses-github-actions-pr-risk-gate/</guid>
+      <description>&lt;p&gt;你不需要一个“会聊天”的 AI 审查器，你需要一个&lt;strong&gt;能阻断坏改动进主干&lt;/strong&gt;的风险闸门。&lt;/p&gt;
+&lt;p&gt;这篇给一套可上线的最小方案：OpenAI Responses 负责生成结构化审查结论，GitHub Actions 负责分级阻断，发现高风险时自动回滚到安全提交。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界</title>
       <link>https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</link>

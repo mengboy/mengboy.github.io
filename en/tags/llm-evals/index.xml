@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>LLM Evals on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/llm-evals/</link>
+    <description>Recent content in LLM Evals on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 16 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/llm-evals/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; GitHub Actions PR Risk Gate: Automated Evals, Tiered Blocking, and One-Click Rollback</title>
+      <link>https://www.mfun.ink/en/2026/03/16/openai-responses-github-actions-pr-risk-gate/</link>
+      <pubDate>Mon, 16 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/16/openai-responses-github-actions-pr-risk-gate/</guid>
+      <description>&lt;p&gt;You don&amp;rsquo;t need an AI reviewer that “sounds smart.” You need a gate that &lt;strong&gt;stops risky PRs before they hit main&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This post shows a production-ready minimum setup: OpenAI Responses generates structured risk output, GitHub Actions enforces tiered policies, and critical failures can trigger a one-click rollback.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
