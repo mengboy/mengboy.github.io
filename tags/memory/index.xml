@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memory on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/memory/</link>
+    <description>Recent content in Memory on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 18 Mar 2026 16:33:52 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps</title>
+      <link>https://www.mfun.ink/english/post/go-openai-responses-agent-memory-layering/</link>
+      <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-openai-responses-agent-memory-layering/</guid>
+      <description>&lt;p&gt;In production Go agents, the first thing that breaks is usually not model quality. It is memory management: context grows, bills spike, and answers drift.&lt;/p&gt;
+&lt;p&gt;Use a 3-layer memory design:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L1: short-term conversational window (seconds)&lt;/li&gt;
+&lt;li&gt;L2: rolling summary (minutes)&lt;/li&gt;
+&lt;li&gt;L3: long-term retrieval memory (days)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Go &#43; OpenAI Responses Agent 记忆分层实战：短期上下文、长期索引与成本封顶</title>
+      <link>https://www.mfun.ink/2026/03/18/go-openai-responses-agent-memory-layering/</link>
+      <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/18/go-openai-responses-agent-memory-layering/</guid>
+      <description>&lt;p&gt;你在 Go 里做 Agent，最容易翻车的不是推理能力，而是“记忆”失控：上下文越来越长、账单越来越高、回答却越来越飘。&lt;/p&gt;
+&lt;p&gt;这篇给你一个可落地的三层方案：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L1：短期会话上下文（秒级，强相关）&lt;/li&gt;
+&lt;li&gt;L2：中期摘要记忆（分钟级，压缩）&lt;/li&gt;
+&lt;li&gt;L3：长期检索记忆（天级，向量索引）&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

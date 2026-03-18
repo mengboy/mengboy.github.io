@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memory on Mengboy Tech Notes</title>
+    <link>https://www.mfun.ink/en/tags/memory/</link>
+    <description>Recent content in Memory on Mengboy Tech Notes</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 18 Mar 2026 16:33:52 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/en/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps</title>
+      <link>https://www.mfun.ink/en/2026/03/18/go-openai-responses-agent-memory-layering/</link>
+      <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/18/go-openai-responses-agent-memory-layering/</guid>
+      <description>&lt;p&gt;In production Go agents, the first thing that breaks is usually not model quality. It is memory management: context grows, bills spike, and answers drift.&lt;/p&gt;
+&lt;p&gt;Use a 3-layer memory design:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;L1: short-term conversational window (seconds)&lt;/li&gt;
+&lt;li&gt;L2: rolling summary (minutes)&lt;/li&gt;
+&lt;li&gt;L3: long-term retrieval memory (days)&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

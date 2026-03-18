@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When Go services call the OpenAI Responses API in production, the real failures are rarely about model quality. Most incidents come from transport instability: weak connection pooling, conflicting timeout layers, and retry storms.
+This guide gives you a practical baseline: HTTP/2 reuse, layered timeout budgets, bounded retries, and error-budget driven operations.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-06 01:13:12 +0000 UTC'>March 6, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control" href="https://www.mfun.ink/english/post/go-openai-responses-connection-pool-timeout-budget/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上 Go 服务调用 OpenAI Responses 时，最容易踩的坑不是“模型不准”，而是链路抖动：连接池不稳、超时预算乱配、重试叠加把自己打挂。
+这篇给一套可落地的基线配置：HTTP/2 连接复用、分层超时、错误预算和退避重试，目标是把 5xx 与超时比例压到可控范围，并且能快速定位瓶颈。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-06 01:13:12 +0000 UTC'>March 6, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环" href="https://www.mfun.ink/2026/03/06/go-openai-responses-connection-pool-timeout-budget/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses &#43; Go 工具调用重试风暴治理：幂等键、退避抖动与熔断阈值
     </h2>
   </header>
@@ -310,32 +338,6 @@ This guide gives you a pragmatic Go-first blueprint for shipping an Agent workfl
   </div>
   <footer class="entry-footer"><span title='2026-02-25 01:18:00 +0000 UTC'>February 25, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Agents SDK with Go: Tool Calling, Session Memory, and Error Recovery" href="https://www.mfun.ink/english/post/openai-agents-sdk-go-tool-calling/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Go 语言实现jpg和png图片的批量压缩
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>记录笔记或者写博客的时候经常会直接复制mac截图插入图片，默认复制得到的是无损png图片，图片体积比较大，占空间带宽，就基于go实现了个命令行批量压缩工具。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2024-01-28 21:42:10 +0800 CST'>January 28, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Go 语言实现jpg和png图片的批量压缩" href="https://www.mfun.ink/2024/01/28/img-tool/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">go 指针赋值是原子性的吗
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>问题提出 提出这个问题主要是因为日常开发中有这样的场景，比如服务配置热加载或者一些全局缓存的异步更新，通常会单独启一个协程去获取最新数据再通过赋值更新原数据。因为更新逻辑是单独的协程，变量的写和读就存在并发访问的情况，于是就有了这个问题。一个简单异步刷新例子 如下：
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-12-06 21:16:31 +0800 CST'>December 6, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to go 指针赋值是原子性的吗" href="https://www.mfun.ink/2023/12/06/is-assigning-pointer-atomic-go/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
