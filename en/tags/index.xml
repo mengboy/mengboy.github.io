@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 01:14:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>429</title>
+      <link>https://www.mfun.ink/en/tags/429/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/429/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>5xx</title>
+      <link>https://www.mfun.ink/en/tags/5xx/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/5xx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backoff</title>
+      <link>https://www.mfun.ink/en/tags/backoff/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/backoff/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Circuit Breaker</title>
+      <link>https://www.mfun.ink/en/tags/circuit-breaker/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/circuit-breaker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/en/tags/go/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/en/tags/openai/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai/</guid>
+      <description></description>
+    </item>
     <item>
       <title>GitHub Actions</title>
       <link>https://www.mfun.ink/en/tags/github-actions/</link>
@@ -55,20 +97,6 @@
       <link>https://www.mfun.ink/en/tags/cost-control/</link>
       <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/cost-control/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://www.mfun.ink/en/tags/go/</link>
-      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/en/tags/openai/</link>
-      <pubDate>Fri, 13 Mar 2026 01:08:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/openai/</guid>
       <description></description>
     </item>
     <item>
@@ -153,13 +181,6 @@
       <link>https://www.mfun.ink/en/tags/timeout/</link>
       <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/timeout/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Circuit Breaker</title>
-      <link>https://www.mfun.ink/en/tags/circuit-breaker/</link>
-      <pubDate>Wed, 04 Mar 2026 01:10:40 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/circuit-breaker/</guid>
       <description></description>
     </item>
     <item>

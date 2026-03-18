@@ -6,13 +6,20 @@
     <description>Recent content in Categories on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 01:14:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Engineering</title>
       <link>https://www.mfun.ink/en/categories/ai-engineering/</link>
-      <pubDate>Mon, 16 Mar 2026 01:08:00 +0000</pubDate>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/categories/ai-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliability</title>
+      <link>https://www.mfun.ink/en/categories/reliability/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/categories/reliability/</guid>
       <description></description>
     </item>
     <item>
@@ -100,7 +107,7 @@
       <description></description>
     </item>
     <item>
-      <title>Ai</title>
+      <title>AI</title>
       <link>https://www.mfun.ink/en/categories/ai/</link>
       <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/categories/ai/</guid>
@@ -135,7 +142,7 @@
       <description></description>
     </item>
     <item>
-      <title>MCP</title>
+      <title>Mcp</title>
       <link>https://www.mfun.ink/en/categories/mcp/</link>
       <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/categories/mcp/</guid>

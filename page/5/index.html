@@ -204,6 +204,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go语言编程规范-命名篇
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>命名是编码过程中让程序员十分纠结的一个点，就像每天饭点纠结选择吃什么饭一样，常见且令人抓头，为此专门有人开发了各种命名神器。命名也是十分能体现一个程序员编码水平的一项，好的命名一定程度能代替代码注释，让代码更加清晰易阅读。好的命名取决于你的词汇量、对业务逻辑的理解以及命名过程中的一些通用规范。遵循一定的命名规范，可以使得代码更加优雅，写起代码来更加如鱼得水。Go语言中主要涉及到包命名、文件命名、结构体命名、接口命名、变量命名下面一一介绍这些相关部分的命名规范。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-11-26 18:56:42 +0800 CST'>November 26, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go语言编程规范-命名篇" href="https://www.mfun.ink/2023/11/26/go-name-standard/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Jellyfin安装及使用体验优化
     </h2>
   </header>
@@ -316,19 +329,6 @@
   </div>
   <footer class="entry-footer"><span title='2023-07-30 17:16:29 +0800 CST'>July 30, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to 局域网下通过路由器虚拟服务访问子网" href="https://www.mfun.ink/2023/07/30/lan-access-subnet/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">xorm使用map kv更新日期时间类型字段的时区问题
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>最近使用xorm更新db的时候碰到一个挺有意思的问题，db中字段类型是日期datetime，对应go model中的字段是time.Time类型，在分别使用model和map两种方式进行更新时，使用model的方式更新能得到正确结果，db中的日期能被更新成当地时间；使用map kv的方式进行更新时db中的字段被更新成了格林尼治标准时间。都是取的go time.Now为什么更新结果不一样呢？
-// demo type TimeTest struct { ID int64 `xorm:&#34;not null pk autoincr INT(11) &#39;id&#39;&#34;` UpdateTime time.Time `xorm:&#34;update_time&#34;` } func UpdateTime(o *xorm.Session) { o.Table(new(TimeTest)).Where(&#34;id = ?&#34;, 1).Update(&amp;TimeTest{ UpdateTime: time.Now(), }) o.Table(new(TimeTest)).Where(&#34;id = ?&#34;, 1).Update(map[string]interface{}{ &#34;update_time&#34;: time.Now(), }) } ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2023-07-29 21:44:10 +0800 CST'>July 29, 2023</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to xorm使用map kv更新日期时间类型字段的时区问题" href="https://www.mfun.ink/2023/07/29/xorm-update-time/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -6,8 +6,22 @@
     <description>Recent content in OpenAI on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 13 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2026 01:14:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 服务调用 OpenAI 的 429/5xx 风暴应对：令牌桶、指数退避与熔断恢复</title>
+      <link>https://www.mfun.ink/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</guid>
+      <description>&lt;p&gt;你不是被 OpenAI API「偶尔报错」打败的；你是被&lt;strong&gt;并发放大后的重试风暴&lt;/strong&gt;打败的。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Handling OpenAI 429/5xx Storms in Go: Token Bucket, Exponential Backoff, and Circuit Breakers</title>
+      <link>https://www.mfun.ink/english/post/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</link>
+      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</guid>
+      <description>&lt;p&gt;Most Go teams are not killed by a single API error. They are killed by a retry storm they created themselves.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界</title>
       <link>https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</link>

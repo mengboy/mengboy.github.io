@@ -2,8 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/en/tags/429/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/429/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/429/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/5xx/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/5xx/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/5xx/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
-    <lastmod>2026-03-16T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -15,8 +41,21 @@
                 href="https://www.mfun.ink/en/categories/ai-engineering/"
                 />
   </url><url>
+    <loc>https://www.mfun.ink/en/tags/backoff/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/backoff/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/backoff/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-03-16T01:08:00+00:00</lastmod>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -26,6 +65,97 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/circuit-breaker/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/circuit-breaker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/circuit-breaker/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/go/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/go/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/go/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/openai/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/openai/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/openai/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/reliability/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/reliability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/reliability/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/categories/devops/</loc>
@@ -65,19 +195,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/llm-evals/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-03-16T01:08:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/openai-responses/</loc>
@@ -132,19 +249,6 @@
                 href="https://www.mfun.ink/en/tags/rollback/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-03-16T01:08:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/batch-api/</loc>
     <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
@@ -171,19 +275,6 @@
                 href="https://www.mfun.ink/en/tags/cost-control/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/tags/go/</loc>
-    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/go/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/go/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/categories/guide/</loc>
     <lastmod>2026-03-13T01:08:00+00:00</lastmod>
     <xhtml:link
@@ -195,19 +286,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/guide/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/openai/</loc>
-    <lastmod>2026-03-13T01:08:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/openai/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/openai/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/</loc>
@@ -442,19 +520,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/timeout/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/circuit-breaker/</loc>
-    <lastmod>2026-03-04T01:10:40+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/circuit-breaker/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/circuit-breaker/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/idempotency/</loc>
