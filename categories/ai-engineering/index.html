@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses in Go Multi-Tenant Quota Governance: Token Buckets, Budget Circuit Breakers, and Cost Attribution
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Most multi-tenant AI platforms fail for two boring reasons: one tenant saturates shared capacity, and finance discovers the burn too late.
+This guide gives you a practical Go blueprint: token-bucket throttling, budget circuit breakers, and request-level cost attribution.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-20 01:08:00 +0000 UTC'>March 20, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses in Go Multi-Tenant Quota Governance: Token Buckets, Budget Circuit Breakers, and Cost Attribution" href="https://www.mfun.ink/english/post/openai-responses-go-multitenant-quota-governance/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses 在 Go 多租户中的配额治理：令牌桶限流、预算熔断与账单归因
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>多租户 AI 服务最容易死在两件事：一个租户打爆全局配额，以及月底账单炸了才发现。
+这篇给你一套可直接落地的 Go 方案：令牌桶限流 &#43; 预算熔断 &#43; 账单归因，目标是“先活下来，再精细化”。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-20 01:08:00 +0000 UTC'>March 20, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses 在 Go 多租户中的配额治理：令牌桶限流、预算熔断与账单归因" href="https://www.mfun.ink/2026/03/20/openai-responses-go-multitenant-quota-governance/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps
     </h2>
   </header>
@@ -308,34 +336,6 @@ Many teams treat Batch API as a cheaper sync endpoint. That usually creates a re
   </div>
   <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries" href="https://www.mfun.ink/english/post/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Structured Outputs 最容易翻车的地方，不是“模型不听话”，而是你把 schema 当成了永远不变的圣旨。
-线上一旦进入版本演进期，最常见的事故就是：字段新增后老消费端崩、枚举值扩展后校验误杀、坏样本把整条链路拖死，最后只能半夜回滚，像在给自己写惊悚片。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚" href="https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The hardest part of Structured Outputs is not getting JSON once. It is surviving schema changes without turning production into a small fire with excellent logs and terrible business results.
-Once a Go service starts evolving prompts and response contracts, the usual failure modes show up fast: a new required field breaks older consumers, an enum expands and strict validation kills valid requests, or one bad sample drags the whole chain into retries and rollback panic.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback" href="https://www.mfun.ink/english/post/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

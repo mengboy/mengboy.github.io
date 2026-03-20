@@ -6,8 +6,16 @@
     <description>Recent content in OpenAI Responses on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Mar 2026 16:33:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/openai-responses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses in Go Multi-Tenant Quota Governance: Token Buckets, Budget Circuit Breakers, and Cost Attribution</title>
+      <link>https://www.mfun.ink/en/2026/03/20/openai-responses-go-multitenant-quota-governance/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/20/openai-responses-go-multitenant-quota-governance/</guid>
+      <description>&lt;p&gt;Most multi-tenant AI platforms fail for two boring reasons: one tenant saturates shared capacity, and finance discovers the burn too late.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go blueprint: token-bucket throttling, budget circuit breakers, and request-level cost attribution.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps</title>
       <link>https://www.mfun.ink/en/2026/03/18/go-openai-responses-agent-memory-layering/</link>

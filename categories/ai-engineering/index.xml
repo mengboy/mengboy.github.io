@@ -6,8 +6,24 @@
     <description>Recent content in AI Engineering on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Mar 2026 16:33:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/ai-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses in Go Multi-Tenant Quota Governance: Token Buckets, Budget Circuit Breakers, and Cost Attribution</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-go-multitenant-quota-governance/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-go-multitenant-quota-governance/</guid>
+      <description>&lt;p&gt;Most multi-tenant AI platforms fail for two boring reasons: one tenant saturates shared capacity, and finance discovers the burn too late.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical Go blueprint: token-bucket throttling, budget circuit breakers, and request-level cost attribution.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses 在 Go 多租户中的配额治理：令牌桶限流、预算熔断与账单归因</title>
+      <link>https://www.mfun.ink/2026/03/20/openai-responses-go-multitenant-quota-governance/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/20/openai-responses-go-multitenant-quota-governance/</guid>
+      <description>&lt;p&gt;多租户 AI 服务最容易死在两件事：&lt;strong&gt;一个租户打爆全局配额&lt;/strong&gt;，以及&lt;strong&gt;月底账单炸了才发现&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可直接落地的 Go 方案：令牌桶限流 + 预算熔断 + 账单归因，目标是“先活下来，再精细化”。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps</title>
       <link>https://www.mfun.ink/english/post/go-openai-responses-agent-memory-layering/</link>

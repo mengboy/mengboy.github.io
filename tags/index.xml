@@ -6,8 +6,64 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Mar 2026 16:33:52 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Budget Control</title>
+      <link>https://www.mfun.ink/tags/budget-control/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/budget-control/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Budget Guard</title>
+      <link>https://www.mfun.ink/tags/budget-guard/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/budget-guard/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FinOps</title>
+      <link>https://www.mfun.ink/tags/finops/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/finops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>https://www.mfun.ink/tags/golang/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Multi-Tenant</title>
+      <link>https://www.mfun.ink/tags/multi-tenant/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/multi-tenant/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Responses</title>
+      <link>https://www.mfun.ink/tags/openai-responses/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/openai-responses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rate Limit</title>
+      <link>https://www.mfun.ink/tags/rate-limit/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/rate-limit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rate Limiting</title>
+      <link>https://www.mfun.ink/tags/rate-limiting/</link>
+      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/rate-limiting/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agent</title>
       <link>https://www.mfun.ink/tags/agent/</link>
@@ -34,13 +90,6 @@
       <link>https://www.mfun.ink/tags/memory/</link>
       <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/memory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI Responses</title>
-      <link>https://www.mfun.ink/tags/openai-responses/</link>
-      <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/openai-responses/</guid>
       <description></description>
     </item>
     <item>
@@ -342,13 +391,6 @@
       <link>https://www.mfun.ink/tags/tool-calling/</link>
       <pubDate>Wed, 25 Feb 2026 01:18:00 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/tool-calling/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Golang</title>
-      <link>https://www.mfun.ink/tags/golang/</link>
-      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/golang/</guid>
       <description></description>
     </item>
     <item>
