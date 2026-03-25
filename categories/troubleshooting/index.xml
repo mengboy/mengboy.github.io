@@ -6,8 +6,16 @@
     <description>Recent content in Troubleshooting on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 11 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 01:13:09 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;In production, the painful part is not “streaming is slow.” It’s “streaming breaks and then duplicates output after reconnect.”&lt;br&gt;
+This guide gives you a practical recovery loop: &lt;strong&gt;delta persistence + resume token + idempotent dedup&lt;/strong&gt;, so reconnection does not replay garbage.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚</title>
       <link>https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/</link>

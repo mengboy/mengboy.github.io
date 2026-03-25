@@ -6,8 +6,16 @@
     <description>Recent content in 故障排查 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 14 Feb 2026 21:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 01:13:09 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; Go 的流式中断恢复：delta 持久化、resume token 与重复片段去重</title>
+      <link>https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;生产里最难受的不是“流式返回慢”，而是“流式返回断了还重复”，用户看到半句、重连后又从中间重喷一遍。&lt;br&gt;
+这篇给一套可落地的恢复闭环：&lt;strong&gt;delta 持久化 + resume token + 幂等去重&lt;/strong&gt;，目标是“断线可续，重放不重字”。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go 服务内存泄漏定位实战：pprof &#43; FlameGraph 一次找准</title>
       <link>https://www.mfun.ink/2026/02/14/go-memory-leak-pprof-flamegraph/</link>

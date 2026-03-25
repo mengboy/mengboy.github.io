@@ -6,8 +6,16 @@
     <description>Recent content in Reliability on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Mar 2026 01:13:12 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 01:13:09 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup</title>
+      <link>https://www.mfun.ink/en/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;In production, the painful part is not “streaming is slow.” It’s “streaming breaks and then duplicates output after reconnect.”&lt;br&gt;
+This guide gives you a practical recovery loop: &lt;strong&gt;delta persistence + resume token + idempotent dedup&lt;/strong&gt;, so reconnection does not replay garbage.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control</title>
       <link>https://www.mfun.ink/en/2026/03/06/go-openai-responses-connection-pool-timeout-budget/</link>

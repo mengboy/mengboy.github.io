@@ -6,8 +6,78 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude</title>
+      <link>https://www.mfun.ink/en/tags/claude/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cost Optimization</title>
+      <link>https://www.mfun.ink/en/tags/cost-optimization/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/cost-optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latency</title>
+      <link>https://www.mfun.ink/en/tags/latency/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/latency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Model-Routing</title>
+      <link>https://www.mfun.ink/en/tags/model-routing/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/model-routing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/en/tags/openai/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://www.mfun.ink/en/tags/go/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Idempotency</title>
+      <link>https://www.mfun.ink/en/tags/idempotency/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/idempotency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Responses</title>
+      <link>https://www.mfun.ink/en/tags/openai-responses/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai-responses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reliability</title>
+      <link>https://www.mfun.ink/en/tags/reliability/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/reliability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Streaming</title>
+      <link>https://www.mfun.ink/en/tags/streaming/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/streaming/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Budget Guard</title>
       <link>https://www.mfun.ink/en/tags/budget-guard/</link>
@@ -37,13 +107,6 @@
       <description></description>
     </item>
     <item>
-      <title>OpenAI Responses</title>
-      <link>https://www.mfun.ink/en/tags/openai-responses/</link>
-      <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/openai-responses/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Rate Limiting</title>
       <link>https://www.mfun.ink/en/tags/rate-limiting/</link>
       <pubDate>Fri, 20 Mar 2026 01:08:00 +0000</pubDate>
@@ -62,13 +125,6 @@
       <link>https://www.mfun.ink/en/tags/cost-control/</link>
       <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/cost-control/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://www.mfun.ink/en/tags/go/</link>
-      <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/go/</guid>
       <description></description>
     </item>
     <item>
@@ -111,13 +167,6 @@
       <link>https://www.mfun.ink/en/tags/circuit-breaker/</link>
       <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/circuit-breaker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/en/tags/openai/</link>
-      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/openai/</guid>
       <description></description>
     </item>
     <item>
@@ -198,13 +247,6 @@
       <description></description>
     </item>
     <item>
-      <title>Latency</title>
-      <link>https://www.mfun.ink/en/tags/latency/</link>
-      <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/latency/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Realtime API</title>
       <link>https://www.mfun.ink/en/tags/realtime-api/</link>
       <pubDate>Mon, 09 Mar 2026 01:13:00 +0000</pubDate>
@@ -226,24 +268,10 @@
       <description></description>
     </item>
     <item>
-      <title>Reliability</title>
-      <link>https://www.mfun.ink/en/tags/reliability/</link>
-      <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/reliability/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Timeout</title>
       <link>https://www.mfun.ink/en/tags/timeout/</link>
       <pubDate>Fri, 06 Mar 2026 01:13:12 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/timeout/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Idempotency</title>
-      <link>https://www.mfun.ink/en/tags/idempotency/</link>
-      <pubDate>Wed, 04 Mar 2026 01:10:40 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/idempotency/</guid>
       <description></description>
     </item>
     <item>
@@ -258,13 +286,6 @@
       <link>https://www.mfun.ink/en/tags/context-management/</link>
       <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/context-management/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cost Optimization</title>
-      <link>https://www.mfun.ink/en/tags/cost-optimization/</link>
-      <pubDate>Mon, 02 Mar 2026 12:44:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/cost-optimization/</guid>
       <description></description>
     </item>
     <item>
@@ -356,13 +377,6 @@
       <link>https://www.mfun.ink/en/tags/observability/</link>
       <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/observability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Streaming</title>
-      <link>https://www.mfun.ink/en/tags/streaming/</link>
-      <pubDate>Mon, 23 Feb 2026 01:15:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/streaming/</guid>
       <description></description>
     </item>
     <item>
@@ -643,13 +657,6 @@
       <link>https://www.mfun.ink/en/tags/wsl/</link>
       <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
       <guid>https://www.mfun.ink/en/tags/wsl/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Claude</title>
-      <link>https://www.mfun.ink/en/tags/claude/</link>
-      <pubDate>Mon, 09 Feb 2026 23:28:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/en/tags/claude/</guid>
       <description></description>
     </item>
     <item>

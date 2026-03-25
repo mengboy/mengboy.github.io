@@ -6,8 +6,16 @@
     <description>Recent content in 成本优化 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 Mar 2026 12:44:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI 模型路由网关实战：延迟分层、成本阈值与质量守门</title>
+      <link>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;你把 Claude 和 OpenAI 一起接进生产环境后，真正的难题不是“能不能调通”，而是&lt;strong&gt;怎么在质量、延迟、成本三角里稳定跑&lt;/strong&gt;。&lt;br&gt;
+如果没有路由网关，最常见结果就是：高峰期延迟抖动、账单失控、异常时全站雪崩。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Assistants/Responses 在 Go 里的上下文爆炸治理：截断策略、摘要回填与成本上限</title>
       <link>https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/</link>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>模型路由 on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/</link>
+    <description>Recent content in 模型路由 on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI 模型路由网关实战：延迟分层、成本阈值与质量守门</title>
+      <link>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;你把 Claude 和 OpenAI 一起接进生产环境后，真正的难题不是“能不能调通”，而是&lt;strong&gt;怎么在质量、延迟、成本三角里稳定跑&lt;/strong&gt;。&lt;br&gt;
+如果没有路由网关，最常见结果就是：高峰期延迟抖动、账单失控、异常时全站雪崩。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

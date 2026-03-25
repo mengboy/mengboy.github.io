@@ -216,6 +216,32 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">基于redis实现一个简单的分布式限流器
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>分布式限流器也是项目开发中常用的，基于redis incr指令可以比较方便快捷的实现一个分布式限流器，因为这个指令自身的原子性，所以不用开发者考虑计数过程的并发问题。下面是go代码实现。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-15 22:30:35 +0800 CST'>October 15, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to 基于redis实现一个简单的分布式限流器" href="https://www.mfun.ink/2022/10/15/redis-current-limiter/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">goroutine 并发数量限制
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>最近经常用go写一些脚本，为了执行效率，一般会开启多个goroutine并发执行,脚本中通常会调用一些线上服务或者数据库读写数据，为了不影响线上服务运行,为了不影响线上服务运行就要对执行的goroutine数量进行限制，避免并发太大打垮线上服务。下面就简单写一个goroutine并发控制器。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-10-15 18:08:41 +0800 CST'>October 15, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to goroutine 并发数量限制" href="https://www.mfun.ink/2022/10/15/goroutine-limit/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">2021年滴滴、腾讯视频、字节等面试记录
     </h2>
   </header>

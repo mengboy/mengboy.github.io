@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>In production, the painful part is not “streaming is slow.” It’s “streaming breaks and then duplicates output after reconnect.”
+This guide gives you a practical recovery loop: delta persistence &#43; resume token &#43; idempotent dedup, so reconnection does not replay garbage.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-23 01:13:09 +0000 UTC'>March 23, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup" href="https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses &#43; Go 的流式中断恢复：delta 持久化、resume token 与重复片段去重
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>生产里最难受的不是“流式返回慢”，而是“流式返回断了还重复”，用户看到半句、重连后又从中间重喷一遍。
+这篇给一套可落地的恢复闭环：delta 持久化 &#43; resume token &#43; 幂等去重，目标是“断线可续，重放不重字”。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-23 01:13:09 +0000 UTC'>March 23, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses &#43; Go 的流式中断恢复：delta 持久化、resume token 与重复片段去重" href="https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps
     </h2>
   </header>
@@ -308,34 +336,6 @@ Once a Go service starts evolving prompts and response contracts, the usual fail
   </div>
   <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback" href="https://www.mfun.ink/english/post/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>If you plan to put OpenAI Realtime into production, do not let a passing demo fool you.
-What usually breaks the system is not the model itself. It is non-rotating short-lived auth, missing interruption state, and zero end-to-end latency budgeting. Miss those three and your voice UX starts sounding like an angry walkie-talkie.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-09 01:13:00 +0000 UTC'>March 9, 2026</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets" href="https://www.mfun.ink/english/post/openai-realtime-go-webrtc-auth-recovery-latency-budget/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Realtime &#43; Go 生产落地：WebRTC 鉴权轮换、打断恢复与端到端延迟预算
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>如果你准备把 OpenAI Realtime 真上生产，先别被“能跑通 demo”骗了。
-真正把系统打爆的，通常不是模型本身，而是 短时鉴权没轮换、打断恢复没状态机、端到端延迟没预算。这三件事不补，语音体验会像在和一台卡顿的对讲机吵架。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-09 01:13:00 +0000 UTC'>March 9, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Realtime &#43; Go 生产落地：WebRTC 鉴权轮换、打断恢复与端到端延迟预算" href="https://www.mfun.ink/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

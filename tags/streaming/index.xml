@@ -6,8 +6,24 @@
     <description>Recent content in Streaming on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Feb 2026 01:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 01:13:09 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/streaming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;In production, the painful part is not “streaming is slow.” It’s “streaming breaks and then duplicates output after reconnect.”&lt;br&gt;
+This guide gives you a practical recovery loop: &lt;strong&gt;delta persistence + resume token + idempotent dedup&lt;/strong&gt;, so reconnection does not replay garbage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses &#43; Go 的流式中断恢复：delta 持久化、resume token 与重复片段去重</title>
+      <link>https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;生产里最难受的不是“流式返回慢”，而是“流式返回断了还重复”，用户看到半句、重连后又从中间重喷一遍。&lt;br&gt;
+这篇给一套可落地的恢复闭环：&lt;strong&gt;delta 持久化 + resume token + 幂等去重&lt;/strong&gt;，目标是“断线可续，重放不重字”。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability</title>
       <link>https://www.mfun.ink/english/post/openai-responses-api-streaming-go-timeout-retry-observability/</link>

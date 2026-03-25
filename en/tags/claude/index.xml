@@ -6,8 +6,16 @@
     <description>Recent content in Claude on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Feb 2026 23:28:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/claude/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Model Routing Gateway: Latency Tiers, Cost Caps, and Quality Guardrails</title>
+      <link>https://www.mfun.ink/en/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;Connecting both Claude and OpenAI in production is the easy part. The hard part is keeping the system stable across the quality-latency-cost triangle.&lt;br&gt;
+Without a routing gateway, you usually get latency spikes, runaway bills, and ugly cascading failures.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude vs Codex vs OpenAI CLI: Which Workflow Actually Improves Dev Productivity</title>
       <link>https://www.mfun.ink/en/2026/02/09/claude-codex-openai-cli-workflow-comparison/</link>

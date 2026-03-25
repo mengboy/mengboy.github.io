@@ -6,8 +6,16 @@
     <description>Recent content in Latency on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Mar 2026 01:13:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/latency/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Model Routing Gateway: Latency Tiers, Cost Caps, and Quality Guardrails</title>
+      <link>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;Connecting both Claude and OpenAI in production is the easy part. The hard part is keeping the system stable across the quality-latency-cost triangle.&lt;br&gt;
+Without a routing gateway, you usually get latency spikes, runaway bills, and ugly cascading failures.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Realtime &#43; Go in Production: WebRTC Token Rotation, Interruption Recovery, and End-to-End Latency Budgets</title>
       <link>https://www.mfun.ink/english/post/openai-realtime-go-webrtc-auth-recovery-latency-budget/</link>

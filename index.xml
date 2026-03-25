@@ -6,8 +6,40 @@
     <description>Recent content on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Model Routing Gateway: Latency Tiers, Cost Caps, and Quality Guardrails</title>
+      <link>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;Connecting both Claude and OpenAI in production is the easy part. The hard part is keeping the system stable across the quality-latency-cost triangle.&lt;br&gt;
+Without a routing gateway, you usually get latency spikes, runaway bills, and ugly cascading failures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude &#43; OpenAI 模型路由网关实战：延迟分层、成本阈值与质量守门</title>
+      <link>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;你把 Claude 和 OpenAI 一起接进生产环境后，真正的难题不是“能不能调通”，而是&lt;strong&gt;怎么在质量、延迟、成本三角里稳定跑&lt;/strong&gt;。&lt;br&gt;
+如果没有路由网关，最常见结果就是：高峰期延迟抖动、账单失控、异常时全站雪崩。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;In production, the painful part is not “streaming is slow.” It’s “streaming breaks and then duplicates output after reconnect.”&lt;br&gt;
+This guide gives you a practical recovery loop: &lt;strong&gt;delta persistence + resume token + idempotent dedup&lt;/strong&gt;, so reconnection does not replay garbage.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses &#43; Go 的流式中断恢复：delta 持久化、resume token 与重复片段去重</title>
+      <link>https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</link>
+      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/23/openai-responses-go-stream-resume-delta-dedup/</guid>
+      <description>&lt;p&gt;生产里最难受的不是“流式返回慢”，而是“流式返回断了还重复”，用户看到半句、重连后又从中间重喷一遍。&lt;br&gt;
+这篇给一套可落地的恢复闭环：&lt;strong&gt;delta 持久化 + resume token + 幂等去重&lt;/strong&gt;，目标是“断线可续，重放不重字”。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses in Go Multi-Tenant Quota Governance: Token Buckets, Budget Circuit Breakers, and Cost Attribution</title>
       <link>https://www.mfun.ink/english/post/openai-responses-go-multitenant-quota-governance/</link>

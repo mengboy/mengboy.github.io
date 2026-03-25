@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Model-Routing on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/model-routing/</link>
+    <description>Recent content in Model-Routing on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/model-routing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Model Routing Gateway: Latency Tiers, Cost Caps, and Quality Guardrails</title>
+      <link>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;Connecting both Claude and OpenAI in production is the easy part. The hard part is keeping the system stable across the quality-latency-cost triangle.&lt;br&gt;
+Without a routing gateway, you usually get latency spikes, runaway bills, and ugly cascading failures.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

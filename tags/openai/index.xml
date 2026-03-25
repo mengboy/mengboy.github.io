@@ -6,8 +6,24 @@
     <description>Recent content in OpenAI on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Mar 2026 01:14:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/openai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Model Routing Gateway: Latency Tiers, Cost Caps, and Quality Guardrails</title>
+      <link>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;Connecting both Claude and OpenAI in production is the easy part. The hard part is keeping the system stable across the quality-latency-cost triangle.&lt;br&gt;
+Without a routing gateway, you usually get latency spikes, runaway bills, and ugly cascading failures.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude &#43; OpenAI 模型路由网关实战：延迟分层、成本阈值与质量守门</title>
+      <link>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</link>
+      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</guid>
+      <description>&lt;p&gt;你把 Claude 和 OpenAI 一起接进生产环境后，真正的难题不是“能不能调通”，而是&lt;strong&gt;怎么在质量、延迟、成本三角里稳定跑&lt;/strong&gt;。&lt;br&gt;
+如果没有路由网关，最常见结果就是：高峰期延迟抖动、账单失控、异常时全站雪崩。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Go 服务调用 OpenAI 的 429/5xx 风暴应对：令牌桶、指数退避与熔断恢复</title>
       <link>https://www.mfun.ink/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</link>
