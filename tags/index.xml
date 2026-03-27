@@ -6,8 +6,43 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backpressure</title>
+      <link>https://www.mfun.ink/tags/backpressure/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/backpressure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI Responses</title>
+      <link>https://www.mfun.ink/tags/openai-responses/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/openai-responses/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Production</title>
+      <link>https://www.mfun.ink/tags/production/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/production/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Streaming</title>
+      <link>https://www.mfun.ink/tags/streaming/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/streaming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Timeout Budget</title>
+      <link>https://www.mfun.ink/tags/timeout-budget/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/timeout-budget/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Claude</title>
       <link>https://www.mfun.ink/tags/claude/</link>
@@ -79,24 +114,10 @@
       <description></description>
     </item>
     <item>
-      <title>OpenAI Responses</title>
-      <link>https://www.mfun.ink/tags/openai-responses/</link>
-      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/openai-responses/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Reliability</title>
       <link>https://www.mfun.ink/tags/reliability/</link>
       <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/reliability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Streaming</title>
-      <link>https://www.mfun.ink/tags/streaming/</link>
-      <pubDate>Mon, 23 Mar 2026 01:13:09 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/streaming/</guid>
       <description></description>
     </item>
     <item>
@@ -856,7 +877,7 @@
       <description></description>
     </item>
     <item>
-      <title>Wsl</title>
+      <title>WSL</title>
       <link>https://www.mfun.ink/tags/wsl/</link>
       <pubDate>Tue, 10 Feb 2026 22:10:00 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/wsl/</guid>

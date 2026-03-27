@@ -216,6 +216,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When Go services call the OpenAI Responses API in production, the real failures are rarely about model quality. Most incidents come from transport instability: weak connection pooling, conflicting timeout layers, and retry storms.
+This guide gives you a practical baseline: HTTP/2 reuse, layered timeout budgets, bounded retries, and error-budget driven operations.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-06 01:13:12 +0000 UTC'>March 6, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses: Connection Pooling and Timeout Budgets from HTTP/2 Reuse to Error-Budget Control" href="https://www.mfun.ink/english/post/go-openai-responses-connection-pool-timeout-budget/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses &#43; Go: Taming Retry Storms with Idempotency Keys, Jittered Backoff, and Circuit Breakers
     </h2>
   </header>
@@ -337,20 +351,6 @@ This guide gives you a copy-paste checklist to stabilize WebSocket connections f
   </div>
   <footer class="entry-footer"><span title='2026-02-18 08:20:00 +0800 CST'>February 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes" href="https://www.mfun.ink/english/post/nginx-websocket-disconnect-traps/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>If your RAG system feels unreliable, switching to a more expensive LLM is usually the wrong first move. In most cases, the bottleneck is retrieval quality: weak recall, poor ranking, and no measurement loop.
-This guide gives a practical path: make recall broader, make ranking sharper, then close the loop with offline &#43; online evaluation.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-17 10:56:00 +0800 CST'>February 17, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to RAG Accuracy Playbook: Retrieval Recall, Re-Ranking, and Evaluation Loop" href="https://www.mfun.ink/english/post/rag-retrieval-rerank-eval-loop/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

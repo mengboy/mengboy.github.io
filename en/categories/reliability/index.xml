@@ -6,8 +6,15 @@
     <description>Recent content in Reliability on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Mar 2026 01:14:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/categories/reliability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses Streaming in Production: Backpressure, Chunk Reassembly, and Timeout Budget</title>
+      <link>https://www.mfun.ink/en/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</guid>
+      <description>&lt;p&gt;Most streaming failures are not about “can it stream”, but “does it stay stable under load”: broken chunks, stuck clients, timeout cascades, and retry storms.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Handling OpenAI 429/5xx Storms in Go: Token Bucket, Exponential Backoff, and Circuit Breakers</title>
       <link>https://www.mfun.ink/en/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</link>

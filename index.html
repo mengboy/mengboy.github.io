@@ -226,6 +226,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Responses 流式输出生产稳态：背压控制、分片重组与超时预算闭环
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上最容易把流式输出做坏的，不是“能不能流出来”，而是流量一上来就抖：token 断片、客户端卡死、超时雪崩、重试风暴。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-27 01:08:00 +0000 UTC'>March 27, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Responses 流式输出生产稳态：背压控制、分片重组与超时预算闭环" href="https://www.mfun.ink/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Claude &#43; OpenAI 模型路由网关实战：延迟分层、成本阈值与质量守门
     </h2>
   </header>
@@ -347,20 +360,6 @@ L1：短期会话上下文（秒级，强相关） L2：中期摘要记忆（分
   </div>
   <footer class="entry-footer"><span title='2026-03-09 01:13:00 +0000 UTC'>March 9, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Realtime &#43; Go 生产落地：WebRTC 鉴权轮换、打断恢复与端到端延迟预算" href="https://www.mfun.ink/2026/03/09/openai-realtime-go-webrtc-auth-recovery-latency-budget/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>线上 Go 服务调用 OpenAI Responses 时，最容易踩的坑不是“模型不准”，而是链路抖动：连接池不稳、超时预算乱配、重试叠加把自己打挂。
-这篇给一套可落地的基线配置：HTTP/2 连接复用、分层超时、错误预算和退避重试，目标是把 5xx 与超时比例压到可控范围，并且能快速定位瓶颈。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-06 01:13:12 +0000 UTC'>March 6, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Go 调 OpenAI Responses 的连接池与超时预算：HTTP/2 复用到错误预算闭环" href="https://www.mfun.ink/2026/03/06/go-openai-responses-connection-pool-timeout-budget/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

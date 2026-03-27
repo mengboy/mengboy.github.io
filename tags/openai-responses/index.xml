@@ -6,8 +6,22 @@
     <description>Recent content in OpenAI Responses on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Mar 2026 01:13:09 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Mar 2026 01:08:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/openai-responses/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Responses Streaming in Production: Backpressure, Chunk Reassembly, and Timeout Budget</title>
+      <link>https://www.mfun.ink/english/post/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</guid>
+      <description>&lt;p&gt;Most streaming failures are not about “can it stream”, but “does it stay stable under load”: broken chunks, stuck clients, timeout cascades, and retry storms.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OpenAI Responses 流式输出生产稳态：背压控制、分片重组与超时预算闭环</title>
+      <link>https://www.mfun.ink/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</link>
+      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</guid>
+      <description>&lt;p&gt;线上最容易把流式输出做坏的，不是“能不能流出来”，而是&lt;strong&gt;流量一上来就抖&lt;/strong&gt;：token 断片、客户端卡死、超时雪崩、重试风暴。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup</title>
       <link>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</link>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.mfun.ink/categories/ai-engineering/</loc>
-    <lastmod>2026-03-25T01:16:31+00:00</lastmod>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -13,6 +13,145 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/categories/ai-engineering/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/backpressure/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/backpressure/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/backpressure/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/english/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/openai-responses/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/openai-responses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/openai-responses/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/english/post/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/post/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.mfun.ink/tags/production/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/production/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/production/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/categories/reliability/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/reliability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/reliability/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/streaming/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/streaming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/streaming/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/timeout-budget/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/timeout-budget/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/timeout-budget/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/tags/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/categories/</loc>
+    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/categories/architecture/</loc>
@@ -70,9 +209,6 @@
                 href="https://www.mfun.ink/tags/cost-optimization/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/english/</loc>
-    <lastmod>2026-03-25T01:16:31+00:00</lastmod>
-  </url><url>
     <loc>https://www.mfun.ink/tags/latency/</loc>
     <lastmod>2026-03-25T01:16:31+00:00</lastmod>
     <xhtml:link
@@ -84,19 +220,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/tags/latency/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/</loc>
-    <lastmod>2026-03-25T01:16:31+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/tags/model-routing/</loc>
@@ -125,37 +248,8 @@
                 href="https://www.mfun.ink/tags/openai/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/post/</loc>
-    <lastmod>2026-03-25T01:16:31+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mfun.ink/tags/</loc>
-    <lastmod>2026-03-25T01:16:31+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/tags/%E6%88%90%E6%9C%AC%E4%BC%98%E5%8C%96/</loc>
     <lastmod>2026-03-25T01:16:31+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mfun.ink/categories/</loc>
-    <lastmod>2026-03-25T01:16:31+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
-                />
   </url><url>
     <loc>https://www.mfun.ink/tags/%E6%A8%A1%E5%9E%8B%E8%B7%AF%E7%94%B1/</loc>
     <lastmod>2026-03-25T01:16:31+00:00</lastmod>
@@ -192,19 +286,6 @@
                 href="https://www.mfun.ink/tags/idempotency/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/tags/openai-responses/</loc>
-    <lastmod>2026-03-23T01:13:09+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/openai-responses/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/openai-responses/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/english/post/openai-responses-go-stream-resume-delta-dedup/</loc>
     <lastmod>2026-03-23T01:13:09+00:00</lastmod>
   </url><url>
@@ -232,19 +313,6 @@
                 rel="alternate"
                 hreflang="zh-cn"
                 href="https://www.mfun.ink/tags/reliability/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/tags/streaming/</loc>
-    <lastmod>2026-03-23T01:13:09+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/streaming/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/streaming/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/categories/troubleshooting/</loc>
@@ -498,19 +566,6 @@
   </url><url>
     <loc>https://www.mfun.ink/english/post/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/</loc>
     <lastmod>2026-03-18T01:14:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.mfun.ink/categories/reliability/</loc>
-    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/reliability/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/reliability/"
-                />
   </url><url>
     <loc>https://www.mfun.ink/categories/devops/</loc>
     <lastmod>2026-03-16T01:08:00+00:00</lastmod>
