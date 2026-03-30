@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自媒体内容生产 | AI 工具导航</title>
+    <meta name="description" content="自媒体内容生产 AI 工具子页：收录工具、模板和试用链接。" />
+    <link rel="stylesheet" href="/ai-nav/assets/styles.css" />
+  </head>
+  <body data-page="track" data-section="creator">
+    <header class="hero">
+      <div class="container">
+        <p class="badge">AI NAV · TRACK</p>
+        <h1 id="page-title">自媒体内容生产 · AI 工具导航</h1>
+        <p id="page-subtitle">加载中...</p>
+        <div class="hero-actions">
+          <a class="btn btn-ghost" href="/ai-nav/">← 返回总入口</a>
+          <button id="copy-stack" class="btn btn-primary" type="button">复制多赛道最小栈</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel controls" aria-label="筛选工具">
+        <div class="search-wrap">
+          <label for="search">搜索工具/标签</label>
+          <input id="search" type="search" placeholder="例如：自动化、开源、CRM" />
+        </div>
+      </section>
+
+      <section id="tool-list" class="grid" aria-live="polite"></section>
+    </main>
+
+    <footer class="container footer">
+      <p id="meta-line">数据加载中...</p>
+      <p class="disclaimer">声明：页面可能包含联盟链接。请先小规模验证，再放量。</p>
+    </footer>
+
+    <template id="tool-card-template">
+      <article class="card">
+        <div class="card-head">
+          <h3 class="tool-name"></h3>
+          <div class="chip-list"></div>
+        </div>
+        <p class="tool-fit"></p>
+        <p class="tool-why"></p>
+        <p class="tool-pricing"></p>
+        <div class="template-box">
+          <p>可复制模板</p>
+          <pre class="tool-template"></pre>
+        </div>
+        <div class="card-actions">
+          <button class="btn btn-ghost copy-template" type="button">复制模板</button>
+          <a class="btn btn-primary trial-link" target="_blank" rel="noopener noreferrer">去试用</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="/ai-nav/assets/app.js" defer></script>
+  </body>
+</html>

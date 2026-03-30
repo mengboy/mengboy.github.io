@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 27 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 01:14:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CircuitBreaker</title>
+      <link>https://www.mfun.ink/en/tags/circuitbreaker/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/circuitbreaker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude</title>
+      <link>https://www.mfun.ink/en/tags/claude/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Failover</title>
+      <link>https://www.mfun.ink/en/tags/failover/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/failover/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gateway</title>
+      <link>https://www.mfun.ink/en/tags/gateway/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/gateway/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/en/tags/openai/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SLA</title>
+      <link>https://www.mfun.ink/en/tags/sla/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/sla/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Backpressure</title>
       <link>https://www.mfun.ink/en/tags/backpressure/</link>
@@ -44,13 +86,6 @@
       <description></description>
     </item>
     <item>
-      <title>Claude</title>
-      <link>https://www.mfun.ink/en/tags/claude/</link>
-      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/claude/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Cost Optimization</title>
       <link>https://www.mfun.ink/en/tags/cost-optimization/</link>
       <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
@@ -69,13 +104,6 @@
       <link>https://www.mfun.ink/en/tags/model-routing/</link>
       <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/model-routing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/en/tags/openai/</link>
-      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/openai/</guid>
       <description></description>
     </item>
     <item>

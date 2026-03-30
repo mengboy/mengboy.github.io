@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 工具导航</title>
+    <meta
+      name="description"
+      content="AI 工具导航总入口：按赛道进入独立子页，查看工具、模板和试用链接。"
+    />
+    <link rel="stylesheet" href="/ai-nav/assets/styles.css" />
+  </head>
+  <body data-page="hub">
+    <header class="hero">
+      <div class="container">
+        <p class="badge">AI NAV · HUB</p>
+        <h1 id="page-title">AI 工具导航（总入口）</h1>
+        <p id="page-subtitle">先选赛道，再进独立子页。每个子页都可独立运营和投流。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#section-grid">进入赛道</a>
+          <button id="copy-stack" class="btn btn-ghost" type="button">复制多赛道最小栈</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <h2>赛道入口</h2>
+        <p class="muted">每个赛道是独立页面，便于后续按内容渠道做精准落地。</p>
+        <div id="section-grid" class="section-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p id="meta-line">数据加载中...</p>
+      <p class="disclaimer">声明：页面可能包含联盟链接。请先验证适配度，再进入试用。</p>
+    </footer>
+
+    <template id="section-card-template">
+      <article class="section-card">
+        <p class="kicker">赛道</p>
+        <h3 class="section-name"></h3>
+        <p class="section-desc"></p>
+        <p class="section-count"></p>
+        <a class="btn btn-primary section-link" href="#">进入子页</a>
+      </article>
+    </template>
+
+    <script src="/ai-nav/assets/app.js" defer></script>
+  </body>
+</html>

@@ -6,8 +6,16 @@
     <description>Recent content in Posts on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 01:14:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI 双供应商网关容灾：健康探测、熔断切换与 SLA 回退策略</title>
+      <link>https://www.mfun.ink/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</guid>
+      <description>&lt;p&gt;当你的生产系统同时接入 Claude 和 OpenAI，真正难的不是“接上 API”，而是&lt;strong&gt;在故障发生时还能稳态服务&lt;/strong&gt;。一个供应商偶发 429/5xx、区域波动或模型超时，都会把下游体验打穿。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可直接落地的双供应商网关方案：健康探测、熔断切换、SLA 分级回退、以及可观测性闭环。目标不是追求“永不失败”，而是&lt;strong&gt;失败可控、成本可控、体验可控&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses 流式输出生产稳态：背压控制、分片重组与超时预算闭环</title>
       <link>https://www.mfun.ink/2026/03/27/openai-responses-streaming-backpressure-chunk-reassembly-timeout-budget/</link>

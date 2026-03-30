@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Failover on Mengboy 技术笔记</title>
+    <link>https://www.mfun.ink/tags/failover/</link>
+    <description>Recent content in Failover on Mengboy 技术笔记</description>
+    <generator>Hugo -- 0.156.0</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 30 Mar 2026 01:14:00 +0000</lastBuildDate>
+    <atom:link href="https://www.mfun.ink/tags/failover/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Dual-Provider Gateway Failover: Health Probes, Circuit Breaking, and SLA Fallback</title>
+      <link>https://www.mfun.ink/english/post/claude-openai-dual-provider-gateway-failover-sla/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-openai-dual-provider-gateway-failover-sla/</guid>
+      <description>&lt;p&gt;If your production stack calls both Claude and OpenAI, the hard part is not API integration. The hard part is keeping user experience stable when one provider starts throwing 429/5xx spikes, regional latency, or timeout storms.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical dual-provider gateway playbook: health probes, circuit breaking, SLA-aware fallback, and observability loops. The goal is not “never fail.” The goal is &lt;strong&gt;controlled failure with controlled cost and controlled latency&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude &#43; OpenAI 双供应商网关容灾：健康探测、熔断切换与 SLA 回退策略</title>
+      <link>https://www.mfun.ink/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</guid>
+      <description>&lt;p&gt;当你的生产系统同时接入 Claude 和 OpenAI，真正难的不是“接上 API”，而是&lt;strong&gt;在故障发生时还能稳态服务&lt;/strong&gt;。一个供应商偶发 429/5xx、区域波动或模型超时，都会把下游体验打穿。&lt;/p&gt;
+&lt;p&gt;这篇给你一套可直接落地的双供应商网关方案：健康探测、熔断切换、SLA 分级回退、以及可观测性闭环。目标不是追求“永不失败”，而是&lt;strong&gt;失败可控、成本可控、体验可控&lt;/strong&gt;。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

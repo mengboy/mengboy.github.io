@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "title": "AI 工具导航（多赛道版）",
+    "subtitle": "按场景快速选工具：内容、电商、独立开发、销售、客服",
+    "lastUpdated": "2026-03-29",
+    "version": "v0.3"
+  },
+  "sections": [
+    {
+      "id": "creator",
+      "name": "自媒体内容生产",
+      "description": "选题、写作、剪辑、分发和复盘工具。"
+    },
+    {
+      "id": "ecommerce",
+      "name": "电商增长与转化",
+      "description": "商品文案、客服自动化、广告优化与归因分析。"
+    },
+    {
+      "id": "indie-dev",
+      "name": "独立开发者效率",
+      "description": "编码、调试、文档、发布全流程提效。"
+    },
+    {
+      "id": "sales",
+      "name": "销售获客自动化",
+      "description": "线索搜集、邮件触达、话术优化和CRM管理。"
+    },
+    {
+      "id": "support",
+      "name": "客服支持",
+      "description": "工单、知识库、AI 回复和质检分析。"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Notion AI",
+      "section": "creator",
+      "tags": [
+        "写作",
+        "选题",
+        "知识库"
+      ],
+      "fitFor": "做长期内容沉淀和多平台复用",
+      "whyPick": "从选题池到稿件管理一体化，维护成本低",
+      "pricing": "免费起步，AI 功能按套餐",
+      "affiliateLabel": "开写",
+      "affiliateUrl": "https://www.notion.so/product/ai",
+      "template": "你是内容主编。请基于这个主题输出：1）3个标题；2）150字开头；3）5条小红书要点。"
+    },
+    {
+      "name": "Perplexity",
+      "section": "creator",
+      "tags": [
+        "研究",
+        "资料",
+        "引用"
+      ],
+      "fitFor": "需要快速查证和整理观点素材",
+      "whyPick": "检索+总结效率高，适合热点快写",
+      "pricing": "免费版可用，Pro 升级",
+      "affiliateLabel": "查资料",
+      "affiliateUrl": "https://www.perplexity.ai/",
+      "template": "请给我这个话题最近30天的高相关事实和可引用来源，并按观点分组。"
+    },
+    {
+      "name": "CapCut",
+      "section": "creator",
+      "tags": [
+        "视频",
+        "剪辑",
+        "字幕"
+      ],
+      "fitFor": "短视频快速剪辑与批量字幕",
+      "whyPick": "上手快，适合日更内容团队",
+      "pricing": "免费可用，专业功能订阅",
+      "affiliateLabel": "做视频",
+      "affiliateUrl": "https://www.capcut.com/",
+      "template": "把这段口播改成60秒短视频脚本：3秒钩子+3段要点+结尾行动号召。"
+    },
+    {
+      "name": "Shopify Magic",
+      "section": "ecommerce",
+      "tags": [
+        "电商",
+        "商品文案",
+        "转化"
+      ],
+      "fitFor": "独立站商品页快速生成与迭代",
+      "whyPick": "商品描述和营销文案生成速度快",
+      "pricing": "随 Shopify 套餐",
+      "affiliateLabel": "建商品页",
+      "affiliateUrl": "https://www.shopify.com/magic",
+      "template": "根据商品卖点生成：主标题、3条利益点、FAQ和购买理由，语气简洁有信任感。"
+    },
+    {
+      "name": "Klaviyo",
+      "section": "ecommerce",
+      "tags": [
+        "邮件营销",
+        "自动化",
+        "归因"
+      ],
+      "fitFor": "做复购和弃购召回的店铺",
+      "whyPick": "自动化流程成熟，电商归因清晰",
+      "pricing": "按联系人数量",
+      "affiliateLabel": "拉复购",
+      "affiliateUrl": "https://www.klaviyo.com/",
+      "template": "生成一套弃购召回邮件流：第1封提醒、第2封利益点、第3封限时激励。"
+    },
+    {
+      "name": "Triple Whale",
+      "section": "ecommerce",
+      "tags": [
+        "数据看板",
+        "广告归因",
+        "DTC"
+      ],
+      "fitFor": "多广告渠道投放的电商团队",
+      "whyPick": "看利润和渠道效率更直观",
+      "pricing": "按功能套餐",
+      "affiliateLabel": "看ROI",
+      "affiliateUrl": "https://www.triplewhale.com/",
+      "template": "请按渠道输出最近7天：花费、收入、ROAS，并标出最该停掉的2个广告组。"
+    },
+    {
+      "name": "Codex CLI",
+      "section": "indie-dev",
+      "tags": [
+        "编码",
+        "重构",
+        "自动化"
+      ],
+      "fitFor": "想把重复开发工作自动化的独立开发者",
+      "whyPick": "迭代速度快，适合原型和重构",
+      "pricing": "按模型/API策略",
+      "affiliateLabel": "提效开发",
+      "affiliateUrl": "https://openai.com/index/introducing-codex/",
+      "template": "请为这个仓库实现：最小可用功能、测试用例、README，优先可运行。"
+    },
+    {
+      "name": "Linear",
+      "section": "indie-dev",
+      "tags": [
+        "项目管理",
+        "issue",
+        "roadmap"
+      ],
+      "fitFor": "个人或小团队迭代产品",
+      "whyPick": "任务流简洁，适合敏捷小步快跑",
+      "pricing": "免费团队可用，进阶版订阅",
+      "affiliateLabel": "管迭代",
+      "affiliateUrl": "https://linear.app/",
+      "template": "把本周开发目标拆成可执行 issue：背景、完成标准、风险、预计工时。"
+    },
+    {
+      "name": "Sentry",
+      "section": "indie-dev",
+      "tags": [
+        "监控",
+        "错误追踪",
+        "稳定性"
+      ],
+      "fitFor": "上线后想快速定位报错",
+      "whyPick": "异常定位快，能关联发布版本",
+      "pricing": "免费层+按量",
+      "affiliateLabel": "盯稳定",
+      "affiliateUrl": "https://sentry.io/",
+      "template": "根据这条报错栈，输出：可能根因、复现步骤、修复优先级和回归测试点。"
+    },
+    {
+      "name": "Apollo",
+      "section": "sales",
+      "tags": [
+        "线索",
+        "B2B",
+        "外呼"
+      ],
+      "fitFor": "需要批量获客和触达的销售团队",
+      "whyPick": "线索数据库与触达流程整合度高",
+      "pricing": "按席位和额度",
+      "affiliateLabel": "找线索",
+      "affiliateUrl": "https://www.apollo.io/",
+      "template": "按目标行业筛出20个潜在客户画像，并给每类写一条首封触达邮件。"
+    },
+    {
+      "name": "Lemlist",
+      "section": "sales",
+      "tags": [
+        "邮件序列",
+        "自动化",
+        "外联"
+      ],
+      "fitFor": "做冷启动邮件获客",
+      "whyPick": "序列化触达和A/B测试方便",
+      "pricing": "按账号套餐",
+      "affiliateLabel": "发外联",
+      "affiliateUrl": "https://www.lemlist.com/",
+      "template": "给我3封销售外联邮件：价值点版、案例版、跟进版，每封不超过120词。"
+    },
+    {
+      "name": "HubSpot",
+      "section": "sales",
+      "tags": [
+        "CRM",
+        "销售漏斗",
+        "自动化"
+      ],
+      "fitFor": "需要统一管理销售线索与成交流程",
+      "whyPick": "CRM 功能完整，适合从0到1搭漏斗",
+      "pricing": "免费CRM+高级版订阅",
+      "affiliateLabel": "管成交",
+      "affiliateUrl": "https://www.hubspot.com/products/crm",
+      "template": "请按MQL→SQL→商机→成交，设计一个每周复盘看板模板。"
+    },
+    {
+      "name": "Intercom",
+      "section": "support",
+      "tags": [
+        "SaaS",
+        "客服",
+        "自动化"
+      ],
+      "fitFor": "中大型团队，多渠道客服统一管理",
+      "whyPick": "自动化规则成熟，支持 AI bot + 人工接管",
+      "pricing": "试用可用，正式版按席位计费",
+      "affiliateLabel": "开始试用",
+      "affiliateUrl": "https://www.intercom.com/",
+      "template": "你是客服助手，请按“先确认问题-再给步骤-最后给升级路径”的结构回复用户。"
+    },
+    {
+      "name": "Zendesk",
+      "section": "support",
+      "tags": [
+        "工单",
+        "SLA",
+        "企业"
+      ],
+      "fitFor": "需要工单流程标准化与审计的团队",
+      "whyPick": "工单管理体系完善，报表和权限颗粒细",
+      "pricing": "按套餐+席位",
+      "affiliateLabel": "查看方案",
+      "affiliateUrl": "https://www.zendesk.com/",
+      "template": "请根据用户问题自动分类为：退款/物流/售后，并生成下一步处理建议。"
+    },
+    {
+      "name": "Langfuse",
+      "section": "support",
+      "tags": [
+        "观测",
+        "评测",
+        "LLM"
+      ],
+      "fitFor": "已经上线 AI 回复，想做质量追踪",
+      "whyPick": "可追踪 prompt、输出和失败案例",
+      "pricing": "开源可自建，云版按量",
+      "affiliateLabel": "做质检",
+      "affiliateUrl": "https://langfuse.com/",
+      "template": "请按满意度、准确性、情绪稳定度三维度给每条客服回复打分并输出改写建议。"
+    }
+  ]
+}

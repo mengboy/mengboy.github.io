@@ -6,8 +6,16 @@
     <description>Recent content in Claude on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Mar 2026 01:16:31 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 01:14:00 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/claude/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude &#43; OpenAI Dual-Provider Gateway Failover: Health Probes, Circuit Breaking, and SLA Fallback</title>
+      <link>https://www.mfun.ink/en/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</link>
+      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</guid>
+      <description>&lt;p&gt;If your production stack calls both Claude and OpenAI, the hard part is not API integration. The hard part is keeping user experience stable when one provider starts throwing 429/5xx spikes, regional latency, or timeout storms.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical dual-provider gateway playbook: health probes, circuit breaking, SLA-aware fallback, and observability loops. The goal is not “never fail.” The goal is &lt;strong&gt;controlled failure with controlled cost and controlled latency&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude &#43; OpenAI Model Routing Gateway: Latency Tiers, Cost Caps, and Quality Guardrails</title>
       <link>https://www.mfun.ink/en/2026/03/25/claude-openai-model-routing-gateway-latency-cost-quality/</link>
