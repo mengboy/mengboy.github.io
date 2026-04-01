@@ -216,6 +216,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Claude 3.7 &#43; OpenAI Responses 双栈降级实战：超时探测、熔断切流与错误预算看板
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>你在生产里同时接 Claude 和 OpenAI，最怕的不是单点故障，而是慢故障：超时变多、429 变密、质量飘忽，系统还“看起来活着”。
+这篇给一套可直接落地的双栈降级方案：先做超时探测，再做熔断切流，最后用错误预算看板兜住业务节奏。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-01 01:19:20 +0000 UTC'>April 1, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Claude 3.7 &#43; OpenAI Responses 双栈降级实战：超时探测、熔断切流与错误预算看板" href="https://www.mfun.ink/2026/04/01/claude-openai-dual-stack-degrade-runbook/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Claude &#43; OpenAI 双供应商网关容灾：健康探测、熔断切换与 SLA 回退策略
     </h2>
   </header>
@@ -336,20 +350,6 @@ L1：短期会话上下文（秒级，强相关） L2：中期摘要记忆（分
   </div>
   <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界" href="https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Structured Outputs 最容易翻车的地方，不是“模型不听话”，而是你把 schema 当成了永远不变的圣旨。
-线上一旦进入版本演进期，最常见的事故就是：字段新增后老消费端崩、枚举值扩展后校验误杀、坏样本把整条链路拖死，最后只能半夜回滚，像在给自己写惊悚片。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚" href="https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

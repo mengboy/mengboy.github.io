@@ -6,8 +6,24 @@
     <description>Recent content on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 30 Mar 2026 01:14:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 01:19:20 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude 3.7 &#43; OpenAI Responses Dual-Stack Degradation Playbook: Timeout Probing, Circuit Cutover, and Error-Budget Dashboard</title>
+      <link>https://www.mfun.ink/english/post/claude-openai-dual-stack-degrade-runbook/</link>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-openai-dual-stack-degrade-runbook/</guid>
+      <description>&lt;p&gt;Running both Claude and OpenAI in production sounds resilient—until a &lt;strong&gt;slow failure&lt;/strong&gt; hits: latency climbs, 429s spike, quality drifts, and everything still looks “up.”&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical dual-stack degradation runbook: timeout probing first, circuit-based cutover second, and an error-budget dashboard to keep business impact bounded.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude 3.7 &#43; OpenAI Responses 双栈降级实战：超时探测、熔断切流与错误预算看板</title>
+      <link>https://www.mfun.ink/2026/04/01/claude-openai-dual-stack-degrade-runbook/</link>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/04/01/claude-openai-dual-stack-degrade-runbook/</guid>
+      <description>&lt;p&gt;你在生产里同时接 Claude 和 OpenAI，最怕的不是单点故障，而是&lt;strong&gt;慢故障&lt;/strong&gt;：超时变多、429 变密、质量飘忽，系统还“看起来活着”。&lt;/p&gt;
+&lt;p&gt;这篇给一套可直接落地的双栈降级方案：先做超时探测，再做熔断切流，最后用错误预算看板兜住业务节奏。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude &#43; OpenAI Dual-Provider Gateway Failover: Health Probes, Circuit Breaking, and SLA Fallback</title>
       <link>https://www.mfun.ink/english/post/claude-openai-dual-provider-gateway-failover-sla/</link>

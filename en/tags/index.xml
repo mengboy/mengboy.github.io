@@ -6,20 +6,41 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Mar 2026 01:14:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 01:19:20 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CircuitBreaker</title>
       <link>https://www.mfun.ink/en/tags/circuitbreaker/</link>
-      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/circuitbreaker/</guid>
       <description></description>
     </item>
     <item>
       <title>Claude</title>
       <link>https://www.mfun.ink/en/tags/claude/</link>
-      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/claude/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ErrorBudget</title>
+      <link>https://www.mfun.ink/en/tags/errorbudget/</link>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/errorbudget/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://www.mfun.ink/en/tags/openai/</link>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SRE</title>
+      <link>https://www.mfun.ink/en/tags/sre/</link>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/sre/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +55,6 @@
       <link>https://www.mfun.ink/en/tags/gateway/</link>
       <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/gateway/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>OpenAI</title>
-      <link>https://www.mfun.ink/en/tags/openai/</link>
-      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/openai/</guid>
       <description></description>
     </item>
     <item>
