@@ -2,6 +2,149 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://www.mfun.ink/en/tags/429/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/429/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/429/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/adaptive-concurrency/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/adaptive-concurrency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/adaptive-concurrency/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/ai-engineering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/ai-engineering/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/claude-api/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/claude-api/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/claude-api/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/rate-limit/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/rate-limit/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/rate-limit/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/categories/reliability/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/categories/reliability/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/categories/reliability/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/sre/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/sre/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/sre/"
+                />
+  </url><url>
+    <loc>https://www.mfun.ink/en/tags/</loc>
+    <lastmod>2026-04-03T01:15:05+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://www.mfun.ink/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.mfun.ink/en/tags/"
+                />
+  </url><url>
     <loc>https://www.mfun.ink/en/categories/aiinfra/</loc>
     <lastmod>2026-04-01T01:19:20+00:00</lastmod>
     <xhtml:link
@@ -13,19 +156,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/categories/aiinfra/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/categories/</loc>
-    <lastmod>2026-04-01T01:19:20+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/circuitbreaker/</loc>
@@ -80,19 +210,6 @@
                 href="https://www.mfun.ink/en/tags/errorbudget/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/</loc>
-    <lastmod>2026-04-01T01:19:20+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/openai/</loc>
     <lastmod>2026-04-01T01:19:20+00:00</lastmod>
     <xhtml:link
@@ -104,32 +221,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/openai/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/sre/</loc>
-    <lastmod>2026-04-01T01:19:20+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/sre/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/sre/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/</loc>
-    <lastmod>2026-04-01T01:19:20+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/2026/03/30/claude-openai-dual-provider-gateway-failover-sla/</loc>
@@ -171,19 +262,6 @@
                 href="https://www.mfun.ink/en/tags/gateway/"
                 />
   </url><url>
-    <loc>https://www.mfun.ink/en/categories/reliability/</loc>
-    <lastmod>2026-03-30T01:14:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/reliability/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/reliability/"
-                />
-  </url><url>
     <loc>https://www.mfun.ink/en/tags/sla/</loc>
     <lastmod>2026-03-30T01:14:00+00:00</lastmod>
     <xhtml:link
@@ -195,19 +273,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/sla/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/categories/ai-engineering/</loc>
-    <lastmod>2026-03-27T01:08:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/categories/ai-engineering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/categories/ai-engineering/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/backpressure/</loc>
@@ -572,19 +637,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.mfun.ink/en/tags/rag/"
-                />
-  </url><url>
-    <loc>https://www.mfun.ink/en/tags/429/</loc>
-    <lastmod>2026-03-18T01:14:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://www.mfun.ink/tags/429/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.mfun.ink/en/tags/429/"
                 />
   </url><url>
     <loc>https://www.mfun.ink/en/tags/5xx/</loc>

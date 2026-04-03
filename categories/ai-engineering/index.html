@@ -202,6 +202,32 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Claude API Rate-Limit Storm Playbook: Adaptive Concurrency, Jittered Backoff, and Quota Isolation
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When Claude API starts returning 429 under high load, most systems don’t just slow down—they collapse: queue buildup, retry storms, upstream timeout chains, and pager noise.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-03 01:15:05 +0000 UTC'>April 3, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Claude API Rate-Limit Storm Playbook: Adaptive Concurrency, Jittered Backoff, and Quota Isolation" href="https://www.mfun.ink/english/post/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Claude API 高并发限流雪崩应对：自适应并发、退避抖动与配额隔离
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>当 Claude API 在高并发下开始返回 429，很多系统不是“慢一点”，而是直接雪崩：队列堆积、重试风暴、上游超时、下游告警连锁。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-03 01:15:05 +0000 UTC'>April 3, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Claude API 高并发限流雪崩应对：自适应并发、退避抖动与配额隔离" href="https://www.mfun.ink/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses Streaming in Production: Backpressure, Chunk Reassembly, and Timeout Budget
     </h2>
   </header>
@@ -308,33 +334,6 @@ L1: short-term conversational window (seconds) L2: rolling summary (minutes) L3:
   </div>
   <footer class="entry-footer"><span title='2026-03-18 16:33:52 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps" href="https://www.mfun.ink/english/post/go-openai-responses-agent-memory-layering/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Go &#43; OpenAI Responses Agent 记忆分层实战：短期上下文、长期索引与成本封顶
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>你在 Go 里做 Agent，最容易翻车的不是推理能力，而是“记忆”失控：上下文越来越长、账单越来越高、回答却越来越飘。
-这篇给你一个可落地的三层方案：
-L1：短期会话上下文（秒级，强相关） L2：中期摘要记忆（分钟级，压缩） L3：长期检索记忆（天级，向量索引） ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-18 16:33:52 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses Agent 记忆分层实战：短期上下文、长期索引与成本封顶" href="https://www.mfun.ink/2026/03/18/go-openai-responses-agent-memory-layering/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Go 服务调用 OpenAI 的 429/5xx 风暴应对：令牌桶、指数退避与熔断恢复
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>你不是被 OpenAI API「偶尔报错」打败的；你是被并发放大后的重试风暴打败的。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-18 01:14:00 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Go 服务调用 OpenAI 的 429/5xx 风暴应对：令牌桶、指数退避与熔断恢复" href="https://www.mfun.ink/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

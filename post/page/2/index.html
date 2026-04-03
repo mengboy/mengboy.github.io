@@ -216,6 +216,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一句话结论：如果你的调用是可延迟、可批处理、可回放，就该把在线请求下沉到 Batch API；省钱最明显，但前提是你把拆批、失败分流和回放链路先做好。
+很多团队把 Batch API 当“便宜版同步接口”来用，结果不是省钱，而是把失败样本堆成事故池。真正的保守做法是：先定义成本边界和SLO，再做离线拆批与失败回放。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界" href="https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚
     </h2>
   </header>
@@ -337,20 +351,6 @@
   </div>
   <footer class="entry-footer"><span title='2026-02-23 01:15:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Responses API 流式输出在 Go 中的工程化实践：超时、重试与可观测性" href="https://www.mfun.ink/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>很多人把 FreshRSS &#43; RSSHub 跑起来很快，但跑稳很难：容器重启后订阅丢失、RSSHub 频繁 403、反代后回调地址异常、升级时服务中断。
-这篇给一套可直接复制的 Linux 部署方案，目标是：可长期运行、可观测、可升级回滚。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-20 01:11:51 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Linux 上部署 FreshRSS &#43; RSSHub 的稳定方案（Docker Compose）" href="https://www.mfun.ink/2026/02/20/freshrss-rsshub-linux-deployment/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

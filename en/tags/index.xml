@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Apr 2026 01:19:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 01:15:05 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>429</title>
+      <link>https://www.mfun.ink/en/tags/429/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/429/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Adaptive Concurrency</title>
+      <link>https://www.mfun.ink/en/tags/adaptive-concurrency/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/adaptive-concurrency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude API</title>
+      <link>https://www.mfun.ink/en/tags/claude-api/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/claude-api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rate Limit</title>
+      <link>https://www.mfun.ink/en/tags/rate-limit/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/rate-limit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SRE</title>
+      <link>https://www.mfun.ink/en/tags/sre/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/tags/sre/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CircuitBreaker</title>
       <link>https://www.mfun.ink/en/tags/circuitbreaker/</link>
@@ -34,13 +69,6 @@
       <link>https://www.mfun.ink/en/tags/openai/</link>
       <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/openai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SRE</title>
-      <link>https://www.mfun.ink/en/tags/sre/</link>
-      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/sre/</guid>
       <description></description>
     </item>
     <item>
@@ -100,7 +128,7 @@
       <description></description>
     </item>
     <item>
-      <title>Cost Optimization</title>
+      <title>Cost-Optimization</title>
       <link>https://www.mfun.ink/en/tags/cost-optimization/</link>
       <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/cost-optimization/</guid>
@@ -202,13 +230,6 @@
       <link>https://www.mfun.ink/en/tags/rag/</link>
       <pubDate>Wed, 18 Mar 2026 16:33:52 +0000</pubDate>
       <guid>https://www.mfun.ink/en/tags/rag/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>429</title>
-      <link>https://www.mfun.ink/en/tags/429/</link>
-      <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/en/tags/429/</guid>
       <description></description>
     </item>
     <item>

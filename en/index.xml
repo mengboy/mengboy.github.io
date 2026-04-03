@@ -6,8 +6,15 @@
     <description>Recent content on Mengboy Tech Notes</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Apr 2026 01:19:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 01:15:05 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude API Rate-Limit Storm Playbook: Adaptive Concurrency, Jittered Backoff, and Quota Isolation</title>
+      <link>https://www.mfun.ink/en/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/en/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</guid>
+      <description>&lt;p&gt;When Claude API starts returning 429 under high load, most systems don&amp;rsquo;t just slow down—they collapse: queue buildup, retry storms, upstream timeout chains, and pager noise.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude 3.7 &#43; OpenAI Responses Dual-Stack Degradation Playbook: Timeout Probing, Circuit Cutover, and Error-Budget Dashboard</title>
       <link>https://www.mfun.ink/en/2026/04/01/claude-openai-dual-stack-degrade-runbook/</link>

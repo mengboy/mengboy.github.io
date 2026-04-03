@@ -204,6 +204,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Short answer: if your workload is delay-tolerant, batchable, and replay-safe, move it from online calls to Batch API. The savings are real, but only if you design splitting, failure routing, and replay first.
+Many teams treat Batch API as a cheaper sync endpoint. That usually creates a replay mess instead of stable savings. A conservative rollout starts with cost boundaries and SLOs, then implements offline batching and controlled replay.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries" href="https://www.mfun.ink/en/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback
     </h2>
   </header>
@@ -325,20 +339,6 @@ This guide gives you a practical Go pattern for OpenAI Responses API streaming w
   </div>
   <footer class="entry-footer"><span title='2026-02-23 01:15:00 +0000 UTC'>February 23, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Responses API Streaming in Go: Timeouts, Retries, and Observability" href="https://www.mfun.ink/en/2026/02/23/openai-responses-api-streaming-go-timeout-retry-observability/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Getting FreshRSS &#43; RSSHub running is easy. Keeping it stable is the hard part: lost state after restarts, repeated 403 errors, broken proxy headers, and risky upgrades.
-This guide gives a production-ready Linux baseline focused on long-term stability, observability, and safe upgrades.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-02-20 01:11:51 +0000 UTC'>February 20, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to A Stable FreshRSS &#43; RSSHub Deployment on Linux (Docker Compose)" href="https://www.mfun.ink/en/2026/02/20/freshrss-rsshub-linux-deployment/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

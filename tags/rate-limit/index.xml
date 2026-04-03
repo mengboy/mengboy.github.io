@@ -6,8 +6,22 @@
     <description>Recent content in Rate Limit on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Mar 2026 01:08:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 01:15:05 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/rate-limit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude API Rate-Limit Storm Playbook: Adaptive Concurrency, Jittered Backoff, and Quota Isolation</title>
+      <link>https://www.mfun.ink/english/post/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</guid>
+      <description>&lt;p&gt;When Claude API starts returning 429 under high load, most systems don&amp;rsquo;t just slow down—they collapse: queue buildup, retry storms, upstream timeout chains, and pager noise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude API 高并发限流雪崩应对：自适应并发、退避抖动与配额隔离</title>
+      <link>https://www.mfun.ink/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/04/03/claude-api-rate-limit-storm-adaptive-concurrency-backoff-quota-isolation/</guid>
+      <description>&lt;p&gt;当 Claude API 在高并发下开始返回 429，很多系统不是“慢一点”，而是直接雪崩：队列堆积、重试风暴、上游超时、下游告警连锁。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>OpenAI Responses 在 Go 多租户中的配额治理：令牌桶限流、预算熔断与账单归因</title>
       <link>https://www.mfun.ink/2026/03/20/openai-responses-go-multitenant-quota-governance/</link>

@@ -6,27 +6,27 @@
     <description>Recent content in 分类 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 01 Apr 2026 01:19:20 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Apr 2026 01:15:05 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AIInfra</title>
-      <link>https://www.mfun.ink/categories/aiinfra/</link>
-      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
-      <guid>https://www.mfun.ink/categories/aiinfra/</guid>
+      <title>AI Engineering</title>
+      <link>https://www.mfun.ink/categories/ai-engineering/</link>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <guid>https://www.mfun.ink/categories/ai-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Reliability</title>
       <link>https://www.mfun.ink/categories/reliability/</link>
-      <pubDate>Mon, 30 Mar 2026 01:14:00 +0000</pubDate>
+      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
       <guid>https://www.mfun.ink/categories/reliability/</guid>
       <description></description>
     </item>
     <item>
-      <title>AI Engineering</title>
-      <link>https://www.mfun.ink/categories/ai-engineering/</link>
-      <pubDate>Fri, 27 Mar 2026 01:08:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/categories/ai-engineering/</guid>
+      <title>AIInfra</title>
+      <link>https://www.mfun.ink/categories/aiinfra/</link>
+      <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
+      <guid>https://www.mfun.ink/categories/aiinfra/</guid>
       <description></description>
     </item>
     <item>
@@ -163,7 +163,7 @@
       <description></description>
     </item>
     <item>
-      <title>Ai</title>
+      <title>AI</title>
       <link>https://www.mfun.ink/categories/ai/</link>
       <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/ai/</guid>
@@ -219,7 +219,7 @@
       <description></description>
     </item>
     <item>
-      <title>Mcp</title>
+      <title>MCP</title>
       <link>https://www.mfun.ink/categories/mcp/</link>
       <pubDate>Wed, 11 Feb 2026 23:15:00 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/mcp/</guid>
@@ -240,7 +240,7 @@
       <description></description>
     </item>
     <item>
-      <title>WSL</title>
+      <title>Wsl</title>
       <link>https://www.mfun.ink/categories/wsl/</link>
       <pubDate>Wed, 11 Feb 2026 22:50:00 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/wsl/</guid>
