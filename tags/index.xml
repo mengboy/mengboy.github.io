@@ -6,8 +6,57 @@
     <description>Recent content in 标签 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 03 Apr 2026 01:15:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 01:17:34 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Auto Fix</title>
+      <link>https://www.mfun.ink/tags/auto-fix/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/auto-fix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CI/CD</title>
+      <link>https://www.mfun.ink/tags/ci/cd/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/ci/cd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude Code</title>
+      <link>https://www.mfun.ink/tags/claude-code/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/claude-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GitHub Actions</title>
+      <link>https://www.mfun.ink/tags/github-actions/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/github-actions/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Troubleshooting</title>
+      <link>https://www.mfun.ink/tags/troubleshooting/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/troubleshooting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>故障排查</title>
+      <link>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>自动修复</title>
+      <link>https://www.mfun.ink/tags/%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/tags/%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D/</guid>
+      <description></description>
+    </item>
     <item>
       <title>429</title>
       <link>https://www.mfun.ink/tags/429/</link>
@@ -128,7 +177,7 @@
       <description></description>
     </item>
     <item>
-      <title>Cost-Optimization</title>
+      <title>Cost Optimization</title>
       <link>https://www.mfun.ink/tags/cost-optimization/</link>
       <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/cost-optimization/</guid>
@@ -279,13 +328,6 @@
       <link>https://www.mfun.ink/tags/circuit-breaker/</link>
       <pubDate>Wed, 18 Mar 2026 01:14:00 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/circuit-breaker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GitHub Actions</title>
-      <link>https://www.mfun.ink/tags/github-actions/</link>
-      <pubDate>Mon, 16 Mar 2026 01:08:00 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/github-actions/</guid>
       <description></description>
     </item>
     <item>
@@ -440,13 +482,6 @@
       <link>https://www.mfun.ink/tags/ai-agent/</link>
       <pubDate>Fri, 27 Feb 2026 01:18:38 +0000</pubDate>
       <guid>https://www.mfun.ink/tags/ai-agent/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CI/CD</title>
-      <link>https://www.mfun.ink/tags/ci/cd/</link>
-      <pubDate>Fri, 27 Feb 2026 01:18:38 +0000</pubDate>
-      <guid>https://www.mfun.ink/tags/ci/cd/</guid>
       <description></description>
     </item>
     <item>
@@ -639,13 +674,6 @@
       <description></description>
     </item>
     <item>
-      <title>Troubleshooting</title>
-      <link>https://www.mfun.ink/tags/troubleshooting/</link>
-      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/troubleshooting/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>WebSocket Disconnect</title>
       <link>https://www.mfun.ink/tags/websocket-disconnect/</link>
       <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
@@ -657,13 +685,6 @@
       <link>https://www.mfun.ink/tags/websocket-%E6%96%AD%E8%BF%9E/</link>
       <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/websocket-%E6%96%AD%E8%BF%9E/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>故障排查</title>
-      <link>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</link>
-      <pubDate>Wed, 18 Feb 2026 08:20:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5/</guid>
       <description></description>
     </item>
     <item>
@@ -734,13 +755,6 @@
       <link>https://www.mfun.ink/tags/pages/</link>
       <pubDate>Mon, 16 Feb 2026 11:59:00 +0800</pubDate>
       <guid>https://www.mfun.ink/tags/pages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Claude Code</title>
-      <link>https://www.mfun.ink/tags/claude-code/</link>
-      <pubDate>Sun, 15 Feb 2026 10:30:00 +0800</pubDate>
-      <guid>https://www.mfun.ink/tags/claude-code/</guid>
       <description></description>
     </item>
     <item>

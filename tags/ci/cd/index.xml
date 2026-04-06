@@ -6,8 +6,24 @@
     <description>Recent content in CI/CD on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 27 Feb 2026 01:18:38 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 01:17:34 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code &#43; GitHub Actions CI Self-Healing Pipeline: Error Attribution, Minimal Patches, and Human Approval Gates</title>
+      <link>https://www.mfun.ink/english/post/claude-code-github-actions-ci-self-healing-pipeline/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-code-github-actions-ci-self-healing-pipeline/</guid>
+      <description>&lt;p&gt;If your CI keeps failing and engineers keep babysitting logs, you&amp;rsquo;re paying an invisible velocity tax. A production-grade AI self-healing pipeline is not &amp;ldquo;let the agent edit anything&amp;rdquo;. It&amp;rsquo;s a controlled loop: &lt;strong&gt;attribution, patching, approval, rollback&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This post gives you a deployable baseline: Claude Code proposes a minimal fix patch, GitHub Actions enforces risk gates and regression checks, and humans only approve at high-impact checkpoints.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Claude Code &#43; GitHub Actions CI 自愈流水线：错误归因、最小修复补丁与人工审批闸门</title>
+      <link>https://www.mfun.ink/2026/04/06/claude-code-github-actions-ci-self-healing-pipeline/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/04/06/claude-code-github-actions-ci-self-healing-pipeline/</guid>
+      <description>&lt;p&gt;CI 每天红、每次都靠人肉盯日志，是团队迭代速度最隐蔽的税。真正可落地的“AI 自愈流水线”，不是让 Agent 直接乱改代码，而是把 &lt;strong&gt;归因、补丁、审批、回滚&lt;/strong&gt; 四件事拆开做，并且每一步都可审计、可中断。&lt;/p&gt;
+&lt;p&gt;这篇给你一套能直接上线的最小闭环：Claude Code 负责“提修复建议+生成最小补丁”，GitHub Actions 负责“自动分级+门禁+回归验证”，人类只在高风险节点按一次按钮。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>GitHub Actions &#43; AI Agent Auto-Fix Pipeline: Failure Tiers, Regression Gates, and Security Guardrails</title>
       <link>https://www.mfun.ink/english/post/github-actions-ai-agent-auto-fix-pipeline/</link>

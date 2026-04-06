@@ -216,6 +216,19 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">redis分布式锁
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>分布式锁主要解决分布式系统中并发更新安全问题，单机服务的话很简单直接使用语言自身的锁就可以了，现在随便一个服务基本上都是多台机器部署的，只是语言自身的锁就不满足需求了，因为它只能锁本台机器，管不了其他机器，这时候就需要分布式锁了，下面介绍下基于redis分布式锁的实现。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-06-03 21:10:31 +0800 CST'>June 3, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to redis分布式锁" href="https://www.mfun.ink/2023/06/03/redis-lua-lock/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">hexo版本升级
     </h2>
   </header>
@@ -349,20 +362,6 @@ package main import &#34;fmt&#34; func main() { fmt.Println(&#34;hello word&#34;
   </div>
   <footer class="entry-footer"><span title='2020-10-27 15:27:33 +0800 CST'>October 27, 2020</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Go启动main函数都干了什么(一)" href="https://www.mfun.ink/2020/10/27/go-start-up/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">macos gdb解决Unable to find Mach task port for process-id
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>安装 直接使用brew install gdb 安装， 没有安装brew的需要先安装brew。
-问题 安装之后，使用过程中遇到这么一个错误:
-Unable to find Mach task port for process-id 33653: (os/kern) failure (0x5). (please check gdb is codesigned - see taskgated(8)) ...</p>
-  </div>
-  <footer class="entry-footer"><span title='2020-10-26 15:35:34 +0800 CST'>October 26, 2020</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to macos gdb解决Unable to find Mach task port for process-id" href="https://www.mfun.ink/2020/10/26/macos-gdb-install/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

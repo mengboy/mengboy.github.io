@@ -6,8 +6,16 @@
     <description>Recent content in Troubleshooting on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 18 Feb 2026 08:20:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 01:17:34 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/troubleshooting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code &#43; GitHub Actions CI Self-Healing Pipeline: Error Attribution, Minimal Patches, and Human Approval Gates</title>
+      <link>https://www.mfun.ink/english/post/claude-code-github-actions-ci-self-healing-pipeline/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/claude-code-github-actions-ci-self-healing-pipeline/</guid>
+      <description>&lt;p&gt;If your CI keeps failing and engineers keep babysitting logs, you&amp;rsquo;re paying an invisible velocity tax. A production-grade AI self-healing pipeline is not &amp;ldquo;let the agent edit anything&amp;rdquo;. It&amp;rsquo;s a controlled loop: &lt;strong&gt;attribution, patching, approval, rollback&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This post gives you a deployable baseline: Claude Code proposes a minimal fix patch, GitHub Actions enforces risk gates and regression checks, and humans only approve at high-impact checkpoints.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nginx Reverse Proxy WebSocket Disconnects: 7 Common Traps and Reliable Fixes</title>
       <link>https://www.mfun.ink/english/post/nginx-websocket-disconnect-traps/</link>

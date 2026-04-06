@@ -6,13 +6,20 @@
     <description>Recent content in 分类 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 03 Apr 2026 01:15:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 01:17:34 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Engineering</title>
       <link>https://www.mfun.ink/categories/ai-engineering/</link>
-      <pubDate>Fri, 03 Apr 2026 01:15:05 +0000</pubDate>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
       <guid>https://www.mfun.ink/categories/ai-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI工程化</title>
+      <link>https://www.mfun.ink/categories/ai%E5%B7%A5%E7%A8%8B%E5%8C%96/</link>
+      <pubDate>Mon, 06 Apr 2026 01:17:34 +0000</pubDate>
+      <guid>https://www.mfun.ink/categories/ai%E5%B7%A5%E7%A8%8B%E5%8C%96/</guid>
       <description></description>
     </item>
     <item>
@@ -163,7 +170,7 @@
       <description></description>
     </item>
     <item>
-      <title>AI</title>
+      <title>Ai</title>
       <link>https://www.mfun.ink/categories/ai/</link>
       <pubDate>Tue, 17 Feb 2026 10:56:00 +0800</pubDate>
       <guid>https://www.mfun.ink/categories/ai/</guid>
