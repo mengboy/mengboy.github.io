@@ -6,8 +6,24 @@
     <description>Recent content in Claude on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 01 Apr 2026 01:19:20 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 01:22:53 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/tags/claude/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control</title>
+      <link>https://www.mfun.ink/english/post/go-dual-model-routing-openai-claude-timeout-cost-fallback/</link>
+      <pubDate>Wed, 08 Apr 2026 01:22:53 +0000</pubDate>
+      <guid>https://www.mfun.ink/english/post/go-dual-model-routing-openai-claude-timeout-cost-fallback/</guid>
+      <description>&lt;p&gt;If your Go service relies on one LLM provider, two failures hurt the most, timeout spikes and billing spikes. A real production setup is not just “add another provider”, it is a single control plane for routing, timeout tiers, cost caps, and fallback.&lt;/p&gt;
+&lt;p&gt;This guide gives you a practical OpenAI + Claude dual-provider pattern with one priority, keep uptime first, then optimize quality.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退</title>
+      <link>https://www.mfun.ink/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/</link>
+      <pubDate>Wed, 08 Apr 2026 01:22:53 +0000</pubDate>
+      <guid>https://www.mfun.ink/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/</guid>
+      <description>&lt;p&gt;线上接入单一模型供应商，最怕两件事，突发超时和账单失控。真正可落地的方案不是“多接一个模型”这么简单，而是把路由、超时、成本、回退放进同一个控制面。&lt;/p&gt;
+&lt;p&gt;这篇给你一套 Go 可直接落地的双栈路由框架，目标是三件事，稳定性优先、成本可控、故障可快速止血。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Claude 3.7 &#43; OpenAI Responses Dual-Stack Degradation Playbook: Timeout Probing, Circuit Cutover, and Error-Budget Dashboard</title>
       <link>https://www.mfun.ink/english/post/claude-openai-dual-stack-degrade-runbook/</link>

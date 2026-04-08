@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>If your Go service relies on one LLM provider, two failures hurt the most, timeout spikes and billing spikes. A real production setup is not just “add another provider”, it is a single control plane for routing, timeout tiers, cost caps, and fallback.
+This guide gives you a practical OpenAI &#43; Claude dual-provider pattern with one priority, keep uptime first, then optimize quality.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control" href="https://www.mfun.ink/english/post/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上接入单一模型供应商，最怕两件事，突发超时和账单失控。真正可落地的方案不是“多接一个模型”这么简单，而是把路由、超时、成本、回退放进同一个控制面。
+这篇给你一套 Go 可直接落地的双栈路由框架，目标是三件事，稳定性优先、成本可控、故障可快速止血。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退" href="https://www.mfun.ink/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Claude 3.7 &#43; OpenAI Responses Dual-Stack Degradation Playbook: Timeout Probing, Circuit Cutover, and Error-Budget Dashboard
     </h2>
   </header>
@@ -308,34 +336,6 @@ Without a routing gateway, you usually get latency spikes, runaway bills, and ug
   </div>
   <footer class="entry-footer"><span title='2026-03-18 01:14:00 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Handling OpenAI 429/5xx Storms in Go: Token Bucket, Exponential Backoff, and Circuit Breakers" href="https://www.mfun.ink/english/post/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>一句话结论：如果你的调用是可延迟、可批处理、可回放，就该把在线请求下沉到 Batch API；省钱最明显，但前提是你把拆批、失败分流和回放链路先做好。
-很多团队把 Batch API 当“便宜版同步接口”来用，结果不是省钱，而是把失败样本堆成事故池。真正的保守做法是：先定义成本边界和SLO，再做离线拆批与失败回放。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界" href="https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Short answer: if your workload is delay-tolerant, batchable, and replay-safe, move it from online calls to Batch API. The savings are real, but only if you design splitting, failure routing, and replay first.
-Many teams treat Batch API as a cheaper sync endpoint. That usually creates a replay mess instead of stable savings. A conservative rollout starts with cost boundaries and SLOs, then implements offline batching and controlled replay.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries" href="https://www.mfun.ink/english/post/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

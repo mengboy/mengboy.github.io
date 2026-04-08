@@ -226,6 +226,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上接入单一模型供应商，最怕两件事，突发超时和账单失控。真正可落地的方案不是“多接一个模型”这么简单，而是把路由、超时、成本、回退放进同一个控制面。
+这篇给你一套 Go 可直接落地的双栈路由框架，目标是三件事，稳定性优先、成本可控、故障可快速止血。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退" href="https://www.mfun.ink/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Claude Code &#43; GitHub Actions CI 自愈流水线：错误归因、最小修复补丁与人工审批闸门
     </h2>
   </header>
@@ -346,19 +360,6 @@ L1：短期会话上下文（秒级，强相关） L2：中期摘要记忆（分
   </div>
   <footer class="entry-footer"><span title='2026-03-18 16:33:52 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses Agent 记忆分层实战：短期上下文、长期索引与成本封顶" href="https://www.mfun.ink/2026/03/18/go-openai-responses-agent-memory-layering/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Go 服务调用 OpenAI 的 429/5xx 风暴应对：令牌桶、指数退避与熔断恢复
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>你不是被 OpenAI API「偶尔报错」打败的；你是被并发放大后的重试风暴打败的。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-18 01:14:00 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Go 服务调用 OpenAI 的 429/5xx 风暴应对：令牌桶、指数退避与熔断恢复" href="https://www.mfun.ink/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

@@ -202,6 +202,20 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>If your Go service relies on one LLM provider, two failures hurt the most, timeout spikes and billing spikes. A real production setup is not just “add another provider”, it is a single control plane for routing, timeout tiers, cost caps, and fallback.
+This guide gives you a practical OpenAI &#43; Claude dual-provider pattern with one priority, keep uptime first, then optimize quality.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control" href="https://www.mfun.ink/en/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Claude 3.7 &#43; OpenAI Responses Dual-Stack Degradation Playbook: Timeout Probing, Circuit Cutover, and Error-Budget Dashboard
     </h2>
   </header>
@@ -323,20 +337,6 @@ In an OpenAI Responses &#43; Go tool-calling stack, missing idempotency, jittere
   </div>
   <footer class="entry-footer"><span title='2026-03-04 01:10:40 +0000 UTC'>March 4, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Responses &#43; Go: Taming Retry Storms with Idempotency Keys, Jittered Backoff, and Circuit Breakers" href="https://www.mfun.ink/en/2026/03/04/openai-responses-go-retry-storm-idempotency-backoff-circuit-breaker/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Taming Context Explosion in OpenAI Assistants/Responses with Go: Truncation, Summary Backfill, and Cost Caps
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Long-running agent sessions usually fail the same way: context keeps growing, latency spikes, costs blow up, and answer quality gets worse.
-That is rarely a model-quality issue. It is almost always missing context governance.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-02 12:44:00 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Taming Context Explosion in OpenAI Assistants/Responses with Go: Truncation, Summary Backfill, and Cost Caps" href="https://www.mfun.ink/en/2026/03/02/openai-assistants-responses-go/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

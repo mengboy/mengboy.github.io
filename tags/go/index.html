@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>If your Go service relies on one LLM provider, two failures hurt the most, timeout spikes and billing spikes. A real production setup is not just “add another provider”, it is a single control plane for routing, timeout tiers, cost caps, and fallback.
+This guide gives you a practical OpenAI &#43; Claude dual-provider pattern with one priority, keep uptime first, then optimize quality.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control" href="https://www.mfun.ink/english/post/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>线上接入单一模型供应商，最怕两件事，突发超时和账单失控。真正可落地的方案不是“多接一个模型”这么简单，而是把路由、超时、成本、回退放进同一个控制面。
+这篇给你一套 Go 可直接落地的双栈路由框架，目标是三件事，稳定性优先、成本可控、故障可快速止血。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go 服务双栈模型路由（OpenAI/Claude）：超时分层、成本上限与降级回退" href="https://www.mfun.ink/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses &#43; Go Stream Recovery: Delta Persistence, Resume Tokens, and Duplicate Chunk Dedup
     </h2>
   </header>
@@ -308,34 +336,6 @@ Many teams treat Batch API as a cheaper sync endpoint. That usually creates a re
   </div>
   <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries" href="https://www.mfun.ink/english/post/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Structured Outputs 最容易翻车的地方，不是“模型不听话”，而是你把 schema 当成了永远不变的圣旨。
-线上一旦进入版本演进期，最常见的事故就是：字段新增后老消费端崩、枚举值扩展后校验误杀、坏样本把整条链路拖死，最后只能半夜回滚，像在给自己写惊悚片。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚" href="https://www.mfun.ink/2026/03/11/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>The hardest part of Structured Outputs is not getting JSON once. It is surviving schema changes without turning production into a small fire with excellent logs and terrible business results.
-Once a Go service starts evolving prompts and response contracts, the usual failure modes show up fast: a new required field breaks older consumers, an enum expands and strict validation kills valid requests, or one bad sample drags the whole chain into retries and rollback panic.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-11 01:08:00 +0000 UTC'>March 11, 2026</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Responses Structured Outputs with Go: Schema Evolution, Bad-Case Fallbacks, and Gradual Rollback" href="https://www.mfun.ink/english/post/openai-responses-structured-outputs-go-schema-evolution-fallback-rollback/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

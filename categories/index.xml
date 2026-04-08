@@ -6,8 +6,22 @@
     <description>Recent content in 分类 on Mengboy 技术笔记</description>
     <generator>Hugo -- 0.156.0</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 06 Apr 2026 01:17:34 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Apr 2026 01:22:53 +0000</lastBuildDate>
     <atom:link href="https://www.mfun.ink/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AIEngineering</title>
+      <link>https://www.mfun.ink/categories/aiengineering/</link>
+      <pubDate>Wed, 08 Apr 2026 01:22:53 +0000</pubDate>
+      <guid>https://www.mfun.ink/categories/aiengineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Architecture</title>
+      <link>https://www.mfun.ink/categories/architecture/</link>
+      <pubDate>Wed, 08 Apr 2026 01:22:53 +0000</pubDate>
+      <guid>https://www.mfun.ink/categories/architecture/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI Engineering</title>
       <link>https://www.mfun.ink/categories/ai-engineering/</link>
@@ -34,13 +48,6 @@
       <link>https://www.mfun.ink/categories/aiinfra/</link>
       <pubDate>Wed, 01 Apr 2026 01:19:20 +0000</pubDate>
       <guid>https://www.mfun.ink/categories/aiinfra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Architecture</title>
-      <link>https://www.mfun.ink/categories/architecture/</link>
-      <pubDate>Wed, 25 Mar 2026 01:16:31 +0000</pubDate>
-      <guid>https://www.mfun.ink/categories/architecture/</guid>
       <description></description>
     </item>
     <item>

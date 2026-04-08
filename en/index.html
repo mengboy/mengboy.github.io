@@ -226,6 +226,20 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>If your Go service relies on one LLM provider, two failures hurt the most, timeout spikes and billing spikes. A real production setup is not just “add another provider”, it is a single control plane for routing, timeout tiers, cost caps, and fallback.
+This guide gives you a practical OpenAI &#43; Claude dual-provider pattern with one priority, keep uptime first, then optimize quality.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-04-08 01:22:53 +0000 UTC'>April 8, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to Go Dual-Provider LLM Routing (OpenAI &#43; Claude): Timeout Tiers, Cost Caps, and Fallback Control" href="https://www.mfun.ink/en/2026/04/08/go-dual-model-routing-openai-claude-timeout-cost-fallback/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Claude Code &#43; GitHub Actions CI Self-Healing Pipeline: Error Attribution, Minimal Patches, and Human Approval Gates
     </h2>
   </header>
@@ -346,19 +360,6 @@ L1: short-term conversational window (seconds) L2: rolling summary (minutes) L3:
   </div>
   <footer class="entry-footer"><span title='2026-03-18 16:33:52 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to Go &#43; OpenAI Responses Agent Memory Layering: Short-Term Context, Long-Term Index, and Cost Caps" href="https://www.mfun.ink/en/2026/03/18/go-openai-responses-agent-memory-layering/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Handling OpenAI 429/5xx Storms in Go: Token Bucket, Exponential Backoff, and Circuit Breakers
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Most Go teams are not killed by a single API error. They are killed by a retry storm they created themselves.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-18 01:14:00 +0000 UTC'>March 18, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Handling OpenAI 429/5xx Storms in Go: Token Bucket, Exponential Backoff, and Circuit Breakers" href="https://www.mfun.ink/en/2026/03/18/go-openai-429-5xx-storm-defense-token-bucket-backoff-circuit-breaker/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">

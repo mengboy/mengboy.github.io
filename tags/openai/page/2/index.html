@@ -202,6 +202,34 @@
 
 <article class="post-entry tag-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>一句话结论：如果你的调用是可延迟、可批处理、可回放，就该把在线请求下沉到 Batch API；省钱最明显，但前提是你把拆批、失败分流和回放链路先做好。
+很多团队把 Batch API 当“便宜版同步接口”来用，结果不是省钱，而是把失败样本堆成事故池。真正的保守做法是：先定义成本边界和SLO，再做离线拆批与失败回放。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Batch API &#43; Go 降本实战：离线拆批、失败重放与成本边界" href="https://www.mfun.ink/2026/03/13/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Short answer: if your workload is delay-tolerant, batchable, and replay-safe, move it from online calls to Batch API. The savings are real, but only if you design splitting, failure routing, and replay first.
+Many teams treat Batch API as a cheaper sync endpoint. That usually creates a replay mess instead of stable savings. A conservative rollout starts with cost boundaries and SLOs, then implements offline batching and controlled replay.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-03-13 01:08:00 +0000 UTC'>March 13, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
+  <a class="entry-link" aria-label="post link to OpenAI Batch API with Go: Offline Batching, Failure Replay, and Cost Boundaries" href="https://www.mfun.ink/english/post/openai-batch-api-go-cost-control-offline-batching-failure-replay/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">OpenAI Responses Structured Outputs &#43; Go：Schema 演进、坏样本兜底与灰度回滚
     </h2>
   </header>
@@ -310,34 +338,6 @@ In an OpenAI Responses &#43; Go tool-calling stack, missing idempotency, jittere
   </div>
   <footer class="entry-footer"><span title='2026-03-04 01:10:40 +0000 UTC'>March 4, 2026</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;mengboy</footer>
   <a class="entry-link" aria-label="post link to OpenAI Responses &#43; Go: Taming Retry Storms with Idempotency Keys, Jittered Backoff, and Circuit Breakers" href="https://www.mfun.ink/english/post/openai-responses-go-retry-storm-idempotency-backoff-circuit-breaker/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">OpenAI Assistants/Responses 在 Go 里的上下文爆炸治理：截断策略、摘要回填与成本上限
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>线上 Agent 一跑久了就会遇到同一个坑：上下文越来越长，延迟飙升、费用失控，最后还更容易答偏。
-这不是模型“变笨”了，通常是上下文治理没做：该留的没留、该删的没删、该摘要的摘要坏了。
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-02 12:44:00 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to OpenAI Assistants/Responses 在 Go 里的上下文爆炸治理：截断策略、摘要回填与成本上限" href="https://www.mfun.ink/2026/03/02/openai-assistants-responses-go/"></a>
-</article>
-
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Taming Context Explosion in OpenAI Assistants/Responses with Go: Truncation, Summary Backfill, and Cost Caps
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Long-running agent sessions usually fail the same way: context keeps growing, latency spikes, costs blow up, and answer quality gets worse.
-That is rarely a model-quality issue. It is almost always missing context governance.
-...</p>
-  </div>
-  <footer class="entry-footer"><span title='2026-03-02 12:44:00 +0000 UTC'>March 2, 2026</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;mengboy</footer>
-  <a class="entry-link" aria-label="post link to Taming Context Explosion in OpenAI Assistants/Responses with Go: Truncation, Summary Backfill, and Cost Caps" href="https://www.mfun.ink/english/post/openai-assistants-responses-go/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
